@@ -1,0 +1,147 @@
+.session-flow {
+  width: 100%;
+}
+
+.session-card h2 {
+  margin-bottom: 8px;
+}
+
+.session-desc {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.game-engine-card h3,
+.ai-panel h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.current-params {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.param {
+  padding: 8px 14px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.param strong {
+  color: var(--accent-blue);
+}
+
+.game-placeholder {
+  padding: 20px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.play-btn {
+  width: 100%;
+  padding: 16px;
+}
+
+.game-result {
+  margin-top: 16px;
+  padding: 12px;
+  background: #c6f6d5;
+  border-radius: var(--radius-sm);
+  color: #22543d;
+  font-size: 0.95rem;
+}
+
+.ai-panel .ai-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ai-panel .ai-row:last-of-type {
+  border-bottom: none;
+}
+
+.ai-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.ai-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.risk-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.risk-low {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.risk-moderate {
+  background: #feebc8;
+  color: #744210;
+}
+
+.risk-high {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.session-stats {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border);
+}
+
+.session-stats h4 {
+  margin-bottom: 8px;
+}
+
+.session-stats p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.header-btn {
+  color: var(--text-inverse);
+  border-color: rgba(255,255,255,0.4);
+  background: transparent;
+}
+
+.header-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.6);
+}
