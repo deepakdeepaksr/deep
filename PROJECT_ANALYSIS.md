@@ -1,4 +1,4 @@
-# Complete Project Analysis: Adaptive Multisensory Learning Platform for Dyslexic Children Using Real-time AI-Powered Content Personalization
+# fgascfcdgawsdasghv Complete Project Analysis: Adaptive Multisensory Learning Platform for Dyslexic Children Using Real-time AI-Powered Content Personalization
 
 **Authors:** Prathapan S, Deepak SR, Rohith K, Dhinesh MP  
 **Document Type:** Project Analysis Report  
@@ -22,19 +22,20 @@ This project proposes an **AI-powered Adaptive Multisensory Learning Platform** 
 ### 2.1 Dyslexia Context
 
 Dyslexia is a neuro-developmental learning disorder that affects:
+
 - Reading skills
 - Spelling abilities
 - Comprehension
 
 ### 2.2 Current System Limitations (Existing System)
 
-| Approach | Description | Key Limitation |
-|----------|-------------|----------------|
-| Classroom teaching | Traditional instruction | High teacher dependency |
-| Worksheets & textbooks | Static materials | No real-time content adaptation |
-| Static educational apps | Fixed learning paths | Same difficulty for all learners |
-| Teacher-controlled pace | Uniform progression | Low engagement and motivation |
-| — | — | No learner behavior analytics |
+| Approach                | Description             | Key Limitation                   |
+| ----------------------- | ----------------------- | -------------------------------- |
+| Classroom teaching      | Traditional instruction | High teacher dependency          |
+| Worksheets & textbooks  | Static materials        | No real-time content adaptation  |
+| Static educational apps | Fixed learning paths    | Same difficulty for all learners |
+| Teacher-controlled pace | Uniform progression     | Low engagement and motivation    |
+| —                       | —                       | No learner behavior analytics    |
 
 **Core Problem:** Existing methods follow a **uniform learning pace** and fail to address the **individual cognitive differences** of dyslexic learners.
 
@@ -45,6 +46,7 @@ Dyslexia is a neuro-developmental learning disorder that affects:
 ### 3.1 System Overview
 
 The platform personalizes educational content **in real time** using:
+
 - Interactive games
 - Sensory-aware instruction
 - Continuous learner performance analysis
@@ -59,6 +61,7 @@ The platform personalizes educational content **in real time** using:
 ### 3.3 Dynamic Adaptations
 
 The system automatically adjusts:
+
 - **Difficulty level**
 - **Learning mode** (visual, auditory)
 - **Learning sequence**
@@ -83,14 +86,14 @@ The system automatically adjusts:
 
 ### 4.1 Intelligent Tutoring & Learning Analytics
 
-| Author | Year | Concept | Algorithm | Issues |
-|--------|------|---------|-----------|--------|
-| D'Mello et al. | 2014 | Using learner behavior to adapt teaching strategies | Learning Analytics Models | Limited real-time adaptation |
-| Piech et al. | 2015 | Predicting student performance via sequence learning | LSTM (Deep Learning) | Focus on prediction, not teaching strategy adaptation |
-| Pardos & Heffernan | 2016 | Personalizing education based on performance | Bayesian Knowledge Tracing | Requires heavy historical data |
-| Liu et al. | 2019 | Improved contextual text classification | RoBERTa | Requires large datasets and high training resources |
-| Doroudi | 2020 | Using RL for optimal teaching actions | Q-Learning / DQN | Requires well-defined reward strategy |
-| Reddy et al. | 2021 | Educational games for engagement and reading | Game-based Learning Model | No intelligence for difficulty control |
+| Author             | Year | Concept                                              | Algorithm                  | Issues                                                |
+| ------------------ | ---- | ---------------------------------------------------- | -------------------------- | ----------------------------------------------------- |
+| D'Mello et al.     | 2014 | Using learner behavior to adapt teaching strategies  | Learning Analytics Models  | Limited real-time adaptation                          |
+| Piech et al.       | 2015 | Predicting student performance via sequence learning | LSTM (Deep Learning)       | Focus on prediction, not teaching strategy adaptation |
+| Pardos & Heffernan | 2016 | Personalizing education based on performance         | Bayesian Knowledge Tracing | Requires heavy historical data                        |
+| Liu et al.         | 2019 | Improved contextual text classification              | RoBERTa                    | Requires large datasets and high training resources   |
+| Doroudi            | 2020 | Using RL for optimal teaching actions                | Q-Learning / DQN           | Requires well-defined reward strategy                 |
+| Reddy et al.       | 2021 | Educational games for engagement and reading         | Game-based Learning Model  | No intelligence for difficulty control                |
 
 ### 4.2 Research Gap Identified
 
@@ -167,10 +170,10 @@ The presentation includes an **Overall System Architecture** diagram. Expected l
 
 ## 9. References
 
-1. R. S. J. d'Mello and A. Graesser, "Intelligent tutoring systems and learning analytics: Enhancing personalized learning," *International Journal of Artificial Intelligence in Education*, vol. 24, no. 4, pp. 426–450, 2014.
-2. M. Doroudi, "Mastery learning heuristics and their hidden models," *Journal of Learning Analytics*, vol. 7, no. 1, pp. 6–16, 2020.
-3. Reddy, P. Sharma, and K. Ramesh, "Game-based learning approach for children with learning disabilities," *IEEE Access*, vol. 9, pp. 112345–112356, 2021.
-4. K. M. K. Chen, H. Xie, and G. Hwang, "A review of AI-based personalized learning systems in education," *Computers & Education: Artificial Intelligence*, vol. 3, 2022.
+1. R. S. J. d'Mello and A. Graesser, "Intelligent tutoring systems and learning analytics: Enhancing personalized learning," _International Journal of Artificial Intelligence in Education_, vol. 24, no. 4, pp. 426–450, 2014.
+2. M. Doroudi, "Mastery learning heuristics and their hidden models," _Journal of Learning Analytics_, vol. 7, no. 1, pp. 6–16, 2020.
+3. Reddy, P. Sharma, and K. Ramesh, "Game-based learning approach for children with learning disabilities," _IEEE Access_, vol. 9, pp. 112345–112356, 2021.
+4. K. M. K. Chen, H. Xie, and G. Hwang, "A review of AI-based personalized learning systems in education," _Computers & Education: Artificial Intelligence_, vol. 3, 2022.
 
 ---
 
@@ -205,4 +208,4 @@ The presentation includes an **Overall System Architecture** diagram. Expected l
 
 ---
 
-*End of Project Analysis*
+_End of Project Analysis_
