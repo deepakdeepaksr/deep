@@ -1,0 +1,32 @@
+A — antenna pokes out of the box on top , gsm and lora connects to antenna by SMA to U.FL to antenna
+
+1. edge hax s3 pro has zig zag black antenna built in with the s3 chip
+Parry A7672S board has U.FL male connector
+lora has sma female 
+for both lora and modem we will use the SMA to U.FL extender
+
+3. dimension of 
+edgehax esp32 is 32x65x14mm
+parry modem is 43x60x12mm , sim socket is o top when plygged-in , berg pins are on bottom and sim slot on top
+lora is 37(with antenna is 92 , with SMA to U.FL extender is)x22x13mm
+
+4. with this i did a range test and worked fine :
+| EByte E22-900T22D Pin | Edgehax S3-PRO Pin | Description / Purpose |
+| :--- | :--- | :--- |
+| **M0** | **GND** | Set to Mode 0 (Transparent UART mode) |
+| **M1** | **GND** | Set to Mode 0 (Transparent UART mode) |
+| **RXD** | **GPIO 17** (`TX_U1`) | UART TX from ESP32 to E22 RX |
+| **TXD** | **GPIO 18** (`RX_U1`) | UART RX to ESP32 from E22 TX |
+| **AUX** | **GPIO 16** | Transmission status / busy pin |
+| **VCC** | **3V3** (Top Left) | 3.3V Power Supply |
+| **GND** | **GND** (Top Right or Bottom) | Ground reference |
+
+this will be module pins on left andantenna is on opposite side right 
+
+5. in shield the detechion key the pin that moves when connected to shield is connected to pin 9 which is not connected anywhere (in shield moving pin) , the shield is connected to gnd
+
+6. test points needed but all not all needed if repoeated tp remove if no purpuse with it 
+
+7. they (serigreeen) will buy with other needed components 
+
+8. deepak wont work for a while its only you and me 

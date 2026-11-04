@@ -1,0 +1,56 @@
+# Local history and tool caches - never source of truth
+.history/
+**/.history/
+__pycache__/
+*.pyc
+.qoder/
+*.~lock.*
+
+# Pre-edit board snapshots: large, regenerable, and they stay on this machine
+pcb/_snap/
+
+# Superseded bulk archives (kept locally, not published)
+backup/
+_audit6l/
+_auto/
+_release/
+_analyze/
+_test_nc/
+morishield.zip
+
+# Regenerable scratch copies of the design used by verification harnesses
+_cto_extract/V2_verbatim_tables/
+_cto_extract/V3_no_fp_table/
+_cto_extract/V4_no_sym_table/
+_cto_extract/V5_with_pcb_present/
+_cto_extract/erc_control/
+_cto_extract/ercprobe_dir/
+_cto_extract/ercx_ownlibs/
+_cto_extract/ercx_stalelib/
+_cto_extract/drcprobe/
+_cto_extract/crops/
+_cto_extract/*.bak*
+_cto_extract/TASK_TRACKER.bak*
+_cto_extract/REPLY*.bak*
+_cto_extract/TT.bak*
+_cto_extract/RT.bak*
+
+# Old design copies kept only for reference; the live design is pcb/
+4L/
+6L/
+
+# KiCad autosaves and backups inside the live design folder
+pcb/*.bak
+pcb/*.bak2
+pcb/*.kicad_prl
+pcb/_probe.kicad_prl
+pcb/_geom.json
+pcb/_work_20261103/scratch/
+revC/_work/scratch/
+revC/preview_do_not_ship/
+
+# OS / cloud noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp

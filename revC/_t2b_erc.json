@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T18:16:11",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/d80462c8-fe11-4e1d-8672-0e34f7f857a2",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 11 [IO37, Passive, Line]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 3.1496
+                            },
+                            "uuid": "57e69fdd-730e-4be7-963f-df0ef4d3573b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected",
+                    "items": [
+                        {
+                            "description": "Label 'REED_PULSE_F'",
+                            "pos": {
+                                "x": 1.5494,
+                                "y": 3.0988
+                            },
+                            "uuid": "f85a5f45-b3be-46ac-a290-a48cf1f3e913"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                }
+            ]
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_sch"
+}

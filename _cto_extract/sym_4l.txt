@@ -1,0 +1,369 @@
+#PWR0002 PE                           
+#PWR0003 +5V                          MoriShield_Carrier:+5V
+#PWR0005 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0006 GND                          MoriShield_Carrier:GND
+#PWR0007 GND                          MoriShield_Carrier:GND
+#PWR0011 GND                          MoriShield_Carrier:GND
+#PWR0012 GND                          MoriShield_Carrier:GND
+#PWR0013 GND                          MoriShield_Carrier:GND
+#PWR0014 GND                          MoriShield_Carrier:GND
+#PWR0020 +5V                          MoriShield_Carrier:+5V
+#PWR0021 GND                          MoriShield_Carrier:GND
+#PWR0022 GND                          MoriShield_Carrier:GND
+#PWR0023 +5V                          MoriShield_Carrier:+5V
+#PWR0024 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0025 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0026 GND                          MoriShield_Carrier:GND
+#PWR0027 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0028 GND                          MoriShield_Carrier:GND
+#PWR0029 GND                          MoriShield_Carrier:GND
+#PWR0034 PE                           MoriShield_Carrier:PE
+#PWR0035 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0037 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0039 GND                          MoriShield_Carrier:GND
+#PWR0041 GND                          MoriShield_Carrier:GND
+#PWR0043 GND                          MoriShield_Carrier:GND
+#PWR0045 GND                          MoriShield_Carrier:GND
+#PWR0047 GND                          MoriShield_Carrier:GND
+#PWR0049 GND                          MoriShield_Carrier:GND
+#PWR0051 GND                          MoriShield_Carrier:GND
+#PWR0053 GND                          MoriShield_Carrier:GND
+#PWR0055 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0057 GND                          MoriShield_Carrier:GND
+#PWR0059 GND                          MoriShield_Carrier:GND
+#PWR0061 GND                          MoriShield_Carrier:GND
+#PWR0063 GND                          MoriShield_Carrier:GND
+#PWR0065 GND                          MoriShield_Carrier:GND
+#PWR0067 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0069 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0071 GND                          MoriShield_Carrier:GND
+#PWR0079 GND                          MoriShield_Carrier:GND
+#PWR0081 GND                          MoriShield_Carrier:GND
+#PWR0083 GND                          MoriShield_Carrier:GND
+#PWR0085 GND                          MoriShield_Carrier:GND
+#PWR0087 GND                          MoriShield_Carrier:GND
+#PWR0089 GND                          MoriShield_Carrier:GND
+#PWR0091 GND                          MoriShield_Carrier:GND
+#PWR0093 +5V_IN                       MoriShield_Carrier:+5V_IN
+#PWR0095 GND                          MoriShield_Carrier:GND
+#PWR0097 +5V_IN                       MoriShield_Carrier:+5V_IN
+#PWR0099 +5V_F                        MoriShield_Carrier:+5V_F
+#PWR0103 +5V_F                        MoriShield_Carrier:+5V_F
+#PWR0105 +5V                          MoriShield_Carrier:+5V
+#PWR0113 +5V                          MoriShield_Carrier:+5V
+#PWR0115 GND                          MoriShield_Carrier:GND
+#PWR0117 +5V                          MoriShield_Carrier:+5V
+#PWR0119 GND                          MoriShield_Carrier:GND
+#PWR0125 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0127 GND                          MoriShield_Carrier:GND
+#PWR0129 +5V                          MoriShield_Carrier:+5V
+#PWR0131 GND                          MoriShield_Carrier:GND
+#PWR0137 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0139 GND                          MoriShield_Carrier:GND
+#PWR0141 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0143 GND                          MoriShield_Carrier:GND
+#PWR0145 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0147 GND                          MoriShield_Carrier:GND
+#PWR0149 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0151 GND                          MoriShield_Carrier:GND
+#PWR0153 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0155 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0157 GND                          MoriShield_Carrier:GND
+#PWR0159 GND                          MoriShield_Carrier:GND
+#PWR0161 LED5V_A                      MoriShield_Carrier:LED5V_A
+#PWR0163 LED5V_A                      MoriShield_Carrier:LED5V_A
+#PWR0165 +5V                          MoriShield_Carrier:+5V
+#PWR0167 GND                          MoriShield_Carrier:GND
+#PWR0169 LED33_A                      MoriShield_Carrier:LED33_A
+#PWR0171 LED33_A                      MoriShield_Carrier:LED33_A
+#PWR0173 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0175 PE                           MoriShield_Carrier:PE
+#PWR0177 PE                           MoriShield_Carrier:PE
+#PWR0179 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0181 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0183 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0187 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0189 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0191 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0195 GND                          MoriShield_Carrier:GND
+#PWR0196 +5V                          MoriShield_Carrier:+5V
+#PWR0198 GND                          MoriShield_Carrier:GND
+#PWR0200 +5V                          MoriShield_Carrier:+5V
+#PWR0202 +5V                          MoriShield_Carrier:+5V
+#PWR0204 GND                          MoriShield_Carrier:GND
+#PWR0206 +5V                          MoriShield_Carrier:+5V
+#PWR0208 GND                          MoriShield_Carrier:GND
+#PWR0210 GND                          MoriShield_Carrier:GND
+#PWR0212 +5V                          MoriShield_Carrier:+5V
+#PWR0214 GND                          MoriShield_Carrier:GND
+#PWR0216 +5V                          MoriShield_Carrier:+5V
+#PWR0218 GND                          MoriShield_Carrier:GND
+#PWR0222 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0224 GND                          MoriShield_Carrier:GND
+#PWR0226 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0228 GND                          MoriShield_Carrier:GND
+#PWR0230 GND                          MoriShield_Carrier:GND
+#PWR0232 GND                          MoriShield_Carrier:GND
+#PWR0234 GND                          MoriShield_Carrier:GND
+#PWR0236 GND                          MoriShield_Carrier:GND
+#PWR0238 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0240 GND                          MoriShield_Carrier:GND
+#PWR0242 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0244 PE                           MoriShield_Carrier:PE
+#PWR0246 PE                           MoriShield_Carrier:PE
+#PWR0248 PE                           MoriShield_Carrier:PE
+#PWR0250 PE                           MoriShield_Carrier:PE
+#PWR0252 PE                           MoriShield_Carrier:PE
+#PWR0254 PE                           MoriShield_Carrier:PE
+#PWR0256 +5V                          MoriShield_Carrier:+5V
+#PWR0258 GND                          MoriShield_Carrier:GND
+#PWR0260 GND                          MoriShield_Carrier:GND
+#PWR0262 GND                          MoriShield_Carrier:GND
+#PWR0266 +5V                          MoriShield_Carrier:+5V
+#PWR0268 +5V                          MoriShield_Carrier:+5V
+#PWR0270 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0272 GND                          MoriShield_Carrier:GND
+#PWR0276 GND                          MoriShield_Carrier:GND
+#PWR0278 GND                          MoriShield_Carrier:GND
+#PWR0288 GND                          MoriShield_Carrier:GND
+#PWR0290 GND                          MoriShield_Carrier:GND
+#PWR0294 GND                          MoriShield_Carrier:GND
+#PWR0296 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0297 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0298 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0299 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0300 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0301 GND                          MoriShield_Carrier:GND
+#PWR0302 GND                          MoriShield_Carrier:GND
+#PWR0303 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0304 GND                          MoriShield_Carrier:GND
+#PWR0308 GND                          MoriShield_Carrier:GND
+#PWR0309 GND                          MoriShield_Carrier:GND
+#PWR0310 GND                          MoriShield_Carrier:GND
+#PWR0311 GND                          MoriShield_Carrier:GND
+#PWR0312 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0313 GND                          MoriShield_Carrier:GND
+#PWR0314 GND                          MoriShield_Carrier:GND
+#PWR0315 GND                          MoriShield_Carrier:GND
+#PWR0316 3V3_C                        MoriShield_Carrier:3V3_C
+#PWR0320 PE                           MoriShield_Carrier:PE
+#PWR0321 PE                           MoriShield_Carrier:PE
+#PWR0322 PE                           MoriShield_Carrier:PE
+#PWR0900 GND                          MoriShield_Carrier:GND
+#PWR0901 +5V                          MoriShield_Carrier:+5V
+#PWR0902 GND                          MoriShield_Carrier:GND
+#PWR0904 GND                          MoriShield_Carrier:GND
+#PWR0905 GND                          MoriShield_Carrier:GND
+#PWR0906 GND                          MoriShield_Carrier:GND
+#PWR0907 PE                           MoriShield_Carrier:PE
+#PWR0908 GND                          MoriShield_Carrier:GND
+#PWR0910 +5V                          MoriShield_Carrier:+5V
+#PWR0911 GND                          MoriShield_Carrier:GND
+#PWR0912 GND                          MoriShield_Carrier:GND
+#PWR0913 GND                          MoriShield_Carrier:GND
+#PWR0914 GND                          MoriShield_Carrier:GND
+#PWR0915 GND                          MoriShield_Carrier:GND
+#PWR0916 GND                          MoriShield_Carrier:GND
+#PWR0917 GND                          MoriShield_Carrier:GND
+#PWR0918 GND                          MoriShield_Carrier:GND
+#PWR0919 GND                          MoriShield_Carrier:GND
+#PWR0920 GND                          MoriShield_Carrier:GND
+#PWR0921 GND                          MoriShield_Carrier:GND
+#PWR0922 +5V                          MoriShield_Carrier:+5V
+#PWR0923 GND                          MoriShield_Carrier:GND
+#PWR0924 GND                          MoriShield_Carrier:GND
+#PWR0925 PWR_FLAG                     MoriShield_Carrier:PWR_FLAG
+#PWR0926 GND                          MoriShield_Carrier:GND
+C1     10uF/25V                     MoriShield_Carrier:C_Polarized
+C3     100nF                        MoriShield_Carrier:C
+C4     100nF                        MoriShield_Carrier:C
+C5     470uF/25V                    MoriShield_Carrier:C_Polarized
+C7     100nF                        MoriShield_Carrier:C
+C8     100nF                        MoriShield_Carrier:C
+C9     100nF                        MoriShield_Carrier:C
+C10    100nF                        MoriShield_Carrier:C
+C13    10uF/50V_X7R                 MoriShield_Carrier:C_Polarized
+C14    100nF                        MoriShield_Carrier:C
+C16    100nF                        MoriShield_Carrier:C
+C26    1uF/10V                      MoriShield_Carrier:C
+C27    1uF/10V                      MoriShield_Carrier:C
+C28    10uF/10V                     MoriShield_Carrier:C
+C29    100nF                        MoriShield_Carrier:C
+C30    100nF                        MoriShield_Carrier:C
+C31    100uF/16V                    MoriShield_Carrier:C_Polarized
+C32    10uF/16V                     MoriShield_Carrier:C
+C33    100nF/16V                    MoriShield_Carrier:C
+C34    100nF                        MoriShield_Carrier:C
+C35    100nF                        MoriShield_Carrier:C
+C36    100nF                        MoriShield_Carrier:C
+C38    10uF/10V                     MoriShield_Carrier:C
+C39    100nF                        MoriShield_Carrier:C
+C40    100nF                        MoriShield_Carrier:C
+C41    100nF                        MoriShield_Carrier:C
+C42    100nF                        MoriShield_Carrier:C
+C43    100nF                        MoriShield_Carrier:C
+C44    100nF                        MoriShield_Carrier:C
+C45    100nF                        MoriShield_Carrier:C
+C46    100nF                        MoriShield_Carrier:C
+C47    100nF                        MoriShield_Carrier:C
+C48    100nF                        MoriShield_Carrier:C
+C49    100nF                        MoriShield_Carrier:C
+C50    100nF                        MoriShield_Carrier:C
+C51    10uF/16V                     MoriShield_Carrier:C
+D2     SMCJ5.0A                     MoriShield_Carrier:D_TVS
+D3     GRN                          MoriShield_Carrier:LED
+D4     YEL                          MoriShield_Carrier:LED
+D6     RED                          MoriShield_Carrier:LED
+D7     SS56                         MoriShield_Carrier:D_Schottky
+ESD1   SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD2   SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD3   PESD5V0S1BA                  MoriShield_Carrier:D
+ESD4   PESD5V0S1BA                  MoriShield_Carrier:D
+ESD7   SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD8   SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD9   SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD10  SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD11  SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD12  SRV05-4                      MoriShield_Carrier:SRV05-4
+ESD16  SMBJ5.0A                     MoriShield_Carrier:D
+ESD17  PESD5V0S1BA                  MoriShield_Carrier:D
+ESD18  PESD5V0S1BA                  MoriShield_Carrier:D
+ESD19  PESD5V0S1BA                  MoriShield_Carrier:D
+ESD20  PESD5V0S1BA                  MoriShield_Carrier:D
+F1     PTC_4A                       MoriShield_Carrier:Fuse
+FB2    120R@100MHz 2A               MoriShield_Carrier:L
+J1     Sock_1x22_L                  MoriShield_Carrier:Sock_1x22_L
+J2     Sock_1x22_R                  MoriShield_Carrier:Sock_1x22_R
+J3     Sock_1x12_L                  MoriShield_Carrier:Sock_1x12_L
+J4     Sock_1x12_R                  MoriShield_Carrier:Sock_1x12_R
+J5     MX126-5.0-02P                MoriShield_Carrier:ScrewTerm_2
+J6     Sock_1x07                    MoriShield_Carrier:Sock_1x07
+J7     Sock_1x08                    MoriShield_Carrier:Sock_1x08
+J8     Sock_1x06                    MoriShield_Carrier:Sock_1x06
+J11    JST_XH_4                     MoriShield_Carrier:JST_XH_4
+J12    JST_XH_4                     MoriShield_Carrier:JST_XH_4
+J13    JST_ZH_5                     MoriShield_Carrier:JST_ZH_5
+J14    JST_XH_4                     MoriShield_Carrier:JST_XH_4
+J15    JST_XH_3                     MoriShield_Carrier:JST_XH_3
+J16    JST_XH_2                     MoriShield_Carrier:JST_XH_2
+J17    JST_XH_4                     MoriShield_Carrier:JST_XH_4
+J18    ScrewTerm_2                  MoriShield_Carrier:ScrewTerm_2
+J19    PE/EARTH                     MoriShield_Carrier:ScrewTerm_2
+J20    JST_XH_4                     MoriShield_Carrier:JST_XH_4
+J21    FDC1004                      MoriShield_Carrier:JST_XH_4
+J22    JST_XH_2                     MoriShield_Carrier:JST_XH_2
+J23    EXT_BTN                      MoriShield_Carrier:JST_XH_2
+J24    PANEL_LED_5V                 MoriShield_Carrier:JST_XH_4
+J25    BUZZER_5V                    MoriShield_Carrier:JST_XH_2
+Q1     2N7000                       MoriShield_Carrier:Q_2N7000
+Q2     AO3401A                      MoriShield_Carrier:Q_PMOS
+Q3     AO3401A                      MoriShield_Carrier:Q_PMOS
+Q4     2N7002                       MoriShield_Carrier:Q_NMOS
+Q5     2N7000                       MoriShield_Carrier:Q_2N7000
+Q6     2N7000                       MoriShield_Carrier:Q_2N7000
+Q7     AO3401A                      MoriShield_Carrier:Q_PMOS
+Q8     2N7002                       MoriShield_Carrier:Q_NMOS
+Q9     AO3401A                      MoriShield_Carrier:Q_PMOS
+R1     DNP                          MoriShield_Carrier:R
+R2     DNP                          MoriShield_Carrier:R
+R5     10k                          MoriShield_Carrier:R
+R6     1k                           MoriShield_Carrier:R
+R7     1k                           MoriShield_Carrier:R
+R10    10k                          MoriShield_Carrier:R
+R11    1k                           MoriShield_Carrier:R
+R13    10k                          MoriShield_Carrier:R
+R14    10k                          MoriShield_Carrier:R
+R15    1k                           MoriShield_Carrier:R
+R16    4.7k                         MoriShield_Carrier:R
+R20    100k                         MoriShield_Carrier:R
+R21    100k                         MoriShield_Carrier:R
+R22    10k                          MoriShield_Carrier:R
+R23    100k                         MoriShield_Carrier:R
+R24    10k                          MoriShield_Carrier:R
+R25    4.7k                         MoriShield_Carrier:R
+R26    4.7k                         MoriShield_Carrier:R
+R27    4.7k                         MoriShield_Carrier:R
+R28    4.7k                         MoriShield_Carrier:R
+R29    1k                           MoriShield_Carrier:R
+R30    1k                           MoriShield_Carrier:R
+R31    47R                          MoriShield_Carrier:R
+R32    47R                          MoriShield_Carrier:R
+R33    47R                          MoriShield_Carrier:R
+R34    47R                          MoriShield_Carrier:R
+R35    4.7k                         MoriShield_Carrier:R
+R36    4.7k                         MoriShield_Carrier:R
+R37    4.7k                         MoriShield_Carrier:R
+R38    4.7k                         MoriShield_Carrier:R
+R39    4.7k                         MoriShield_Carrier:R
+R40    4.7k                         MoriShield_Carrier:R
+R41    4.7k                         MoriShield_Carrier:R
+R42    4.7k                         MoriShield_Carrier:R
+R43    4.7k                         MoriShield_Carrier:R
+R44    4.7k                         MoriShield_Carrier:R
+R45    4.7k                         MoriShield_Carrier:R
+R46    4.7k                         MoriShield_Carrier:R
+R47    4.7k                         MoriShield_Carrier:R
+R48    4.7k                         MoriShield_Carrier:R
+R49    10k                          MoriShield_Carrier:R
+R50    100R                         MoriShield_Carrier:R
+R51    10k                          MoriShield_Carrier:R
+R52    10k                          MoriShield_Carrier:R
+R53    100k                         MoriShield_Carrier:R
+R54    10k                          MoriShield_Carrier:R
+R55    100k                         MoriShield_Carrier:R
+SW1    SW_6x6                       MoriShield_Carrier:SW_Push
+TP2    +5V                          MoriShield_Carrier:TP
+TP3    +5V                          MoriShield_Carrier:TP
+TP4    3V3_C                        MoriShield_Carrier:TP
+TP5    GND                          MoriShield_Carrier:TP
+TP6    RST_ESP                      MoriShield_Carrier:TP
+TP7    I2C0_SDA                     MoriShield_Carrier:TP
+TP8    I2C0_SCL                     MoriShield_Carrier:TP
+TP9    UART2_MOD_TX                 MoriShield_Carrier:TP
+TP10   UART2_MOD_RX                 MoriShield_Carrier:TP
+TP11   I2C0_SDA_CH6                 MoriShield_Carrier:TP
+TP12   I2C0_SCL_CH6                 MoriShield_Carrier:TP
+U4     TPS3823-33                   MoriShield_Carrier:TPS3823
+U6     TPS7A2033                    MoriShield_Carrier:TPS7A2033
+U7     TCA9548A                     MoriShield_Carrier:TCA9548A
+U8     TCA9535                      MoriShield_Carrier:TCA9535
+BZ     Buzzer_5V                    
+U      PCA9546A                     
+U      TCA9535                      
+J      JST_XH_4                     
+U      Buck_EN                      
+U      TPS54360B                    
+Q      2N7000                       
+J      Sock_1x08                    
+J      JST_XH_2                     
+D      D_Schottky                   
+U      TCA9548A                     
+U      TPS7A2033                    
+U      MAX3485                      
+D      D_TVS                        
+J      Sock_1x12_L                  
+C      C                            
+R      R                            
+J      JST_ZH_5                     
+J      ScrewTerm_2                  
+Q      Q_PMOS                       
+U      DS3231SN                     
+C      C_Polarized                  
+J      JST_XH_3                     
+U      TPS3823-33                   
+D      LED                          
+L      L                            
+SW     SW_Push                      
+J      Sock_1x07                    
+ESD    SRV05-4                      
+J      Sock_1x12_R                  
+U      AMS1117-3.3                  
+J      Sock_1x22_R                  
+Q      Q_NMOS                       
+TP     TestPoint                    
+BT     BAT                          
+J      Sock_1x04                    
+J      Sock_1x06                    
+J      Sock_1x22_L                  
+F      Fuse                         
+D      D                            

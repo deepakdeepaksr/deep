@@ -1,0 +1,1032 @@
+{
+ "via_count": 229,
+ "vias_in_pads": 65,
+ "vias_in_pads_detail": [
+  {
+   "via": [
+    244.0,
+    171.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "3V3_C",
+   "pad": "R24.1",
+   "padnet": "3V3_C"
+  },
+  {
+   "via": [
+    236.963,
+    171.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "3V3_C",
+   "pad": "C4.1",
+   "padnet": "3V3_C"
+  },
+  {
+   "via": [
+    143.55,
+    159.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "3V3_C",
+   "pad": "R7.2",
+   "padnet": "3V3_C"
+  },
+  {
+   "via": [
+    201.55,
+    175.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "3V3_C",
+   "pad": "R38.2",
+   "padnet": "3V3_C"
+  },
+  {
+   "via": [
+    253.537,
+    175.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C46.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    190.063,
+    168.95
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "Q4.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    239.037,
+    171.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C4.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    295.5,
+    186.963
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C50.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    237.537,
+    190.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C45.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    252.0,
+    158.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "R55.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    244.0,
+    164.25
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C30.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    187.562,
+    173.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C51.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    174.037,
+    155.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C7.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    249.037,
+    175.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C33.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    178.338,
+    158.3
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C10.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    239.037,
+    174.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C29.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    182.037,
+    173.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C27.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    285.7,
+    103.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "ESD16.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    300.75,
+    147.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C49.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    184.863,
+    168.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "U6.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    265.788,
+    191.25
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C48.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    247.563,
+    154.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C38.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    174.037,
+    158.3
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C9.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    177.037,
+    173.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C26.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    251.037,
+    189.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C47.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    178.338,
+    155.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "GND",
+   "pad": "C8.2",
+   "padnet": "GND"
+  },
+  {
+   "via": [
+    291.55,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R45.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    235.463,
+    190.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "C45.1",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    286.137,
+    186.95
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "ESD12.4",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    291.45,
+    134.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R47.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    263.712,
+    191.25
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "C48.1",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    256.55,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R41.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    272.137,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "ESD9.5",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    248.963,
+    189.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "C47.1",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    243.05,
+    189.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R40.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    277.55,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R43.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    251.137,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "ESD10.5",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    270.0,
+    190.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R44.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    291.5,
+    136.75
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R48.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    243.05,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R39.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    291.5,
+    189.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R46.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    295.5,
+    189.037
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "C50.1",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    286.137,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "ESD12.5",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    256.55,
+    189.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "R42.2",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    298.75,
+    147.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/3V3_SENS_SW",
+   "pad": "C49.1",
+   "padnet": "/3V3_SENS_SW"
+  },
+  {
+   "via": [
+    174.963,
+    173.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "C26.1",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    280.3,
+    103.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "ESD16.1",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    180.0,
+    178.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "R21.1",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    139.25,
+    168.75
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "R6.2",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    250.062,
+    154.95
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "Q7.2",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    184.863,
+    168.95
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "U6.3",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    175.063,
+    168.95
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "Q3.2",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    184.863,
+    167.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "+5V",
+   "pad": "U6.1",
+   "padnet": "+5V"
+  },
+  {
+   "via": [
+    153.95,
+    149.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/LED_DRV1",
+   "pad": "R51.1",
+   "padnet": "/LED_DRV1"
+  },
+  {
+   "via": [
+    194.45,
+    172.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C1_SCL",
+   "pad": "R37.1",
+   "padnet": "/I2C1_SCL"
+  },
+  {
+   "via": [
+    237.65,
+    187.5
+   ],
+   "size": null,
+   "drill": 0.45,
+   "net": "/+5V_SENS",
+   "pad": "ESD11.4",
+   "padnet": "/+5V_SENS"
+  },
+  {
+   "via": [
+    294.55,
+    134.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH6",
+   "pad": "R47.1",
+   "padnet": "/I2C0_SDA_CH6"
+  },
+  {
+   "via": [
+    227.75,
+    177.5
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_MUX_SD0",
+   "pad": "R31.1",
+   "padnet": "/I2C0_MUX_SD0"
+  },
+  {
+   "via": [
+    179.862,
+    185.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH1",
+   "pad": "ESD8.1",
+   "padnet": "/I2C0_SDA_CH1"
+  },
+  {
+   "via": [
+    269.862,
+    185.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH4",
+   "pad": "ESD9.1",
+   "padnet": "/I2C0_SDA_CH4"
+  },
+  {
+   "via": [
+    239.95,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH2",
+   "pad": "R39.1",
+   "padnet": "/I2C0_SDA_CH2"
+  },
+  {
+   "via": [
+    248.862,
+    185.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH3",
+   "pad": "ESD10.1",
+   "padnet": "/I2C0_SDA_CH3"
+  },
+  {
+   "via": [
+    253.25,
+    186.0
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH3",
+   "pad": "R41.1",
+   "padnet": "/I2C0_SDA_CH3"
+  },
+  {
+   "via": [
+    283.863,
+    185.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/I2C0_SDA_CH5",
+   "pad": "ESD12.1",
+   "padnet": "/I2C0_SDA_CH5"
+  },
+  {
+   "via": [
+    152.7,
+    141.05
+   ],
+   "size": null,
+   "drill": 0.3,
+   "net": "/LED_DRV2",
+   "pad": "R52.1",
+   "padnet": "/LED_DRV2"
+  }
+ ],
+ "esd": [
+  {
+   "conn": "J11",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 75.62
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH0",
+     "esd": "ESD7",
+     "copper_mm": 23.78,
+     "straight_mm": 14.71
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH0",
+     "esd": "ESD7",
+     "copper_mm": 21.46,
+     "straight_mm": 17.67
+    }
+   ]
+  },
+  {
+   "conn": "J12",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 59.75
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH1",
+     "esd": "ESD8",
+     "copper_mm": 21.06,
+     "straight_mm": 18.73
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH1",
+     "esd": "ESD8",
+     "copper_mm": 24.47,
+     "straight_mm": 21.79
+    }
+   ]
+  },
+  {
+   "conn": "J13",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/+5V_SENS",
+     "esd": "ESD11",
+     "copper_mm": 20.76,
+     "straight_mm": 8.17
+    },
+    {
+     "pin": "2",
+     "net": "/I2C0_SDA_CH2",
+     "esd": "ESD11",
+     "copper_mm": 14.87,
+     "straight_mm": 9.2
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH2",
+     "esd": "ESD11",
+     "copper_mm": 10.75,
+     "straight_mm": 7.93
+    }
+   ]
+  },
+  {
+   "conn": "J14",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 8.58
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH3",
+     "esd": "ESD10",
+     "copper_mm": 11.29,
+     "straight_mm": 9.73
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH3",
+     "esd": "ESD10",
+     "copper_mm": 13.03,
+     "straight_mm": 12.8
+    }
+   ]
+  },
+  {
+   "conn": "J15",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 101.12
+    },
+    {
+     "pin": "3",
+     "net": "/SOIL_ADC_RAW",
+     "esd": "ESD4",
+     "copper_mm": 27.62,
+     "straight_mm": 21.17
+    }
+   ]
+  },
+  {
+   "conn": "J16",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 87.61
+    },
+    {
+     "pin": "2",
+     "net": "/FSR_ADC_RAW",
+     "esd": "ESD3",
+     "copper_mm": 26.54,
+     "straight_mm": 18.06
+    }
+   ]
+  },
+  {
+   "conn": "J17",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 21.6
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH4",
+     "esd": "ESD9",
+     "copper_mm": 10.32,
+     "straight_mm": 9.73
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH4",
+     "esd": "ESD9",
+     "copper_mm": 17.82,
+     "straight_mm": 12.8
+    }
+   ]
+  },
+  {
+   "conn": "J20",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 65.0
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH6",
+     "esd": "ESD19",
+     "copper_mm": 7.3,
+     "straight_mm": 5.37
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH6",
+     "esd": "ESD18",
+     "copper_mm": 14.44,
+     "straight_mm": 10.31
+    }
+   ]
+  },
+  {
+   "conn": "J21",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/3V3_SENS_SW",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 34.91
+    },
+    {
+     "pin": "3",
+     "net": "/I2C0_SCL_CH5",
+     "esd": "ESD12",
+     "copper_mm": 11.29,
+     "straight_mm": 9.73
+    },
+    {
+     "pin": "4",
+     "net": "/I2C0_SDA_CH5",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 12.8
+    }
+   ]
+  },
+  {
+   "conn": "J22",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/REED_PULSE",
+     "esd": "ESD17",
+     "copper_mm": 18.19,
+     "straight_mm": 11.24
+    }
+   ]
+  },
+  {
+   "conn": "J23",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "/EVENT_BTN",
+     "esd": "ESD20",
+     "copper_mm": 15.67,
+     "straight_mm": 14.51
+    }
+   ]
+  },
+  {
+   "conn": "J24",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "+5V",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 153.83
+    },
+    {
+     "pin": "2",
+     "net": "/LED1_K",
+     "esd": null
+    },
+    {
+     "pin": "3",
+     "net": "/LED2_K",
+     "esd": null
+    }
+   ]
+  },
+  {
+   "conn": "J25",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "+5V",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 168.08
+    },
+    {
+     "pin": "2",
+     "net": "/BZ_NEG",
+     "esd": null
+    }
+   ]
+  },
+  {
+   "conn": "J26",
+   "pads": [
+    {
+     "pin": "1",
+     "net": "3V3_C",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 44.68
+    },
+    {
+     "pin": "3",
+     "net": "/I2C1_SCL",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 37.37
+    },
+    {
+     "pin": "4",
+     "net": "/I2C1_SDA",
+     "esd": null,
+     "copper_mm": null,
+     "straight_mm": 35.44
+    }
+   ]
+  }
+ ]
+}

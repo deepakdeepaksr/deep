@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:49:17",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [+5V] on F.Cu, length 5.0990 mm",
+                    "pos": {
+                        "x": 3.0,
+                        "y": 5.0
+                    },
+                    "uuid": "9847cd53-39fb-45fa-8ea6-e177d95fd16a"
+                },
+                {
+                    "description": "Via [+5V] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 161.0,
+                        "y": 103.0
+                    },
+                    "uuid": "bc442b6a-2f69-4214-980a-dc41116ab9c0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+5V] on F.Cu, length 4.1231 mm",
+                    "pos": {
+                        "x": 2.0,
+                        "y": 1.0
+                    },
+                    "uuid": "2faf6331-60f2-4c7e-81e3-0af38926ab0f"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+5V] on F.Cu, length 5.0990 mm",
+                    "pos": {
+                        "x": 3.0,
+                        "y": 5.0
+                    },
+                    "uuid": "9847cd53-39fb-45fa-8ea6-e177d95fd16a"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

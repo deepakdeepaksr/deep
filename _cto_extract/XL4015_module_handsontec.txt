@@ -1,0 +1,136 @@
+1 www.handsontec.com 
+ 
+ 
+Handson Technology 
+Data Specs 
+XL4015 Step-Down DC Module with CV/CV Control 
+ 
+XL4015 is a 180KHz fixed frequency PWM buck (step-down) DC/DC converter module, capable of driving 
+a 5A load with high  efficiency, low ripple and excellent line and  load regulation. This module is with 
+constant Voltage (CV) and constant current (CA) adjustment control. Suitable for general purpose DC 
+regulator and battery charger application. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SKU: PSU1031 
+ 
+Brief  Data: 
+ 
+ Input Voltage: 8Vdc~36Vdc. 
+ Output voltage: 1.25Vdc~32Vdc. 
+ Output current: Adjustable maximum 5A. 
+ Voltage Regulation: ± 2.5% 
+ Load Regulation: ± 0.5% 
+ Output ripple: 50mV (max) 20M bandwidth 
+ Switching frequency: 300KHz 
+ Conversion efficiency: 95% (the highest) 
+ Rectification: non-synchronous rectification 
+ Module Properties: non-isolated constant current and voltage module. 
+ Size: 51x26.3x14 (LxWxH) (mm). 
+ Operating Temperature: -40 ° to +85 ° 
+ 
+ 
+2 www.handsontec.com 
+ 
+Board Dimension: 
+Unit: mm 
+ 
+ 
+ 
+ 
+ 
+  
+3 www.handsontec.com 
+ 
+Functional Diagram: 
+ 
+ 
+ 
+Function Description 
+Input Voltage 8 ~ 36Vdc. This is step down converter, input must higher 
+than output voltage. 
+Output Voltage 1.25 ~ 32Vdc. This is step down converter, input must 
+higher than output voltage. 
+Output Voltage Adjustment Clockwise: Increase Voltage. 
+Counter clockwise: Decrease Voltage. 
+Output Current Adjustment Clockwise: Increase Current limit. 
+Counter clockwise: Decrease Current limit. 
+Red LED Indicator Constant Current Mode Operation. 
+Blue LED Indicator Battery Charger Mode: Charging in Progress. 
+Green LED Indicator Battery Charger Mode: Battery full charge. 
+ 
+  
+4 www.handsontec.com 
+ 
+Schematic: 
+ 
+ 
+ 
+ 
+  
+5 www.handsontec.com 
+ 
+Application Example: 
+ 
+ 
+  
+6 www.handsontec.com 
+ 
+ 
+Handsontec.com 
+We have the parts for your ideas 
+ 
+HandsOn Technology provides a multimedia and interactive platform for 
+everyone interested in electronics. From beginner to diehard, from student 
+to lecturer. Information, education, inspiration and entertainment. Analog 
+and digital, practical and theoretical; software and hardware.  
+ 
+ 
+ 
+HandsOn Technology support Open Source Hardware (OSHW) 
+Development Platform. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Learn : Design : Share 
+ 
+ 
+handsontec.com 
+ 
+ 
+ 
+ 
+7 www.handsontec.com 
+ 
+The Face behind our product quality… 
+In a world of constant change and continuous technological development, a new or replacement 
+product is never far away – and they all need to be tested. 
+Many vendors simply import and sell wihtout checks and this cannot be the ultimate interests of 
+anyone, particularly the customer. Every part sell on Handsotec is fully tested. So when buying from 
+Handsontec products range, you can be confident you’re getting outstanding quality and value. 
+ 
+We keep adding the new parts so that you can get rolling on your next project. 
+ 
+Breakout Boards & Modules 
+ 
+Connectors Electro-Mechanical Parts 
+ 
+Engineering Material  
+Mechanical Hardware 
+ 
+P 
+Electronics Components 
+Power Supply Arduino Board & Shield 
+ 
+Tools & Accessory 
+ 
+ 

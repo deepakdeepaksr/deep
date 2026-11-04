@@ -1,0 +1,89 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-04T07:58:46",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [
+        {
+            "description": "Pad net (/E22_M1) doesn't match net given by schematic (unconnected-(J1-IO10-Pad16))",
+            "items": [
+                {
+                    "description": "PTH pad 16 [/E22_M1] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 115.9
+                    },
+                    "uuid": "c56cf634-0fb2-4f87-871b-567c582c43db"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/E22_M0) doesn't match net given by schematic (unconnected-(J1-IO11-Pad17))",
+            "items": [
+                {
+                    "description": "PTH pad 17 [/E22_M0] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 113.36
+                    },
+                    "uuid": "b7cd0e1e-7190-41b5-86fd-ad900dd937d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/E22_M1) doesn't match net given by schematic (/E22_M1_STRAP)",
+            "items": [
+                {
+                    "description": "PTH pad 6 [/E22_M1] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/E22_M0) doesn't match net given by schematic (/E22_M0_STRAP)",
+            "items": [
+                {
+                    "description": "PTH pad 7 [/E22_M0] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "ccdf1b78-1fe1-4c1e-8a72-75ad6e07fdaf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Missing footprint R56 (0)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R57 (0)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

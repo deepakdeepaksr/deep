@@ -1,0 +1,268 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-01T17:40:16",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C45",
+                    "pos": {
+                        "x": 232.154,
+                        "y": 187.552
+                    },
+                    "uuid": "01d5f2ae-f69b-4875-98af-f6a47160d2fc"
+                },
+                {
+                    "description": "Reference field of ESD11",
+                    "pos": {
+                        "x": 231.979,
+                        "y": 188.08
+                    },
+                    "uuid": "4bab598f-e6c8-4500-a6c6-3fddcd929228"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ESD8",
+                    "pos": {
+                        "x": 187.55,
+                        "y": 191.082
+                    },
+                    "uuid": "7dd64f9b-f352-46ac-a4ee-33a4f8a6596e"
+                },
+                {
+                    "description": "Reference field of C44",
+                    "pos": {
+                        "x": 187.55,
+                        "y": 191.082
+                    },
+                    "uuid": "e83a4616-76a7-48d6-833b-d93da6401304"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of J20",
+                    "pos": {
+                        "x": 294.75,
+                        "y": 141.75
+                    },
+                    "uuid": "c04db1ce-cfed-44c2-b351-0102a3e0ba88"
+                },
+                {
+                    "description": "Segment of ESD19 on F.Silkscreen",
+                    "pos": {
+                        "x": 294.86,
+                        "y": 140.6
+                    },
+                    "uuid": "f65b51ca-966b-44e4-a518-c3cbb2537f52"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of ESD19 on F.Silkscreen",
+                    "pos": {
+                        "x": 294.86,
+                        "y": 140.6
+                    },
+                    "uuid": "7cc8d219-fa75-48d1-8b82-c0dcb4eb8337"
+                },
+                {
+                    "description": "Reference field of J20",
+                    "pos": {
+                        "x": 294.75,
+                        "y": 141.75
+                    },
+                    "uuid": "c04db1ce-cfed-44c2-b351-0102a3e0ba88"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ESD19",
+                    "pos": {
+                        "x": 291.39,
+                        "y": 140.864
+                    },
+                    "uuid": "41b9e8ae-e68d-4380-a9ca-368a0ae86f6d"
+                },
+                {
+                    "description": "Segment of ESD19 on F.Silkscreen",
+                    "pos": {
+                        "x": 294.86,
+                        "y": 140.6
+                    },
+                    "uuid": "f65b51ca-966b-44e4-a518-c3cbb2537f52"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ESD20",
+                    "pos": {
+                        "x": 146.646,
+                        "y": 122.646
+                    },
+                    "uuid": "290ca912-e0a8-4233-b738-1b9a435d6828"
+                },
+                {
+                    "description": "Segment of ESD17 on F.Silkscreen",
+                    "pos": {
+                        "x": 143.59,
+                        "y": 122.35
+                    },
+                    "uuid": "3343eecd-d5ee-481c-bdd2-261ed715ca8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of ESD20 on F.Silkscreen",
+                    "pos": {
+                        "x": 145.39,
+                        "y": 123.15
+                    },
+                    "uuid": "13a2e470-a99f-48e2-a88f-1f6c9dbddc11"
+                },
+                {
+                    "description": "Reference field of ESD20",
+                    "pos": {
+                        "x": 146.646,
+                        "y": 122.646
+                    },
+                    "uuid": "290ca912-e0a8-4233-b738-1b9a435d6828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of ESD20",
+                    "pos": {
+                        "x": 146.646,
+                        "y": 122.646
+                    },
+                    "uuid": "290ca912-e0a8-4233-b738-1b9a435d6828"
+                },
+                {
+                    "description": "Segment of ESD20 on F.Silkscreen",
+                    "pos": {
+                        "x": 145.39,
+                        "y": 123.15
+                    },
+                    "uuid": "3e28d7d1-8fe4-4cd6-8652-c2d1d5e5c62c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of D6",
+                    "pos": {
+                        "x": 133.0,
+                        "y": 177.0
+                    },
+                    "uuid": "d383e9fb-eda6-4e40-a67e-e07fe757ebe9"
+                },
+                {
+                    "description": "Arc of D6 on F.Silkscreen",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 175.73
+                    },
+                    "uuid": "ffd15442-9955-4d7c-ac99-c54df77562b4"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of C28",
+                    "pos": {
+                        "x": 216.0,
+                        "y": 106.0
+                    },
+                    "uuid": "23ceb0f8-097e-4aaa-a802-c6006b2053c9"
+                },
+                {
+                    "description": "Segment of D7 on F.Silkscreen",
+                    "pos": {
+                        "x": 213.09,
+                        "y": 106.25
+                    },
+                    "uuid": "61eb67da-00b0-4266-9830-54c3390cd551"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

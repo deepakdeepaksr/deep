@@ -1,0 +1,362 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T18:17:59",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of R30 on F.Silkscreen",
+                    "pos": {
+                        "x": 149.772936,
+                        "y": 186.735
+                    },
+                    "uuid": "afd650d7-449a-4353-ac31-ba4a0daab253"
+                },
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 186.5
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 186.5
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                },
+                {
+                    "description": "Segment of R25 on F.Silkscreen",
+                    "pos": {
+                        "x": 175.272936,
+                        "y": 186.735
+                    },
+                    "uuid": "c9b69184-73ea-4062-8704-17c264025275"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R25",
+                    "pos": {
+                        "x": 177.0,
+                        "y": 187.5
+                    },
+                    "uuid": "5a7c3137-4ab5-4e9d-9cbc-c49a47638238"
+                },
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 186.5
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J18 on F.Silkscreen",
+                    "pos": {
+                        "x": 138.3875,
+                        "y": 110.37
+                    },
+                    "uuid": "cd9e7816-dbf9-489d-baec-b22be60596f3"
+                },
+                {
+                    "description": "PCB text 'REED' on F.Silkscreen",
+                    "pos": {
+                        "x": 132.97,
+                        "y": 110.0
+                    },
+                    "uuid": "faf0c144-87a7-445f-b88e-aefdfd671322"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SPS30' on F.Silkscreen",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 186.5
+                    },
+                    "uuid": "a4fe5a0e-37cc-4739-9ba4-995bbcc5c47e"
+                },
+                {
+                    "description": "Pad 2 [PE] of ESD11 on F.Cu",
+                    "pos": {
+                        "x": 235.3625,
+                        "y": 186.5
+                    },
+                    "uuid": "6af83dea-085d-4975-861e-db319b1893e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SPS30' on F.Silkscreen",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 186.5
+                    },
+                    "uuid": "a4fe5a0e-37cc-4739-9ba4-995bbcc5c47e"
+                },
+                {
+                    "description": "Pad 5 [/+5V_SENS] of ESD11 on F.Cu",
+                    "pos": {
+                        "x": 237.6375,
+                        "y": 186.5
+                    },
+                    "uuid": "cae09b80-2880-429c-92af-daff07492ddf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 186.5
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                },
+                {
+                    "description": "Pad 2 [/FSR_ADC_F] of R30 on F.Cu",
+                    "pos": {
+                        "x": 151.0,
+                        "y": 186.0
+                    },
+                    "uuid": "cf15203f-ec1b-43c2-a7b9-98a5bf272efd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 186.5
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                },
+                {
+                    "description": "Pad 1 [/I2C0_SDA_CH0] of R25 on F.Cu",
+                    "pos": {
+                        "x": 174.5,
+                        "y": 186.0
+                    },
+                    "uuid": "910f9bc8-2625-4e77-97db-c1a44b16f124"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 186.5
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                },
+                {
+                    "description": "Pad 1 [/FSR_ADC_RAW] of R30 on F.Cu",
+                    "pos": {
+                        "x": 149.0,
+                        "y": 186.0
+                    },
+                    "uuid": "c2baf72a-d374-41e7-9554-e9e62fec91c6"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 186.5
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                },
+                {
+                    "description": "Pad 2 [/3V3_SENS_SW] of R25 on F.Cu",
+                    "pos": {
+                        "x": 176.5,
+                        "y": 186.0
+                    },
+                    "uuid": "c67bb905-7e99-499a-8aec-d63173480ff1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 186.5
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Pad 2 [PE] of ESD10 on F.Cu",
+                    "pos": {
+                        "x": 248.8625,
+                        "y": 186.0
+                    },
+                    "uuid": "df604428-3a43-455d-91ff-569dc466c81c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 186.5
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Pad 3 [/I2C0_SCL_CH3] of ESD10 on F.Cu",
+                    "pos": {
+                        "x": 248.8625,
+                        "y": 186.95
+                    },
+                    "uuid": "8123f709-3ebd-45d8-b910-fc4e3488fccf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 186.5
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Pad 5 [/3V3_SENS_SW] of ESD10 on F.Cu",
+                    "pos": {
+                        "x": 251.1375,
+                        "y": 186.0
+                    },
+                    "uuid": "ade554c9-dbca-47ca-8170-2b726a1ea67d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 186.5
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Pad 4 [/3V3_SENS_SW] of ESD10 on F.Cu",
+                    "pos": {
+                        "x": 251.1375,
+                        "y": 186.95
+                    },
+                    "uuid": "6d465b40-ec66-4e1d-aa95-98b66dce71de"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 186.5
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Pad 1 [/I2C0_SDA_CH3] of R41 on F.Cu",
+                    "pos": {
+                        "x": 253.45,
+                        "y": 186.0
+                    },
+                    "uuid": "35c2b3f6-7db4-45f9-8a0c-b2c79a9f5330"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

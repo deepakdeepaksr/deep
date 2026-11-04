@@ -1,0 +1,127 @@
+== J19 PE/EARTH
+   pad 1    PE
+   pad 2    GND
+== J16 JST_XH_2
+   pad 1    /3V3_SENS_SW
+   pad 2    /FSR_ADC_RAW
+== J18 ScrewTerm_2
+   pad 1    +5V_IN
+   pad 2    GND
+== J1 Sock_1x22_L
+   pad 1    3V3_C
+   pad 2    3V3_C
+   pad 3    /RST_ESP
+   pad 4    /I2C1_SDA
+   pad 5    /I2C1_SCL
+   pad 6    /PWR_EN
+   pad 8    /E22_AUX
+   pad 10   /UART1_LORA_TX
+   pad 11   /UART1_LORA_RX
+   pad 12   /I2C0_SDA
+   pad 13   /EVENT_BTN
+   pad 14   /I2C0_SCL
+   pad 16   /E22_M1
+   pad 17   /E22_M0
+   pad 18   /+5V_ESP
+   pad 22   GND
+== J20 JST_XH_4
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH6
+   pad 4    /I2C0_SDA_CH6
+== J2 Sock_1x22_R
+   pad 1    GND
+   pad 2    /FSR_ADC_F
+   pad 5    /SOIL_ADC_F
+   pad 6    /STATUS_LED
+   pad 7    /REED_PULSE_F
+   pad 8    /UART2_MOD_RX
+   pad 17   /UART2_MOD_TX
+   pad 18   /MPU_INT
+   pad 19   GND
+   pad 22   GND
+== J17 JST_XH_4
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH4
+   pad 4    /I2C0_SDA_CH4
+== J15 JST_XH_3
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /SOIL_ADC_RAW
+== J4 Sock_1x12_R
+   pad 1    /PWR_KEY
+   pad 2    GND
+   pad 3    3V3_C
+   pad 4    /UART2_MOD_RX
+   pad 5    /UART2_MOD_TX
+   pad 6    GND
+   pad 7    GND
+== J22 JST_XH_2
+   pad 1    /REED_PULSE
+   pad 2    GND
+== J5 MX126-5.0-02P
+   pad 1    +5V
+   pad 2    GND
+== J3 Sock_1x12_L
+   pad 1    /PWR_EN
+   pad 2    GND
+   pad 7    GND
+   pad 10   GND
+== J7 Sock_1x08
+   pad 1    /MPU_INT
+   pad 2    3V3_C
+   pad 3    /I2C1_SDA
+   pad 6    /I2C1_SCL
+   pad 7    GND
+   pad 8    3V3_C
+== J6 Sock_1x07
+   pad 1    GND
+   pad 2    /+5V_E22
+   pad 3    /E22_AUX
+   pad 4    /UART1_LORA_RX
+   pad 5    /UART1_LORA_TX
+   pad 6    /E22_M1
+   pad 7    /E22_M0
+== J23 EXT_BTN
+   pad 1    /EVENT_BTN
+   pad 2    GND
+== J14 JST_XH_4
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH3
+   pad 4    /I2C0_SDA_CH3
+== J21 FDC1004
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH5
+   pad 4    /I2C0_SDA_CH5
+== J12 JST_XH_4
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH1
+   pad 4    /I2C0_SDA_CH1
+== J8 Sock_1x06
+   pad 1    /I2C1_SCL
+   pad 4    /I2C1_SDA
+   pad 5    3V3_C
+   pad 6    GND
+== J11 JST_XH_4
+   pad 1    /3V3_SENS_SW
+   pad 2    GND
+   pad 3    /I2C0_SCL_CH0
+   pad 4    /I2C0_SDA_CH0
+== J24 PANEL_LED_5V
+   pad 1    +5V
+   pad 2    /LED1_K
+   pad 3    /LED2_K
+   pad 4    GND
+== J13 JST_ZH_5
+   pad 1    /+5V_SENS
+   pad 2    /I2C0_SDA_CH2
+   pad 3    /I2C0_SCL_CH2
+   pad 4    GND
+   pad 5    GND
+== J25 BUZZER_5V
+   pad 1    +5V
+   pad 2    /BZ_NEG

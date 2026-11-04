@@ -1,0 +1,1579 @@
+
+
+===== PAGE 1 =====
+SERIGREEN TECHNOLOGIES PRIVATE LIMITED
+Salem, Tamil Nadu
+MoriShield
+Pesticide-drift early warning at the plot boundary
+Confidential. Prepared for Serigreen and its build team. Not for onward circulation.
+Carrier PCB, Rev A: module fit
+Verification of the team's evidence on the ESP32 and modem boards, and what it
+changes
+Document
+MS-CAR-REV-A-003, version 1.1
+Date
+16 October 2026 (version 1.0: 13 October 2026)
+From
+Dr. Shanmugakumar Murugesan, Co-founder and CTO, Serigreen Technologies Private Limited
+To
+Deepak (hardware and electronics) and Aswin (firmware and software)
+Responds to
+Aswin's reply of 13 October to A1, A2 and A6 of MS-CAR-REV-A-001 v1.2: four caliper photos, the
+Parry 4G modem datasheet, the EdgeHax ESP32-S3 pinout, and two spacing figures (34.4 mm
+modem, 26.7 mm ESP32)
+Status
+For action. Four new blocking items (A7 to A10), and B10, the modem's 5 V supply, raised to
+blocking with MS-CAR-REV-A-004. Every other request in v1.2 stands as written unless section 10
+updates it. Not a release for fabrication: MS-CAR-REV-A-004 sets the release gate.
+Revision
+1.1: B10 raised to P0 and aligned with MS-CAR-REV-A-004 (dedicated 5 V converter for the
+modem); cross-references added. 1.0: first issue.
+Classification
+Confidential
+How this check was done
+Every figure in the reply was checked against the photos themselves (the verniers read on enlarged crops), against the two datasheets, and
+against the v3 board file that v1.2 reviewed (socket pad coordinates and nets). A value taken from a photo is marked as such, with its likely
+error. Nothing here was measured on a physical board; section 11 shows how to close that gap in under an hour.
+
+
+===== PAGE 2 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 2 of 19
+Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+1. Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+What is settled and what is open
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+To close before fabrication
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+2. What we received and how we checked it
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+3. Row spacing: what the readings mean
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+4. Row alignment and pin 1
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+5. Which way the modem board's pins point
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+6. Pin-outs against the carrier
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+The microSD conflict
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+7. The modem board: supply and control
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+Supply: 4.75 V minimum at the board's own connector
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+Control: what PWR_KEY, RESET and PWR_EN do
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+8. Mechanical fit and access
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+The modem board overhangs the top edge
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+The ESP32 board
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+9. A pin plan for the EdgeHax board
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+Rules the plan follows
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+The decision behind A6
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+10. Change requests
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+10.1 New requests
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 14
+10.2 Updates to v1.2 requests
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+11. How to measure and test-fit
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+Measuring one board, about ten minutes
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+Test-fit before ordering
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+12. Gates before fabrication, and how to respond
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16
+Appendix A. Pin maps
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+Appendix B. Photo readings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+Appendix C. References
+
+
+===== PAGE 3 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 3 of 19
+1. Summary
+Thank you for the quick and careful reply. It settles more than it leaves open. Both boards are now identified, both
+pin-outs are known, and your point that neither board uses the usual dev-board footprint is right: the v1.2
+suggestion that the rows probably sit on the 2.54 mm grid is withdrawn.
+Your outside readings are accurate: the photos show about 34.4 to 34.5 mm across the modem pins and about 26.7 to 26.8
+mm across the ESP32 pins, consistent with the 34.4 and 26.7 mm you sent. A socket footprint, though, needs the distance
+between pin centres, and an outside reading includes one pin width. The photos also hold inside readings, which cancel the pin
+width. For the ESP32 board the two readings together put the rows about 26.2 mm apart, centre to centre. For the modem
+board they disagree with each other; the outside reading with a standard 0.64 mm pin, backed by the vendor's photo, puts the
+rows about 33.8 mm apart. v3 has 26.00 and 33.56 mm, so both are about 0.2 mm narrow. That alone might still let the boards
+in, but v3 also offsets each pair of rows along their length (0.30 and 0.50 mm), which nothing in the evidence supports, and the
+modem's inside reading has to be retaken.
+The pin-outs show three things the spacing figures cannot. The EdgeHax board's own microSD slot uses GPIO10 to GPIO14, the
+pins v3 gives to the modem's reset, power key and UART (A7). In your photos and in the vendor's, the modem board's header
+pins stand up from its component side, while the carrier expects them to point down into J3 and J4 (A9). And the modem
+board overhangs the carrier's top edge by about 7.5 to 8 mm, so two of its four mounting holes land off the board (A12).
+What is settled and what is open
+Settled by your evidence
+Still open
+Both boards identified: EdgeHax S3-PRO (ESP32-S3-WROOM-1 N16R8)
+and Parry PTG4GBOB-SC104V1 (SIMCom A7672S).
+Centre-to-centre row spacing of both boards: retake at the pin roots
+and test-fit (A10).
+Neither board is on the 2.54 mm grid. The v1.2 grid note is withdrawn.
+Row offsets in v3, J1 by 0.30 mm and J4 by 0.50 mm: remove unless
+measured (A8).
+The ESP32 socket pin order matches the EdgeHax board on all 44 pins.
+Four modem lines on the ESP32 board's microSD pins (A7).
+The modem socket map is correct pin for pin: 1.8 V lines left
+unconnected, UART crossed, J3 pin 3 (VDD_IN_UART) on 3.3 V.
+Which way the modem board's pins point, and so whether J3 and J4
+match it as fitted (A9).
+The modem board regulates from 5 V itself: the v1.2 concern about 5
+V on a 4.2 V input is withdrawn for this board.
+At least 4.75 V at the modem board's connector during transmit
+bursts, and the cable to it (B10).
+GPIO35 to GPIO37 (octal PSRAM) are correctly left unconnected.
+What PWR_KEY, RESET and PWR_EN do, and the modem board's J2
+jumper (A11). Retention and overhang (A12).
+N16R8, per the EdgeHax pinout (A6 still asks for a photo of the module
+marking).
+N16R8 is rated to +65 °C: the board choice is a decision (A6, section 9).
+To close before fabrication
+Item
+What
+Effort
+A7
+Move the modem UART and control lines off GPIO10 to GPIO14.
+A small re-route
+A8
+Line up J1 with J2, and J4 with J3, along their length.
+Two footprint moves
+A9
+Confirm which way the modem board's pins point, and match J3 and J4 to it.
+One side-on photo; then possibly rework
+or mirroring
+A10
+Measure both boards at the pin roots, set the spacing, test-fit a 1:1 print.
+Under an hour
+B10
+Give the modem its own 5 V converter beside J5 (MS-CAR-REV-A-004, section 3.3).
+A small converter and a re-route
+These sit alongside the P0 items of v1.2 (A1, A2, A4, A6, C1 to C4 and G1), several of which this evidence updates (section
+10.2). B10 was raised to blocking by MS-CAR-REV-A-004, which models the modem rail; A11, A12, C13 and E6 follow at lower
+priority. MS-CAR-REV-A-004 also brings every open item into one list and sets the release gate for fabrication.
+
+
+===== PAGE 4 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 4 of 19
+2. What we received and how we checked it
+Item
+What it shows
+What it does not show
+Four caliper photos (Mitutoyo
+vernier, 0.02 mm): ESP32 outside
+and inside, modem outside and
+inside
+ESP32: outside about 26.7 to 26.8 mm, inside about 25.7
+mm. Modem: outside about 34.4 to 34.5 mm, inside
+about 33.75 to 33.85 mm.
+Exactly where along the pins the jaws sat; in
+the photos they appear to be on the pins
+above the plastic rather than at the roots.
+Parry Technology datasheet, 4G
+LTE GSM modem
+PTG4GBOB-SC104V1, 2 pages
+Supply 5 V ±5% on a separate 2-pin connector; -40 to +85
+°C; UART level-translated for 3.3 to 5 V (set by
+VDD_IN_UART); level-translated inputs to power the
+module on, reset it and switch the board's power; 2 x 12
+pin-out; over-current and ESD protection; photos of both
+sides, with the SIM holder on the underside.
+Dimensions or hole positions; a schematic; the
+polarity or default state of the control inputs;
+the LTE band list.
+EdgeHax ESP32-S3 WROOM
+N16R8 Dev Kit pinout (S3-PRO), 1
+page
+Pin order (that of Espressif's DevKitC-1); microSD on
+GPIO10 to GPIO14; LEDs on GPIO40, 41 and 42; a 4-pin
+1.27 mm I2C connector; a 2-pin battery connector; two
+USB-C ports.
+Dimensions (the drawing is not to scale: it
+implies about 28 mm between rows); the I2C
+connector's GPIOs; pull-ups; LED wiring;
+whether a 32 kHz crystal is fitted.
+Aswin's note
+Outer-edge spacing 34.4 mm (modem) and 26.7 mm
+(ESP32); neither board uses the usual dev-board
+footprint.
+Inside readings, pin width, row offsets.
+How we checked. Each vernier was read on an enlarged crop of its photo, with the printed main-scale figures fixing the
+millimetres (Appendix B). In the vendor's photo of the modem board, the pins were located by image analysis and scaled by
+the 2.54 mm pitch along each row. The v3 board file gave the socket pad coordinates and nets, and every pin of both boards
+was matched against them (Appendix A). The board area under and around the modules was checked for parts, tracks and
+vias.
+Limits. A vernier read from a photo carries about ±0.05 to 0.1 mm: in these photos no vernier line can be seen to meet a
+main-scale line cleanly, because the vernier plate sits nearer the lens than the main scale. Your own outside readings, taken on
+the caliper itself, are the better values and are used below. The vendor's photo is good to roughly ±0.3 mm across the rows
+and is used only as a cross-check. Neither vendor supplied a schematic or a dimensioned drawing, so anything that depends on
+what sits behind a pin (pull-ups, LED wiring, input polarity) is asked, not assumed.
+3. Row spacing: what the readings mean
+A footprint places socket centres. Across the outside of two pins a caliper reads the centre distance plus one pin width; across
+the inside, the centre distance minus one pin width. The average of an outside and an inside reading taken on the same two
+pins cancels the pin width exactly, and half their difference gives the pin width, which is a built-in check: for standard square
+header pins it should come out at about 0.64 mm.
+O: outside jaws read C + w
+C: centre to centre, what the footprint needs
+I: inside jaws read C - w
+w: pin width
+about 0.64 mm
+pin of row 1
+(section across the rows)
+C = (O + I) / 2
+w = (O - I) / 2
+The average cancels the pin width,
+whatever it is. Half the difference
+is the pin width: if it is far from
+0.64 mm, a jaw was tilted or not
+seated, and the pair is retaken.
+Figure 1. The three distances. Only C belongs in the footprint; O and I together give C without knowing w.
+
+
+===== PAGE 5 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 5 of 19
+Board
+Reading
+Read from the photo
+In your note
+ESP32
+Outside, across both rows
+about 26.7 to 26.8 mm
+26.7 mm
+ESP32
+Inside, between the rows
+about 25.7 mm (25.65 to 25.75)
+not stated
+Modem
+Outside, across both rows
+about 34.4 to 34.5 mm
+34.4 mm
+Modem
+Inside, between the rows
+about 33.75 to 33.85 mm
+not stated
+Table 1. The four readings, read from the photos to about ±0.05 to 0.1 mm. The vernier crops are in Appendix B.
+Board
+From O, 0.64
+mm pin
+From I, 0.64
+mm pin
+(O + I) / 2
+Pin width (O - I) /
+2
+Best estimate
+v3
+v3 against best
+ESP32
+26.06 to 26.16
+26.29 to
+26.39
+26.18 to 26.28
+0.48 to 0.58
+26.2 (26.1 to 26.3)
+26.00
+0.2 narrow
+Modem
+33.76 to 33.86
+34.39 to
+34.49
+34.08 to 34.18
+0.28 to 0.38 (not
+credible)
+33.8 (33.7 to 33.9)
+33.56
+0.25 narrow
+Table 2. Centre-to-centre spacing in millimetres, worked from Table 1, with O from your readings and the photos.
+For the ESP32 board the two readings broadly agree. They imply a pin about 0.5 mm wide, a little under the standard 0.64 mm,
+which points to jaws not quite square or not quite seated. Every reasonable way of combining them puts the rows 26.1 to 26.3
+mm apart, most likely about 26.2 mm, so v3's 26.00 mm is about 0.2 mm narrow.
+For the modem board the two readings disagree. Together they imply a pin 0.28 to 0.38 mm wide, which no header has, so
+one of them is wrong. If the outside reading is right, the rows are about 33.8 mm apart; if the inside reading is right, about 34.4
+to 34.5 mm. The vendor's photo, measured independently, puts the pin rows about 33.8 to 33.9 mm apart (Table 3). The inside
+reading is therefore the likely outlier, probably taken with the caliper tilted, which makes an inside reading too large. Best
+estimate 33.8 mm: v3's 33.56 mm is about 0.25 mm narrow.
+Quantity, vendor's photo of the modem board
+Result
+Note
+Pin pitch along each row, over 11 pitches
+21.99 and 22.05 pixels: 8.66 to 8.68 pixels per
+mm
+The scale for the rest
+J3 to J4, between the pin rows (pin tips)
+about 33.8 to 33.9 mm
+About ±0.3 mm: perspective and image
+compression
+J4 pin 1 against J3 pin 1, along the rows
+J4 about 0.1 to 0.2 mm higher, within the
+photo's error
+v3 has J4 0.50 mm lower
+Table 3. Cross-check on the vendor's datasheet photo.
+Both v3 spacings sit further inside the outer readings than one pin width: 0.70 mm for the ESP32 and 0.84 mm for the modem,
+where a 0.64 mm pin gives 0.64 mm. The footprint should not rest on an assumed pin width at all; section 11 gives a
+measurement that does not need one.
+What 0.2 mm means. A socket contact accepts a pin a little off centre, but as a working figure a pin more than about 0.2 mm
+from its socket centre needs force or bends. A 0.2 mm spacing error alone splits as about 0.1 mm per row. Added to the row
+offsets of section 4, the modem's worst pins come to about 0.3 mm. That is why A8 and A10 are blocking: neither error is large
+on its own, both are cheap to remove, and forcing a board into misplaced sockets bends pins on a part nobody can rework in
+the field.
+Withdrawn. The v1.2 notes that 26.00 and 33.56 mm are off the 2.54 mm grid, and that the nearest grid spacings (25.40 and
+33.02 mm) might be the real ones, are withdrawn. Both boards measure about 0.8 mm away from those grid values.
+4. Row alignment and pin 1
+In v3, J1's pin 1 sits 0.30 mm lower than J2's (y 154.14 against 153.84) and J4's 0.50 mm lower than J3's (99.00 against 98.50).
+Both offsets appeared when v3 moved J1 and J4; the 6 Oct layout had the rows level. Nothing in the evidence supports them.
+The vendor's photo shows the modem's rows level to within its accuracy, with any residual in the opposite sense. The EdgeHax
+drawing is not to scale and cannot settle a 0.3 mm offset either way, but nothing supplied suggests one. Unless you have
+measured an offset on the real boards (if so, please send the photo), line the rows up (A8).
+The pin 1 ends are right on both boards. The ESP32 board sits with its antenna end toward the bottom of the carrier and its
+USB end toward the top edge, as the Dwgs.User note says, which puts the EdgeHax left header (3V3, RST, IO4 and on) on J1
+
+
+===== PAGE 6 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 6 of 19
+and its right header (GND, TX, RX, IO1 and on) on J2. The modem board sits with its supply connector toward the top edge:
+PWR_KEY on J3 pin 1, PWR_EN on J4 pin 1.
+5. Which way the modem board's pins point
+On the ESP32 board the header plastic is on the back, the side with the microSD slot, and the pins stand out of that side: with
+the board components-up they point down into J1 and J2, as the carrier assumes. The modem board is the other way round. In
+both of your photos and in the datasheet's, most plainly the perspective view on its first page, the black header plastic sits on
+the component side next to the A7672S and the long pins stand up from it, leaning outward in perspective as upright pins do
+(Figure 2). The datasheet's photo of the underside shows no plastic there, only the solder joints and the SIM holder. With the
+plastic on top, the long ends of a standard header point up and only the short ends, about 1.5 mm, come through underneath:
+too short to seat in a socket.
+a Your modem photo, left row:
+plastic on the component side,
+pins standing up and leaning
+outward.
+b Vendor's photo, right row:
+the same.
+c Your ESP32 photo, back: yellow plastic on the microSD side, with the pins
+standing out of that side, as the carrier expects.
+Figure 2. Header direction on the two boards.
+J3 and J4 are drawn for the modem board components-up with its pins pointing down. If its pins stand up from the component
+side, there are three ways forward, and the footprint depends on which one you choose:
+• (a) the pins also protrude at least about 3 mm below the board, enough to seat in a socket: the footprint stands as drawn,
+and the SIM holder faces the carrier;
+• (b) the headers are refitted pins-down on every board: the footprint stands, at the cost of rework and a heat cycle on each
+board, and the SIM holder faces the carrier;
+• (c) the board goes in components-down: J3 and J4 must be mirrored (the PWR_KEY row moves to the right-hand socket);
+the SIM holder then faces up and stays reachable, but the tall capacitor beside the supply connector, the supply connector
+itself and the antenna connector face the carrier inside a gap of about 11 mm.
+Fitted components-down on today's footprint, the board would receive the carrier's PWRKEY on its PWR_EN, 3.3 V on a
+microphone pin, the UART on its earpiece pins and RESET on its 1.8 V I2C clock. A side-on photo of one board beside a ruler
+settles the question (A9).
+6. Pin-outs against the carrier
+Appendix A maps all 44 ESP32 pins and all 24 modem pins against the v3 nets. In summary:
+Check
+ESP32 board (J1, J2)
+Modem board (J3, J4)
+Pin order and count
+Matches: the DevKitC-1 order, 2 x 22.
+Matches: 2 x 12, PWR_KEY on J3 pin 1, PWR_EN on J4 pin
+1.
+
+
+===== PAGE 7 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 7 of 19
+Check
+ESP32 board (J1, J2)
+Modem board (J3, J4)
+Power
+5 V on J1 pin 21; grounds on J1 pin 22 and J2 pins 1, 21
+and 22: all match.
+Grounds on J3 pins 2, 6, 12 and J4 pins 6, 9, 12 match. 5 V
+arrives on its own connector from J5.
+Signals
+Every v3 signal lands on its intended GPIO, but four of
+them land on the microSD lines (A7).
+UART crossed correctly (J3 pin 4, modem TXD, to RX2; J3
+pin 5 to TX2). RESET on J3 pin 8.
+Pins that must stay
+free
+GPIO35 to 37 (PSRAM), 19 and 20 (USB), 43 and 44
+(USB-serial), 0, 45 and 46 (strapping): all free. The pads
+named IO6, IO12, IO19, IO20, IO38, IO47 and IO48 carry
+no copper.
+VDD_1V8, the 1.8 V GPIO, I2C and debug-UART pins, ADC,
+microphone and earpiece: all free, correctly, since none is
+level-translated.
+Logic level
+3.3 V I/O.
+VDD_IN_UART (J3 pin 3) on 3V3_C sets the modem UART
+to 3.3 V: right.
+Open questions
+The I2C connector's GPIOs and pull-ups; LED wiring on
+GPIO40 to 42; any 32 kHz crystal on GPIO15 and 16 (the
+E22 lines); how the 5V pin, both USB-C ports and the
+battery connector are combined (B6).
+Active level and default state of PWR_KEY, RESET and
+PWR_EN; the J2 jumper; the LTE bands of this A7672S
+variant.
+The microSD conflict
+The EdgeHax board wires its microSD slot to GPIO10 (chip select), GPIO11 (MOSI), GPIO12 (clock), GPIO13 (MISO) and GPIO14.
+v3 puts MODEM_RESET on GPIO10, PWRKEY on GPIO11, TX2 on GPIO13 and RX2 on GPIO14. v1.2 (A1) flagged this as a risk;
+the pin-out now confirms it. With a card fitted, driving MODEM_RESET low selects the card, which then drives GPIO13 against
+the ESP32's UART transmit. SD slots normally carry pull-ups on chip select, MOSI and MISO; those would hold PWRKEY and
+RESET high whenever the ESP32 is in reset or booting, so the modem could switch on or off at every ESP32 restart, depending
+on the polarity question in A11. Without a card the slot still loads all five lines, and the raw archive (C2) cannot use it.
+The fix is also the simplest way to close C2: give GPIO10 to GPIO14 to the board's own slot and move the modem lines (section
+9). The carrier then needs no microSD socket of its own.
+7. The modem board: supply and control
+Supply: 4.75 V minimum at the board's own connector
+The datasheet asks for 5 V ±5%, so 4.75 to 5.25 V at the modem board's 2-pin connector, at all times. The A7672S draws its
+largest current on a GSM transmit burst; the datasheet lists GSM, and a rural node may fall back to it. At the 5 V input that is
+up to about 1.8 A for about half a millisecond, partly smoothed by the board's own capacitor. v1.2 (B4) described the feed;
+here is its budget as far as the files allow:
+Element
+Resistance
+Drop at 1.8 A
+v3 track, J9 pin 1 to J5 pin 1: 221 mm on the bottom layer, mostly 1.4 to 2.2 mm wide,
+with 2 mm necks at 0.75 and 0.5 mm (1 oz copper assumed)
+72 mΩ
+0.13 V
+Ground return through the pours (B4: the 5 V track cuts the bottom pour)
+a few mΩ if continuous
+about 0.01 V
+Cable from J5 to the modem connector, 150 mm of 24 AWG each way
+about 25 mΩ
+about 0.05 V
+Four connector contacts (JST XH: up to 10 mΩ each)
+up to 40 mΩ
+up to 0.07 V
+Total
+about 140 mΩ
+about 0.25 V
+Table 4. Supply budget from the buck module to the modem board, new parts at room temperature. The track resistance is computed from the v3
+board file.
+Even new, 0.25 V is the whole margin below 5.0 V, before the buck module's own tolerance and its response to a step load.
+Over the unit's life it gets worse: JST XH contacts are specified at up to 20 mΩ each after environmental testing, and copper in
+a warm box has about 15 percent more resistance, which takes the loop to about 190 to 200 mΩ and the drop to about 0.35 V.
+MS-CAR-REV-A-004 models the burst in detail: capacitance at J5 cannot carry a 0.58 ms burst; a dedicated converter beside
+the modem, set to 5.10 V, with the carrier end of the cable soldered and a short cable, holds about 4.86 V across tolerance and
+ageing, the most margin of the options modelled, so B10 is raised to P0. The closing evidence is a measurement: the voltage at
+the modem connector on an oscilloscope, through an LTE attach and with the modem forced onto GSM (for example
+AT+CNMP=13 on SIMCom modules), between 4.75 and 5.25 V (B10).
+
+
+===== PAGE 8 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 8 of 19
+Control: what PWR_KEY, RESET and PWR_EN do
+The datasheet says the three inputs are level-translated and let a microcontroller power the module on, reset it and switch the
+modem board's power on and off. It does not say whether each is active high or low, what state it takes when the ESP32 is not
+driving it, or how long a pulse it needs. Your photo and the vendor's both show a 2-pin jumper, J2, beside the PWR_KEY label
+near the top-left corner, with a shunt fitted, and two pads marked PW_EN beside it. On boards of this kind such a jumper often
+ties the power key so the module switches itself on when power is applied. If so, the carrier's PWRKEY line does nothing while
+the shunt is fitted, and the module can only be switched off by a command or by cutting PWR_EN.
+That matters for recovery. A modem that stops answering in the field has to come back without a visit, and the robust way, the
+recovery H2 depends on, is this: firmware sends the power-off command (AT+CPOF), waits, then switches the board off and on
+with PWR_EN, cutting PWR_EN directly only if the modem does not answer. For that, PWR_EN must work as assumed, must
+not be overridden by a jumper, and must hold a defined state while the ESP32 is in reset, set by a resistor on the carrier rather
+than by whatever the GPIO floats to. If J2 does give automatic power-on and PWR_EN does switch the board, the PWRKEY and
+RESET lines can be dropped, which frees two GPIOs (section 9).
+One precaution: VDD_IN_UART stays powered from 3V3_C while the modem board is off, so the level translator stays alive.
+Depending on the translator, a UART line held high can feed the unpowered module through its input. Until the vendor
+confirms the translator isolates, set TX2 low or as an input before cutting PWR_EN (A11).
+8. Mechanical fit and access
+The v3 renders show empty sockets, so the boards' own shapes were never checked against the carrier (A4). Figure 3 draws
+the upper right part of the carrier at full size from the v3 file, with the module outlines estimated from the photos.
+E22 module (approx.)
+carrier top edge, y 87.5
+J1
+J2
+USB-C end of the ESP32 board,
+about 10 to 12 mm from the edge
+J1 pins 16 to 20:
+GPIO10 to 14, the
+microSD lines (A7)
+antenna
+red dashes: v3 keep-out
+teal dots: area to keep clear (E3)
+pin 1 of J1, J2 in red
+J3
+J4
+modem board, estimated outline
+overhang about 7.5 to 8 mm;
+upper holes off the board
+its supply
+connector
+J5
+cable (B10)
+green dots: modem moved
+down 10 mm (A12)
+H2
+10 mm
+Figure 3. Carrier v3 at 1:1 (x 172 to 296, y 74 to 176 in board coordinates). Pads, edge, mounting hole H2 and the v3 keep-out (red dashes) are
+from the board file; the teal area is the proposed E3 zone. The modem board's outline, holes and connector are estimated from the vendor's
+photo (drawn about 55 by 41 mm; the order listing gives 56 by 42 mm); the E22 body is approximate.
+The modem board overhangs the top edge
+The modem board is about 56 by 42 mm. In the vendor's photo its top edge is about 18.5 mm above J3 pin 1 and its two upper
+mounting holes about 15.5 mm above it; scaled to the listed 56 mm, the edge may be nearer 19 mm. On the carrier, J3 and J4
+pin 1 are only 11 mm from the top edge. The board therefore overhangs the carrier by about 7.5 to 8 mm, its two upper holes
+fall about 4.5 mm beyond the edge, and its own supply connector sits in the overhang. Only the two lower holes could take
+standoffs today: the left one lands on clear board, the right one about 1.2 mm from the ground track leaving J4 pin 12. There is
+
+
+===== PAGE 9 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 9 of 19
+room to move the whole modem down: the carrier has no parts below it down to the E22 module at about y 158. Moving J3
+and J4 down by 10 to 12 mm, set from the board's real outline, puts the board, its four holes and its connector on the carrier.
+The 5 V feed to J5, which runs along y 136.5 on the bottom layer, would then pass under J4's lower pins and must be
+re-routed, which B4 asks for anyway (A12).
+The ESP32 board
+The EdgeHax board has no mounting holes, so only its sockets hold it. Serigreen's direction 1 in v1.2 (section 5) accepts plug-in
+modules for the pilot on condition that they are held down mechanically, by standoffs, clamps or ties. A clamp bar across the
+board on two new carrier holes, or a foam pad pressed down by the lid, would do (A12).
+Its two USB-C ports are at the end toward the carrier's top edge. Your photo of the back shows the board ending only about 2
+to 4 mm past pin 22, so the ports sit about 10 to 12 mm in from the carrier edge. A plugged-in cable needs clear space beyond
+that edge, inside the enclosure. Its microSD slot is on the underside at the antenna end, facing the carrier, with the end of a
+card just past the board edge; whether a card can be changed without lifting the board needs checking on a fitted board. If the
+raw archive is to be collected on site visits (C2), reading it over Wi-Fi or USB avoids the question, and avoids wearing the
+sockets and bending pins on every visit (E6).
+The antenna is at that same end. In your photo of the back, the module's antenna end projects about 6 mm beyond the board,
+which itself ends about 2 mm past pin 1, so on the carrier the antenna reaches about y 162. The v3 keep-out (x 180.5 to 209.5,
+y 148.5 to 158.5) stops short of that, sits 1.5 mm off the rows' centre, and blocks copper pour only. An area centred on the
+rows (x 182 to 211) and running to about y 170 is crossed today by 36 track segments of 10 nets and 3 vias, and R1's right-hand
+pad falls inside it (E3).
+9. A pin plan for the EdgeHax board
+The v1.2 allocation (its Appendix B) was drawn for an Espressif DevKitC-1. Three facts about the EdgeHax board break it: the
+microSD slot takes GPIO10 to GPIO14, where v1.2 kept the modem lines and proposed E22 M1 on GPIO12; the LEDs on
+GPIO40, 41 and 42 load those pins, where v1.2 proposed RS485 receive on GPIO40 and a microSD chip select on GPIO42; and
+the octal PSRAM still takes GPIO35 to 37. This section replaces that appendix (C13).
+Rules the plan follows
+• GPIO10 to GPIO14 belong to the on-board microSD slot, and nothing else goes on them.
+• Inputs, and lines that must hold a defined level while the ESP32 resets, go on pins with nothing else attached: GPIO38, 39,
+47 and 48, besides those already in use.
+• The LED pins (GPIO40, 41, 42) take outputs that are low most of the time: E22 M1 (low in normal mode), the RS485 driver
+enable (low except while sending) and the status LED. A line that idles high would keep an LED lit and waste a few milliamps
+around the clock.
+• GPIO47 and 48 take their I/O voltage from the module's flash supply: 3.3 V on N16R8 and on the N8R2, N8 and N16
+modules, but 1.8 V on 1.8 V-flash variants.
+• The event button must wake the ESP32 from deep sleep, so it needs an RTC-capable pin (GPIO0 to 21). All are taken except
+GPIO3, a strapping pin that only matters when the JTAG-select eFuse is burned, which it is not by default. GPIO3 with a
+pull-up will do.
+• If a 32 kHz crystal is fitted on GPIO15 and 16, the E22's M0 and AUX lines move.
+
+
+===== PAGE 10 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 10 of 19
+Pin budget
+N16R8, as bought
+Non-octal module
+GPIOs on the two headers
+36
+36
+Not usable: strapping GPIO0, 45, 46; native USB 19, 20; USB-serial 43, 44
+7
+7
+Octal PSRAM, GPIO35 to 37
+3
+0
+On-board microSD, GPIO10 to 14
+5
+5
+Left for everything else (GPIO3 counted, for the button)
+21
+24
+Needed with modem PWRKEY and RESET: Rev A's 11 non-modem lines, modem PWR_EN,
+TX2, RX2, PWRKEY, RESET, plus battery sense, RS485 TX, RX and enable, E22 M1, event
+button, status LED
+23
+23
+Needed if J2 gives automatic power-on (no PWRKEY or RESET)
+21
+21
+Balance: with PWRKEY and RESET / without
+-2 / 0
++1 / +3
+Table 5. Pin budget. The buzzer and the sensor-rail switches go on an I2C GPIO expander, as in v1.2. An auto-direction RS485 transceiver saves one
+more pin.
+Function
+v3
+Rev B on N16R8 (as bought)
+Rev B, non-octal
+module
+Notes
+microSD on the board's
+slot
+modem lines on 10,
+11, 13, 14
+GPIO10 to 14
+GPIO10 to 14
+C2, A7
+Modem UART TX2, RX2
+GPIO13, 14
+GPIO47, 48
+GPIO47, 48
+Modem PWR_EN
+GPIO7
+GPIO7
+GPIO7
+carrier resistor sets the reset
+state (A11)
+Modem PWRKEY
+GPIO11
+none: J2 automatic power-on,
+if A11 confirms
+GPIO38
+Modem RESET
+GPIO10
+none: power-cycle with
+PWR_EN
+GPIO35
+RS485 TX, RX
+none
+GPIO38, 39
+GPIO36, 39
+C1; never GPIO43 or 44
+RS485 driver enable
+none
+GPIO41 (white LED)
+GPIO41 (white LED)
+pull-down; or none with
+auto-direction
+E22 M0 / M1
+GPIO15, tied
+GPIO15 / GPIO40 (orange LED)
+GPIO15 / GPIO40
+C5; pull-downs set the start mode
+Event button
+none
+GPIO3
+GPIO3
+C4; pull-up; wakes from deep
+sleep
+Status LED, external
+none
+GPIO42 (green LED)
+GPIO42
+C4
+Battery voltage, ADC1
+none
+GPIO6
+GPIO6
+B9
+E22 TX, RX; AUX
+GPIO17, 18; 16
+unchanged
+unchanged
+AUX moves if a crystal is on
+GPIO16
+I2C-0; I2C-1
+GPIO8, 9; 4, 5
+unchanged
+unchanged
+C6; check the board's I2C
+connector
+MPU-6050 INT; FSR; soil
+GPIO21; 1; 2
+unchanged
+unchanged
+Buzzer, sensor-rail
+switches
+none
+I2C expander on I2C-1
+I2C expander on I2C-1
+B5, C4
+Spare
+none
+GPIO37
+Table 6. Starting allocation, to be confirmed against the EdgeHax questions in section 12.
+The decision behind A6
+With the board as bought, the plan closes with no spare pin, and only if the modem board's J2 jumper gives automatic
+power-on. A board with a non-octal module frees GPIO35 to 37, keeps full modem control with a pin to spare, and fixes the
+temperature rating as well: Espressif rates the octal-PSRAM (R8) modules to +65 °C ambient and the others to +85 °C. So A6
+and the pin plan are one decision:
+
+
+===== PAGE 11 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 11 of 19
+Option
+Temperature rating
+Pins
+Footprint
+Cost
+1. EdgeHax S3-PRO N16R8,
+as bought
++65 °C; with PSRAM ECC
+enabled, up to +85 °C at the
+cost of 1/16 of the PSRAM
+(Espressif)
+Closes with none spare,
+only with J2 automatic
+power-on
+v3 sockets at the
+measured spacing
+Enable ECC in
+firmware; record the
+decision
+2. The same EdgeHax board
+with an N8R2, N8 or N16
+module, if EdgeHax makes
+one
++85 °C
+One spare, full modem
+control
+The same, if the board
+is otherwise identical
+(confirm)
+Ask EdgeHax or Robu
+3. Espressif
+ESP32-S3-DevKitC-1-N8R2
++85 °C
+Frees GPIO35 to 37, but no
+microSD slot: a carrier
+socket takes four pins
+Rows 22.86 mm, the 6
+Oct spacing
+Back to the v1.2 plan
+Our preference is option 2 if it exists; otherwise option 1, with ECC enabled and the decision recorded. Option 3 trades the
+on-board slot for a fully documented board.
+10. Change requests
+New requests continue the v1.2 numbering. Each says where, what we found, why it matters, what to change and when it
+counts as closed. Section 10.2 updates the v1.2 requests this evidence touches; every other v1.2 request stands as written.
+10.1 New requests
+A7 · Modem lines off the microSD pins (GPIO10 to GPIO14)
+P0
+Where
+J1 pins 16, 17, 19 and 20 (GPIO10, 11, 13, 14) carry MODEM_RESET, PWRKEY, TX2_MODEM and RX2_MODEM. J1 pin 18
+(GPIO12) is a named pad with no copper.
+What we found
+The EdgeHax pinout wires the board's own microSD slot to GPIO10 (chip select), GPIO11 (MOSI), GPIO12 (clock), GPIO13
+(MISO) and GPIO14. Four modem lines share those pins. v1.2 (A1) raised this as a risk; the pinout confirms it.
+Why it matters
+With a card fitted, asserting MODEM_RESET selects the card, which then drives GPIO13 against the ESP32's UART
+transmit. The pull-ups an SD slot normally carries on chip select, MOSI and MISO would hold PWRKEY and RESET high
+while the ESP32 resets or boots, so the modem may change state at every restart (A11). The raw archive (C2) cannot use
+the slot while these lines are on it.
+What to change
+Move TX2 and RX2 to GPIO47 and GPIO48, and PWRKEY and RESET as section 9 sets out, or drop them if A11 confirms
+automatic power-on. Leave GPIO10 to GPIO14 to the slot: nothing on J1 pins 16 to 20 but their pads.
+Closed when
+The Rev B netlist has no net on J1 pins 16 to 20, and the firmware pin map (C13) agrees.
+A8 · Line up the socket rows
+P0
+Where
+J1 against J2: pin 1 at y 154.14 and 153.84, so J1 sits 0.30 mm lower. J4 against J3: pin 1 at y 99.00 and 98.50, so J4 sits 0.50
+mm lower. Both offsets arrived with the v3 moves of J1 and J4; the 6 Oct rows were level.
+What we found
+The vendor's photo shows the modem's rows level to within its accuracy (about 0.2 mm, and in the other direction). The
+EdgeHax drawing is not to scale and cannot settle a 0.3 mm offset, but nothing supplied suggests one. No measured offset
+was supplied.
+Why it matters
+Every pin of the offset row sits off its socket along the row. Added to the spacing error (A10), the modem's worst pins
+come to about 0.3 mm off centre: enough to bend pins or strain the sockets on every insertion.
+What to change
+Put J1 pin 1 at the same y as J2 pin 1, and J4 pin 1 at the same y as J3 pin 1, moving whichever suits the routing. If you have
+measured an offset on the real boards, send that photo instead.
+Closed when
+Pin 1 y coordinates match within 0.01 mm in the Rev B board file, or a measured offset is documented.
+
+
+===== PAGE 12 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 12 of 19
+A9 · Which way the modem board's pins point
+P0
+Where
+J3 and J4, drawn for the modem board fitted components-up with its pins pointing down.
+What we found
+In both of your modem photos and in the datasheet's photos (most plainly the perspective view on its first page), the
+header plastic sits on the component side, beside the A7672S, and the long pins stand up from it (Figure 2); the
+datasheet's photo of the underside shows no plastic there. The ESP32 board is the usual way round: plastic on the back,
+pins down.
+Why it matters
+If the pins do not reach down into the sockets, the board cannot be fitted components-up. Fitted components-down,
+today's J3 and J4 would put PWRKEY on PWR_EN, 3.3 V on a microphone pin, the UART on the earpiece pins and RESET on
+the 1.8 V I2C clock, and the tall capacitor, supply connector and antenna connector would face the carrier inside a gap of
+about 11 mm.
+What to change
+Send a side-on photo of one of your modem boards beside a ruler, showing the pin length above and below the board.
+Then choose and record one of: (a) pins long enough below the board to seat (about 3 mm or more): no change; (b)
+headers refitted pins-down on every board: no footprint change, one rework step per board; (c) components-down:
+mirror J3 and J4 and check every part on that side for clearance. In (a) and (b) the SIM holder, on the underside, faces the
+carrier; in (c) it faces up.
+Closed when
+The photo is in, the choice is recorded, and the Rev B footprint and the test-fit (A10) match it.
+A10 · Measure at the pin roots and test-fit before ordering
+P0
+Where
+Row spacing of J1 and J2 (ESP32) and of J3 and J4 (modem).
+What we found
+Your outside readings are accurate, but each includes one pin width. Combined with the inside readings in the photos
+(and, for the modem, with the vendor's photo), they put the rows about 26.2 mm (ESP32) and 33.8 mm (modem) apart,
+centre to centre, against 26.00 and 33.56 mm in v3. The modem's two readings disagree with each other by more than a
+caliper should.
+Why it matters
+About 0.2 mm is small on its own, but it adds to the offsets in A8 and to the reading uncertainty, and a board forced into
+misplaced sockets bends pins that cannot be straightened in the field.
+What to change
+Measure each board as section 11 describes (outside and inside at the pin roots, both ends, two boards of each type). Set
+each row spacing to the mean centre-to-centre value, rounded to 0.05 mm. Print the footprint at 1:1 and press both
+boards' pins through it before ordering.
+Closed when
+The readings table with its photos, and a photo of both boards pressed into the 1:1 print with every pin on its pad.
+A11 · Modem control lines: polarity, defaults and recovery
+P1
+Where
+J3 pin 1 (PWRKEY), J3 pin 8 (MODEM_RESET), J4 pin 1 (PWR_EN); the modem board's J2 jumper and its PW_EN pads.
+What we found
+The datasheet says the three inputs are level-translated and let a microcontroller power the module on, reset it and
+switch the board's power. It does not say which level is active, what each input does when nothing drives it, or how long a
+pulse it needs. A 2-pin jumper, J2, beside the PWR_KEY label is fitted on your board and on the vendor's.
+Why it matters
+Without the truth table, firmware cannot be written, the carrier cannot hold safe states while the ESP32 resets, and the
+hard power-cycle that field recovery depends on (H2) may not exist.
+What to change
+Get the vendor's schematic or a written truth table: active level, internal pull, minimum pulse, what J2 and the PW_EN
+pads do, and the board's state at power-up. Add a resistor on the carrier to set each line during reset. Write the recovery
+sequence: power-off command (AT+CPOF), wait, PWR_EN off then on; cut PWR_EN directly only if the modem does not
+answer. Set TX2 low or as an input before cutting PWR_EN. If J2 gives automatic power-on, drop PWRKEY and RESET.
+Closed when
+The truth table is in the Rev B README, and the bring-up plan (G3) shows firmware power-cycling the modem with
+PWR_EN.
+
+
+===== PAGE 13 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 13 of 19
+A12 · Retention of both boards, and the modem's overhang
+P1
+Where
+The modem board on J3 and J4, whose pin 1 is 11 mm below the carrier's top edge; the ESP32 board on J1 and J2.
+What we found
+The modem board (about 56 by 42 mm) reaches about 18.5 to 19 mm above J3 pin 1, so it overhangs the carrier by about
+7.5 to 8 mm; its two upper mounting holes fall about 4.5 mm beyond the edge and its supply connector sits in the
+overhang (Figure 3). Of the two lower holes, the right one sits about 1.2 mm from the ground track leaving J4 pin 12. The
+ESP32 board has no mounting holes.
+Why it matters
+Direction 1 in v1.2 (section 5) accepts plug-in modules for the pilot only if they are held down mechanically. On a pole in
+wind, boards held only by socket friction work loose over months. An overhanging board also has to fit the box.
+What to change
+Move J3 and J4 down by 10 to 12 mm, set from the board's real outline (the carrier has no parts below the modem down
+to the E22 at about y 158), so all four holes land on the board. Re-route the 5 V feed to J5, which would then pass under
+J4's lower pins (B4). Fit four standoffs (M2.5, to confirm against the holes) with copper cleared around them. Retain the
+ESP32 board with a clamp bar on two new carrier holes beside it, or a foam pad pressed down by the lid.
+Closed when
+The 3D check (A4) shows both boards inside the carrier outline with their retention, and the test-fit shows the standoff
+holes line up.
+B10 · 5 V at the modem connector, and the cable to it (raised to P0)
+P0
+Where
+J5 (JST XH, 2-pin) to the modem board's own 2-pin supply connector; the J9 to J5 feed (B4).
+What we found
+The modem board needs 4.75 to 5.25 V. The v3 feed has about 72 mΩ of track; with a cable and four contacts the loop is
+about 140 mΩ, about 0.25 V at a 1.8 A burst (Table 4), rising to about 0.35 V as the contacts age and the box warms. The
+model in MS-CAR-REV-A-004 puts the modem connector at 4.61 to 4.74 V in a burst, and about 4.51 V with the buck at its
+low tolerance and the contacts aged together. The connector series on the modem board, the cable and its polarity are
+not specified anywhere.
+Why it matters
+Dips below 4.75 V during network attach or a GSM burst take the modem board outside its rated input, where resets are
+the classic field failure. A reversed or mismatched cable can destroy the modem board at first power-up.
+What to change
+A dedicated 5 V converter beside J5, as MS-CAR-REV-A-004 section 6.1 sets out (5.10 V within 2 percent, capacitance
+beside its input and output, its 12 V feed with the ground return alongside, its enable as the modem's power switch), plus
+a specified cable: the series at each end, carrier +5 V to the modem's "+5V SUPPLY" by function rather than pin number,
+red and black, 22 AWG, as short as possible, with the carrier end soldered or on a low-resistance connector. Any carrier
+connector differs from J16 (A3). Check polarity with a meter before first connection.
+Closed when
+The model of the new circuit, then an oscilloscope trace at the modem connector at the lowest input voltage, through an
+LTE attach and with the modem forced onto GSM: between 4.75 and 5.25 V.
+C13 · One pin map for the EdgeHax board
+P1
+Where
+J1 and J2; the firmware pin definitions; v1.2 Appendix B.
+What we found
+v1.2's allocation assumed an Espressif DevKitC-1. On the EdgeHax board GPIO10 to 14 are the microSD slot and GPIO40 to
+42 drive LEDs; the I2C connector's GPIOs, any pull-ups, and whether a 32 kHz crystal sits on GPIO15 and 16 are unknown.
+Why it matters
+A pin conflict found after fabrication means bodge wires on every unit.
+What to change
+Take section 9 as the starting point, settle the open board questions with EdgeHax or by inspecting a board, and publish
+one table that hardware and firmware both sign (A5).
+Closed when
+The Rev B README, the schematic labels and the firmware agree pin for pin.
+
+
+===== PAGE 14 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 14 of 19
+E6 · Access with the modules fitted
+P2
+Where
+The ESP32 board's USB-C ports and microSD slot; the modem board's antenna connector, SIM holder and supply
+connector.
+What we found
+The USB-C ports sit about 10 to 12 mm in from the carrier's top edge. The microSD slot is on the underside at the antenna
+end, facing the carrier; whether a card can be changed with the board fitted is not yet known. The modem board's SIM
+holder is on its underside, so fitted components-up it faces the carrier.
+Why it matters
+If flashing, card changes or SIM changes mean pulling boards from sockets in the field, every visit wears the sockets and
+risks bent pins and static damage.
+What to change
+Decide how each is done in the field: firmware over the air, or USB with room for the plug inside the box; the archive read
+over Wi-Fi or USB, with the card treated as fixed; the SIM fitted before assembly or reachable. Show it in the 3D check
+(A4).
+Closed when
+The 3D check and the bring-up plan cover each access.
+10.2 Updates to v1.2 requests
+Item
+Request and status after this evidence
+What remains
+A1
+P0
+ESP32 board identity and socket pin order
+Board identified: EdgeHax S3-PRO, ESP32-S3-WROOM-1 N16R8. Pin order
+confirmed against all 44 pins. The 2.54 mm grid note is withdrawn. microSD
+pins now known (A7).
+Spacing and row alignment (A10, A8); LED and
+microSD pins (C13).
+A2
+P0
+LTE modem board identity, supply and interface
+Board identified: Parry PTG4GBOB-SC104V1, SIMCom A7672S; your boards
+carry module part number S2-10F6D-Z32CD. It regulates from 5 V ±5%, so the
+3.8 V rail v1.2 asked for is not needed. UART level-translated; J3 pin 3 on 3.3 V
+is right. Header 2 x 12, mapped correctly. Grid note withdrawn.
+Spacing and alignment (A10, A8), header direction
+(A9), control lines (A11), 5 V window (B10), LTE
+bands of the fitted module. Remove the stale
+Dwgs.User note "A7672S MODEM VERIFY
+35.56mm" and the README's 9 + 2 pin description.
+A4
+P0
+Module clearances, enclosure and sensor shield
+The modem overhang and the ESP32 access points are now quantified.
+A12 and E6; the 3D check with all modules fitted,
+including the modem board's tall capacitor.
+A5
+P1
+One agreed GPIO map, with enough pins
+v3 correctly leaves GPIO35 to 37 (octal PSRAM) unconnected; the count of
+free pins changes with the EdgeHax facts.
+The map itself, per section 9 (C13).
+A6
+P0
+ESP32 module temperature rating
+N16R8, per the EdgeHax pinout: rated to +65 °C ambient. The acceptance still
+asks for a photo of the module marking.
+The decision in section 9: a non-octal EdgeHax
+variant, or PSRAM ECC enabled and recorded.
+B4
+P1
+5 V feed to the modem
+The target is now known: 4.75 V minimum at the modem board's connector.
+B10.
+B6
+P2
+USB and carrier supplies
+The EdgeHax board has two USB-C ports and a battery connector besides its
+5V pin.
+Ask EdgeHax how the 5V pin, the two USB-C ports
+and the battery connector are combined; leave the
+battery connector empty.
+C1
+P0
+RS485 port for wind and soil
+v1.2 proposed RS485 receive on GPIO40, which drives an LED on this board.
+Pins per section 9; hardware as v1.2.
+C2
+P0
+microSD raw archive
+The board's own slot on GPIO10 to 14 can close this with no socket on the
+carrier.
+Closes with A7 and E6.
+C4
+P0
+Event button, status LED and buzzer
+Pins proposed: button on GPIO3, status LED on GPIO42, buzzer on the I2C
+expander.
+Hardware as v1.2.
+C5
+P1
+E22 mode pins and radio settings
+v1.2 proposed M1 on GPIO12, which is the microSD clock.
+M1 on GPIO40 (section 9); radio settings as v1.2.
+E3
+P2
+ESP32 antenna area
+Your photo shows the module's antenna end projecting about 6 mm beyond
+the board, which ends about 2 mm past pin 1: the antenna reaches about y
+162 on the carrier, past the v3 zone (to y 158.5).
+Re-centre the zone on the rows and run it to about
+y 170; forbid tracks, vias and pads, not just pour.
+Today 36 track segments of 10 nets and 3 vias cross
+that area, and R1's right-hand pad falls inside it.
+H2
+P1
+Watchdog and recovery
+Modem recovery rests on PWR_EN, whose behaviour is not yet confirmed.
+A11.
+
+
+===== PAGE 15 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 15 of 19
+11. How to measure and test-fit
+Measuring one board, about ten minutes
+1
+Hold the board with its pins pointing the way they will go into the sockets. Measure at the pin roots, where the pins leave the plastic, not
+at the tips.
+2
+Outside: close the main jaws on the outer faces of pin 1 of each row, square across the rows. Read O. Repeat at the last pin (12 or 22).
+3
+Inside: open the small upper jaws between the inner faces of the same two pins, square across the rows and not tilted along them. Read
+I. Repeat at the other end.
+4
+Work out C = (O + I) / 2 and w = (O - I) / 2. Keep the pair only if w is between 0.58 and 0.70 mm; otherwise retake it. The two ends should
+give the same C within 0.05 mm, which also shows the rows are parallel.
+5
+Repeat on a second board of each type. Photograph every reading with the jaws in view.
+6
+Send a table: board, end, O, I, C, w.
+Test-fit before ordering
+1
+Set J1 to J2 and J3 to J4 to the mean C, rounded to 0.05 mm, with the rows level (A8) and J3 and J4 drawn for the way the modem board
+will actually be fitted (A9).
+2
+Plot F.Cu and Edge.Cuts to PDF at 1:1 and print at 100 percent, with no fit-to-page. Check the scale with a ruler across the 168 mm board
+outline: within 0.3 mm.
+3
+Lay the print on foam board or thick card and press each board's pins through it, the way the board will be fitted.
+4
+Pass: every pin pierces its own pad, none bends, each board sits flat, and the modem board's holes line up with the standoff holes drawn
+for A12.
+5
+Better still, if a 3D printer is to hand: a plate with 1.0 mm holes at the pad positions and real sockets pressed into it.
+6
+Photograph the result and send it with the readings.
+12. Gates before fabrication, and how to respond
+Gate
+Evidence
+Closes
+1
+microSD pins free
+Rev B netlist: nothing but pads on J1 pins 16 to 20
+A7
+2
+Rows level
+Pin 1 y coordinates equal in the Rev B file
+A8
+3
+Modem header direction
+Side-on photo; the footprint matches the way the board is fitted
+A9
+4
+Spacing measured, test-fit passed
+Readings table and test-fit photo
+A10; spacing in A1 and A2
+5
+Board choice and temperature
+Decision recorded
+A6
+6
+Pin map
+One table signed by hardware and firmware
+C13, A5
+7
+Modem truth table
+In the README; carrier resistors chosen from it
+A11
+8
+Modem 5 V
+Model of the new supply circuit, then the bench trace at the modem
+connector
+B10
+These sit alongside the v1.2 gates; none of them replaces a v1.2 P0.
+Please reply against the item numbers, as for v1.2: for each, accepted, rejected with a reason, or a question; what you
+changed, with coordinates; and the evidence. The quickest useful reply is the side-on modem photo (A9) and the root readings
+(A10): they take minutes and settle the two biggest unknowns. The vendor questions can go out in parallel:
+Vendor
+Questions
+EdgeHax
+A dimensioned drawing (outline, header positions, antenna position). A schematic, or answers on: pull-ups on the microSD
+lines; LED wiring on GPIO40 to 42 (to ground or to 3.3 V); the I2C connector's GPIOs and pull-ups; whether a 32 kHz crystal is
+fitted on GPIO15 and 16; how the 5V pin, both USB-C ports and the battery connector are combined. Is the board made with an
+N8R2, N8 or N16 module?
+
+
+===== PAGE 16 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 16 of 19
+Vendor
+Questions
+Parry
+A dimensioned drawing (outline, hole positions and size, header positions). A schematic or truth table for PWR_KEY, RESET and
+PWR_EN (active level, pull, pulse length, state at power-up); what J2 and the PW_EN pads do; the series of the 2-pin supply
+connector; the SIM size and holder type; pin length below the board, or whether boards can come with headers pins-down or
+unfitted; the LTE bands of the module fitted to your boards (part number S2-10F6D-Z32CD; the datasheet photo shows
+S2-10AZP-Z30QM); whether the UART translator isolates when the module is off.
+Thank you again. This was the right evidence to send, and it moved the review a long way. I am glad to go through any item on
+a call.
+Appendix A. Pin maps
+Carrier socket pins against the boards' own pin labels and the v3 nets. Conflicts in bold.
+
+
+===== PAGE 17 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 17 of 19
+Socket pin
+Board pin
+Function on the EdgeHax board
+v3 net
+Check
+J1.1
+3V3
+board 3.3 V
+not connected
+OK
+J1.2
+3V3
+board 3.3 V
+not connected
+OK
+J1.3
+RST
+ESP32 enable
+not connected
+OK (H2 may use it)
+J1.4
+IO4
+GPIO4, ADC1
+SDA1
+OK
+J1.5
+IO5
+GPIO5, ADC1
+SCL1
+OK
+J1.6
+IO6
+GPIO6, ADC1
+named pad, no copper
+Battery sense (B9)
+J1.7
+IO7
+GPIO7
+PWR_EN
+OK
+J1.8
+IO15
+GPIO15, 32 kHz crystal option
+E22_M0M1
+Check no crystal fitted (C13)
+J1.9
+IO16
+GPIO16, 32 kHz crystal option
+E22_AUX
+Check no crystal fitted (C13)
+J1.10
+IO17
+GPIO17
+TX1_LORA
+OK
+J1.11
+IO18
+GPIO18
+RX1_LORA
+OK
+J1.12
+IO8
+GPIO8
+SDA0
+OK; check the board's I2C pull-ups
+J1.13
+IO3
+GPIO3, strapping (JTAG select)
+not connected
+Proposed event button
+J1.14
+IO46
+GPIO46, strapping (boot)
+not connected
+Keep free
+J1.15
+IO9
+GPIO9
+SCL0
+OK
+J1.16
+IO10
+microSD chip select
+MODEM_RESET
+Conflict (A7)
+J1.17
+IO11
+microSD MOSI
+PWRKEY
+Conflict (A7)
+J1.18
+IO12
+microSD clock
+named pad, no copper
+Keep unconnected
+J1.19
+IO13
+microSD MISO
+TX2_MODEM
+Conflict (A7)
+J1.20
+IO14
+microSD (fifth line)
+RX2_MODEM
+Conflict (A7)
+J1.21
+5V
+5 V input
++5V
+OK (B6)
+J1.22
+GND
+ground
+GND
+OK
+J2.1
+G
+ground
+GND
+OK
+J2.2
+TX
+GPIO43, USB-serial
+not connected
+OK, keep free
+J2.3
+RX
+GPIO44, USB-serial
+not connected
+OK, keep free
+J2.4
+IO1
+GPIO1, ADC1
+FSR_ADC
+OK
+J2.5
+IO2
+GPIO2, ADC1
+SOIL_ADC
+OK
+J2.6
+IO42
+GPIO42, green LED
+not connected
+LED pin: proposed status LED
+J2.7
+IO41
+GPIO41, white LED
+not connected
+LED pin: proposed RS485 enable
+J2.8
+IO40
+GPIO40, orange LED
+not connected
+LED pin: proposed E22 M1
+J2.9
+IO39
+GPIO39
+not connected
+Proposed RS485 RX
+J2.10
+IO38
+GPIO38
+named pad, no copper
+Proposed RS485 TX or modem PWRKEY
+J2.11
+IO37
+octal PSRAM
+not connected
+OK, must stay free
+J2.12
+IO36
+octal PSRAM
+not connected
+OK, must stay free
+J2.13
+IO35
+octal PSRAM
+not connected
+OK, must stay free
+J2.14
+IO0
+GPIO0, BOOT strapping
+not connected
+OK, keep free
+J2.15
+IO45
+GPIO45, strapping
+not connected
+OK, keep free
+J2.16
+IO48
+GPIO48
+named pad, no copper
+Proposed modem RX2
+J2.17
+IO47
+GPIO47
+named pad, no copper
+Proposed modem TX2
+J2.18
+IO21
+GPIO21
+MPU_INT
+OK
+J2.19
+IO20
+native USB D+
+named pad, no copper
+Keep unconnected
+J2.20
+IO19
+native USB D-
+named pad, no copper
+Keep unconnected
+J2.21
+G
+ground
+GND
+OK
+J2.22
+G
+ground
+GND
+OK
+Table A1. ESP32 board (EdgeHax S3-PRO) on J1 and J2.
+
+
+===== PAGE 18 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 18 of 19
+Socket pin
+Board pin
+Function on the Parry board
+v3 net
+Check
+J3.1
+A7672_PWR_KEY
+power key, level-translated
+PWRKEY
+OK; polarity (A11)
+J3.2
+GROUND
+ground
+GND
+OK
+J3.3
+VDD_IN_UART
+UART level reference, 3.3 to 5 V
+3V3_C
+OK
+J3.4
+A7672_TXD
+modem transmit
+RX2_MODEM
+OK, crossed
+J3.5
+A7672_RXD
+modem receive
+TX2_MODEM
+OK, crossed
+J3.6
+GROUND
+ground
+GND
+OK
+J3.7
+VDD_1V8
+module 1.8 V output
+not connected
+OK
+J3.8
+A7672_RESET
+reset, level-translated
+MODEM_RESET
+OK; polarity (A11)
+J3.9
+GPIO1_1V8
+1.8 V, not translated
+not connected
+OK
+J3.10
+UART_LOG_RX
+1.8 V debug UART
+not connected
+OK
+J3.11
+UART_LOG_TX
+1.8 V debug UART
+not connected
+OK
+J3.12
+GROUND
+ground
+GND
+OK
+J4.1
+PWR_EN
+board power, level-translated
+PWR_EN
+OK; polarity (A11)
+J4.2
+MIC_N
+microphone
+not connected
+OK
+J4.3
+MIC_P
+microphone
+not connected
+OK
+J4.4
+EAR_N
+earpiece
+not connected
+OK
+J4.5
+EAR_P
+earpiece
+not connected
+OK
+J4.6
+GROUND
+ground
+GND
+OK
+J4.7
+SDA_1V8
+1.8 V I2C, not translated
+not connected
+OK
+J4.8
+SCL_1V8
+1.8 V I2C, not translated
+not connected
+OK
+J4.9
+GROUND
+ground
+GND
+OK
+J4.10
+GPIO2_1V8
+1.8 V, not translated
+not connected
+OK
+J4.11
+ADC
+module ADC input
+not connected
+OK
+J4.12
+GROUND
+ground
+GND
+OK
+J5.1
++5V SUPPLY
+separate 2-pin connector
++5V
+By cable (B10)
+J5.2
+GROUND
+separate 2-pin connector
+GND
+By cable (B10)
+Table A2. Modem board (Parry PTG4GBOB-SC104V1) on J3, J4 and, by cable, J5.
+
+
+===== PAGE 19 =====
+MoriShield carrier PCB, Rev A  ·  module fit
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-003 v1.1  ·  16 October 2026
+Page 19 of 19
+Appendix B. Photo readings
+Each crop is from the photo you sent, enlarged. The red line marks the vernier zero, read against the printed main scale. No
+vernier line can be seen to meet a main-scale line cleanly in these photos (the vernier plate sits nearer the lens than the main
+scale), so each value is good to about ±0.05 to 0.1 mm. Readings taken on the caliper itself are better.
+B1. ESP32, outside: about 26.7 to 26.8 mm.
+B2. ESP32, inside: about 25.7 mm.
+B3. Modem, outside: about 34.4 to 34.5 mm.
+B4. Modem, inside: about 33.75 to 33.85 mm.
+ESP32, outside
+ESP32, inside
+Modem, outside
+Modem, inside
+Figure B5. The four photos as received, rotated upright.
+Appendix C. References
+1
+MS-CAR-REV-A-001 v1.2, Carrier PCB Rev A: design review and change requests for Rev B, 12 October 2026; MS-CAR-REV-A-004 v1.0,
+Carrier PCB Rev A: fabrication readiness, 16 October 2026.
+2
+MoriShield carrier review package v3, 12 October 2026: KiCad board file (socket coordinates, nets, tracks, zones).
+3
+Aswin's reply of 13 October 2026: four caliper photos and the spacing note.
+4
+Parry Technology India, 4G LTE GSM Modem, part PTG4GBOB-SC104V1, datasheet, 2 pages, 2023.
+5
+EdgeHax, ESP32 S3 WROOM N16R8 Dev Kit pinout (S3-PRO), 1 page, 2026.
+6
+Espressif: ESP32-S3-WROOM-1 datasheet (operating temperature by variant, PSRAM ECC); ESP32-S3 datasheet (strapping pins, RTC
+GPIOs, GPIO power domains).
+7
+SIMCom: A7672 series hardware design (power key, reset, supply peaks); A76XX AT command manual (AT+CPOF, AT+CNMP).
+8
+JST: XH connector specification (contact resistance).

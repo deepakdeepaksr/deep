@@ -1,0 +1,298 @@
+milestone one :
+What changed
+Net move (PCB + schematic kept in sync)
+
+U8 pad 11 (P07, at 249.00, 169.93) → net /WDT_WDI
+U8 pad 17 (P14) → no net
+Schematic: WDT_WDI label + wire moved from pin 17 to pin 11, no_connect added on pin 17, removed from pin 11
+Routing (no 0Ω needed — the path fits cleanly)
+
+F.Cu:  U8.11 (249.9,169.93) ──► via (250.45,169.9)   ← "re-aimed toward the expander"
+B.Cu:  via ─► (249.5,170.9) ─► (248.0,170.3) ─► (244.5,173.5) ─► …existing route ► U4.WDI
+Old pad-17 stub and its via at (257,168.1) removed
+Old end-via at (244.5,173.5) removed — the new via sits at the expander's lower-left corner
+0.2 mm tracks, 0.6/0.3 mm via — same style as the rest of the net
+The route threads between the E22_EN via, SENS_EN via/track, LED_DRV2 via and the GND via; every clearance is ≥0.2 mm.
+
+Validation (kicad-cli 10.0.6, zone refill + save)
+Check	Before	After
+Unconnected items	1	0
+DRC violations	165	163 (all pre-existing silk/lib warnings)
+Clearance / shorting	—	none
+Schematic ERC	—	only pre-existing library-config issues
+Note: my first via placement near the LED_DRV2 via produced real shorts in DRC (to /LED_DRV2 and a GND via) — that's why the via ended up at (250.45, 169.9) after re-checking geometry.
+
+Backups kept alongside: MoriShield_Carrier.kicad_pcb.bak and .kicad_sch.bak. Open the board in KiCad and the watchdog net will show fully connected (P07 → TPS3823 WDI).
+
+milestone 2 :
+Watchdog Link — Work Summary
+1. The problem
+MoriShield_Carrier.kicad_pcb had exactly one unconnected net: /WDT_WDI, the watchdog kick line between the I/O expander U8 (TCA9535) and the watchdog IC U4 (TPS3823).
+
+The copper already existed in two disconnected islands:
+
+U4.WDI → via → B.Cu route ending at a via at (244.5, 173.5)
+U8 pad 17 (P14) → 2 mm stub → via at (257, 168.1)
+The gap in between could not be closed from pad 17 because the escape is blocked by the SENS_EN / SDA / LED_DRV2 routing under and around the expander.
+
+2. What I changed
+Schematic (MoriShield_Carrier.kicad_sch)
+Item	Change
+WDT_WDI label + wire	Moved from U8 pin 17 (P14) to pin 11 (P07)
+no_connect on pin 11	Removed (pin is now used)
+no_connect on pin 17	Added (pin is now unused)
+PCB (MoriShield_Carrier.kicad_pcb)
+Item	Change
+U8 pad 11 (P07, 249.00, 169.93)	Net set to /WDT_WDI
+U8 pad 17 (P14)	Net removed (NC)
+Old pad-17 stub + via (257, 168.1)	Deleted (dead copper)
+Old end-via (244.5, 173.5)	Deleted — re-aimed toward the expander
+New via	(250.45, 169.9), 0.6/0.3 mm — at U8's lower-left corner
+New F.Cu track	pad 11 → new via
+New B.Cu tracks	via → (249.5, 170.9) → (248.0, 170.3) → (244.5, 173.5), joining the existing route to U4
+Track width 0.2 mm — same style as the rest of the net.
+
+No 0 Ω 0603 required
+The route fits through the existing gaps (between the E22_EN via, SENS_EN via/track, LED_DRV2 via and a GND via) with ≥ 0.2 mm clearance everywhere, so no jumper part and no BOM line were added.
+
+3. How it was verified
+Test	Tool	Result
+Unconnected items	kicad-cli 10.0.6 pcb drc --refill-zones	1 → 0 ✔
+DRC violations	same run, --severity-all	165 → 163 (none new; all remaining are pre-existing silk/lib warnings)
+Clearance / shorts	DRC + independent geometric check of the new copper	None ✔
+Schematic parity	--schematic-parity	No net conflicts (only pre-existing footprint-library mismatch warnings)
+ERC	kicad-cli sch erc	Only pre-existing "library not in config" issues — no pin/net errors ✔
+Zone fills	Refilled and saved by DRC run	GND plane / power zones clear the new via correctly ✔
+File format	Header check	Unchanged (20260206) — no KiCad version upgrade side-effects
+Note: the first attempt placed the via at (251.65, 165.8); DRC caught real shorts there (to /LED_DRV2 and a GND via), so the via was moved and the route re-checked before finalizing.
+
+4. Current status
+✅ Watchdog net fully connected: U8 P07 → via → B.Cu → U4 WDI
+✅ PCB and schematic consistent (net on pin 11 in both)
+✅ Board opens cleanly; only pre-existing cosmetic DRC items remain (silkscreen-over-copper, library-config warnings — unrelated to this change)
+📁 Backups kept: MoriShield_Carrier.kicad_pcb.bak, MoriShield_Carrier.kicad_sch.bak
+5. Suggested next steps
+Open the board in KiCad and visually confirm the route (net highlight on /WDT_WDI).
+Re-run your own DRC if you have project-specific rule overrides.
+When ordering, no extra parts needed for this link — but remember J3/J4 male-header and J5 clearance items from the connector review.
+
+milestone 3 :
+All three areas are done, DRC is clean, and the board is saved. Here's the summary.
+
+1. J18 input block — protection device position established
+Decision: the protection eFuse goes at (141.0, 100.8) — the free bay between J18, the fuse F1 and C5, directly on the input path (left-to-right flow: J18 → protection → fuse → Q9).
+
+Item	Action
+U10 (SOT-23-6 eFuse footprint, value "eFuse")	Placed at (141.0, 100.8). Only pad 6 carries the new /5V_PROT node; IN/EN/ILIM pins left un-netted because the block topology isn't final
+Copper cleared	Old 0.5 mm / 0.3 mm +5V_IN diagonal that ran under the new part was deleted
+Input run widened	0.3–0.5 mm → 1.5 mm, rerouted around U10: J18.1 → (137.4, 104.2) → (137.4, 97.6) → F1.1
+Everything else in the block	Left untouched, as instructed (Q9/D2/C5/F1 wiring not finalised)
+2. J26 — 4-pin JST-XH beside J8
+Placed at (162.45, 181.35) — the nearest free 13.4 × 6.75 mm area beside J8 (the I²C header). Pinout follows the board's JST sensor-port convention: 1 = 3V3_C, 2 = GND, 3 = /I2C1_SCL, 4 = /I2C1_SDA. All four routed to J8's corresponding pads (one via each).
+
+3. /MODEM_RST — J1 pin 6 → J4 pin 8
+New net /MODEM_RST created: J1.6 (209.5, 141.3) → J4.8 (269.5, 131.34). 67 mm route, 0.25 mm tracks, 4 vias, crossing the mid-board corridor under the modem keep-out.
+
+Two new nets created: /MODEM_RST and /5V_PROT ✓
+
+4. DRC / ERC status (kicad-cli 10.0.6, zone refill + save)
+Check	Result
+Unconnected items	0 ✔
+DRC violations	164 vs 163 baseline — no clearance, no shorts, no track crossings; all remaining are pre-existing silkscreen/library warnings
+Zone fills	Refilled and saved (GND/PE/In2 planes clear the new vias correctly)
+Board saved	MoriShield_Carrier.kicad_pcb (backup …pcb.bak2)
+5. Screenshots (in pcb/)
+File	Shows
+shot_J18_3d.png / shot_J18_2d.png	J18, widened 1.5 mm input run, U10 footprint, F1
+shot_J26_3d.png / shot_J26_2d.png	J26 JST beside J8 with its 4 routed nets
+shot_MODEM_RST_3d.png / shot_MODEM_RST_2d.png	/MODEM_RST route from J1.6 to J4.8
+(2D views are layer-coloured: red = F.Cu, blue = B.Cu, green = highlighted net, magenta = vias.)
+
+Caveats to close next
+Schematic sync — J26 and U10 exist only in the PCB; "Update PCB from schematic" would delete them. They need schematic symbols + MODEM_RST labels + BOM lines.
+U10 is a position placeholder — package choice (SOT-23-6 eFuse) and pin functions to confirm against the final part; then route IN/OUT/EN and rewire Q9.
+J26 pinout — assumed 3V3/GND/SCL/SDA per board convention; confirm before ordering cables.
+Cosmetic: new JST/silk overlaps (2 warnings) — usual for this board's density.
+
+milestone 4 :
+Rev C P0 pass — J18 legend, 4 A copper, schematic sync
+Tool: KiCad 10.0.6 kicad-cli. Every step DRC'd on its own, --severity-all --refill-zones.
+Baseline measured in this folder before any edit: 132 DRC items, 0 unconnected, 211 parity.
+
+1. J18 legend — swapped, and both strokes to 0.15 mm
+The +/− were two board-level gr_text items (Times New Roman, 1 mm, bold, 0.25 mm stroke), not footprint silk:
+
+Item	Was	Now
+"5v +"	(128.00, 100.50) — beside pad 2, GND	(128.00, 105.27) — beside pad 1, +5V_IN
+"5v −"	(128.00, 107.00) — beside pad 1, +5V_IN	(128.00, 100.27) — beside pad 2, GND
+stroke	0.25 mm	0.15 mm both
+font	Times New Roman (TrueType)	KiCad stroke font — the only TrueType text on the board
+
+Both marks are now centred on their own terminal, not merely near it: the `+` box centres on 107.250 (pad 1) and the `−` box on 102.250 (pad 2), measured from each text's bounding box after the font change. The `+` moved 1.73 mm, the `−` 0.23 mm.
+
+Why the font changed: the two text_thickness warnings do not come from the stroke value. Tested 0 / 0.15 / 0.16 / 0.30 mm — flagged at every one. They are TrueType-specific ("insufficient stroke weight"), and these were the only two texts on the board with a custom face. Dropping (face "Times New Roman") cleared both. Side effect: the stroke font is wider in x (1.70 mm against 0.95 mm), which put the `+` into J18's reference field at (128.47, 105.25) — one new silk_overlap. Fixed by moving the reference to (134.47, 98.50), above the connector body, clear of both marks and of the 1.5 mm input track.
+
+Result on this item alone: 132 → 130 DRC items, the only change being text_thickness 2 → 0. No new silk_overlap, no new silk_over_copper.
+
+2. +5V_IN — the 0.5 mm link inside F1
+F1 is a 5x20 mm Littelfuse 111 clip holder with two legs per terminal (2.0 mm pads at 5 mm pitch). The input arrives on the 146.50 leg; the 151.50 leg was fed only through a 0.5 mm track.
+
+F.Cu (151.500,96.000) → (146.500,96.000)	0.5 → 1.5 mm
+DRC after: 132 items, 0 unconnected — identical type/severity histogram to step 1.
+
+3. +5V_F — the 0.3 mm link and both 0.5 mm runs to Q9
+F.Cu (161.500,96.000) → (166.500,96.000)	0.3 → 1.5 mm	(the other F1 clip)
+F.Cu (166.500,96.000) → (162.938,99.562)	0.5 → 1.5 mm
+F.Cu (162.938,99.562) → (162.938,103.050)	0.5 → 1.5 mm	(into Q9 pad 2)
+DRC after: 132 items, 0 unconnected — no new types.
+
+Q9's own pads are 1.48 x 0.60 mm, so the 1.5 mm track is wider than the land it lands on. Geometry is legal (0.41 mm to pad 1, 0.83 mm to pad 3, both ≥ 0.2) but the AO3401A land is now the narrowest thing in the path, and R5's "restore the library footprint" is still open.
+
+4. J5's feed — widened in place, no re-route needed
+This was the one you flagged as possibly not fitting. It did fit:
+
+In2.Cu (239.510,95.830) → (232.920,95.830)	0.3 → 1.5 mm
+In2.Cu (232.920,95.830) → (225.500,103.250)	0.3 → 1.5 mm	(lands on D7.2's 3.3 x 4.5 pad)
+
+Both run inside the +5V pour on In2.Cu, so the zone simply re-fills around the wider track. Clearance to the nearest other-net copper (J5.2 GND pad) is 2.85 mm. DRC after: 132 items, 0 unconnected.
+So: nothing to re-route for J5 tonight. The modem's 5 V now leaves the plane on 1.5 mm, not 0.3 mm.
+Resistance, though, is a separate question from fit: in place on In2.Cu (0.5 oz) this run is ~11.5 mΩ, against ~5.8 mΩ for the same 1.5 mm on F.Cu. See section 7.
+
+5. /MODEM_RST — the 19.8° segment is gone
+Deleted: F.Cu (241.000,141.500) → (269.500,131.250), 28.50 x −10.25 mm = 19.78°, and it also ended 0.09 mm off J4 pad 8's centre.
+Replaced with two segments, both on the board's 0/45/90 convention and landing dead centre on the pad:
+
+F.Cu (241.000,141.500) → (251.160,131.340)	14.37 mm at exactly 45°
+F.Cu (251.160,131.340) → (269.500,131.340)	18.34 mm horizontal, into J4.8
+
+Clearances: 0.662 mm to /PWR_EN (the nearest), 1.225 mm to /E22_M0, 5.8 mm on the horizontal. Route is 67.0 → 69.4 mm; the two vias and the B.Cu hop it inherited are untouched.
+DRC after: 132 items, 0 unconnected.
+
+Still on this net (not touched, it needs a different fix): the (243.00,143.75) → B.Cu → (241.00,141.50) hop is a 2 mm back-jog. It is forced, not sloppy — B.Cu is bounded by two parallel 45° tracks (/E22_M1 y = x − 100.75 and /UART1_LORA_RX y = x − 98), a 1.94 mm corridor, so any climb has to travel left. The other shallow angles (11.8° and 9.8° at the two middle vias, 1.6° at 234,143.5) are in the same corridor.
+
+6. Schematic sync — J26, U10, both labels, six no_connects
+Schematic went 717,853 → 728,595 bytes; 153 → 155 components. Netlist re-exported and read back.
+
+Item	Where	What
+J26	(491.49, 641.35), sensor-port row	JST_XH_4 symbol, footprint MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical. Pin 1 → 3V3_C, 2 → GND, 3 → label I2C1_SCL, 4 → label I2C1_SDA
+U10	(177.80, 147.32), in the input block	New symbol MoriShield_Carrier:eFuse_SOT-23-6 (6 pins, names hidden, passive, footprint Package_TO_SOT_SMD:SOT-23-6). Pin 6 → label 5V_PROT; pins 1-5 → no_connect
+/MODEM_RST	J1 pin 6	no_connect removed at (115.57, 302.26), wire + label MODEM_RST added
+/MODEM_RST	J4 pin 8	no_connect removed at (445.77, 320.04), wire + label MODEM_RST added — you only listed J1.6, but J4.8 is the other end of the same net in the board, and leaving it NC would have kept the net split
+Library	MoriShield_Carrier.kicad_sym	eFuse_SOT-23-6 added, identical text to the copy embedded in the sheet, so lib_symbol_issues stays at 0
+
+Netlist now reads: /MODEM_RST = J1.6 + J4.8; /5V_PROT = U10.6; J26.1 3V3_C, .2 GND, .3 /I2C1_SCL, .4 /I2C1_SDA; U10.1-5 as unconnected-(U10-~-PadN).
+
+ERC: 0 errors, 1 warning — isolated_pin_label on 5V_PROT, i.e. "label connected to only one pin". That is the placeholder showing through, not a mistake: the net has one pin because U10's circuit is not designed yet. It closes when U10 is wired.
+Parity (same folder, before → after): extra_footprint 6 → 4 — the two that were J26 and U10 are gone; the four left are H1-H4, the mounting holes. net_conflict 58 → 61 (+5 for U10's no_connect pads, −2 for J1.6/J4.8). footprint_symbol_mismatch 133 → 134 (U10 is now compared at all).
+
+7. U10's real circuit — route C (discrete), decided on resistance, not preference
+Condition 2 of the Rev B review (MS-CAR-REV-B-001 §6.4) asks for reverse-polarity protection, an over-voltage cut-off that opens before the rail reaches 5.5 V, survival of 12 V or 24 V on J18 indefinitely, and a current limit near 3.5 A. The review names TI's TPS26630 / TPS26631 with an external blocking FET.
+
+Part data checked against TI's own documentation (accessed 1 Nov 2026):
+TPS2663x datasheet Rev. G, ti.com/lit/ds/symlink/tps2663.pdf — 4.5-60 V operating, 67 V abs max, 31 mΩ, 0.6-6 A adjustable limit, adjustable OVP cut-off, B-FET driver for reverse polarity. Packages: VQFN (RGE) 24 pins for TPS26630; HTSSOP (PWP) 20 pins and VQFN for TPS26631. Not SOT-23-6.
+TPS2662x datasheet Rev. F, ti.com/lit/ds/symlink/tps2662.pdf — 4.5-60 V but only 0.88 A, 10-lead 3 x 3 VSON.
+
+So the SOT-23-6 placeholder cannot host it: 6 pins cannot give a 3.5 A limit behind a 60 V front end. U10 has to change footprint before it can have a circuit — a layout change in the input bay, not a wiring job.
+
+Decision (owner, 1 Nov): route C — a discrete OVP / reverse-polarity controller driving a logic-level N-FET. The arithmetic, not the part list, decides it. Sheet resistance 0.505 mΩ/sq at 1 oz, 1.01 mΩ/sq at 0.5 oz on the inner layers (note: the board file carries no stackup, so these weights are the owner's, not read out of the project):
+
+Allocation	Route C	TPS2663x
+J18 terminal + F1 clip contacts	10 mΩ	10 mΩ
+Protection switch	5 mΩ (logic-level N-FET)	31 mΩ (internal FET, typ)
+Input pour, 4 mm × ~120 mm	15 mΩ	15 mΩ
+Vias and misc	10 mΩ	10 mΩ
+Total	40 mΩ — 20 mΩ margin	66 mΩ — over before any track
+
+A and B cannot hold condition 5's 60 mΩ on the switch alone. VQFN-24 was rejected separately on hand assembly (F2) and the open via-in-pad question (R16); deferring was rejected because R4 is P0 and condition 2 is one of the six accepted on the record.
+
+What route C still needs before it can be drawn, and is not yet verified: the controller must either have a charge pump or drive a FET that enhances fully at 5 V, because this bus is 5.15 V nominal and most 60 V controllers want 8-10 V of gate drive. That is to be checked against datasheets. If nothing satisfies both 5 V gate drive and a 5.4 V trip point, the fallback is TPS26631 in HTSSOP-20, with a written request to Serigreen to relax 60 mΩ to 90 mΩ rather than miss it silently.
+
+Governance: the review names TPS26630, so route C is a deviation from a part the reviewer specified. It must go to Serigreen as an Agreed item on the response sheet before it is drawn — not as a silent substitution. The table above is the one-line question to send them; drawing proceeds in parallel so the answer is not on the critical path.
+
+Resistance note that changes the J5 row: the modem feed as it stood was 17.08 mm of 0.3 mm on In2.Cu — 57 squares at 1.01 mΩ = ~58 mΩ, the whole 60 mΩ budget on its own. Widened in place tonight to 1.5 mm it is 11.4 squares × 1.01 = 11.5 mΩ. The same run on F.Cu at 1.5 mm would be 5.8 mΩ, and as a 4 mm pour on F.Cu 2.2 mΩ. In-place widening was the instruction and it is legal, but it leaves ~5.7 mΩ on the inner layer against an outer-layer re-route — worth having once route C's 20 mΩ margin is being spent.
+
+8. What is still open after tonight
+U10 real circuit — route C, blocked on the controller choice (5 V gate drive + 5.4 V trip) and on Serigreen agreeing the deviation. Needs a new footprint once the part is fixed. P0.
+Condition 3 is still not met: it wants pour width (3 mm or more) from J18 through the protection to the plane, and six or more 0.3 mm vias at every layer change. Tonight's work is 1.5 mm. Also untouched: Q9.3 → (161.00,103.00) is still a 1.03 mm stub of 0.5 mm track into a single 0.6/0.3 via — R5's "one 0.3 mm via carries the board", and it is on +5V, not on the two nets named.
+J5's feed sits on In2.Cu at 11.5 mΩ; an outer-layer re-route would be 5.8 mΩ (4 mm pour: 2.2 mΩ). Not done — it was not needed to make the widening fit.
+The 1.6°/9.8°/11.8° kinks and the 2 mm B.Cu back-jog on /MODEM_RST, if you want the whole net to 0/45/90.
+Pre-existing and unchanged: 78 silk_over_copper, 47 silk_overlap, 3 via_dangling, 2 track_dangling, Q9 lib_footprint_mismatch.
+
+Final numbers: 130 DRC items (baseline 132, text_thickness 2 → 0), 0 unconnected, 213 parity.
+
+Evidence: _evidence\ (DRC JSON after each step, final ERC), _shots_revC\ (2D renders of J18, F1/+5V_F, J5 feed, /MODEM_RST), _snap\ (pre-work copies of the board and schematic).
+9. Milestone 5 - audit-driven copper pass + schematic parity to zero (1 Nov, late session)
+
+Enforcement: MoriShield_Carrier.kicad_dru added - real per-class/per-net minimum-width floors (netclass track_width is a routing default, never a DRC minimum). Net-class resolution under kicad-cli needed a non-empty design_settings.rules.rules array in .kicad_pro - one inert entry ("netclass-binding-activation", min 0.05 mm, cannot fire) added. Known quirk: a rule conditioned on A.NetClass == 'Signal' silently disables the whole dru file; the global floor is written unconditionally instead. Backup of .kicad_pro in _snap.
+
+Copper, work-order items 1-4 done:
+- /+5V_SENS chain (In2.Cu daisy x~176-247, y~166-167): 27 segs to 0.5 mm; the four long runs tried at 0.8 - three blocked by J7 PTH / +5V via / 3V3_C via went to 0.6, the clean 9.9 mm diagonal kept 0.8. F.Cu corridor was surveyed first - fully occupied (J7 row, 3V3_C, I2C0, U8 pads), so in-place inner-layer widening was the honest fix. ~313 -> ~110 mOhm.
+- /3V3_SENS_SW: all 28 segs 0.3 -> 0.5; three new clearance hits fixed by moving the shared ESD7 vertex -0.25 mm in y and jogging the x=183 vertical to x=183.2.
+- +5V micro-stub at R6.2 (pad-fanout artifact + a zero-length segment), GND stubs at J26.2/J8.6/C30.2 widened.
+- PE back edge: the 153 mm 0.6 mm wire (143,203.5)-(296,203.5) was redundant - the B.Cu PE pour already fills that strip. Wire deleted, pour carries it, 0 unconnected. Caveat recorded: the strip bonds to the main PE body only east of x~239 because /BUZZER_EN crosses at y=201.75 - a real pinch, documented not hidden.
+- PE via bridge near R47/R48: the two vias (293.35,136.60) and (296.90,135.40) are needed - deleting them orphaned an island (proved by 1 unconnected). The 1.0 mm corridor between R47/R48 pad rows minus 2x0.30 mm PE clearance caps the track at 0.4 mm: routed vertical 0.4 + horizontal 0.35 flat at corridor centre y=135.375. Both stay flagged under the 0.6 PE floor - deliberate, physically maximal.
+
+Parity: 213 -> 0.
+- 122 footprint fpids normalised to the schematic-authoritative library prefixes.
+- 61 net_conflicts: board pads got their schematic-generated unconnected-(Ref-Pin-PadN) net names (name-only net model in this file format - no decl table needed).
+- 14 field mismatches: Description/Datasheet/Rating copied schematic->footprint (C36, C41-C50 "U8 decoupling"; R15; U8 datasheet+description; F1 Rating + Description).
+- 12 BOM flags: TP2-TP12 and U4 had exclude_from_bom on the board while the schematic says in_bom yes - flag cleared. U4 keeps board_only + exclude_from_pos_files, which parity does not flag but which will make Update-PCB skip it - noted for review.
+- 4 extra_footprint (H1-H4 mounting holes) integrated properly rather than left as extras: new pinless symbol MoriShield_Carrier:MountingHole added to the project lib AND the sch lib_symbols cache (both needed - the placed instance does not resolve otherwise), four instances placed at x=1150 off the right margin, board footprints linked via (path "/<symbol-uuid>"). Probe test proved parity matches on path-uuid.
+
+Final gates: DRC 159 items, 0 unconnected; parity 0; ERC 0 errors / 1 warning (the /5V_PROT single-pin label - the placeholder showing through, closes when U10 is wired).
+Remaining width flags are the documented set: 13x 3V3_C 0.2 mm reference routing (deprioritised), 2x PE bridge stubs (physical max), plus the pre-existing 8 clearance items (PE netclass 0.30 mm - e.g. the 0.25 mm via-to-R48.1 gap that pre-dates tonight).
+
+Still open: route-C controller search (5 V gate drive + <5.5 V trip + 24 V survive + rev-pol + ~3.5 A, datasheet-verified) then Serigreen sign-off before drawing; 3V3_C decision; PE pinch note above; no stackup in project - all mOhm figures assume 1 oz outer / 0.5 oz inner pending fab confirmation.
+
+10. Milestone 6 - second audit pass: mechanical items closed, SD conflict refuted (1 Nov, cont.)
+
+Work-order items from the second `input` audit:
+- /I2C0_MUX_SC0 vias (229.70,181.50) and (234.50,179.35): 0.5/0.3 -> 0.7/0.3 mm. Four via-size items closed (159 -> 155).
+- PE via at (293.35,136.60) nudged to (293.25,136.60); F.Cu stub re-pointed, B.Cu diagonal extended to exact via centre (was 0.605 mm short -> dangling).
+- Seven PE clearances around J11/J16/J17 pads, ESD7/9/11.5 and the /3V3_SENS_SW via: B.Cu stitch vias moved west off ESD pads, vertical tracks shifted 0.08-0.15 mm, the J11/I2C descent reverted to x=174.625 at 0.4 mm (proven bottleneck: J11.1 pad + I2C track leave no 0.6 mm centreline; 0.4 gives 0.325/0.40 mm gaps). Clearance count now 0.
+
+lib_footprint_mismatch - all closed:
+- U7/U8 (TSSOP-24_4.4x7.8mm_P0.65mm_HS): the LIBRARY file was defective - pads written as 0.45 x 1.8 (axis-swapped, would run parallel to the body and overlap on 0.65 mm pitch). Board carries the corrected 1.8 x 0.42 pads. Library rewritten from board geometry. .bak kept in the .pretty dir.
+- Q-family SOT-23s turned out to be THREE content groups, not one footprint: {Q9} fully custom (rotated pads 270 deg, custom silk, descr "SOT-23 reverse-polarity PMOS, S to +5V rail, D to +5V_F"); {Q2,Q3,Q7} standard template + enlarged 1.48x0.60 pads, Value AO3401A; {Q4,Q8} same, Value 2N7002.
+- New lib files written from raw board blocks (fpid renamed): SOT-23_HS (from Q2) for Q2/Q3/Q4/Q7/Q8; SOT-23_PMOS_HS (from Q9) for Q9. Schematic Footprint props updated for all six; Q9's board fpid repointed. Board-instance lines (path/sheet/net) stripped after proving they are not part of the compare; footprint-level (at) MUST be kept for the rotated Q9 - the checker applies footprint rotation to pad geometry.
+- Checker behaviour, verified empirically: compares pads + graphics + footprint-level props (descr/tags/datasheet/generator), ignores per-instance Reference/Value/path/net/uuid. Value difference between Q4/Q8 and the lib does not flag.
+
+S3-PRO microSD question (audit item #1) - datasheet-answered, conflict refuted:
+- Board identified by exact pin-order match, 44/44: Keyestudio "ESP32 S3 PRO" family (docs.keyestudio.com/projects/ESP32-S3/en/latest/2.Pinout.html). J1 pins 1-22 = 3V3,3V3,RST,IO4-7,IO15-18,IO8,IO3,IO46,IO9-14,5V,GND; J2/J3 = GND,IO43,IO44,IO1,IO2,IO42-35,IO0,IO45,IO48,IO47,IO21,IO20,IO19,GND,GND.
+- Official peripheral table (docs.keyestudio.com/projects/KS5034): microSD = DAT3 io39/CS, CMD io35/MOSI, SCK io37/SCK, DAT0 io36/MISO. RGB io45, INA180 io1, USB OTG io19/20.
+- Carrier state: J2 pads 9/11/12/13 (io39/37/36/35) are all unconnected-(...) - nothing on the carrier touches the SD bus. /E22_M1 = J1.16 = io10 (ADC1_CH9) and /E22_M0 = J1.17 = io11 (ADC2_CH0): plain GPIOs, NOT SD lines on this board.
+- Conclusion: the audit's "E22 contends with microSD on GPIO10/11" does not apply to the identified board. The planned move (M1->J2.8/io40, M0->J1.8/io15) is unnecessary; recommendation recorded for the owner, who should sanity-check the physical board is indeed the Keyestudio unit. No pin move drawn.
+
+Final numbers: DRC 145 items = 78 silk_over_copper + 46 silk_overlap (both pre-existing cosmetic) + 16 track_width (13x 3V3_C documented + 3x PE residuals: 0.35 mm corridor + 0.4 mm J11 descent, physical max) + 3 via_dangling + 2 track_dangling. Clearance 0. lib_footprint_mismatch 0. Unconnected 0. Schematic parity 0 (--schematic-parity, --refill-zones). Evidence: _evidence\drc_42-46*.json.
+
+Still open: 3V3_C policy decision (owner); route-C controller search + Serigreen sign-off; suppressed-check justifications (missing_courtyard, single_global_label).
+
+11. Modem / LoRa socket audit (owner request: VDD_1V8 and "check everything")
+
+VDD_1V8 - J4 pin 7 (modem UART socket). Explicit no_connect in the schematic; board pad carries unconnected-(J4-VDD_1V8-Pad7); no track, no net. Direction CANNOT be verified: the modem module/board is not identified anywhere in the project (no part number, no datasheet, no note; socket pin names are project-defined). On cellular modules a VDD_1V8 / VDD_EXT pin is normally an OUTPUT - the module's internal 1.8 V reference for its 1.8 V I/O domain (the same domain as the socket's SDA_1V8 / SCL_1V8 / GPIO2_1V8 / ADC_1V8). If that holds, NC is correct (some datasheets still ask for a 2.2 uF cap). Status: PENDING - blocked on the module datasheet.
+
+Modem sockets J3 (power header) + J4 (UART header), 2x12:
+- Supply: the ONLY power entering the modem is 3V3_C on J4.3 (VDD_IN_UART). There is no VBAT/VCC pin on either socket. 3V3_C is fed from the ESP32 dev board's own 3V3 pins (J1.1/J1.2) - the carrier has no 3.3 V regulator for it. If the module expects a main supply, its GSM burst current (up to ~2 A for 2G, ~0.5 A Cat-M/NB) has no defined source or budget: no !padne CURRENT directive exists for J3/J4 (the E22 has one, 0.15 A).
+- VDD_IN_UART tied to 3V3_C: consistent only if the pin is a host-supplied UART I/O rail input. If it is a module output, the carrier back-drives it. Verify against datasheet.
+- PWR_KEY (J4.1): R15 1k to GND only - no host drive. The modem's power key is therefore hard-tied and cannot be pulsed. Acceptable only if the module auto-powers on supply; otherwise needs a GPIO/expander drive (>=500 ms pulse on most SIMCom parts).
+- /PWR_EN (J3.1): driven by BOTH J1.7 (ESP32 IO7) and U8.16 (TCA9535 P13), with R16 4.7k pull-down. Two possible drivers on one net - confirm one side is input-only or split the net.
+- RESET (J4.8) <- /MODEM_RST <- J1.6 (ESP32 IO6). OK. TXD/RXD (J4.4/5) <-> /UART2_MOD_RX/TX <-> J2.16/J2.17, with TP10/TP9. OK.
+- SIM: neither socket carries USIM_VDD/DATA/CLK/RST/DET. The SIM socket must be on the modem board - confirm, or it is missing from the carrier.
+- USB (modem firmware download): not on either socket. Confirm the modem board brings its own USB.
+- Unused-by-design (explicit no_connect): J3 MIC_N/MIC_P/EAR_N/EAR_P/SDA_1V8/SCL_1V8/GPIO2_1V8/ADC_1V8; J4 VDD_1V8/GPIO1/UART_LOG_RX/UART_LOG_TX. Confirm audio, 1.8 V I2C and debug UART are intentionally unused.
+
+E22 LoRa socket J6 (Sock_1x07) - verified, no action:
+- Pin map is the exact reverse of the EBYTE DIP pinout and matches function-for-function: pad1 GND=module pin7, pad2 +5V_E22=pin6 VCC, pad3 AUX=pin5, pad4 RX=pin4 TXD, pad5 TX=pin3 RXD, pad6 M1=pin2, pad7 M0=pin1.
+- Supply: E22-900T22D / E22-400T22D operate 2.3-5.5 V (5.0 V typ, >5.5 V destroys). +5V_E22 via Q7/FB2 is CORRECT. The SPI stamp variant E22-900M22S (max 3.7 V) would not fit a 7-pin socket - confirm the 900 vs 400 MHz variant.
+- Power switch complete: U8.6 /E22_EN -> R54 -> Q8 gate (/E22_EN_G, R55 100k PD) -> Q8 drain /E22_GATE -> Q7 (AO3401A) gate (R53 100k PU to +5V) -> Q7 S=+5V, D=+5V_E22_IN -> FB2 -> +5V_E22 -> C38/C39 -> J6.2.
+- UART1/AUX/M0/M1 map to J1.10/11/9/16/17 = IO17/IO18/IO16/IO10/IO11 - plain GPIOs, no conflict with the S3-PRO microSD (io35/36/37/39, all unconnected on J2).
+
+Other open items confirmed in the same sweep:
+- U10 eFuse placeholder: pads 1-5 unconnected-(...), only pad 6 /5V_PROT. ERC warning isolated_pin_label on /5V_PROT comes from this. Blocked on route-C controller + Serigreen deviation.
+- Suppressed checks still unjustified: DRC missing_courtyard, track_not_centered_on_via, tuning_profile_track_geometries, footprint_filters_mismatch, footprint_type_mismatch; ERC single_global_label, four_way_junction, simulation_model_issue, footprint_filter.
+- U4 (TPS3823-33 watchdog) carries attr board_only although it has a schematic symbol - Update PCB from Schematic may skip or delete it. Clear the flag.
+- Q9.3 (+5V) still enters the board through a single 0.6/0.3 via on a 1.03 mm 0.5 mm stub (R5 item).
+- PE pour pinch: back-edge strip bonds to the main PE body only east of x~239 (/BUZZER_EN crosses at y=201.75).
+- No stackup in the project - all mOhm figures assume 1 oz outer / 0.5 oz inner.
+- Cosmetic residuals: 78 silk_over_copper, 46 silk_overlap, 3 via_dangling, 2 track_dangling; 16 track_width (13x 3V3_C + 3x PE).
+- GPIO10/11 vs microSD: resolved, no conflict, no pin move (section 10).

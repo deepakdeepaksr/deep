@@ -1,0 +1,138 @@
+[
+ {
+  "net": "/LED_DRV2",
+  "segments": 14,
+  "length_mm": 109.8,
+  "x": [
+   152.7,
+   251.5
+  ],
+  "y": [
+   141.1,
+   166.1
+  ],
+  "corridor_F": -0.03,
+  "corridor_B": 0.19,
+  "need_mm": 0.3,
+  "verdict": "no"
+ },
+ {
+  "net": "/LED_DRV1",
+  "segments": 8,
+  "length_mm": 100.9,
+  "x": [
+   153.9,
+   247.6
+  ],
+  "y": [
+   149.1,
+   165.8
+  ],
+  "corridor_F": -0.15,
+  "corridor_B": -0.01,
+  "need_mm": 0.3,
+  "verdict": "no"
+ },
+ {
+  "net": "/+5V_SENS",
+  "segments": 13,
+  "length_mm": 76.7,
+  "x": [
+   176.1,
+   246.9
+  ],
+  "y": [
+   166.0,
+   176.0
+  ],
+  "corridor_F": -0.15,
+  "corridor_B": -0.01,
+  "need_mm": 0.6,
+  "verdict": "no"
+ },
+ {
+  "net": "3V3_C",
+  "segments": 10,
+  "length_mm": 63.1,
+  "x": [
+   245.0,
+   269.6
+  ],
+  "y": [
+   118.6,
+   167.5
+  ],
+  "corridor_F": -0.01,
+  "corridor_B": 0.01,
+  "need_mm": 0.35,
+  "verdict": "no"
+ },
+ {
+  "net": "/SENS_EN",
+  "segments": 7,
+  "length_mm": 52.6,
+  "x": [
+   194.0,
+   241.2
+  ],
+  "y": [
+   179.2,
+   183.3
+  ],
+  "corridor_F": -0.01,
+  "corridor_B": -0.19,
+  "need_mm": 0.35,
+  "verdict": "no"
+ },
+ {
+  "net": "/I2C0_SCL",
+  "segments": 7,
+  "length_mm": 22.5,
+  "x": [
+   241.8,
+   256.4
+  ],
+  "y": [
+   164.5,
+   177.7
+  ],
+  "corridor_F": 0.0,
+  "corridor_B": 0.13,
+  "need_mm": 0.3,
+  "verdict": "no"
+ },
+ {
+  "net": "+5V",
+  "segments": 2,
+  "length_mm": 17.1,
+  "x": [
+   225.5,
+   239.5
+  ],
+  "y": [
+   95.8,
+   103.2
+  ],
+  "corridor_F": 10.99,
+  "corridor_B": 6.93,
+  "need_mm": 0.95,
+  "verdict": "yes"
+ },
+ {
+  "net": "/I2C0_MUX_SC0",
+  "segments": 2,
+  "length_mm": 5.7,
+  "x": [
+   229.7,
+   234.5
+  ],
+  "y": [
+   179.3,
+   181.5
+  ],
+  "corridor_F": -0.04,
+  "corridor_B": 0.15,
+  "need_mm": 0.3,
+  "verdict": "no"
+ }
+]

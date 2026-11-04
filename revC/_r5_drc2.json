@@ -1,0 +1,639 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-02T22:30:25",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/E22_AUX] on B.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 262.0,
+                        "y": 171.25
+                    },
+                    "uuid": "49dc4532-a3ae-47f8-85cb-0af92a1aed93"
+                },
+                {
+                    "description": "PTH pad 5 [/E22_AUX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "bb7b5329-118f-4ba6-8bf5-e9a20e173484"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/UART1_LORA_TX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "2012ed68-8b52-4d6f-bf47-92630b5fdaa3"
+                },
+                {
+                    "description": "Track [/UART1_LORA_TX] on B.Cu, length 1.5697 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "45b6eec1-adb6-47df-bb34-4e5b05b55f34"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/+5V_E22] on F.Cu, length 6.0104 mm",
+                    "pos": {
+                        "x": 257.5,
+                        "y": 165.75
+                    },
+                    "uuid": "db8c7ca3-595d-43a4-8ea6-25f89f66d4e6"
+                },
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets /+5V_E22 and GND)",
+            "items": [
+                {
+                    "description": "Track [/+5V_E22] on F.Cu, length 1.2996 mm",
+                    "pos": {
+                        "x": 262.5,
+                        "y": 174.25
+                    },
+                    "uuid": "35d04e27-89df-47be-8e37-dcbb81fb0585"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 175.08
+                    },
+                    "uuid": "763990e1-b748-416f-b8b8-a5e49041de37"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_E22] on F.Cu, length 1.2996 mm",
+                    "pos": {
+                        "x": 262.5,
+                        "y": 174.25
+                    },
+                    "uuid": "35d04e27-89df-47be-8e37-dcbb81fb0585"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 175.08
+                    },
+                    "uuid": "763990e1-b748-416f-b8b8-a5e49041de37"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /E22_M0 and unconnected-(J1-IO11-Pad17))",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 5.3600 mm",
+                    "pos": {
+                        "x": 214.86,
+                        "y": 113.36
+                    },
+                    "uuid": "32e42b8f-03d2-4f20-bed3-51efe07d8175"
+                },
+                {
+                    "description": "PTH pad 17 [unconnected-(J1-IO11-Pad17)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 113.36
+                    },
+                    "uuid": "b7cd0e1e-7190-41b5-86fd-ad900dd937d3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 5.3600 mm",
+                    "pos": {
+                        "x": 214.86,
+                        "y": 113.36
+                    },
+                    "uuid": "32e42b8f-03d2-4f20-bed3-51efe07d8175"
+                },
+                {
+                    "description": "PTH pad 17 [unconnected-(J1-IO11-Pad17)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 113.36
+                    },
+                    "uuid": "b7cd0e1e-7190-41b5-86fd-ad900dd937d3"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /+5V_E22 and /E22_M1)",
+            "items": [
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                },
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 5.8973 mm",
+                    "pos": {
+                        "x": 263.42,
+                        "y": 164.92
+                    },
+                    "uuid": "a623e585-bd69-49f2-869d-31847940acea"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 5.8973 mm",
+                    "pos": {
+                        "x": 263.42,
+                        "y": 164.92
+                    },
+                    "uuid": "a623e585-bd69-49f2-869d-31847940acea"
+                },
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /+5V_E22 and /E22_M1)",
+            "items": [
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                },
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 0.0800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "708d8bc1-0acd-4c92-b9ac-3793e2c63c04"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 0.0800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "708d8bc1-0acd-4c92-b9ac-3793e2c63c04"
+                },
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /E22_M1 and unconnected-(J1-IO10-Pad16))",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 4.3500 mm",
+                    "pos": {
+                        "x": 213.85,
+                        "y": 115.9
+                    },
+                    "uuid": "601b6f54-c87d-4a89-9ae1-bfbe46fa689f"
+                },
+                {
+                    "description": "PTH pad 16 [unconnected-(J1-IO10-Pad16)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 115.9
+                    },
+                    "uuid": "c56cf634-0fb2-4f87-871b-567c582c43db"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 4.3500 mm",
+                    "pos": {
+                        "x": 213.85,
+                        "y": 115.9
+                    },
+                    "uuid": "601b6f54-c87d-4a89-9ae1-bfbe46fa689f"
+                },
+                {
+                    "description": "PTH pad 16 [unconnected-(J1-IO10-Pad16)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 115.9
+                    },
+                    "uuid": "c56cf634-0fb2-4f87-871b-567c582c43db"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /E22_M0 and GND)",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 1.8800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "bcbe5e88-3171-4586-89e4-cbd16e3040e5"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "ccdf1b78-1fe1-4c1e-8a72-75ad6e07fdaf"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 1.8800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "bcbe5e88-3171-4586-89e4-cbd16e3040e5"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "ccdf1b78-1fe1-4c1e-8a72-75ad6e07fdaf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /UART1_LORA_TX and /E22_AUX)",
+            "items": [
+                {
+                    "description": "Track [/UART1_LORA_TX] on B.Cu, length 1.5697 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "45b6eec1-adb6-47df-bb34-4e5b05b55f34"
+                },
+                {
+                    "description": "PTH pad 5 [/E22_AUX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "bb7b5329-118f-4ba6-8bf5-e9a20e173484"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/UART1_LORA_TX] on B.Cu, length 1.5697 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "45b6eec1-adb6-47df-bb34-4e5b05b55f34"
+                },
+                {
+                    "description": "PTH pad 5 [/E22_AUX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "bb7b5329-118f-4ba6-8bf5-e9a20e173484"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets /E22_AUX and /UART1_LORA_TX)",
+            "items": [
+                {
+                    "description": "Track [/E22_AUX] on B.Cu, length 1.9784 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "1fa9cbb6-acbf-434e-a98f-33a63ff2763b"
+                },
+                {
+                    "description": "PTH pad 3 [/UART1_LORA_TX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "2012ed68-8b52-4d6f-bf47-92630b5fdaa3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [/E22_AUX] on B.Cu, length 1.9784 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "1fa9cbb6-acbf-434e-a98f-33a63ff2763b"
+                },
+                {
+                    "description": "PTH pad 3 [/UART1_LORA_TX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "2012ed68-8b52-4d6f-bf47-92630b5fdaa3"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/+5V_E22] on F.Cu, length 1.2996 mm",
+                    "pos": {
+                        "x": 262.5,
+                        "y": 174.25
+                    },
+                    "uuid": "35d04e27-89df-47be-8e37-dcbb81fb0585"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 175.08
+                    },
+                    "uuid": "763990e1-b748-416f-b8b8-a5e49041de37"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 4.3500 mm",
+                    "pos": {
+                        "x": 213.85,
+                        "y": 115.9
+                    },
+                    "uuid": "601b6f54-c87d-4a89-9ae1-bfbe46fa689f"
+                },
+                {
+                    "description": "PTH pad 16 [unconnected-(J1-IO10-Pad16)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 115.9
+                    },
+                    "uuid": "c56cf634-0fb2-4f87-871b-567c582c43db"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 0.0800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "708d8bc1-0acd-4c92-b9ac-3793e2c63c04"
+                },
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_AUX] on B.Cu, length 1.9784 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "1fa9cbb6-acbf-434e-a98f-33a63ff2763b"
+                },
+                {
+                    "description": "PTH pad 3 [/UART1_LORA_TX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 172.54
+                    },
+                    "uuid": "2012ed68-8b52-4d6f-bf47-92630b5fdaa3"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_M1] on B.Cu, length 5.8973 mm",
+                    "pos": {
+                        "x": 263.42,
+                        "y": 164.92
+                    },
+                    "uuid": "a623e585-bd69-49f2-869d-31847940acea"
+                },
+                {
+                    "description": "PTH pad 6 [/+5V_E22] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 5.3600 mm",
+                    "pos": {
+                        "x": 214.86,
+                        "y": 113.36
+                    },
+                    "uuid": "32e42b8f-03d2-4f20-bed3-51efe07d8175"
+                },
+                {
+                    "description": "PTH pad 17 [unconnected-(J1-IO11-Pad17)] of J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 113.36
+                    },
+                    "uuid": "b7cd0e1e-7190-41b5-86fd-ad900dd937d3"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/UART1_LORA_TX] on B.Cu, length 1.5697 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "45b6eec1-adb6-47df-bb34-4e5b05b55f34"
+                },
+                {
+                    "description": "PTH pad 5 [/E22_AUX] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 167.46
+                    },
+                    "uuid": "bb7b5329-118f-4ba6-8bf5-e9a20e173484"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [/E22_M0] on F.Cu, length 1.8800 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "bcbe5e88-3171-4586-89e4-cbd16e3040e5"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "ccdf1b78-1fe1-4c1e-8a72-75ad6e07fdaf"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+	(footprint "MoriShield_Carrier:SOT-23_PMOS_HS"
+		(layer "F.Cu")
+		(uuid "59a42dd9-6137-4911-aad0-aa677b39e550")
+		(at 162 104 180)
+		(descr "SOT-23 reverse-polarity PMOS, S to +5V rail, D to +5V_F")
+		(tags "SOT-23")
+		(property "Reference" "Q9"
+			(at 0 -2.5 0)
+			(layer "F.SilkS")
+			(uuid "937cbb98-cfe6-475c-b3f6-15417ee19842")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "AO3401A"
+			(at 0 2.4 0)
+			(layer "F.Fab")
+			(uuid "9f94c3af-ab83-42bf-851a-ef8d21d0e30e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6fdde341-1647-4ee4-90bc-c278ae37c40d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "46635f70-fda8-4fc5-b7fa-d6b83d912491")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.7 1.45)
+			(end 1.7 -1.45)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "c803ad46-46a8-4aa3-ae17-a3860e977bd6")
+		)
+		(pad "1" smd roundrect
+			(at -0.9375 -0.95 270)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "20e0ec0b-090c-4a3e-af24-c04e664e22e1")
+		)
+		(pad "2" smd roundrect
+			(at -0.9375 0.95 270)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "eb160cb8-a73d-4b88-a02d-d2bd9b943ca9")
+		)
+		(pad "3" smd roundrect
+			(at 0.9375 0 270)
+			(size 1.475 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "4aadce84-0e96-407e-a280-ce9d21623863")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)

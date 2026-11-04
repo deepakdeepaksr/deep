@@ -1,0 +1,308 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-04T07:57:50",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [
+        {
+            "description": "Pad net (E22_M0_STRAP) doesn't match net given by schematic (3V3_C)",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (E22_M1_STRAP) doesn't match net given by schematic (/E22_M1_STRAP)",
+            "items": [
+                {
+                    "description": "PTH pad 6 [E22_M1_STRAP] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 164.92
+                    },
+                    "uuid": "1e865259-d46e-47cc-a588-9393a8667d91"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (E22_M0_STRAP) doesn't match net given by schematic (/E22_M0_STRAP)",
+            "items": [
+                {
+                    "description": "PTH pad 7 [E22_M0_STRAP] of J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "ccdf1b78-1fe1-4c1e-8a72-75ad6e07fdaf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (E22_M1_STRAP) doesn't match net given by schematic (GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M1_STRAP] of R56 on F.Cu",
+                    "pos": {
+                        "x": 266.675,
+                        "y": 164.92
+                    },
+                    "uuid": "70a3978f-3294-42f9-bc3c-ac13eaef41d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (GND) doesn't match net given by schematic (/E22_M1_STRAP)",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of R56 on F.Cu",
+                    "pos": {
+                        "x": 268.325,
+                        "y": 164.92
+                    },
+                    "uuid": "923d2ddc-68c5-454f-ba80-8000e299e299"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (E22_M0_STRAP) doesn't match net given by schematic (GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of R57 on F.Cu",
+                    "pos": {
+                        "x": 266.675,
+                        "y": 162.38
+                    },
+                    "uuid": "6c5ce8a0-33db-467e-990d-9155362995aa"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (GND) doesn't match net given by schematic (/E22_M0_STRAP)",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of R57 on F.Cu",
+                    "pos": {
+                        "x": 268.325,
+                        "y": 162.38
+                    },
+                    "uuid": "f50808f6-3809-44bc-bd19-f9807b63a1f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                },
+                {
+                    "description": "Track [E22_M0_STRAP] on B.Cu, length 3.0625 mm",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 162.38
+                    },
+                    "uuid": "2049377a-5cb9-4404-8154-35a1acb96b3b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets E22_M0_STRAP and 3V3_C)",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                },
+                {
+                    "description": "Track [3V3_C] on F.Cu, length 2.8284 mm",
+                    "pos": {
+                        "x": 226.75,
+                        "y": 152.0
+                    },
+                    "uuid": "ea69b782-c1a4-4850-8768-1b6c04439da9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets E22_M0_STRAP and 3V3_C)",
+            "items": [
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                },
+                {
+                    "description": "Track [3V3_C] on F.Cu, length 2.0000 mm",
+                    "pos": {
+                        "x": 224.75,
+                        "y": 152.0
+                    },
+                    "uuid": "4e617de5-eb58-438a-a0d1-2508a276fa6a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3_C] on F.Cu, length 2.0000 mm",
+                    "pos": {
+                        "x": 224.75,
+                        "y": 152.0
+                    },
+                    "uuid": "4e617de5-eb58-438a-a0d1-2508a276fa6a"
+                },
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [3V3_C] on F.Cu, length 2.8284 mm",
+                    "pos": {
+                        "x": 226.75,
+                        "y": 152.0
+                    },
+                    "uuid": "ea69b782-c1a4-4850-8768-1b6c04439da9"
+                },
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of C36 on F.Cu",
+                    "pos": {
+                        "x": 226.9625,
+                        "y": 152.0
+                    },
+                    "uuid": "1e418830-d62b-4c4e-af6a-60037682ff37"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of R57 on F.Silkscreen",
+                    "pos": {
+                        "x": 267.262742,
+                        "y": 162.9025
+                    },
+                    "uuid": "8ff6852a-b484-4c73-b9ec-bc33aa02f50c"
+                },
+                {
+                    "description": "Reference field of R56",
+                    "pos": {
+                        "x": 267.5,
+                        "y": 163.02
+                    },
+                    "uuid": "cc5ddd09-159e-4039-baae-5b1bab7b8eda"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R56",
+                    "pos": {
+                        "x": 267.5,
+                        "y": 163.02
+                    },
+                    "uuid": "cc5ddd09-159e-4039-baae-5b1bab7b8eda"
+                },
+                {
+                    "description": "Pad 1 [E22_M0_STRAP] of R57 on F.Cu",
+                    "pos": {
+                        "x": 266.675,
+                        "y": 162.38
+                    },
+                    "uuid": "6c5ce8a0-33db-467e-990d-9155362995aa"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of R56",
+                    "pos": {
+                        "x": 267.5,
+                        "y": 163.02
+                    },
+                    "uuid": "cc5ddd09-159e-4039-baae-5b1bab7b8eda"
+                },
+                {
+                    "description": "Pad 2 [GND] of R57 on F.Cu",
+                    "pos": {
+                        "x": 268.325,
+                        "y": 162.38
+                    },
+                    "uuid": "f50808f6-3809-44bc-bd19-f9807b63a1f8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

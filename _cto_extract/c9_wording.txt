@@ -1,0 +1,108 @@
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @23470
+highest voltage the rail reaches in normal use, or the part leaks and warms all day. The clamping voltage must be below what the loads survive. • ESD: every line that leaves the box has its ESD array within 5 mm of the connector pin, along the copper, before any other part. Measure with Inspect, Measure Tool. Panel lamps, buttons and buzzers count as leaving the box. • Earth (PE): one defined bond between PE and ground on the board (a link, with an RC footprint as the alternative), beside the sensor ports; PE coppe
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @24054
+arts' pins; the earthing scheme written in the README. Pass when The three input events are written up with the simulation; stand-off and clamp voltages are stated against the rail; every ESD part is within 5 mm of its pin; the PE bond is on the board and described. Seen so far Rev B had no reverse or over-voltage protection on its 5 V input, a polarity legend printed on the wrong pads, TVS parts whose stand-off was below the planned set point, ESD parts 5 to 22 mm from their pins, and PE with no bond to ground.   
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @24794
+rom the pins they serve, modules drawn on the wrong socket, connectors and test points hidden under a module, modules with nothing to hold them, parts that collide with the enclosure. How to run it • Decoupling: for each supply pin, the nearest 100 nF within 5 mm along the copper (3 mm for an IC's own pin), and the bulk capacitor (10 µF or more) within 10 mm. Measure along the track, not in a straight line. Put the result in the decoupling map (check C13). • Modules: draw each plug-in module's outline and height on
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @24846
+socket, connectors and test points hidden under a module, modules with nothing to hold them, parts that collide with the enclosure. How to run it • Decoupling: for each supply pin, the nearest 100 nF within 5 mm along the copper (3 mm for an IC's own pin), and the bulk capacitor (10 µF or more) within 10 mm. Measure along the track, not in a straight line. Put the result in the decoupling map (check C13). • Modules: draw each plug-in module's outline and height on a user layer (F.Fab for the outline, with the modul
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @24942
+ts that collide with the enclosure. How to run it • Decoupling: for each supply pin, the nearest 100 nF within 5 mm along the copper (3 mm for an IC's own pin), and the bulk capacitor (10 µF or more) within 10 mm. Measure along the track, not in a straight line. Put the result in the decoupling map (check C13). • Modules: draw each plug-in module's outline and height on a user layer (F.Fab for the outline, with the module's name), attach a 3D model to its socket footprint (Footprint Properties, 3D Models), and look
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @25027
+the nearest 100 nF within 5 mm along the copper (3 mm for an IC's own pin), and the bulk capacitor (10 µF or more) within 10 mm. Measure along the track, not in a straight line. Put the result in the decoupling map (check C13). • Modules: draw each plug-in module's outline and height on a user layer (F.Fab for the outline, with the module's name), attach a 3D model to its socket footprint (Footprint Properties, 3D Models), and look at View, 3D Viewer from both sides. Check each outline against the pinout of the soc
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @33057
+hese close the fit items in one go. • DC solve or simulation: the supply paths with the real resistances from check C7, for each case the review lists, as plots or a table with the setup described. • Decoupling map: one table, supply pin by supply pin, with the nearest capacitor, its value and the distance along the copper. • FMEA: a table of the parts and connections that can fail (each fuse, FET, regulator, connector, cable, the watchdog), with the failure, its effect on the board and on the farmer, how it is det
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @37201
+ the README F.Silkscreen Gerber, J18 area; screenshot of the plotted layer with the pad nets highlighted Done B7 P1 C26 and C27 (1 µF) moved to 2.1 mm and 2.4 mm from U6 pins 1 and 5 along the copper Decoupling map row U6; screenshot Done C1 P0 RS485 deferred to Rev C Serigreen's message of (date) agreeing the deferral Deferred, agreed (new) J5 changed from JST XH to a screw terminal Schematic sheet 2; Serigreen's message of (date) Agreed before drawing Table 5. The response sheet. Status is one of Done, Partly (sa
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @43200
+rrier PCB  ·  release check Serigreen Technologies Private Limited Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026 Page 14 of 15 B.3 Distances and spacings Quantity Serigreen's figure 100 nF decoupling to its supply pin 5 mm along the copper; 3 mm for an IC's own pin Bulk capacitor (10 µF or more) to its load 10 mm along the copper ESD or TVS part to the connector pin it protects 5 mm along the copper, before any other part Any two nets 0.2 mm (project minimum); 0.25 mm at component terminations Net above 
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @45267
+h listed with resistances and sources; heating at the fault current under 10 °C; ratings written; simulation in C8 Reverse, over-voltage and surge events written up; TVS stand-off above the rail; ESD within 5 mm; PE bond on the board C9 Decoupling map; 3D check with every module on its right socket and the box closed; nothing reachable under a module; standoffs C10 Plane layers carry nothing but planes; antenna rule area; spacing rules and rule file match the board; power copper and vias; stitching C11 Signed pin m
+
+### MoriShield-Carrier-ReleaseCheck-v1.0.txt @45304
+; heating at the fault current under 10 °C; ratings written; simulation in C8 Reverse, over-voltage and surge events written up; TVS stand-off above the rail; ESD within 5 mm; PE bond on the board C9 Decoupling map; 3D check with every module on its right socket and the box closed; nothing reachable under a module; standoffs C10 Plane layers carry nothing but planes; antenna rule area; spacing rules and rule file match the board; power copper and vias; stitching C11 Signed pin map; one driver per line; reset states
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @7364
+ct buck, 4.64 V with the buck 2 percent low, 4.61 V with aged contacts and warm copper, and 4.51 V with both, against the 4.75 V the board needs. Extra capacitance does not fix it. Fails: B10, now P0 Decoupling Twelve supply points have no capacitor within 25 mm along the copper, among them the modem, SPS30, E22 and ESP32 supplies. The 3.3 V regulator's 22 µF output capacitor is 9 mm away in a straight line but 108 mm along the copper. Fix: B7 (now P1), B12, C7 Input chain Copper is fine (about 18 mΩ). The TVS, buc
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @7414
+V with aged contacts and warm copper, and 4.51 V with both, against the 4.75 V the board needs. Extra capacitance does not fix it. Fails: B10, now P0 Decoupling Twelve supply points have no capacitor within 25 mm along the copper, among them the modem, SPS30, E22 and ESP32 supplies. The 3.3 V regulator's 22 µF output capacitor is 9 mm away in a straight line but 108 mm along the copper. Fix: B7 (now P1), B12, C7 Input chain Copper is fine (about 18 mΩ). The TVS, buck, fuse and input capacitor ratings do not suit a 
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @9540
+widths and heating checked against IPC-2221 and IPC-2152 practice. Modem rail under bursts A circuit model of the buck, tracks, capacitors, cable and a GSM burst, run for fourteen cases (Appendix A). Decoupling The nearest capacitor on the same net to every supply pin, along the copper and in a straight line. Ground Fill regions on each layer, every link between the layers (through-hole ground pads and vias) and the pour pieces it reaches, and a distance map. Clearance The smallest gap between copper of different n
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @20962
+it), fix this cheaply (E1). The acceptance becomes measurable: no point of either ground pour more than 10 mm from a ground link, the Wi-Fi antenna keep-out excepted because it carries no copper. 4.2 Decoupling map Supply point Capacitor Along the copper Straight line Request Modem supply, J5 pin 1 C1, 10 µF 167 mm 111 mm B10 Modem UART reference, J3 pin 3 C10, 100 nF 149 mm 97 mm (C9) B12 ESP32 5 V pin, J1 pin 21 C1, 10 µF 129 mm 56 mm B12 SPS30 5 V, J13 pin 1 C1, 10 µF 127 mm 99 mm C7 FSR port, J16 pin 1 C10, 100
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @23603
+22's pad; its 12 V input still draws bursts of about 1 A, so its 12 V feed needs its ground return alongside and input capacitance beside the converter (B10). The E22's own transmit pulses want local decoupling (B12) and a ferrite on its supply (E7). 4.4 Radios Three radios share the box: Wi-Fi on the ESP32 module, LTE through the modem board's u.FL pigtail, and LoRa through the E22's SMA at the right-hand edge. The Wi-Fi antenna needs the carrier clear beneath it to about y 170, on both layers, for tracks, vias an
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @25192
+e 7. Protection at every port that leaves the box. ESD1 to ESD4 are marked do-not-fit only in the PCB value; the schematic and BOM fit them (C8). Every pin that leaves the box needs fitted protection within 5 mm of its connector, in a hand-solderable package, returned to an earth terminal that is bonded to the earth rod (C8, H1). Series resistors of about 47 Ω on each cabled I2C line, beside the   ===== PAGE 9 ===== MoriShield carrier PCB, Rev A  ·  fabrication readiness Serigreen Technologies Private Limited Confi
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @29217
+il that feeds every sensor may ring or oscillate, which shows up as noisy readings and I2C errors that are hard to trace. What to change Place the output capacitor the regulator's datasheet calls for within 5 mm of U1 pin 2, and 10 µF within 5 mm of U1 pin 3, both measured along the copper, with their ground pads straight to the pour. If B5 replaces U1 with a low-quiescent regulator, follow that part's capacitor rules instead. Closed when Layout, and a scope capture of the 3.3 V rail at U1 during I2C traffic and a 
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @29252
+ or oscillate, which shows up as noisy readings and I2C errors that are hard to trace. What to change Place the output capacitor the regulator's datasheet calls for within 5 mm of U1 pin 2, and 10 µF within 5 mm of U1 pin 3, both measured along the copper, with their ground pads straight to the pour. If B5 replaces U1 with a low-quiescent regulator, follow that part's capacitor rules instead. Closed when Layout, and a scope capture of the 3.3 V rail at U1 during I2C traffic and a modem burst: no sustained oscillati
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @32974
+Why it matters The extra resistance and inductance weaken C6 as the converter's input reservoir and let more switching ripple onto the 12 V lead (E7). What to change Connect C6 with full-width copper within 5 mm of the buck input, and add a 10 µF ceramic (50 V, X7R) beside it. Closed when Layout. B12 · Local decoupling at every supply point P1 Where J1 pin 21 (ESP32 5 V), J6 pin 2 (E22), J15 and J16 (analog ports), J11, J12 and J17 (cabled sensor ports), J3 pin 3 (modem UART reference), J9 pin 1 (buck output). What
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @33084
+witching ripple onto the 12 V lead (E7). What to change Connect C6 with full-width copper within 5 mm of the buck input, and add a 10 µF ceramic (50 V, X7R) beside it. Closed when Layout. B12 · Local decoupling at every supply point P1 Where J1 pin 21 (ESP32 5 V), J6 pin 2 (E22), J15 and J16 (analog ports), J11, J12 and J17 (cabled sensor ports), J3 pin 3 (modem UART reference), J9 pin 1 (buck output). What we found Along the copper, the nearest capacitor is 129 mm from the ESP32's 5 V pin (C1, 10 µF), 93 mm from t
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @33948
+d E22 and noise on the analog sensor supplies are fed through long, shared track instead of from a local reservoir, which shows up as supply dips, radio noise and unstable readings. What to change C1 within 10 mm of J1 pin 21; 47 to 100 µF plus 100 nF within 10 mm of J6 pin 2; 100 nF at J15, J16, J11, J12, J17 and J3 pin 3; bulk capacitance (100 µF or more, low-ESR) within 10 mm of the buck output. All distances along the copper. Closed when A decoupling map in the Rev B package giving the copper distance from ever
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @34000
+d through long, shared track instead of from a local reservoir, which shows up as supply dips, radio noise and unstable readings. What to change C1 within 10 mm of J1 pin 21; 47 to 100 µF plus 100 nF within 10 mm of J6 pin 2; 100 nF at J15, J16, J11, J12, J17 and J3 pin 3; bulk capacitance (100 µF or more, low-ESR) within 10 mm of the buck output. All distances along the copper. Closed when A decoupling map in the Rev B package giving the copper distance from every supply point to its capacitor: 10 mm or less, or a
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @34117
+le readings. What to change C1 within 10 mm of J1 pin 21; 47 to 100 µF plus 100 nF within 10 mm of J6 pin 2; 100 nF at J15, J16, J11, J12, J17 and J3 pin 3; bulk capacitance (100 µF or more, low-ESR) within 10 mm of the buck output. All distances along the copper. Closed when A decoupling map in the Rev B package giving the copper distance from every supply point to its capacitor: 10 mm or less, or a stated reason accepted by Serigreen. E7 · EMI filtering on the supply and cable entries P1 Where J18 to J9 (12 V int
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @34196
+ nF within 10 mm of J6 pin 2; 100 nF at J15, J16, J11, J12, J17 and J3 pin 3; bulk capacitance (100 µF or more, low-ESR) within 10 mm of the buck output. All distances along the copper. Closed when A decoupling map in the Rev B package giving the copper distance from every supply point to its capacitor: 10 mm or less, or a stated reason accepted by Serigreen. E7 · EMI filtering on the supply and cable entries P1 Where J18 to J9 (12 V into the buck); J6 pin 2 (E22 supply); the cabled I2C ports J11 to J14 and J17. Wh
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @40706
+and active current. v1.2 B6 P2 Diode from the carrier 5 V to J1 pin 21, and a service rule for USB. Schematic and service note. v1.2 B7 P1 The output capacitor the 3.3 V regulator needs for stability within 5 mm of its output, and 10 µF within 5 mm of its input, both along the copper. Layout; no sustained oscillation on the 3.3 V rail, ripple and transients under 50 mV peak to peak. v1.2, raised here B8 P1 Input chain sized for the charge controller's battery-disconnect voltage, or an over-voltage cutoff ahead of t
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @40743
+from the carrier 5 V to J1 pin 21, and a service rule for USB. Schematic and service note. v1.2 B7 P1 The output capacitor the 3.3 V regulator needs for stability within 5 mm of its output, and 10 µF within 5 mm of its input, both along the copper. Layout; no sustained oscillation on the 3.3 V rail, ripple and transients under 50 mV peak to peak. v1.2, raised here B8 P1 Input chain sized for the charge controller's battery-disconnect voltage, or an over-voltage cutoff ahead of the buck. Bench test with 22 V on the 
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @41835
+enable as the modem power switch. Model, then bench trace at the modem connector: 4.75 to 5.25 V through LTE attach and forced GSM at minimum input. 003, raised here B11 P2 C6 connected at full width within 5 mm of the buck input, with 10 µF ceramic beside it. Layout. New B12 P1 Local decoupling at the ESP32 5 V pin, the E22 supply, both analog ports, three cabled sensor ports, the modem UART reference and the buck output. Decoupling map: every supply point within 10 mm of its capacitor along the copper, or a state
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @41921
+ to 5.25 V through LTE attach and forced GSM at minimum input. 003, raised here B11 P2 C6 connected at full width within 5 mm of the buck input, with 10 µF ceramic beside it. Layout. New B12 P1 Local decoupling at the ESP32 5 V pin, the E22 supply, both analog ports, three cabled sensor ports, the modem UART reference and the buck output. Decoupling map: every supply point within 10 mm of its capacitor along the copper, or a stated reason. New C1 P0 RS485 port: fault-protected 3.3 V transceiver, termination jumper,
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @42062
+ut, with 10 µF ceramic beside it. Layout. New B12 P1 Local decoupling at the ESP32 5 V pin, the E22 supply, both analog ports, three cabled sensor ports, the modem UART reference and the buck output. Decoupling map: every supply point within 10 mm of its capacitor along the copper, or a stated reason. New C1 P0 RS485 port: fault-protected 3.3 V transceiver, termination jumper, fail-safe bias, TVS to earth, switched 12 V through a PTC; pins per 003 section 9. Sensors read over Modbus at installed length; survives a 
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @42097
+ayout. New B12 P1 Local decoupling at the ESP32 5 V pin, the E22 supply, both analog ports, three cabled sensor ports, the modem UART reference and the buck output. Decoupling map: every supply point within 10 mm of its capacitor along the copper, or a stated reason. New C1 P0 RS485 port: fault-protected 3.3 V transceiver, termination jumper, fail-safe bias, TVS to earth, switched 12 V through a PTC; pins per 003 section 9. Sensors read over Modbus at installed length; survives a 12 V miswire. v1.2, 003 C2 P0 Raw a
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @43298
+one segment per port; pull-ups sized for 3 mA with module pull-ups counted. Rise under 1 µs and low level under 0.4 V at installed lengths; one shorted cable leaves the rest working. v1.2 C7 P1 SPS30 decoupling at J13: 100 µF, 10 µF and 100 nF within 10 mm. Layout; scope capture at fan start. v1.2 C8 P1 Fitted ESD protection on every pin that leaves the box, within 5 mm of each connector, returned to the earth terminal, in hand-solderable packages; schematic, PCB and BOM agree. IEC 61000-4-2, ±4 kV contact and ±8 k
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @43342
+A with module pull-ups counted. Rise under 1 µs and low level under 0.4 V at installed lengths; one shorted cable leaves the rest working. v1.2 C7 P1 SPS30 decoupling at J13: 100 µF, 10 µF and 100 nF within 10 mm. Layout; scope capture at fan start. v1.2 C8 P1 Fitted ESD protection on every pin that leaves the box, within 5 mm of each connector, returned to the earth terminal, in hand-solderable packages; schematic, PCB and BOM agree. IEC 61000-4-2, ±4 kV contact and ±8 kV air, on each port. v1.2 C9 P2 FSR input: a
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @43459
+ves the rest working. v1.2 C7 P1 SPS30 decoupling at J13: 100 µF, 10 µF and 100 nF within 10 mm. Layout; scope capture at fan start. v1.2 C8 P1 Fitted ESD protection on every pin that leaves the box, within 5 mm of each connector, returned to the earth terminal, in hand-solderable packages; schematic, PCB and BOM agree. IEC 61000-4-2, ±4 kV contact and ±8 kV air, on each port. v1.2 C9 P2 FSR input: a purpose and test plan, or remove J16, R5 and ESD3. Written purpose, or removal. v1.2 C10 P2 Two builds in the BOM; a
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @49463
+ same y, or the measured offset documented (A8). 6 Power: G1 results (modem connector 4.75 V or more in the worst case; clamps; thermal), supply-path resistances or a DC solve for every load, and the decoupling map with copper distances (B7, B10, B12); the B10 bench trace and the modem registering on the network (A2), or the agreed plan to take them on the first Rev B boards. 7 EMC layout: the stitching plot (no point of either ground pour more than 10 mm from a ground link, the antenna keep-out excepted), keep-out
+
+### MoriShield-Carrier-FabReadiness-v1.0.txt @50955
+edicated supply (B10), the modem header direction (A9), and the input chain parts for 40 V (B1 to B3, B8). 2 Schematic: RS485, microSD use, FDC1004, button, LED and buzzer (C1 to C4); the new supply, decoupling and filters (B7, B10, B12, E7); protection (C8, H1); the pin map (C13). 3 Layout: module fit and placement (A7 to A12), supply routing and capacitor placement (B4, B7, B10 to B12), stitching and keep-outs (E1, E3), protection placement (C8). 4 Evidence and files: the G1 simulation, the 3D check, the BOM and 

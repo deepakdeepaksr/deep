@@ -1,0 +1,132 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-02T22:44:20",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 25.5500 mm",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 178.8
+                    },
+                    "uuid": "9854a767-c43d-498e-8993-04b1d652f7e3"
+                },
+                {
+                    "description": "Track [/I2C0_SDA_CH6] on B.Cu, length 35.4260 mm",
+                    "pos": {
+                        "x": 294.55,
+                        "y": 155.95
+                    },
+                    "uuid": "c818acb0-23b4-4115-8ff2-3c81676ac8c0"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 5.7500 mm",
+                    "pos": {
+                        "x": 298.75,
+                        "y": 178.8
+                    },
+                    "uuid": "71544220-9165-4066-a13a-181f14a2f276"
+                },
+                {
+                    "description": "Track [/I2C0_SDA_CH3] on B.Cu, length 17.3241 mm",
+                    "pos": {
+                        "x": 295.875,
+                        "y": 178.625
+                    },
+                    "uuid": "790596c9-536b-47fe-81d7-3fce46b40ff2"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /I2C0_SDA_CH3 and /3V3_SENS_SW)",
+            "items": [
+                {
+                    "description": "Track [/I2C0_SDA_CH3] on B.Cu, length 46.0000 mm",
+                    "pos": {
+                        "x": 295.875,
+                        "y": 132.625
+                    },
+                    "uuid": "4c235229-233f-4a97-87a9-18d4b13127b6"
+                },
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 5.7500 mm",
+                    "pos": {
+                        "x": 298.75,
+                        "y": 178.8
+                    },
+                    "uuid": "71544220-9165-4066-a13a-181f14a2f276"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/I2C0_SDA_CH3] on B.Cu, length 46.0000 mm",
+                    "pos": {
+                        "x": 295.875,
+                        "y": 132.625
+                    },
+                    "uuid": "4c235229-233f-4a97-87a9-18d4b13127b6"
+                },
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 8.1317 mm",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 153.25
+                    },
+                    "uuid": "6ede0581-4d9e-4fe7-9b6c-38038c4c0ad9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/I2C0_SDA_CH6] on B.Cu, length 21.9500 mm",
+                    "pos": {
+                        "x": 294.55,
+                        "y": 134.0
+                    },
+                    "uuid": "22cae826-60b5-4ef1-9f97-866ef1d1419e"
+                },
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 8.1317 mm",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 153.25
+                    },
+                    "uuid": "6ede0581-4d9e-4fe7-9b6c-38038c4c0ad9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        }
+    ]
+}

@@ -1,0 +1,1391 @@
+Extracted text of the Ebyte E22-900T22D User Manual (26 pages).
+Source: https://www.cdebyte.com/pdf-down.aspx?id=1463
+Extracted with PyMuPDF; full-width punctuation preserved.
+This file is the citation source for revC\FAB_NOTES.md and TASK_TRACKER.md.
+=== PAGE 1 ===
+E22-900T22D User Manual
+868M/915M 22dBm DIP New LoRa Wireless Module
+
+=== PAGE 2 ===
+CONTENTS
+1.
+OVERVIEW.........................................................................................................................................3
+1.1 INTRODUCTION.......................................................................................................................................................................................4
+1.2 FEATURES.................................................................................................................................................................................................4
+1.3 APPLICATION...........................................................................................................................................................................................5
+2.
+SPECIFICATION AND PARAMETER......................................................................................... 5
+2.1 LIMIT PARAMETER................................................................................................................................................................................. 5
+2.2 OPERATING PARAMETER.......................................................................................................................................................................5
+3 SIZE AND PIN DEFINITION..............................................................................................................7
+4. CONNECT TO MCU............................................................................................................................8
+5 FUNCTION DESCRIPTION................................................................................................................9
+5.1 FIXED TRANSMISSION...........................................................................................................................................................................9
+5.2 BROADCASTING TRANSMISSION.........................................................................................................................................................9
+5.3 BROADCASTING ADDRESS................................................................................................................................................................... 9
+5.4 MONITOR ADDRESS.............................................................................................................................................................................10
+5.5 RESET.....................................................................................................................................................................................................10
+5.6 AUX DESCRIPTION..............................................................................................................................................................................10
+5.6.1 Indication of UART output.......................................................................................................................................................10
+5.6.2 Indication of wireless transmitting.........................................................................................................................................10
+5.6.3 Configuration procedure of module.......................................................................................................................................12
+5.6.4 Notes for AUX............................................................................................................................................................................. 12
+6 OPERATING MODE...........................................................................................................................12
+6.1 MODE SWITCHING...............................................................................................................................................................................12
+6.2 NORMAL MODE（MODE 0）............................................................................................................................................................13
+6.3 WOR MODE（MODE 1）................................................................................................................................................................. 13
+6.4 CONFIGURATION MODE（MODE 2）..............................................................................................................................................14
+6.5 DEEP SLEEP MODE（MODE 3）...................................................................................................................................................... 14
+7 REGISTER READ AND WRITE CONTROL............................................................................... 14
+7.1 COMMAND FORMAT............................................................................................................................................................................ 14
+7.2 REGISTER DESCRIPTION.....................................................................................................................................................................15
+7.3 FACTORY DEFAULT PARAMETER....................................................................................................................................................... 18
+8 REPEATER NETWORKING MODE..............................................................................................18
+
+=== PAGE 3 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+9 CONFIGURATION INSTRUCTIONS ON COMPUTER........................................................... 19
+10 HARDWARE DESIGN......................................................................................................................20
+11 FAQ........................................................................................................................................................21
+11.1 COMMUNICATION RANGE IS TOO SHORT......................................................................................................................................21
+11.2 MODULE IS EASY TO DAMAGE....................................................................................................................................................... 21
+11.3 BER(BIT ERROR RATE) IS HIGH................................................................................................................................................. 21
+12 PRODUCTION GUIDANCE...........................................................................................................22
+12.1 REFLOW SOLDERING TEMPERATURE.............................................................................................................................................22
+12.2 REFLOW SOLDERING CURVE...........................................................................................................................................................22
+13 E22 SERIES.........................................................................................................................................23
+14 ANTENNA RECOMMENDATION................................................................................................23
+15 PACKAGE FOR BULK ORDER....................................................................................................24
+REVISION HISTORY............................................................................................................................24
+ABOUT US................................................................................................................................................24
+
+=== PAGE 4 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+3
+Disclaimer
+EBYTE reserves all rights to this document and the information contained herein.
+Products, names, logos and designs described herein may in whole or in part be
+subject to intellectual property rights. Reproduction, use, modification or disclosure to
+third parties of this document or any part thereof without the express permission of
+EBYTE is strictly prohibited.
+The information contained herein is provided “as is” and EBYTE assumes no
+liability for the use of the information. No warranty, either express or implied, is given,
+including but not limited, with respect to the accuracy, correctness, reliability and
+fitness for a particular purpose of the information. This document may be revised by
+EBYTE at any time. For most recent documents, visit www.ebyte.com.
+
+=== PAGE 5 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+4
+1. Overview
+1.1 Introduction
+E22-900T22D is a wireless module (UART) with multiple transmission
+modes, working in the 850.125MHz~930.125MHz, (default 868.125MHz). It
+features LoRa spread spectrum technology, TTL level output, compatible with
+3.3V and 5V IO port voltage.
+E22-900T22D adopts a new generation of LoRa spread spectrum
+technology. Compared with the traditional SX1278 solution, it has a longer
+transmission distance, faster speed, lower power consumption, and smaller size; it supports functions such as air wake-up,
+wireless configuration, carrier monitoring, automatic relay. communication keys and sub-package length setting. Ebyte
+provides customized development services on it.
+1.2 Features
+
+New LoRa spread spectrum modulation technology brings further communication distance and stronger
+anti-interference ability;
+
+Supports automatic relay network, multilevel relay used in long distance communication, the same area to run
+multiple network running at the same time;
+
+The communication allows users to set key that cannot be read, greatly improving the user data privacy;
+
+Supports LBT function, before sending channel environmental noise monitoring, can greatly increase the success
+rate of communication module in harsh environment;
+
+RSSI signal strength indicator function, can be used to assess the signal quality, improve the communication
+network and distance;
+
+Wireless parameters configuration, sent via wireless instruction packet, or read a wireless remote configuration
+module parameters;
+
+Air wake up, that is, ultra-low power consumption function, suitable for a battery-powered application solutions;
+
+Supports fixed transmission, radio transmission, channel to monitor;
+
+Deep sleep mode enables 2 ua power consumption;
+
+Global free license ISM 868/915 MHZ band;
+
+Under ideal conditions, the communication distance can be up to 5 km;
+
+Supports parameter electricity saving, electricity again after the module will work according to set good parameters;
+
+Effective watchdog design, once an exception occurs, the module will be in automatic restart, and can continue to
+work on previous parameter;
+
+0.3 k ~ 62.5 kbps air data rate;
+
+2.3 V to 5.5 V power supply, over 5V power supply can ensure the best performance;
+
+Industry-standard design, support - 40 ~ + 85 ℃ under long time use;
+
+=== PAGE 6 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+5
+
+Size and shape are consistent with E32 series module, which can be directly replaced to improve performance and
+distance.
+1.3 Application
+
+Home security alarm and remote keyless entry；
+
+Smart home and industrial sensors；
+
+Wireless alarm security system；
+
+Building automation solutions；
+
+Wireless industrial-grade remote control；
+
+Health care products；
+
+Advanced Meter Reading Architecture(AMI)；
+
+Automotive industry applications.
+2. Specification and parameter
+2.1 Limit parameter
+Main parameter
+Performance
+Remark
+Min.
+Max.
+Power supply（V）
+0
+5.5
+Voltage over 5.5V will cause permanent
+damage to module
+Blocking power（dBm）
+-
+10
+Chances of burn is slim when modules are
+used in short distance
+Operating temperature（℃）
+-40
+85
+/
+2.2 Operating parameter
+Main parameter
+Performance
+Remark
+Min.
+Typ.
+Max.
+Operating voltage（V）
+2.1
+5.0
+5.5
+≥3.3 V ensures output power
+Communication level（V）
+3.3
+For 5V TTL,It is recommended to add
+level conversion
+Operating temperature（℃）
+-40
+-
+85
+Industrial design
+Operating frequency（MHz）
+850.125
+868.125
+930.125
+Support ISM band
+Power
+consumpti
+on
+TX current(mA)
+-
+140
+-
+Instant power consumption
+RX current (mA)
+-
+11
+-
+Sleep current（μA）
+-
+2
+-
+Software is shut down
+Max Tx power（dBm）
+21.5
+22.0
+22.5
+Receiving sensitivity（dBm）
+-146
+-147
+-148
+Air data rate 0.3kbps
+Air data rate（bps）
+0.3k
+2.4k
+62.5k
+To control via user’s program
+
+=== PAGE 7 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+6
+Main parameter
+Description
+Remark
+Distance for reference
+5000m
+Test condition：clear and open area, antenna gain: 5dBi，
+antenna height: 2.5m，air data rate: 2.4kbps
+TX length
+240 Byte
+Can be configured via command as 32/64/128/240 bytes
+per packet to transmit
+Buffer
+1000 Byte
+Modulation
+LORA
+Communication interface
+UART
+TTL level
+Package
+DIP
+Connector
+1*7*2.54mm
+Size
+21*36 mm
+Antenna
+SMA-K
+50 ohm impedance
+
+=== PAGE 8 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+7
+3 Size and pin definition
+No.
+Name
+Direction
+Function
+1
+M0
+Input
+（weak pull-up）
+Work with M1 to decide 4 working modes of module (not suspended, if not
+used, could be grounded).
+2
+M1
+Input
+（weak pull-up）
+Work with M0 to decide 4 working modes of module (not suspended, if not
+used, could be grounded).
+3
+RXD
+Input
+TTL UART inputs, connects to external (MCU, PC) TXD output pin. Can be
+configured as open-drain or pull-up input.
+4
+TXD
+Output
+TTL UART outputs, connects to external RXD (MCU, PC) input pin. Can be
+
+=== PAGE 9 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+8
+configured as open-drain or push-pull output
+5
+AUX
+Output
+To indicate module ’ s working status & wakes up the external MCU. During the
+procedure of self-check initialization, the pin outputs low level. Can be
+configured as push-pull output (suspending is allowed).
+6
+VCC
+Input
+Power supply ：2.3~ 5.5V DC
+7
+GND
+Input
+Ground
+8
+Fixed hole
+-
+Connect to GND
+9
+Fixed hole
+-
+Connect to GND
+10
+Fixed hole
+-
+Connect to GND
+4. Connect to MCU
+No.
+Description（STM8L MCU）
+1
+The UART module is TTL level.
+2
+For some MCU works at 5VDC, it may need to add 4-10K pull-up resistor for the TXD & AUX pin.
+
+=== PAGE 10 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+9
+5 Function description
+5.1 Fixed transmission
+5.2 Broadcasting transmission
+5.3 Broadcasting address
+
+For example: Set the address of module A as 0xFFFF or 0x0000, and the channel as 0x04;
+
+When module is the transmitter (transparent transmission), all modules under channel 0x04 will receive the data, the purpose of
+
+=== PAGE 11 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+10
+broadcast is realized.
+5.4 Monitor address
+
+For example: Set the address of module A as 0xFFFF or 0x0000, and the channel as 0x04;
+
+When module A is the receiver, it can receive the data sent from all modules under channel 0x04, the purpose of monitor is
+realized.
+5.5 Reset
+When the module is powered, AUX outputs low level immediately, conducts hardware self-check and sets the operating mode based
+on user’s parameters. During the process, the AUX remains low level. After the process completed, the AUX outputs high level and
+starts to work as per the operating mode combined by M1 and M0. Therefore, users need to wait the AUX rising edge as the start of
+module’s normal work.
+5.6 AUX description
+
+AUX Pin can be used as indication for wireless send & receive buffer and self-check.
+
+It can indicate whether there are data that are not sent yet via wireless way, or whether all wireless data has been sent through
+UART, or whether the module is still in the process of self-check initialization.
+5.6.1 Indication of UART output
+
+To wake up external MCU
+5.6.2 Indication of wireless transmitting
+Buffer (empty): the internal 1000 bytes data in the buffer are written to the RFIC (Auto sub-packaging). When AUX=1, the user
+can input data less than 1000 bytes continuously without overflow. Buffer (not empty): when AUX=0, the internal 1000 bytes data in
+the buffer have not been written to the RFIC completely. If the user starts to transmit data at this circumstance, it may cause overtime
+when the module is waiting for the user data, or transmitting wireless sub package.When AUX = 1, it does not mean that all the UART
+data of the module have been transmitted already, perhaps the last packet of data is still in transmission.
+
+=== PAGE 12 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+11
+
+=== PAGE 13 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+12
+5.6.3 Configuration procedure of module
+
+Only happened when power-on resetting or exiting sleep mode
+5.6.4 Notes for AUX
+No.
+Description
+1
+For function 1 & function 2 mentioned above, the priority should be given to the one with low level output, which means if it
+meets each of any low level output condition, AUX outputs low level, if none of the low level condition is met, AUX outputs
+high level.
+2
+When AUX outputs low level, it means the module is busy & cannot conduct operating mode checking. Within 1ms since AUX
+outputs high level, the mode switch will be completed.
+3
+After switching to new operating mode, it will not work in the new mode immediately until AUX rising edge lasts for 2ms . If
+AUX stays on the high level, the operating mode switch can be effected immediately.
+4
+When the user switches to other operating modes from mode 3 (sleep mode) or it’s still in reset process, the module will reset
+user parameters, during which AUX outputs low level.
+6 Operating mode
+There are four operating modes, which are set by M1 and M0, the details are as follows:
+Mode(0-3)
+M1
+M0
+Description
+Remark
+0 Normal mode
+0
+0
+UART and wireless channel are open, transparent transmission
+is on
+Supports configuration over air via
+special command
+1 WOR mode
+0
+1
+Can be defined as WOR transmitter and WOR receiver
+Supports wake up over air
+2 Configuration mode
+1
+0
+Users can access the register through the serial port to control
+the working state of the module
+3 Deep sleep mode
+1
+1
+Sleep mode
+6.1 Mode switching
+No.
+Remark
+
+=== PAGE 14 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+13
+1
+
+Users can combine M1 and M0 with high and low levels to determine the operating mode. Two GPIOs of the MCU can
+be used to control mode switching;
+
+After changing M1 and M0: If the module is idle, after 1ms, it can start working according to the new mode;
+
+If the serial port data of the module has not been transmitted through the wireless, the new working mode can be
+switched after the transmission is completed;
+
+If the module receives the wireless data and transmits the data through the serial port, it needs to finish transmission
+before switching the new working mode;
+
+Therefore, mode switching can only be valid when AUX output is 1, otherwise it will delay switching.
+2
+
+For example, users continuously inputs a large amount of data and simultaneously performs mode switching. At this
+time, the switching mode operation is invalid; the module will process all the user data before performing the new mode
+detection;
+
+Therefore, the general recommendation is to detect the output state of the AUX pin and switch after 2ms when the
+output is high.
+3
+
+When the module is switched from other modes to sleep mode, if the data has not been processed yet;
+
+The module will process these data (including receiving and sending) before entering sleep mode. This feature can be
+used for fast sleep, which saves power; for example, the transmitter module works in mode 0, the user transmits the
+serial port data "12345", and then does not have to wait for the AUX pin to be idle (high level), and can directly switch
+to sleep mode. And the user's main MCU immediately sleeps, the module will automatically transmit the user data
+through the wireless, and automatically enters sleep within 1ms;
+
+This saves MCU's working time and reduces power consumption.
+4
+
+Similarly, any mode switching can use this feature. After the module processes the current mode event, it will
+automatically enter the new mode within 1ms; thus eliminating the need for the user to query AUX and achieve the
+purpose of fast switching;
+
+For example, switching from the transmit mode to the receive mode; the user MCU can also enter sleep before the mode
+switch, and use the external interrupt function to acquire the AUX change, thereby performing mode switching.
+5
+
+This operation mode is very flexible and efficient, and is designed according to the user's MCU's operation convenience,
+and can reduce the workload of the entire system as much as possible, improve system efficiency, and reduce power
+consumption.
+6.2 Normal mode（Mode 0）
+Type
+M0 = 0，M1 = 0
+Transmitting
+Users can input data through the serial port and the module will start wireless transmission.
+Receiving
+The module wireless receiving function is turned on, and after receiving the wireless data, it will be output through the serial
+port TXD pin.
+6.3 WOR mode（Mode 1）
+Type
+M0 = 1，M1 =0
+
+=== PAGE 15 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+14
+Transmitting
+When defined as a transmitting party, a preamble is automatically added before transmitting.
+Receiving
+It can receive data normally, the receiving function is the same as mode 0.
+6.4 Configuration mode（Mode 2）
+Type
+M0 = 0，M1 = 1
+Transmitting
+Wireless transmitting off
+Receiving
+Wireless receiving off
+Configuration
+Users can access the registers to configure the module's operation state.
+6.5 Deep sleep mode（Mode 3）
+Type
+M0 = 1，M1 = 1
+Transmitting
+Unable to transmit wireless data
+Receiving
+Unable to receive wireless data
+Note
+When from the sleep mode to other modes, the module will reconfigure the parameters. During the configuration process,
+AUX will remain low; After configuration,it outputs high level, we suggest that user test rising edge AUX.
+7 Register read and write control
+7.1 Command format
+In configuration mode (mode 2: M1 = 1, M0 = 0), the list of supported commands are as follows (only 9600, 8N1 format is
+supported when)：
+No.
+Command format
+Description
+1
+Set register
+Command: C0+starting address+length+parameters
+Response: C1+starting address+length+parameters
+E.g 1: Channel is 0x09
+command
+starting address
+length
+parameter
+Send:
+C0
+05
+01
+09
+
+=== PAGE 16 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+15
+Returen:
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: C0 00 04 12 34 00 61
+Return: C1 00 04 12 34 00 61
+2
+Read register
+Command: C1+starting address+parameters
+Response: C1+starting address+length+parameters
+E.g 1：Read channel
+command
+starting address
+length
+parameter
+Send:
+C1
+05
+01
+Returen:
+C1
+05
+01
+09
+E.g 2: Read module address, network address, serial port and air data rate.
+Send: C1 00 04
+Return: C1 00 04 12 34 00 61
+3
+Set
+temporary
+registers
+Command: C2+starting address+parameters
+Response: C1+starting address+length+parameters
+E.g 1: Channel is 0x09
+command
+starting address
+length
+parameter
+Send:
+C2
+05
+01
+09
+Returen:
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: C2 00 04 12 34 00 61
+Return: C1 00 04 12 34 00 61
+5
+Wireless
+configuration
+Command: CF CF + normal command
+Respond：CF CF + normal respond
+E.g 1: Channel is 0x09
+Command head
+command
+starting address
+length
+parameter
+Send:
+CF CF
+C0
+05
+01
+09
+Returen:
+CF CF
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: CF CF C2 00 04 12 34 00 61
+Return: CF CF C1 00 04 12 34 00 61
+PS ： 1. Wireless configuration can only be used in transparent transmission, not available for Fixed
+transmission.
+2. Suppose Module A is in place A, Module B is in place B,
+when module A is in configuration mode (Mode 2), module B is in normal mode (Mode 0);
+you can use module A to configure parameters of module B by sending wireless configuration commands.
+6
+Wrong format
+Wrong format respond: FF FF FF
+7.2 Register description
+Address
+Read or
+write
+Name
+Description
+Remark
+00H
+Read/Wr
+ite
+ADDH
+ADDH（default 0）
+
+The module address is high byte and low byte. Note:
+When the module address is FFFF, it can be used as
+the broadcast and monitor address, that is the module
+will not perform address filtering.
+01H
+Read/Wr
+ite
+ADDL
+ADDL（default 0）
+02H
+Read/Wr
+ite
+NETID
+NETID（default 0）
+
+Network address, used to distinguish the network.
+When communicating with each other, they should
+
+=== PAGE 17 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+16
+be set to the same.
+03H
+Read/Wr
+ite
+REG0
+7，6，5
+UART: Serial port rate（bps）
+000: 1200
+001: 2400
+010: 4800
+011: 9600（default）
+100: 19200
+101: 38400
+110: 57600
+111: 115200
+---------------------------------------
+4，3：
+Serial parity bit
+00：8N1（default）
+01：8O1
+10：8E1
+11：8N1（equal to 00）
+-----------------------------------
+2，1，0，air data rate
+000: 0.3k
+001: 1.2k
+010: 2.4k（default）
+011: 4.8k
+100: 9.6k
+101: 19.2k
+110: 38.4k
+111: 62.5k
+
+For the two modules that communicate with each
+other, the serial port baud rate can be different, and
+the verification method can also be different.
+
+When transmitting large packets continuously, users
+need to consider the data blocking caused by the
+same baud rate, and data may even be lost. It is
+generally recommended that both parties have the
+same baud rate.
+---------------------------------------
+
+Both parties must be the same
+
+The higher the rate, the shorter the distance
+04H
+Read/Wr
+ite
+REG1
+7，6：
+Sub packet setting
+00: 240 bytes（default）
+01: 128 bytes
+10: 64 bytes
+11: 32 bytes
+--------------------------------------
+5 ：RSSI
+Ambient noise enable
+1: Enable
+0: Disable（default）
+--------------------------------------
+4，3，2 Reserve
+--------------------------------------
+1，0：
+Transmitting power
+00：22dbm（default）
+01：17dbm
+10：13dbm
+11：10dbm
+
+When the data is smaller than the sub packet length,
+the serial output of the receiving end is an
+uninterrupted continuous output.
+When the data is larger than the sub packet length,
+the receiving end serial port will output the sub
+packet.
+--------------------------------------------
+
+When enabled, the C0 C1 C2 C3 command can be
+sent in the transmitting mode or WOR transmitting
+mode to read the register.
+Register 0x00: Current ambient noise rssi
+Register 0X01: rssi when the data was received last
+time.
+（Current channel noise is: dBm = -（256 - RSSI））
+Command format: C0 C1 C2 C3 + starting address +
+read length
+Returns: C1 + address address + read length + read valid
+value
+E.g: send C0 C1 C2 C3 00 01
+Return C1 00 01 rssi
+----------------------------------
+
+Power
+and
+current
+are
+nonlinear,
+and
+power
+efficiency is highest at maximum power.
+
+The current does not decrease in proportion to the
+decrease in power.
+
+=== PAGE 18 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+17
+05H
+Read/Wr
+ite
+REG2
+Channel control（CH）
+0-80 represents a total of 81 channels
+
+Frequency= 850.125 + CH *1M
+06H
+Read/Wr
+ite
+REG3
+7
+Enable RSSI
+1：Enable
+0：Disable（default）
+--------------------------------------
+6，
+Fixed point transmission
+1：Fixed point transmission mode
+0 ： Transparent transmission mode
+（default）
+---------------------------------------
+5
+Enable reply
+1：Enable repeater function
+0：Disable repeater function
+--------------------------------------
+4
+LBT enable byte (monitor before
+transmission)
+1：Enable
+0：Disable（default）
+--------------------------------------
+3
+WOR transceiver control
+1：WOR transmitter
+The
+module
+receiving
+and
+transmitting functions are turned on, and a
+wake-up code is added when transmitting data.
+Receiving is turned on.
+0：WOR receiver（default）
+The module is unable to transmit data
+and works in WOR monitoring mode. The
+monitoring period is as follows (WOR cycle),
+which can save a lot of power.
+---------------------------------------
+2，1，0，WOR cycle
+000：500ms
+001：1000ms
+010：1500ms
+011：2000ms（default）
+100：2500ms
+101：3000ms
+110：3500ms
+111：4000ms
+
+When enabled, the module receives wireless data
+and it will follow an RSSI strength byte after output
+via the serial port TXD
+.---------------------------------------
+
+The module recognizes the first three bytes of the
+serial data as: address high + address low + channel
+and takes it as the wireless transmitting target.
+---------------------------------------
+
+After the reply function is enabled, if the target
+address is not the module itself, the module will
+forward it once.
+
+In order to prevent data return-back, it is
+recommended to use it in conjunction with the fixed
+point mode. That is: the target address is different
+from the source address.
+----------------------------------------
+
+When enabled, wireless data will be monitored
+before it is transmitted, which can avoid interference
+to a certain extent, but may cause data delay.
+----------------------------------------
+
+Valid only for mode 1.
+
+After the WOR receiver receives the wireless data
+and outputs it through the serial port, it will wait for
+1000ms before entering the WOR again. Users can
+input the serial port data and return it via the wireless
+during this period. Each serial byte will be refreshed
+for 1000ms. Users must transmit the first byte within
+1000ms.
+---------------------------------------------
+
+Valid only for mode 1.
+
+Period T = (1 + WOR) * 500ms, maximum 4000ms,
+minimum 500ms
+
+The longer the WOR monitoring interval period, the
+lower the average power consumption, but the
+greater the data delay
+
+Both the transmitter and the receiver must be the
+same (very important).
+07H
+Write
+CRYPT_
+H
+Key high byte (default 0）
+
+Write only, read returns 0
+
+Used for user encryption to avoid intercepting
+airborne wireless data by similar modules.
+
+The module will internally use these two bytes as a
+calculation factor to transform and encrypt the
+over-the-air wireless signal.
+08H
+Write
+CRYPT_
+L
+Key low byte (default 0)
+80H~
+86H
+Read
+only
+PID
+Product information 7 bytes
+
+Product information 7 bytes
+
+=== PAGE 19 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+18
+7.3 Factory default parameter
+Factory default parameters：C0 00 09 00 00 00 62 00 12 03 00 00
+Model No.
+Frequency
+Address
+Channel
+Air data rate
+Baud rate
+Parity format
+Power
+E22-900T22D
+868.125MHz
+0x0000
+0x12
+2.4kbps
+9600
+8N1
+22dbm
+8 Repeater networking mode
+No.
+Description
+1
+After setting the repeater mode by configuration, switch to the normal mode and the repeater starts working.
+2
+In the repeater mode, ADDH, ADDL are no longer used as the module address, but is correspondingly paired with the NETID. If
+the data of one of the networks is received, it is forwarded to another network. The network ID of the repeater itself is invalid.
+3
+In repeater mode, the repeater module cannot transmit and receive data, and cannot perform low-power operation.
+4
+The user enters the other mode from mode 3 (sleep mode) or during the reset process, the module resets the user parameters
+during which the AUX outputs low level.
+Repeater networking rules:
+1. Forwarding rules, the repeater can forward data in both directions between two NETIDs.
+2. In repeater mode, ADDH\ADDL is no longer used as the module address, and it is used as a NETID forwarding pairing flag.
+Figure:
+1
+Primary repeater
+“Node 1” NETID is 08.
+“Node 2” NETID is 33.
+Primary repeater 1‘s ’ADDH\ADDL are 08，33.
+So the signal sent by node 1 (08) can be forwarded to node 2 (33)
+At the same time, node 1 and node 2 have the same address, so the data transmitted by node 1 can be received by node 2.
+②
+Secondary repeater
+Secondary repeater’s ADDH\ADDL are 33，05.
+Therefore, Repeater 2 can forward the data of Repeater 1 to the network NETID: 05.
+Thus node 3 and node 4 can receive node 1 data. Node 4 outputs data normally, and node 3 has a different address than node 1, so no
+data is output.
+3
+Two-way repeater
+As shown in the figure: the data sent by node 1, the nodes 2, 4 can receive the data sent by node 2, 4, and node 1 can also receive it.
+
+=== PAGE 20 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+19
+9 Configuration instructions on computer
+
+The following figure shows the E22-900T22D configuration host computer display interface, the user can switch to the
+command mode through M0M1, and quickly configure and read the parameters on computer.
+
+In the configuration on computer, the module address, frequency channel, network ID, and key are all in decimal mode. The
+range of values of each parameter is:
+Network address: 0-65535
+Frequency channel: 0-80
+
+=== PAGE 21 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+20
+Network ID: 0-255
+Key: 0-65535
+
+When the user configures the repeater mode using the host computer, special attention must be paid. Since the parameters are in
+decimal mode in the host computer, the module address and network ID need to be converted into hexadecimal. For example, if
+the network ID input by the transmitting end A is 02, and the network ID input by the receiving end B is 10, when the repeater
+end R sets the module address, the hexadecimal value 0X020A is converted into the decimal value 522 as the repeater end R.
+Module address. That is, the module address value of the repeater terminal R is 522 at this time.
+10 Hardware design
+
+It is recommended to use a DC stabilized power supply. The power supply ripple factor is as small as possible, and
+the module needs to be reliably grounded.；
+
+Please pay attention to the correct connection of the positive and negative poles of the power supply. Reverse
+connection may cause permanent damage to the module；
+
+Please check the power supply to ensure it is within the recommended voltage otherwise when it exceeds the
+maximum value the module will be permanently damaged；
+
+Please check the stability of the power supply, the voltage can not be fluctuated frequently；
+
+When designing the power supply circuit for the module, it is often recommended to reserve more than 30% of the
+margin, so the whole machine is beneficial for long-term stable operation.；
+
+The module should be as far away as possible from the power supply, transformers, high-frequency wiring and other
+parts with large electromagnetic interference.；
+
+High-frequency digital routing, high-frequency analog routing, and power routing must be avoided under the
+module. If it is necessary to pass through the module, assume that the module is soldered to the Top Layer, and the
+copper is spread on the Top Layer of the module contact part(well grounded), it must be close to the digital part of
+the module and routed in the Bottom Layer；
+
+Assuming the module is soldered or placed over the Top Layer, it is wrong to randomly route over the Bottom Layer
+or other layers, which will affect the module's spurs and receiving sensitivity to varying degrees；
+
+It is assumed that there are devices with large electromagnetic interference around the module that will greatly
+affect the performance. It is recommended to keep them away from the module according to the strength of the
+interference. If necessary, appropriate isolation and shielding can be done；
+
+Assume that there are traces with large electromagnetic interference (high-frequency digital, high-frequency analog,
+power traces) around the module that will greatly affect the performance of the module. It is recommended to stay
+away from the module according to the strength of the interference.If necessary, appropriate isolation and shielding
+can be done.
+
+If the communication line uses a 5V level, a 1k-5.1k resistor must be connected in series (not recommended, there is
+still a risk of damage)；
+
+Try to stay away from some physical layers such as TTL protocol at 2.4GHz , for example: USB3.0；
+
+The mounting structure of antenna has a great influence on the performance of the module. It is necessary to ensure
+that the antenna is exposed, preferably vertically upward. When the module is mounted inside the case, use a good
+antenna extension cable to extend the antenna to the outside；
+
+The antenna must not be installed inside the metal case, which will cause the transmission distance to be greatly
+weakened.
+
+=== PAGE 22 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+21
+11 FAQ
+11.1 Communication range is too short
+
+The communication distance will be affected when obstacle exists.
+
+Data lose rate will be affected by temperature, humidity and co-channel interference.
+
+The ground will absorb and reflect wireless radio wave, so the performance will be poor when testing near ground.
+
+Sea water has great ability in absorbing wireless radio wave, so performance will be poor when testing near the sea.
+
+The signal will be affected when the antenna is near metal object or put in a metal case.
+
+Power register was set incorrectly, air data rate is set as too high (the higher the air data rate, the shorter the distance).
+
+The power supply low voltage under room temperature is lower than 2.5V, the lower the voltage, the lower the transmitting
+power.
+
+Due to antenna quality or poor matching between antenna and module.
+11.2 Module is easy to damage
+
+Please check the power supply source, ensure it is in right range, voltage higher than max value will damage the module.
+
+Please check the stability of power source, the voltage cannot fluctuate too much.
+
+Please make sure antistatic measure are taken when installing and using, high frequency devices have electrostatic susceptibility.
+
+Please ensure the humidity is within limited range, some parts are sensitive to humidity.
+
+Please avoid using modules under too high or too low temperature.
+11.3
+BER(Bit Error Rate) is high
+
+There are co-channel signal interference nearby, please be away from interference sources or modify frequency and
+channel to avoid interference;
+
+Poor power supply may cause messy code. Make sure that the power supply is reliable.
+
+The extension line and feeder quality are poor or too long, so the bit error rate is high;
+
+=== PAGE 23 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+22
+12 Production guidance
+12.1 Reflow soldering temperature
+Profile Feature
+Curve characteristics
+Sn-Pb Assembly
+Pb-Free Assembly
+Solder Paste
+Solder paste
+Sn63/Pb37
+Sn96.5/Ag3/Cu0.5
+Preheat Temperature min （Tsmin）
+Min preheating temp.
+100℃
+150℃
+Preheat temperature max (Tsmax)
+Mx preheating temp.
+150℃
+200℃
+Preheat Time (Tsmin to Tsmax)(ts)
+Preheating time
+60-120 sec
+60-120 sec
+Average ramp-up rate(Tsmax to Tp)
+Average ramp-up rate
+3℃/second max
+3℃/second max
+Liquidous Temperature (TL)
+Liquid phase temp.
+183℃
+217℃
+Time（tL）Maintained Above（TL）
+Time below liquid phase line
+60-90 sec
+30-90 sec
+Peak temperature（Tp）
+Peak temp.
+220-235℃
+230-250℃
+Aveage ramp-down rate（Tp to Tsmax）
+Aveage ramp-down rate
+6℃/second max
+6℃/second max
+Time 25℃ to peak temperature
+Time to peak temperature for
+25℃
+max 6 minutes
+max 8 minutes
+12.2 Reflow soldering curve
+
+=== PAGE 24 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+23
+13 E22 series
+Model No.
+Core IC
+Frequency
+Hz
+Tx power
+dBm
+Distance
+km
+Package
+Size
+mm
+Interface
+E22-900T22S
+SX1262
+868M 915M
+22
+7
+SMD
+16*26
+UART
+E22-230T22S
+SX1262
+230M
+22
+7
+SMD
+16*26
+UART
+E22-400T22S
+SX1268
+430M 470M
+22
+7
+SMD
+16*26
+UART
+E22-400M30S
+SX1268
+433M 470M
+30
+12
+SMD
+24*38.5
+SPI
+E22-900M30S
+SX1262
+868M 915M
+30
+12
+SMD
+24*38.5
+SPI
+E22-900M22S
+SX1262
+868M 915M
+22
+6.5
+SMD
+14*20
+SPI
+E22-400M22S
+SX1268
+433M 470M
+22
+6.5
+SMD
+14*20
+SPI
+E22-230T30S
+SX1262
+230M
+30
+10
+SMD
+40.5*25
+UART
+E22-400T30S
+SX1268
+430M 470M
+30
+10
+SMD
+40.5*25
+UART
+E22-900T30S
+SX1262
+868M 915M
+30
+10
+SMD
+40.5*25
+UART
+14 Antenna recommendation
+The antenna is an important role in the communication process. A good antenna can largely improve the
+communication system. Therefore, we recommend some antennas for wireless modules with excellent performance and
+reasonable price.
+Model No.
+Type
+Frequency
+Hz
+Interface
+Gain
+dBi
+Height
+Cable
+Function feature
+TX868-XPL-100
+Sucker
+antenna
+868M
+SMA-J
+3.5
+29cm
+100cm
+Sucker antenna, High gain
+TX868-JK-20
+Rubber
+antenna
+868M
+SMA-J
+3
+200mm
+-
+Flexible &omnidirectional
+TX868-JZ-5
+Rubber
+antenna
+868M
+SMA-J
+2
+50mm
+-
+Short straight
+&omnidirectional
+TX915-XPL-100
+Sucker
+antenna
+915M
+SMA-J
+3.5
+25cm
+100cm
+Sucker antenna, High gain
+TX915-JK-20
+Rubber
+antenna
+915M
+SMA-J
+3
+210mm
+-
+Flexible &omnidirectional
+TX915-JK-11
+Rubber
+antenna
+915M
+SMA-J
+2.5
+110mm
+-
+Flexible &omnidirectional
+TX915-JZ-5
+Rubber
+antenna
+915M
+SMA-J
+2
+50mm
+-
+Short straight
+&omnidirectional
+
+=== PAGE 25 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+24
+15 Package for bulk order
+Revision history
+Version
+Date
+Description
+Issued by
+1.00
+2020-09-01
+Initial version
+Ken
+1.1
+2020-11-27
+Error correction
+Linson
+1.3
+2022-6-30
+Error correction
+Yan
+About us
+Technical support: support@cdebyte.com
+Documents and RF Setting download link: www.ebyte.com
+Thank you for using Ebyte products! Please contact us with any questions or suggestions: info@cdebyte.com
+-------------------------------------------------------------------------------------------------
+Official hotline:028-61399028
+Web: www.ebyte.com
+Address: , Building B5, Mould Industrial Park, 199# Xiqu Ave, High-tech Zone, Chengdu, 611731, Sichuan, China
+
+=== PAGE 26 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+25

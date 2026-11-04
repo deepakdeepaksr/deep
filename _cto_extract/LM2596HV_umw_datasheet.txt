@@ -1,0 +1,1188 @@
+
+=== PAGE 1 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 1 of 28www.umw-ic.com
+2.Features
+3.3V, 5V, 12V, and adjustable output versions
+Adjustable version output voltage range,
+1.2V to 37V (57V for HV version) 
+±4% max over line and load conditions
+Available in TO-220 and TO-263,TO-220B
+packages
+Guaranteed 3A output load current
+Input voltage range up to 60V
+Requires only 4 external components
+Excellent line and load regulation specifications
+150 kHz fixed frequency internal oscillator
+TTL shutdown capability
+Low power standby mode, IQ typically 80 µA
+High efficiency
+Uses readily available standard inductors
+Thermal shutdown and current limit protection
+3.Applications
+Simple high-efficiency step-down (buck) regulator
+On-card switching regulators
+Positive to negative converter
+Note: Patent Number 5,382,918.
+1.Description
+The LM2596 /LM2596HV series of regulators are 
+monolithic integrated circuits that provide all the act-
+ive functions for a step-down (buck) switching regu-
+lator, capable of driving a 3A load with excellent line 
+and load regulation. These devices are available in 
+fixed output voltages of 3.3V, 5V, 12V, and an adjus-
+table output version.
+Requiring a minimum number of external compone-
+nts, these regulators are simple to use and include 
+internal frequency compensationt, and a fixed-frequ-
+ency oscillator.
+The LM2596 /LM2596HV series operates at a swit-
+ching frequency of150 kHz thus allowing smaller 
+sized filter compontents than what would be needed 
+with lower frequency switching regulators. Available 
+in a standard 5-lead TO-220 package with several 
+different lead bend options, and a 5-lesd TO-262 
+surface mount package.
+UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 2 ===
+2 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+4.Typical Application (Fixed Output Voltage Versions)
+5.Package Types
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+LM2596
+/LM2596HV
+5.0
+TO220B-5L TO220-5L TO263-5L
+=== PAGE 3 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 3 of 28
+Name
+VIN
+Output
+GND
+Feedback
+ON/OFF
+Pin Descriptions
+Description
+Input supply voltage
+Switching output
+Ground
+Output voltage feedback
+ON/OFF shutdown Active is “Low” or floating
+6.Pinning information
+7.Ordering information
+TO220B-5L/TO220-5L TO263-5L
+5 ON/OFF 
+4 Feedback 
+3 GND
+2 Output 
+1 VIN
+5 ON/OFF 
+4 Feedback
+3 GND
+2 Output 
+1 VIN
+Output Voltage, V
+3.3
+Temperature
+Range
+Package
+Type
+LM2596HVS - 3.3
+LM2596S - 3.3
+LM2596HVT - 3.3
+LM2596T - 3.3
+-40°C≤TA≤125°C
+5.0
+LM2596HVS - 5.0
+LM2596S - 5.0
+LM2596HVT - 5.0
+LM2596T- 5.0
+12
+LM2596HVS - 12
+LM2596S - 12
+LM2596HVT - 12
+LM2596T- 12
+ADJ
+LM2596HVS - ADJ
+LM2596S - ADJ
+LM2596HVT - ADJ
+LM2596T- ADJ
+TO-263
+TO-220
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 4 ===
+4 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+8.Absolute Maximum Ratings (Note 1)
+RatingParameter
+Maximum Supply Voltage
+LM2596
+LM2596HV
+ON /OFF Pin Input Voltage
+Feedback Pin Voltage
+Output Voltage to Ground (Steady State)
+Power Dissipation
+Storage Temperature Range
+ESD Susceptibility HumanBodyModel
+Vapor Phase (60 sec.)
+Infrared (10 sec.)
+T Package (Soldering, 10 sec.)
+Maximum Junction Temperature
+45V
+63V
+-0.3 ≤ V ≤ +25V
+-0.3 ≤ V ≤+25V
+-1V
+Internally limited
+-65°C to +150°C
+2kV
++215°C
++245°C
++260°C
++150°C
+9.Operating Conditions
+RatingParameter
+Temperature Range
+Supply Voltage
+LM2596
+LM2596HV
+-40°C ≤ TJ ≤ +125°C
+4.75V ~ 40V
+4.75V ~ 60V
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 5 ===
+System Parameters (Note 5) Test Circuit Figure 1 (LM2596 - 3.3, LM2596HV-3.3)
+Output Voltage
+Efficiency
+System Parameters (Note 5) Test Circuit Figure 1 (LM2596-5.0, LM2596HV-5.0)
+Output Voltage
+Efficiency
+System Parameters (Note 5) Test Circuit Figure 1 (LM2596-12, LM2596HV-12)
+Output Voltage
+Efficiency
+System Parameters (Note 5) Test Circuit Figure 1 (LM2596-ADJ, LM2596HV-ADJ)
+Feedback Voltage
+Efficiency
+Specifications with standard type face are for TJ=25°C, and those with boldface type apply over full Operating 
+Temperature Range
+VIN=12V, ILOAD=3A
+VIN=12V, ILOAD=3A
+VIN=25V, ILOAD=3A
+4.5V≤VIN≤40V (57V)
+0.2A≤ILOAD≤3A, VOUT programm-
+ed for 3V. Circuit of Figure 1.
+VIN=12V, VOUT=3V, ILOAD=3A
+4.75V≤VIN≤40V (60V)
+0.2A≤ILOAD≤3A
+7V≤VIN≤40V (60V)
+0.2A≤ILOAD≤3A
+15V≤VIN≤40V (60V)
+0.2A≤ILOAD≤3A
+Symbol Conditions UnitsTyp LimitParameter
+VOUT
+η
+VOUT
+η
+VOUT
+η
+VFB
+η
+3.3
+73
+5
+80
+12
+90
+1.23
+73
+3.168/3.135
+3.432/3.465
+4.800/4.750
+5.200/5.250
+11.52/11.40
+12.48/12.60
+1.193/1.180
+1.267/1.280
+V
+V(min)
+V(max)
+%
+V
+V(min)
+V(max)
+%
+V
+V(min)
+V(max)
+%
+V
+V(min)
+V(max)
+%
+10.1 Electrical Characteristics 
+UTD Semiconductor Co.,Limited
+Jun.2025 5 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 6 ===
+6 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Device Parameters
+Oscillator Frequency
+Max Duty Cycle (ON) 
+Min Duty Cycle (OFF)
+Current Limit
+Output Leakage Current
+Feedback Bias Current
+Saturation Voltage
+Quiescent Current
+Standby Quiescent Current
+Specifications with standard type face are for TJ=25°C, and those with boldface type apply over full Operating 
+Temperature Range, Unless otherwise specified, VIN=12V for the 3.3V, 5V, and Adjustable version and VIN=24V for 
+the 12V version. ILOAD=500mA
+Adjustable Version Only
+VFB=1.3V
+(Note 6)
+(Note 8)
+(Note 9)
+Peak Current (Notes 7, 8)
+Output=0V (Notes 7, 9)
+ON/OFF pin=5V (OFF)
+(Note 10)
+IOUT=3A (Notes 7, 8)
+Output=-1V (Note 10)
+(Note 9)
+Symbol Conditions UnitsTyp LimitParameter
+IB
+VSAT
+DC
+IQ
+ISTBY
+fO
+ICL
+IL
+10
+150
+1.16
+100
+0
+4.5
+2
+5
+80
+50/100
+117/117
+183/183
+1.4/1.5
+3.6/3.4
+6.9/7.5
+50
+30
+10
+200/250
+nA
+nA(max)
+kHz
+kHz(min)
+kHz(max)
+V
+V(max)
+%
+%
+A
+A(min)
+A(max)
+µA(max)
+mA
+mA(max)
+mA
+mA(max)
+µA
+µA(max)
+10.2 Electrical Characteristics (All Output Voltage Versions)
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 7 ===
+Thermal Resistance
+ON/OFF Pin Input Current
+Note 1: Absolute Maximum Ratings indicate limits beyond which damage to the device may occur. Operating Ratings indicate 
+conditions for which the device is intended to be functional, but do not guarantee specific performance limits. For guaranteed 
+specifications and test conditions, see the Electrical Characteristics.
+Note 2: The human body model is a 100 pF capacitor discharged through a 1.5k resistor into each pin.
+Note 3: Typical numbers are at 25˚C and represent the most likely norm.
+Note 4: All limits guaranteed at room temperature (standard type face) and at temperature extremes (bold type face). All room 
+temperature limits are 100% production tested. All limits at temperature extremes are guaranteed via correlation using standard 
+Statistical Quality Control (SQC) methods. All limits are used to calculate Average Outgoing Quality Level (AOQL).
+Note 5: External components such as the catch diode, inductor, input and output capacitors, and voltage programming resistors 
+can affect switching regulator system performance. When the LM2596 is used as shown in the Figure 1 test circuit, system perf-
+ormance will be as shown in system parameters section of Electrical Characteristics.
+ON/OFF CONTROL Test Circuit Figure 1
+ON/OFF Pin Logic Input 
+Threshold Voltage
+TO-220 or TO-263 Package
+Junction to Case
+TO-220 Package, Junction to 
+Ambient (Note 11)
+TO-263 Package, Junction to 
+Ambient (Note 12)
+TO-263 Package, Junction to 
+Ambient (Note 13)
+TO-263 Package, Junction to 
+Ambient (Note 14)
+Low (Regulator ON) 
+High (Regulator OFF
+VLOGIC=2.5V (Regulator OFF)
+VLOGIC=0.5V (Regulator ON)
+Symbol Conditions UnitsTyp LimitParameter
+θJC
+θJA
+θJA
+θJA
+θJA
+IH
+IL
+VIH
+VIL
+2
+50
+50
+30
+20
+1.3
+5
+0.02
+0.6
+2
+15
+5
+V
+V(max)
+V(min)
+µA
+µA(max)
+µA
+µA(max)
+°C/W
+°C/W
+°C/W
+°C/W
+°C/W
+UTD Semiconductor Co.,Limited
+Jun.2025 7 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 8 ===
+8 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Note 6: The switching frequency is reduced when the second stage current limit is activated.
+Note 7: No diode, inductor or capacitor connected to output pin.
+Note 8: Feedback pin removed from output and connected to 0V to force the output transistor switch ON.
+Note 9: Feedback pin removed from output and connected to 12V for the 3.3V, 5V, and the ADJ. version, and 15V for the 12V 
+version, to force the output transistor switch OFF.
+Note 10: VIN = 40V.
+Note 11: Junction to ambient thermal resistance (no external heat sink) for the TO-220 package mounted vertically, with the leads 
+soldered to a printed circuit board with (1 oz.) copper area of approximately 1 in2.
+Note 12: Junction to ambient thermal resistance with the TO-263 package tab soldered to a single printed circuit board with 0.5 
+in2 of (1 oz.) copper area.
+Note 13: Junction to ambient thermal resistance with the TO-263 package tab soldered to a single sided printed circuit board with 
+2.5 in2 of (1 oz.) copper area.
+Note 14: Junction to ambient thermal resistance with the TO-263 package tab soldered to a double sided printed circuit board 
+with 3 in2 of (1 oz.) copper area on the LM2596S side of the board, and approximately 16 in2 of copper on the other side of the 
+p-c board. See Application Information in this data sheet and the thermal model in Switchers Made Simple™ version 4.3 
+software.
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 9 ===
+Output Voltage Change (%)
+Output Voltage Change (%)
+Efficiency (%)
+Saturation Voltage (V)
+Switch Current Limit (A)
+Input-Output Differential (V)
+Junction Temperature (°C)
+Figure 1: Normalized Output Voltage Figure 2: Line Regulation
+Input Voltage (V)
+Input Voltage (V)
+Figure 3: Efficiency
+Switch Current (A)
+Figure 4: Switch Saturation Voltage
+Junction Temperature (°C)
+Figure 5: Switch Current Limit
+Junction Temperature (°C)
+Figure 6: Dropout Voltage
+11.1 Typical Characteristic (Circuit of Figure 1)
+UTD Semiconductor Co.,Limited
+Jun.2025 9 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+
+=== PAGE 10 ===
+10 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Supply Current (mA)
+Current (µA)
+Supply Voltage (V)
+Threshold Voltage (V)
+Current (µA)
+Frequency (kHz)
+Junction Temperature (°C)
+Figure 7: Quiescent Current Figure 8: Quiescent Current
+Supply Voltage (V)
+Junction Temperature (°C)
+Figure 9: Supply Voltage
+Junction Temperature (°C)
+Figure 10: ON/OFF Threshold Voltage
+ON/OF Pin Voltage (V)
+Figure 11: ON/OFF Pin Current (Sinking)
+Junction Temperature (°C)
+Figure 12: Switching Frequency
+11.2 Typical Characteristic
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+
+=== PAGE 11 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 11 of 28
+Output 
+Voltage (V)
+Conditions Inductor
+Load 
+Current (A)
+Max Input 
+Voltage (V)
+Inductance 
+(μH)
+Inductor 
+(#)
+Panasonic HFQ 
+Series (μF/V)
+Through Hole Electrolytic
+Output Capacitor
+Surface Mount Tantalum
+Nichicon PL 
+Series (μF/V)
+AVX TPS 
+Series (μF/V)
+Sprague 595D 
+Series (μF/V)
+5
+7
+10
+40
+6
+10
+40
+8
+10
+15
+40
+9
+20
+40
+15
+18
+30
+40
+15
+20
+40
+3
+3
+3
+3.3
+5
+12
+Figure 2. LM2596 Fixed Voltage Quick Design Component Selection Table
+2
+2
+2
+22
+22
+22
+33
+22
+33
+47
+22
+22
+33
+47
+22
+68
+68
+22
+33
+68
+68
+33
+68
+150
+L41
+L41
+L41
+L40
+L33
+L32
+L39
+L41
+L41
+L40
+L39
+L33
+L38
+L38
+L41
+L40
+L44
+L44
+L32
+L38
+L42
+470/25
+560/35
+680/35
+560/35
+470/25
+330/35
+330/35
+470/25
+560/25
+330/35
+330/35
+470/25
+180/35
+180/35
+470/25
+330/25
+180/25
+180/35
+330/25
+180/25
+82/25
+560/16
+560/35
+680/35
+470/35
+470/35
+330/35
+270/50
+560/16
+560/25
+330/35
+270/35
+560/16
+180/35
+180/35
+470/25
+330/25
+180/25
+180/35
+330/25
+180/25
+82/25
+330/6.3
+330/6.3
+330/6.3
+330/6.3
+330/6.3
+330/6.3
+220/10
+220/10
+220/10
+220/10
+220/10
+220/10
+100/10
+100/10
+100/16
+100/16
+100/16
+100/16
+100/16
+100/16
+68/20
+390/6.3
+390/6.3
+390/6.3
+390/6.3
+390/6.3
+390/6.3
+330/10
+330/10
+330/10
+330/10
+330/10
+330/10
+270/10
+270/10
+180/16
+180/16
+120/20
+120/20
+180/16
+120/20
+68/25
+12.Series Buck Regulator Design Procedure (Fixed Output) (Continued)
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 12 ===
+12 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Panasonic HFQ 
+Series (μF/V)
+Nichicon PL Series
+(μF/V)
+Feedforward 
+capacitor
+AVX TPS Series
+(μF/V)
+Sprague 595D 
+Series (μF/V)
+Feedforward 
+Capacitor
+820/35
+560/35
+470/25
+330/25
+330/25
+220/35
+220/35
+100/50
+2
+4
+6
+9
+12
+15
+24
+28
+Figure 3. Output Capacitor and Feedforward Capacitor Selection Table
+820/35
+470/35
+470/25
+330/25
+330/25
+220/35
+150/35
+100/50
+33nF
+10nF
+3.3nF
+1.5nF
+1nF
+680pF
+560pF
+390pF
+330/6.3
+330/6.3
+220/10
+100/16
+100/16
+68/20
+33/25
+10/35
+470/4
+390/6.3
+330/10
+180/16
+180/16
+120/20
+33/25
+15/50
+33nF
+10nF
+3.3nF
+1.5nF
+1nF
+680pF
+220pF
+220pF
+13.Series Buck Regulator Desing Procedure (Adjustable Output)
+Surface Mount Output CapacitorThrough Hole Output Capacitor
+Output 
+Voltage (V)
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 13 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 13 of 28
+14.Series Buck Regulator Design Procedure
+Maximum Input Voltage (V)
+Maximum Input Voltage (V)
+Maximum Input Voltage (V)
+E•T (V•µs)
+Maximum Load Current (A)
+Figure 4: LM2596/LM2596HV-3.3 Figure 5: LM2596/LM2596HV-12
+Maximum Load Current (A)
+Maximum Load Current (A)
+Figure 6: LM2596/LM2596HV-5.0
+Maximum Load Current (A)
+Figure 7: LM2596/LM2596HV-ADJ
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+01258324
+01258325
+01258326
+01258327
+=== PAGE 14 ===
+14 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+where VREF = 1.23V
+Select R1 to be approximately 1 kΩ, use a 1% resistor for best stability.
+CIN — 470µF, 50V, Aluminum Electrolytic Nichicon “PL Series”
+COUT — 220 µF, 35V Aluminum Electrolytic, Nichicon “PL Series”
+D1 — 5A, 40V Schottky Rectifier, 1N5825
+L1 — 68 µH, L38
+R1 — 1 kΩ, 1%
+CFF — See Application Information Section
+15.Test Circuit and Layout Guidelines (Continued)
+Adjustable Output Voltage Versions
+VOUT=VREF(1+R2/R1)
+R2=R1(VOUT/VREF-1)
+Figure 1. Standard Test Circuits and Layout Guides
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+LM2596/
+LM2596HV
+=== PAGE 15 ===
+As in any switching regulator, layout is very important. Rap�idly switching currents associated with wiring inductan-
+ce can generate voltage transients which can cause problems. For minimal inductance and ground loops, the wires 
+indicated by heavy lines should be wide printed circuit traces and should be kept as short as possible. For best res-
+ults, external components should be located as close to the switcher lC as possible using ground plane construction 
+or single point grounding.
+If open core inductors are used, special care must be taken as to the location and positioning of this type of inductor
+Allowing the inductor flux to intersect sensitive feedback, lC groundpath and COUT wiring can cause problems.
+When using the adjustable version, special care must be taken as to the location of the feedback resistors and the
+associated wiring. Physically locate both resistors near the IC, and route the wiring away from the inductor, especi-
+ally an open core type of inductor. (See application section for more information.)
+UTD Semiconductor Co.,Limited
+Jun.2025 15 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 16 ===
+16 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+16.Series Buck Regulator Design Procedure (Adjustable Output)
+Procedure (Adjustable Output Voltage Version)
+Given:
+VOUT=Regulated Output Voltage
+VIN(max)=Maximum Input Voltage
+ILOAD(max)=Maximum Load Current
+F=Switching Frequency (Fixed at a nominal 150 kHz).
+1. Programming Output Voltage (Selecting R1 and R2, as shown in Figure 1) 
+Use the following formula to select the appropriate resistor values.
+VOUT=VREF(1+R2/R1) where VREF=1.23V
+Select a value for R1 between 240Ω and 1.5kΩ. The lower resistor values minimize noise pickup in the sensitive 
+feedback pin. (For the lowest temperature coefficient and the best stability with time, use 1% metal film resistors.)
+R2=R1(VOUT/VREF-1)
+2. Inductor Selection (L1)
+A.Calculate the inductor Volt • microsecond constant E • T (V• µs), from the following formula:
+where VSAT=internal switch saturation voltage=1.16V and VD=diode forward voltage drop=0.5V
+B. Use the E•T value from the previous formula and match it with the E•T number on the vertical axis of the Inductor
+Value Selection Guide shown in Figure 7.
+C. on the horizontal axis, select the maximum load current.
+D. Identify the inductance region intersected by the E•T value and the Maximum Load Current value. Each region is 
+identified by an inductance value and an inductor code (LXX).
+E. Select an appropriate inductor from the four manufacturer’s part numbers listed in Figure 8.
+E • T=(VIN-VOUT-VSAT) •                          •                         (V • µs)
+VOUT+VD
+VIN - VSAT + VD
+1000
+150kHz
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 17 ===
+EXAMPLE (Adjustable Output Voltage Version)
+Given:
+VOUT = 20V
+VIN(max) = 28V
+ILOAD(max) = 2A
+F = Switching Frequency (Fixed at a nominal 150 kHz).
+1. Programming Output Voltage (Selecting R1 and R2, as shown in Figure 1 )
+Select R1 to be 1 kΩ, 1%. Solve for R2.
+R2=R1(VOUT/VREF - 1) =1k(20V/1.23V - 1)
+R2 = 1k (16.26 − 1) = 15.26k, closest 1% value is 15.4 kΩ. R2 = 15.4 kΩ.
+2. Inductor Selection (L1)
+A. Calculate the inductor Volt • microsecond constant (E • T)
+B. E • T = 34.2 (V • µs)
+C. ILOAD(max) = 3A
+D. From the inductor value selection guide shown in Figure 7, the inductance region intersected by the 34 (V • µs) 
+horizontal L39.
+E. From the table in Figure 8, locate line L39, and select an bers.
+UTD Semiconductor Co.,Limited
+Jun.2025 17 of 28
+E • T=(28-20-1.16) •                        •              (V• µS)
+20+0.5
+28-1.16+0.5
+1000
+150
+E • T=(6.84) •                        •6.67 (V• µS) =34.2(V• µS)
+20.5
+27.34
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 18 ===
+18 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Figure 12.
+17.Block Diagram
+18.Application Information
+Pin Functions
++VIN __ This is the positive input supply for the IC switching regulator. A suitable input bypass capacitor must be pre-
+sent at this pin to minimize voltage transients and to supply the switching currents needed by the regulator.
+Ground __ Circuit ground.
+Output __ Internal switch. The voltage at this pin switches between (+VIN __ VSAT) and approximately __ 0.5V, with a 
+duty cycle of approximately VOUT/VIN. To minimize coupling to sensitive circuitry, the PC board copper area connect-
+ed to this pin should be kept to a minimum.
+Feedback __ Senses the regulated output voltage to complete the feedback loop.
+ON /OFF __ Allows the switching regulator circuit to be shut down using logic level signals thus dropping the total 
+input supply current to approximately 80 µA. Pulling this pin below a threshold voltage of approximately 1.3V turns 
+the regulator on, and pulling this pin above 1.3V (up to a maximum of 25V) shuts the regulator down. If this shutdo-
+wn feature is not needed, the ON /OFF pin can be wired to the ground pin or it can be left open, in either case the 
+regulator will be in the ON condition.
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+01258321
+=== PAGE 19 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 19 of 28
+External Components
+Input Capacitor
+CIN __ A low ESR aluminum or tantalum bypass capacitor is needed between the input pin and ground pin. It must be
+located near the regulator using short leads. This capacitor prevents large voltage transients from appearing at the 
+input, and provides the instantaneous current needed each time the switch turns on.
+The important parameters for the Input capacitor are the voltage rating and the RMS current rating. Because of the
+relatively high RMS currents flowing in a buck regulator's input capacitor, this capacitor should be chosen for its 
+RMS current rating rather than its capacitance or voltage ratings, although the capacitance value and voltage rating 
+are directly related to the RMS current rating.
+The RMS current rating of a capacitor could be viewed as a capacitor's power rating. The RMS current flowing thro-
+ugh the capacitors internal ESR produces power which causes the internal temperature of the capacitor to rise. The 
+RMS current rating of a capacitor is determined by the amount of current required to raise the internal temperature 
+approximately 10°C above an ambient temperature of 105°C. The ability of the capacitor to dissipate this heat to 
+the surrounding air will determine the amount of current the capacitor can safely sustain. Capacitors that are physic-
+ally large and have a large surface area will typically have higher RMS current ratings. For a given capacitor value, 
+a higher voltage electrolytic capacitor will be physically larger than a lower voltage capacitor, and thus be able to 
+dissipate more heat to the surrounding air, and therefore will have a higher RMS current rating.
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+01258336
+FIGURE 21. Delayed Startup
+LM2596
+/LM2596HV
+5.0
+01258337
+FIGURE 22. Undervoltage Lockout
+for Buck Regulator
+LM2596
+/LM2596HV
+5.0
+01258338
+This circuit has an ON/OFF threshold of approximately 13V.
+FIGURE 23. Undervoltage Lockout
+for Inverting Regulator
+LM2596
+/LM2596HV
+5.0
+=== PAGE 20 ===
+20 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+Delayed Startup
+The circuit in Figure 21 uses the the ON /OFF pin to provide a time delay between the time the input voltage is app-
+lied and the time the output voltage comes up (only the circuitry pertaining to the delayed start up is shown). As the 
+input voltage rises, the charging of capacitor C1 pulls the ON /OFF pin high, keeping the regulator off. Once the 
+input voltage reaches its final value and the capacitor stops charging, and resistor R2 pulls the ON/OFF pin low, thus 
+allowing the circuit to start switching. Resistor R1 is included to limit the maximum voltage applied to the ON /OFF
+pin (maximum of 25V), reduces power supply noise sensitivity, and also limits the capacitor, C1, discharge current. 
+When high input ripple voltage exists, avoid long delay time, because this ripple can be coupled into the ON /OFF 
+pin and cause problems. This delayed startup feature is useful in situations where the input power source is limited 
+in the amount of current it can deliver. It allows the input voltage to rise to a higher voltage before the regulator starts 
+operating. Buck regulators require less input current at higher input voltages.
+Undervoltage Lockout
+Some applications require the regulator to remain off until the input voltage reaches a predetermined voltage. An 
+undervoltage lockout feature applied to a buck regulator is shown in Figure 22, while Figure 23 and 24 applies the 
+same feature to an inverting circuit. The circuit in Figure 23 features a constant threshold voltage for turn on and 
+turn off (zener voltage plus approximately one volt). If hysteresis is needed, the circuit in Figure 24 has a turn ON 
+voltage which is different than the turn OFF voltage. The amount of hysteresis is approximately equal to the value 
+of the output voltage. If zener voltages greater than 25V are used, an additional 47 kΩ resistor is needed from the 
+ON /OFF pin to the ground pin to stay within the 25V maximum limit of the ON/OFF pin.
+Inverting Regulator
+The circuit in Figure 25 converts a positive input voltage to a negative output voltage with a common ground. The 
+circuit operates by bootstrapping the regulator’s ground pin to the negative output voltage, then grounding the feed-
+back pin, This example uses the LM2596/LM2596HV-5.0 to generate a -5V output, but other output voltages are 
+possible by selecting other output voltage versions, including the adjustable version. Since this regulator topology 
+can produce an output voltage that is either greater than or less than the input voltage, the maximum output current 
+greatly depends on both the input and output voltage. The curve shown in Figure 26 provides a guide as to the am-
+ount of output load current possible for the different input and output voltage conditions.
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 21 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 21 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+This circuit has hysteresis Regulator starts switching at VIN = 13V Regulator stops switching at VIN = 8V
+LM2596
+/LM2596HV
+5.0
+LM2596
+/LM2596HV
+5.0
+Figure 24. Undervoltage Lockout with Hysteresis for Inverting Regulator
+Figure 25. Inverting −5V Regulator with Delayed Startup
+Figure 26. Inverting Regulator Typical Load Current
+CIN — 68µF/25V Tant. Sprague 595D
+470µF/50V Elec. Panasonic HFQ
+COUT  — 47 µF/20V Tant. Sprague 595D
+220µF/25V Elec. Panasonic HFQ
+
+=== PAGE 22 ===
+22 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+Because of differences in the operation of the inverting regulator, the standard design procedure is not used to sel-
+ect the inductor value. In the majority of designs, a 33 µH, 3.5A inductor is the best choice. Capacitor selection can 
+also be narrowed down to just a few values. Using the values shown in Figure 25 will provide good results in the 
+majority of inverting designs.
+This type of inverting regulator can require relatively large amounts of input current when starting up, even with light
+loads. Input currents as high as the LM2596 /LM2596HV current limit (approx 4.5A) are needed for at least 2 ms or 
+more, until the output reaches its nominal output voltage. The adual time depends on the output voltage and the size 
+of the outputcapacitor. Input power sources that are current limited or sources that can not deliver these currents
+without getting loaded down, may not work correctly. Because of the relatively high startup currents required by the 
+inverting tolology the delayed startup feature (C1, R1 and R2) shown the in Figure 25 is recommended. By delaying 
+the regulator startup, the input capacitor is allowed to charge up to a higher votage before the switcher begins 
+operating. A portion of the high nput current needed for startup is now supplied by the input capacitor (CIN). For 
+severe start up conditions, the input capacitor can be made much larger than normal.
+Inverting Regulator Shutdown Methods
+To use the ON /OFF pin in a standard buck configuration is simple, pull it below 1.3V(@25˚C, referenced to ground) 
+to turn regulator ON, pull it above 1.3V to shut the regulator OFF. With the inverting configuration, some level shifti-
+ng is required, because the ground pin of the regulator is no longer at ground, but is now setting at the negative 
+output voltage level. Two different shutdown methods for inverting regulators are shown in Figure 27 and 28.
+=== PAGE 23 ===
+UTD Semiconductor Co.,Limited
+Jun.2025 23 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+01258342
+LM2596
+/LM2596HV
+5.0
+01258343
+LM2596
+/LM2596HV
+5.0
+Figure 27. Inverting Regulator Ground Referenced Shutdown
+Figure 28. Inverting Regulator Ground Referenced Shutdown using Opto Device
+=== PAGE 24 ===
+24 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+19.1 TO220B-5L Package Outline Dimensions
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+D
+Φ
+A
+c1
+E
+A1
+A3
+c
+A4
+L2
+L1
+F
+E1
+b
+L3
+L4
+e
+e1
+DIMENSIONS (mm are the original dimensions)
+Min
+Max
+4.450 8.350
+8.750
+0.710
+0.910
+0.310 1.170 10.010 8.9004.470 2.520
+4.670 2.820 4.850 0.530 1.370 10.310 9.300
+12.460
+12.860
+1.700
+TYP
+Symbol A A1 A3 A4 b c c1 D E E1 e
+6.700
+6.900
+e1
+Min
+Max
+24.800 1.000
+2.000
+6.000
+6.400
+0.950 3.7902.590 26.800
+2.890 27.400 25.200 1.050 3.890
+Symbol F L1 L2 L3 L4 R Φ
+=== PAGE 25 ===
+19.2 TO220-5L Package Outline Dimensions
+UTD Semiconductor Co.,Limited
+Jun.2025 25 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+DIMENSIONS (mm are the original dimensions)
+Min
+Max
+13.67 28.55
+28.95
+1.70
+0.75 1.20 0.45 2.386.3 8.48
+6.4 8.68 13.97 0.85 1.30 0.65 2.58
+0.33
+0.43
+10.00
+10.20
+Symbol A A1 A2 B B1 b C C1 D E E1
+3.80
+3.90
+Φ
+E1
+Φ
+A
+A1
+A2
+B1
+b
+E
+D
+C
+C1
+B
+=== PAGE 26 ===
+26 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+19.3 TO-263 Package Outline Dimensions
+5.080
+5.480
+L1
+D
+B
+E
+L1
+e
+e1
+L
+c1
+b
+A
+A1
+L2
+c
+V
+DIMENSIONS (mm are the original dimensions)
+Min
+Max
+4.470 0.000 1.560 0.710 0.310 1.170 9.880 8.200 1.700 15.140
+4.670 0.150 1.760 0.910 0.530 1.370 10.180 8.600 TYP 15.5406.900
+6.700
+Symbol A A1 B b c c1 D E e e1 L
+Min
+Max
+2.340 5.600
+2.740 REF
+Symbol L2 V
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 27 ===
+20.Ordering Information
+yy: Year Code
+ww: Week Code
+UMW yyww
+LM2596S
+-ADJ   P+
+Package Base QTY Delivery ModeMarkingOrder Code
+UMW LM2596HVS-12
+UMW LM2596HVS-3.3
+UMW LM2596HVS-5.0
+UMW LM2596HVS-ADJ
+UMW LM2596S-12
+UMW LM2596S-3.3
+UMW LM2596S-5.0
+UMW LM2596S-ADJ
+TO-263
+TO-263
+TO-263
+TO-263
+TO-263
+TO-263
+TO-263
+TO-263
+LM2596HVS
+LM2596HVS
+LM2596HVS
+LM2596HVS
+LM2596S
+LM2596S
+LM2596S
+LM2596S
+800
+800
+800
+800
+800
+800
+800
+800
+Tape and reel
+Tape and reel
+Tape and reel
+Tape and reel
+Tape and reel
+Tape and reel
+Tape and reel
+Tape and reel
+UTD Semiconductor Co.,Limited
+Jun.2025 27 of 28
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator
+=== PAGE 28 ===
+28 of 28
+UTD Semiconductor Co.,Limited
+Jun.2025
+UMW reserves the right to make changes to all products, specifications. Customers should obtain the latest version 
+of product documentation and verify the completeness and currency of the information before placing an order.
+This document and any actions by UMW do not grant any intellectual property rights, whether express or implied, 
+by estoppel or otherwise. The product names and marks mentioned herein may be trademarks of their respective 
+owners.
+When reselling, applying, or exporting, please comply with export control laws and regulations of China, the United 
+States, the United Kingdom, the European Union, and other relevant countries, regions, and international 
+organizations.
+Unless explicitly stated in writing, UMW products are not intended for use in medical, life-saving, or life-sustaining 
+applications, nor for any other applications where product failure could result in personal injury or death. If customers 
+use or sell the product for such applications without explicit authorization, they assume all associated risks.
+When applying our products, please do not exceed the maximum rated values, as this may affect the reliability of the 
+entire system. Under certain conditions, any semiconductor product may experience faults or failures. Buyers are 
+responsible for adhering to safety standards and implementing safety measures during system design, prototyping, 
+and manufacturing when using our products to prevent potential failure risks that could lead to personal injury or 
+property damage.
+21.Disclaimer
+www.umw-ic.com UMW LM2596/LM2596HV
+3A Step-Down Voltage Regulator

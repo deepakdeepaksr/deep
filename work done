@@ -1,0 +1,55 @@
+# Session report - MoriShield Carrier Rev C - 2026-11-04 (T-59 attempt: batch 3)
+
+**Outcome: no batch landed. The board and schematic are byte-identical to the state on entry and verified
+clean. Nothing was carried forward dirty.**
+
+## 1. State on entry, re-confirmed with pcb\_census.py
+
+`161 footprints | 1150 segments | 319 vias | 6 zones | 136 nets | copper 5142.324 mm | vias inside SMD pads 67`
+ERC 0; DRC 0 violations / 0 unconnected / 0 parity. E1 148 links / 10.00 mm / 0.0 %. Matches the brief.
+
+## 2. What was attempted: batch 3 (D7.1, /+5V_ESP, one 100 nF)
+
+Batch 3 was chosen because it is a single part, so it could be finished rather than half-done. The plan was
+C52, 100 nF, cloned from C41 (same `MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder`
+footprint already on the board), symbol at a grid point, label `+5V_ESP` on pin 1 (net `/+5V_ESP`), GND power
+symbol on pin 2; board at (215.60, 97.50) rot 90, pad 1 to D7.1 at (215.60, 103.00) - 4.46 mm along the
+copper - and its own GND via at (213.50, 96.46), not shared with anything.
+
+**Attempt 1 failed, four ways:**
+- the board footprint's `at` line did not match my regex, so C52 landed on top of C41 (`courtyards_overlap`,
+  two `silk_overlap`, `shorting_items` with C41's pad 1);
+- pad 1 kept C41's `+5V` net instead of `/+5V_ESP` (`net_conflict`);
+- the schematic symbol x = 455 is off the 1.27 mm grid (two `endpoint_off_grid` in ERC).
+
+**Attempt 2 fixed two of the three** - pad 1 became `/+5V_ESP` (parity back to 0) and the symbol moved to
+454.66, on grid - **but the `at` regex missed again**: KiCad writes a footprint's `at` without the rotation
+field when the rotation is 0, so `\(at [-\d.]+ [-\d.]+ [-\d.]+\)` matched a property `at` line instead and
+C52 stayed at C41's position. Result: 9 violations, 1 unconnected, and a `shorting_items` between C41.1 and
+C52.1.
+
+Per the batch rule, the snapshot `pcb\_snap\T59_5VESP_20261104_090758` was restored.
+
+## 3. Verification of the restore
+
+`pcb\_work_20261103\B3_restored.json`: **0 violations, 0 unconnected, 0 parity**. Census identical to entry
+in all seven numbers. The strap read-back and T-55/T-56 are untouched.
+
+## 4. Root cause, and the fix for the next run
+
+**Cloning a board footprint by regex on `(at ...)` is unsafe.** Two traps, both hit here: KiCad omits the
+rotation field when it is 0, and `(at ...)` also appears in every property. The footprint's own placement
+node must be taken from the s-expression parser as the `at` child of the footprint node, not found by text
+pattern. With that one change the batch-3 edit should apply first time; the rest of it (pad nets, label,
+GND symbol, track, via) already produced parity 0 in attempt 2.
+
+## 5. Not done
+
+Batches 1 (3V3_C, six pins, needs a 10 uF on a rail that has none), 2 (/3V3_SENS_SW, five pins), and 4 (+5V,
+J24.1) were not attempted. The wrap (items 9-13: regeneration, the three documents, response sheet, trace2,
+final_verify, pack.ps1) was not run, because with no batch landed there was nothing new to publish.
+
+## 6. Rollback
+
+`pcb\_snap\T59_5VESP_20261104_090758` holds both files exactly as they were at entry. Evidence of the clean
+restore: `pcb\_work_20261103\B3_restored.json`.

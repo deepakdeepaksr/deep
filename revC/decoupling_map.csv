@@ -1,0 +1,37 @@
+net,load_ref,load_pad,class,local_cap,local_val,local_100nf_mm,local_method,local_limit_mm,local_meets,bulk_cap,bulk_val,bulk_mm,bulk_meets,pin_x,pin_y,local_x,local_y,verdict,verdict_reason
+/3V3_SENS_SW,J16,1,connector,C43,100nF,5.18,track,5.0,no,C51,10uF/16V,29.71,no,163.94,194.5,161.0,190.54,ADD,bulk C51 is 29.7 mm and unique on the net; 100 nF site rot 90 only
+3V3_C,J1,1,connector,C36,100nF,23.99,track,5.0,no,,,,no,209.5,154.0,226.96,152.0,ADD,"3V3_C has no 10 uF capacitor at all; 100 nF site at (210.50,157.75) rot 0"
+3V3_C,J1,2,connector,C36,100nF,26.53,track,5.0,no,,,,no,209.5,151.46,226.96,152.0,NONE,no legal site within 5.0 mm; nearest copper: B.Cu /I2C1_SDA at 1.8 mm; PAD J1.3 at 2.5 mm; B.Cu /I2C1_SCL at 4.0 mm
+/+5V_ESP,J1,21,connector,,,,,5.0,no,C28,10uF/10V,11.66,no,209.5,103.2,,,NONE,no legal site within 5.0 mm; nearest copper: PAD J1.20 at 2.5 mm; PAD J1.22 at 2.5 mm; B.Cu /UART2_MOD_RX at 4.0 mm
+/3V3_SENS_SW,J20,1,connector,C49,100nF,5.75,plane,5.0,no,C51,10uF/16V,118.51,no,298.75,141.75,298.71,147.5,NONE,no legal site within 5.0 mm; nearest copper: PAD J20.2 at 2.5 mm; F.Cu /I2C0_SCL_CH6 at 4.5 mm; PAD ESD19.1 at 4.9 mm
++5V,Q3,2,MOSFET,C14,100nF,60.85,plane,5.0,no,C1,10uF/25V,45.23,no,175.06,168.95,168.06,108.5,NONE,no legal site within 5.0 mm; nearest copper: F.Cu /SENS_GATE at 1.3 mm; F.Cu /SENS_GATE at 1.3 mm; VIA /+5V_SENS at 1.4 mm
+/+5V_SENS,Q3,3,MOSFET,C33,100nF/16V,66.44,plane,5.0,no,C31,100uF/16V,58.1,no,176.94,168.0,235.96,198.5,NONE,no legal site within 5.0 mm; nearest copper: F.Cu /3V3_SENS at 2.0 mm; PAD Q3.1 at 2.1 mm; PAD Q3.2 at 2.1 mm
+3V3_C,U4,5,IC,C36,100nF,3.48,track,3.0,no,,,,no,223.7,150.95,226.96,152.0,NONE,no legal site within 3.0 mm; nearest copper: F.Cu /WDT_WDI at 1.3 mm; F.Cu /WDT_WDI at 1.8 mm; VIA /WDT_WDI at 1.8 mm
++5V,U6,1,IC,C14,100nF,60.91,plane,3.0,no,C1,10uF/25V,45.54,no,184.86,167.05,168.06,108.5,NONE,no legal site within 3.0 mm; nearest copper: PAD U6.2 at 1.0 mm; VIA GND at 1.0 mm; In2.Cu /+5V_SENS at 1.0 mm
++5V,U6,3,IC,C14,100nF,62.74,plane,3.0,no,C1,10uF/25V,47.34,no,184.86,168.95,168.06,108.5,NONE,no legal site within 3.0 mm; nearest copper: VIA GND at 1.0 mm; PAD U6.2 at 1.0 mm; F.Cu /SENS_GATE at 1.1 mm
+/3V3_SENS,U6,5,IC,,,,,3.0,no,,,,no,187.14,167.05,,,NONE,no legal site within 3.0 mm; nearest copper: In2.Cu /+5V_SENS at 1.3 mm; PAD U6.4 at 1.9 mm; F.Cu /SENS_EN_G at 2.1 mm
+/3V3_SENS_SW,J17,1,connector,C48,100nF,7.98,plane,5.0,no,C51,10uF/16V,89.19,no,271.0,194.5,263.71,191.25,ADD,bulk C51 is 89.2 mm and unique on the net; 100 nF site rot 90 only
+/3V3_SENS_SW,J15,1,connector,C43,100nF,11.34,plane,5.0,no,C51,10uF/16V,40.28,no,150.38,194.5,161.0,190.54,ADD,bulk C51 is 40.3 mm and unique on the net; 100 nF site rot 90 only
+3V3_C,U7,24,IC,C30,100nF,12.55,plane,3.0,no,,,,no,243.0,176.43,246.04,164.25,NONE,no legal site within 3.0 mm; nearest copper: PAD U7.23 at 0.6 mm; F.Cu /I2C0_SDA at 0.8 mm; PAD U7.22 at 1.3 mm
+3V3_C,J4,3,connector,C30,100nF,51.29,plane,5.0,no,,,,no,269.5,118.64,246.04,164.25,ADD,"3V3_C has no 10 uF; 100 nF site at (273.50,117.39) rot 0"
+/+5V_ESP,D7,1,diode,,,,,5.0,no,C28,10uF/10V,5.48,yes,215.6,103.0,,,ADD,"/+5V_ESP has no 100 nF at all (C28 is 10 uF); 100 nF site at (215.60,97.50) rot 90 only"
++5V,D7,2,diode,C14,100nF,56.61,plane,5.0,no,C1,10uF/25V,58.31,no,224.4,103.0,168.06,108.5,NONE,no legal site within 5.0 mm; nearest copper: B.Cu /UART2_MOD_RX at 4.7 mm; VIA GND at 5.3 mm; VIA 3V3_C at 5.4 mm
++5V,Q9,3,MOSFET,C41,100nF,2.75,plane,5.0,yes,C5,470uF/25V,10.46,no,161.06,104.0,161.02,106.75,MOVE,"C41 relocated to (162.06,106.75), 2.75 mm"
++5V,J5,1,connector,C14,100nF,56.58,plane,5.0,no,C1,10uF/25V,61.37,no,222.0,91.4,168.06,108.5,NONE,no legal site within 5.0 mm; nearest copper: PAD J5.2 at 5.0 mm; VIA GND at 5.3 mm; VIA GND at 9.1 mm
+3V3_C,U8,24,IC,C30,100nF,9.0,plane,3.0,no,,,,no,255.0,163.43,246.04,164.25,NONE,no legal site within 3.0 mm; nearest copper: PAD U8.23 at 0.6 mm; F.Cu /I2C0_SDA at 0.9 mm; PAD U8.22 at 1.3 mm
+3V3_C,J7,2,connector,C30,100nF,31.44,plane,5.0,no,,,,no,214.65,166.0,246.04,164.25,ADD,"3V3_C has no 10 uF; 100 nF site at (215.65,163.00) rot 0"
+3V3_C,J7,8,connector,C30,100nF,16.24,plane,5.0,no,,,,no,229.89,166.0,246.04,164.25,ADD,"3V3_C has no 10 uF; 100 nF site at (229.14,169.00) rot 0"
+3V3_C,J26,1,connector,C9,100nF,42.27,track,5.0,no,,,,no,134.0,153.5,171.96,158.3,ADD,"3V3_C has no 10 uF; 100 nF site at (129.75,152.50) rot 90 only"
+/3V3_SENS,Q2,2,MOSFET,,,,,5.0,no,,,,no,180.06,168.95,,,NONE,no legal site within 5.0 mm; nearest copper: B.Cu /SENS_GATE at 1.8 mm; PAD Q2.1 at 1.9 mm; PAD Q2.3 at 2.1 mm
+/3V3_SENS_SW,Q2,3,MOSFET,C44,100nF,21.59,plane,5.0,no,C51,10uF/16V,5.83,yes,181.94,168.0,179.96,189.5,NONE,no legal site within 5.0 mm; nearest copper: F.Cu /SENS_GATE at 1.0 mm; F.Cu /SENS_GATE at 1.5 mm; F.Cu /SENS_GATE at 1.6 mm
+/+5V_E22,J6,2,connector,C39,100nF,46.45,track,5.0,no,C38,10uF/10V,37.84,no,263.5,175.08,239.96,154.0,NONE,no legal site within 5.0 mm; nearest copper: F.Cu /PWR_EN at 1.2 mm; F.Cu /PWR_EN at 1.6 mm; F.Cu /PWR_EN at 1.6 mm
+/3V3_SENS_SW,J14,1,connector,C47,100nF,5.11,plane,5.0,no,C51,10uF/16V,69.0,no,250.0,194.5,248.96,189.5,NONE,no legal site within 5.0 mm; nearest copper: PAD J14.2 at 2.5 mm; B.Cu PE at 3.8 mm; F.Cu /I2C0_SCL_CH3 at 4.5 mm
+/3V3_SENS_SW,J21,1,connector,C50,100nF,11.84,plane,5.0,no,C51,10uF/16V,102.84,no,285.0,194.5,295.5,189.04,NONE,no legal site within 5.0 mm; nearest copper: B.Cu /I2C0_SDA_CH3 at 1.5 mm; PAD J21.2 at 2.5 mm; B.Cu /I2C0_SDA_CH3 at 3.1 mm
+/3V3_SENS_SW,J12,1,connector,C44,100nF,13.03,plane,5.0,no,C51,10uF/16V,22.79,no,192.0,194.5,179.96,189.5,ADD,bulk C51 is 22.8 mm and unique on the net; 100 nF site rot 90 only
+3V3_C,J8,5,connector,C9,100nF,5.48,track,5.0,no,,,,no,167.81,161.5,171.96,158.3,ADD,"3V3_C has no 10 uF; 100 nF site at (166.06,157.25) rot 90 only"
+/3V3_SENS_SW,J11,1,connector,C44,100nF,6.38,plane,5.0,no,C51,10uF/16V,23.1,no,176.0,194.5,179.96,189.5,ADD,bulk C51 is 23.1 mm and the only 10 uF on the net (moving it breaks Q2.3); 100 nF site rot 90 only
++5V,J24,1,connector,C41,100nF,49.26,plane,5.0,no,C13,10uF/50V_X7R,32.19,no,132.97,147.25,161.02,106.75,ADD,"bulk C13 could move within 10 mm, but the 100 nF site at (138.97,147.25) cannot be reached: the track crosses /LED1_K (132.975,144.75)-(136.705,148.48)"
+/+5V_SENS,J13,1,connector,C33,100nF/16V,4.0,track,5.0,yes,C32,10uF/16V,5.28,yes,236.0,194.5,235.96,198.5,MOVE,"C33 relocated to (237.00,198.50), 4.00 mm"
++5V,D2,1,diode,C14,100nF,4.5,track,5.0,yes,C5,470uF/25V,14.21,no,168.1,104.0,168.06,108.5,MOVE,"C14 relocated to (169.10,108.50), 4.50 mm"
++5V,J25,1,connector,C41,100nF,90.4,plane,5.0,no,C13,10uF/50V_X7R,70.04,no,139.31,194.5,161.02,106.75,NONE,no legal site within 5.0 mm; nearest copper: B.Cu /BZ_NEG at 2.1 mm; B.Cu /BZ_NEG at 2.2 mm; B.Cu /BZ_NEG at 2.2 mm
++5V,Q7,2,MOSFET,C42,100nF,69.88,plane,5.0,no,C1,10uF/25V,85.84,no,250.06,154.95,285.96,95.0,NONE,no legal site within 5.0 mm; nearest copper: F.Cu /+5V_E22_IN at 1.0 mm; B.Cu /E22_GATE at 1.2 mm; F.Cu /+5V_E22_IN at 1.3 mm

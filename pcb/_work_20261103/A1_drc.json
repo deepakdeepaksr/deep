@@ -1,0 +1,124 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T18:59:44",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/I2C1_SCL] on B.Cu, length 3.4800 mm",
+                    "pos": {
+                        "x": 162.73,
+                        "y": 164.98
+                    },
+                    "uuid": "b832137c-ecde-4c2f-8ae7-203415645cf2"
+                },
+                {
+                    "description": "Track [/I2C1_SCL] on F.Cu, length 6.2300 mm",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 162.8
+                    },
+                    "uuid": "bf71b91f-fed0-4b17-8597-73bd4893beeb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [3V3_C] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.5,
+                        "y": 175.75
+                    },
+                    "uuid": "04e04363-5206-4dff-8b3f-90763adcdaf9"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/I2C1_SDA] on F.Cu, length 1.4142 mm",
+                    "pos": {
+                        "x": 171.5,
+                        "y": 166.75
+                    },
+                    "uuid": "f6800f7e-eefe-40b8-8bae-41e5de6072c6"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [/I2C1_SCL] on F.Cu, length 6.2300 mm",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 162.8
+                    },
+                    "uuid": "bf71b91f-fed0-4b17-8597-73bd4893beeb"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [/I2C1_SCL] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 168.5,
+                        "y": 169.75
+                    },
+                    "uuid": "f8e2f164-ebde-4dcf-96e5-877337e0c4e2"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "items": [
+                {
+                    "description": "Track [3V3_C] on F.Cu, length 1.4773 mm",
+                    "pos": {
+                        "x": 142.2,
+                        "y": 158.4
+                    },
+                    "uuid": "c78aab40-14f6-4d40-a0ca-238b092d4087"
+                },
+                {
+                    "description": "Via [3V3_C] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 143.549999,
+                        "y": 158.999999
+                    },
+                    "uuid": "b77dab81-f28c-41df-b31b-d487ad6a28a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_not_centered_on_via"
+        }
+    ]
+}

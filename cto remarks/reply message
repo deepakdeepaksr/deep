@@ -1,0 +1,11 @@
+Thank you for the Rev B package. It is a real step forward: the ground plane, the switched sensor rails and the per-port I2C segments are the right calls, and some of it goes beyond what we asked.
+The attached review (MS-CAR-REV-B-001) checks the package against the 59 items and the release gate. Rev B is not yet released for fabrication. Please read section 1 first, then sections 5 and 6: the 6-layer Gerbers short 5 V to ground at the ESP32 header, the 4-layer has the watchdog input unconnected, and the 5 V input needs the protection and copper described in section 6 before the modem board can be held inside its 4.75 to 5.25 V window.
+Two decisions from our side: the 4-layer board goes forward and the 6-layer is withdrawn; the 5 V input at J18 is accepted on the six conditions in section 6.4.
+For the next package, please start with the response sheet against the 59 items and R1 to R17 (section 12, row 1), and send it with the evidence listed there. A schematic-only review before you lay out the board is welcome and may save a loop. I am glad to go through any item on a call.
+
+message 2 :
+Good question. There is no PCB testing software as such. The reviews are done with Claude, working from the files you send: KiCad 10 (ERC, DRC with schematic parity and refilled zones, the Gerber viewer), our own scripts that read the board file, netlist, Gerbers and drill files, the part datasheets, IPC-2221 and a DC budget model. Every number is reproduced by a second independent pass before a review goes out. The tool is never the evidence; the files and the datasheets are.
+
+Rather than describe it, I have written up the whole procedure as the attached release check (MS-CAR-CHK-001). It is the same set of checks we run on your package, with the KiCad steps and what pass means for each, plus the response sheet that should come with every package and a one-page list to tick before you send. If you run it on the files before they leave you, the next review should be a confirmation rather than a new list, and we save a loop on both sides.
+
+Section 4 is the part to work through; Appendix A has the KiCad settings to set once. Call me if any check is unclear and we will go through it together.

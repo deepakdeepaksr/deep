@@ -1,0 +1,75 @@
+{
+ "description": "Track has unconnected end",
+ "items": [
+  {
+   "description": "Track [3V3_C] on B.Cu, length 13.0000 mm",
+   "pos": {
+    "x": 169.0,
+    "y": 129.25
+   },
+   "uuid": "195ff0ab-7ba1-40c9-8384-2f4ce3e9fab0"
+  }
+ ],
+ "severity": "warning",
+ "type": "track_dangling"
+}
+{
+ "description": "Via is not connected or connected on only one layer",
+ "items": [
+  {
+   "description": "Via [/PWR_EN] on F.Cu - B.Cu",
+   "pos": {
+    "x": 256.899999,
+    "y": 170.1
+   },
+   "uuid": "a872d970-ab82-4fe9-b6e2-873436224da0"
+  }
+ ],
+ "severity": "warning",
+ "type": "via_dangling"
+}
+{
+ "description": "Via is not connected or connected on only one layer",
+ "items": [
+  {
+   "description": "Via [/I2C0_SDA] on F.Cu - B.Cu",
+   "pos": {
+    "x": 247.25,
+    "y": 172.0
+   },
+   "uuid": "75133ec4-ff1a-4f0a-85da-0df0d6da4120"
+  }
+ ],
+ "severity": "warning",
+ "type": "via_dangling"
+}
+{
+ "description": "Track has unconnected end",
+ "items": [
+  {
+   "description": "Track [/EVENT_BTN] on F.Cu, length 1.0500 mm",
+   "pos": {
+    "x": 170.55,
+    "y": 131.0
+   },
+   "uuid": "e54073cd-5da7-46a9-bcb2-993543087529"
+  }
+ ],
+ "severity": "warning",
+ "type": "track_dangling"
+}
+{
+ "description": "Via is not connected or connected on only one layer",
+ "items": [
+  {
+   "description": "Via [/BUZZER_EN] on F.Cu - B.Cu",
+   "pos": {
+    "x": 257.5,
+    "y": 167.5
+   },
+   "uuid": "496bf122-792d-4b7b-93ab-91957d8f81af"
+  }
+ ],
+ "severity": "warning",
+ "type": "via_dangling"
+}

@@ -1,0 +1,339 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T18:17:40",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of J13",
+                    "pos": {
+                        "x": 238.5,
+                        "y": 191.95
+                    },
+                    "uuid": "0bceb33e-ff11-4a2c-8210-75a3090df3b9"
+                },
+                {
+                    "description": "PCB text 'SPS30' on F.Silkscreen",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 191.7
+                    },
+                    "uuid": "a4fe5a0e-37cc-4739-9ba4-995bbcc5c47e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J11 on F.Silkscreen",
+                    "pos": {
+                        "x": 173.45,
+                        "y": 192.05
+                    },
+                    "uuid": "78c784fc-f8a7-497e-9a89-55635d676232"
+                },
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.7
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J11 on F.Silkscreen",
+                    "pos": {
+                        "x": 173.44,
+                        "y": 192.04
+                    },
+                    "uuid": "a18851a4-5149-4b33-988b-4f368ce9f8f1"
+                },
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.7
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.7
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                },
+                {
+                    "description": "Segment of J11 on F.Silkscreen",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 191.75
+                    },
+                    "uuid": "ddfaccde-e779-46f6-a96f-06604c8855d4"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of J11",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.0
+                    },
+                    "uuid": "a669585d-3002-4264-91c5-e7f62f27e4f8"
+                },
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.7
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J11 on F.Silkscreen",
+                    "pos": {
+                        "x": 176.75,
+                        "y": 192.05
+                    },
+                    "uuid": "207007c9-4302-4329-8870-a49d689de1ed"
+                },
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 191.7
+                    },
+                    "uuid": "adafaf5f-b869-4f95-bd34-08840e12f518"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J15 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.82,
+                        "y": 192.04
+                    },
+                    "uuid": "0442e8c0-c099-4ced-9110-44a968728ae3"
+                },
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 191.7
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J15 on F.Silkscreen",
+                    "pos": {
+                        "x": 151.13,
+                        "y": 192.05
+                    },
+                    "uuid": "1a94f1c8-322e-42fb-9e7d-7d5eb6edbec1"
+                },
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 191.7
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J15 on F.Silkscreen",
+                    "pos": {
+                        "x": 147.83,
+                        "y": 192.05
+                    },
+                    "uuid": "8a1311cc-5b4e-40f4-b1a0-0e3c13efd686"
+                },
+                {
+                    "description": "PCB text 'SOIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 191.7
+                    },
+                    "uuid": "e7ebcfe1-52a5-4dd9-a8c2-9784d1bedb9c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.7
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Rectangle of J14 on F.Silkscreen",
+                    "pos": {
+                        "x": 247.45,
+                        "y": 192.05
+                    },
+                    "uuid": "8b963827-6e6b-4e3b-9098-e9895ec827e5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.7
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Rectangle of J14 on F.Silkscreen",
+                    "pos": {
+                        "x": 247.44,
+                        "y": 192.04
+                    },
+                    "uuid": "83fbe3ea-aa5e-459a-b37f-0b4782f8fe75"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.7
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Rectangle of J14 on F.Silkscreen",
+                    "pos": {
+                        "x": 250.75,
+                        "y": 192.05
+                    },
+                    "uuid": "ba84c4ca-7558-432c-b3e0-af4fc1093e5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.7
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Reference field of J14",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.0
+                    },
+                    "uuid": "5e630dc7-3efd-4770-bf5a-798f7cc96733"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'BME688' on F.Silkscreen",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 191.7
+                    },
+                    "uuid": "075184a8-60b7-4c23-b4aa-152a82a82586"
+                },
+                {
+                    "description": "Segment of J14 on F.Silkscreen",
+                    "pos": {
+                        "x": 248.4,
+                        "y": 191.75
+                    },
+                    "uuid": "183ebfef-6166-4643-93c6-9c2b7144e03f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

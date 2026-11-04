@@ -1,0 +1,39 @@
+Your numbers reproduce exactly — and one thing in the error list is not in your summary.
+Confirmed
+Claim	My independent run
+Parity 91 → 0	✅ SCHEMATIC PARITY: 0 {} — with --schematic-parity passed explicitly
+ERC 0 errors / 1 warning	✅ only isolated_pin_label on 5V_PROT
+0 unconnected	✅
+DRC 159	✅ 159 — 27 errors, 132 warnings
+15 width = 13 3V3_C + 2 PE	✅ exactly
+61 synthetic unconnected-(…) nets	✅ 61, and the ref list matches (U10 ×5, U8 ×10, J3 ×8, J4 ×4, J2 ×12, ESD spares, U7.19–20, U6.NC)
+H1–H4 integrated	✅ 4 pinless MountingHole instances in the schematic, footprints at (131.50, 92.50) / (299.50, 92.50) / (131.50, 200.50) / (299.50, 200.50)
+\n corruption fully recovered	✅ zero literal \n sequences; 23 gr_text + 85 fp_text intact
+PE corridor rebuilt	✅ 0.35 mm and 0.40 mm F.Cu segments, as described
+And a correction I owe you: the net classes do bind. My "kicad-cli ignores them" conclusion was wrong — the project now carries all 8 classes with 16 patterns, and DRC is reporting track_width at exactly those thresholds. The board needed a GUI save to materialise the assignment, which is what your session did. That also means the 153 mm 0.6 mm PE back-edge track I flagged is gone — only the two corridor segments remain, so the pour rebuild took it.
+The thing that is now worse, not better
+Parity going to zero locked in a pin conflict, because the clean-up faithfully recorded what the schematic already said:
+Pin	Net	GPIO	Problem
+J1 pad 16	/E22_M1	GPIO10	on-board microSD line
+J1 pad 17	/E22_M0	GPIO11	on-board microSD line
+J1 pad 8	unconnected-(J1-IO15-Pad8)	GPIO15	free — this was the planned M0 target
+J2 pad 8	unconnected-(J2-IO40-Pad8)	GPIO40	free — this was the planned M1 target
+The move we recorded on 31 October was never drawn. Before, those two pads were just empty; now they carry explicit no-connect flags that are parity-clean, so the board formally declares "GPIO15 and GPIO40 are unused" while the LoRa module's mode pins sit on the SD card's lines. When the ESP32 board is seated, the E22 and the microSD drive the same two GPIOs — one of them will not work, and it will look like a firmware bug at bring-up.It also lands directly on item C13 — "README, schematic and firmware agree pin for pin" — which is exactly the check that would fail.
+The other 19 errors, grouped
+Group	Count	Detail
+PE clearance	8	Every one involves PE copper: PE tracks on B.Cu against J11.1, J16.2, J17.1 and a /3V3_SENS_SW via; PE vias against ESD7.5, ESD9.5, ESD11.5 and R48.1. Revealed by the 0.30 mm PE class, not caused by you — but they are errors and the earth net is the wrong place to be at 0.20 mm
+Undersized vias	4	Two /I2C0_MUX_SC0 vias at (229.70, 181.50) and (234.50, 179.35) are 0.50 mm copper — below the 0.60 floor, annular ≈ 0.10 mm. A real fab yield risk, and a 2-minute fix
+lib_footprint_mismatch	3	Q9 (known) + U7 and U8, both new this session. The footprint in the board no longer matches its library entry
+PE corridor	2 width + 1 of the clearances	The rebuild is 0.25 mm from R48.1, not the 0.30 mm it was aimed at — pad edge is at x 293.90, via centre 293.35 with 0.30 mm radius → 0.25 mm. It is 0.05 mm short of its own target, and DRC is reporting it
+3V3_C	13	0.2/0.25/0.3 mm segments against a 0.5 mm class. Low current (it feeds VDD_UART), so widen opportunistically or relax the class with a written reason
+Also for the response sheet: 9 checks are currently suppressed — 5 DRC (missing_courtyard, track_not_centered_on_via, tuning_profile_track_geometries, footprint_filters_mismatch, footprint_type_mismatch) and 4 ERC (single_global_label, four_way_junction, simulation_model_issue, footprint_filter). Item D3 asks for one line justifying each, or their removal. missing_courtyard and single_global_label are the two a reviewer will question first — the second is what lets /5V_PROT pass today.
+What to do next
+#	Task	Who	Why first
+1	Confirm the S3-PRO microSD pinout — continuity, SD fitted vs not, on GPIO10/11. Then move /E22_M1 → J1.16→J2.8 (GPIO40) and /E22_M0 → J1.8 (GPIO15), deleting those two no-connects	me the lookup, you the meter	The only functional defect in the list
+2	Enlarge the two /I2C0_MUX_SC0 vias to 0.7/0.3	me, 5 min	Cheapest 4 errors on the board
+3	Nudge the PE via in the R47/R48 corridor to clear R48.1 by ≥0.30 mm	me, 10 min	Closes the last width + clearance pair there
+4	Fix the 7 remaining PE clearances — mostly pushing PE tracks/vias off the sensor-port pads, or letting the pour back off	me, 30 min	Earth net, and it is 7 of the 27 errors
+5	Resolve lib_footprint_mismatch on U7 and U8 — find out what drifted and either update the library or the board	me, 20 min	New this session; must not ship unexplained
+6	Decide 3V3_C: widen the 13 segments, or drop the class to 0.3 mm with a written reason	you decide	It is a judgement, not a measurement
+7	The route-C controller search + the Serigreen deviation question	me	Unblocks U10 and the last ERC warning
+Say "start" and I'll take 2, 3, 4 and 5 now — they are all mechanical, all DRC-verifiable, and they clear 13 of the 27 errors without needing a decision from you. I'll do the S3-PRO microSD lookup at the same time so #1 is ready the moment your meter confirms it, and #6 and #7 can wait for you.

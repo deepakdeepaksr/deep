@@ -1,0 +1,128 @@
+(footprint "DFN1006-2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "ESD3"
+		(at -42.55 6.5 270)
+		(layer "F.SilkS")
+		(uuid "eea3a743-494b-4025-b08b-4d5af3c8cf69")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "ESD5V0-DNP"
+		(at 0 1.1 0)
+		(layer "F.Fab")
+		(uuid "9e98e2f5-cfaf-4305-be9a-79d35a78cdd3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f6af9e92-57fe-44b2-98bb-b4f2098ead3c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "DFN1006-2 SMD ESD diode (SLESD8D5.0C)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "de9d1371-00c2-49fc-b691-993e0587b6df")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "MoriShield_Carrier.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.7 -0.5)
+		(end -0.2 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5e678ba-ddef-49b0-afaa-d424b0719375")
+	)
+	(fp_rect
+		(start -0.9 -0.5)
+		(end 0.9 0.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "4b972e4a-2535-4e34-9c1b-a60c3e3fe0c6")
+	)
+	(fp_line
+		(start -0.5 -0.3)
+		(end 0.5 -0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "25171b0a-5e91-4512-825a-96fdcb90ad03")
+	)
+	(fp_line
+		(start -0.5 0.3)
+		(end -0.5 -0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f4a5e4cd-c8bd-4576-a4b3-9bb4b1c74c1f")
+	)
+	(fp_line
+		(start 0.5 -0.3)
+		(end 0.5 0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ba3cc2b0-dc09-44ff-8291-81d53d91333e")
+	)
+	(fp_line
+		(start 0.5 0.3)
+		(end -0.5 0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "687c3b2a-21df-4691-b33f-f8160b8e6459")
+	)
+	(pad "1" smd rect
+		(at -0.375 0)
+		(size 0.45 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "565889c1-2096-4f0b-9d5d-e39355f17db2")
+	)
+	(pad "2" smd rect
+		(at 0.375 0)
+		(size 0.45 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f79b528d-bff0-4d36-8bac-167d0bcb4401")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,688 @@
+=== A. MoriShield_Carrier:R symbol definition (pin geometry) ===
+(symbol "MoriShield_Carrier:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MoriShield_Carrier:SRV05-4"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "ESD"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SRV05-4"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_au
+
+=== B. a full resistor INSTANCE block: R50 ===
+		(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:R")
+		(at 1082.04 501.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "811bc9a8-c893-4d68-bd00-d5369a38fe22")
+		(property "Reference" "R50"
+			(at 1082.04 497.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 1082.04 505.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 1082.04 501.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 1082.04 501.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 1082.04 501.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e1ff4fc-f2f9-433a-98b6-b4f30be529c5")
+		)
+		(pin "2"
+			(uuid "09ceaaaf-0890-460f-b774-a88fad79d438")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 109.22 659.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "82f82273-48a7-482e-9313-49dba4967d21")
+		(property "Reference" "#PWR0258"
+			(at 109.22 651.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 654.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -704.85 373.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at -704.85 373.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol"
+			(at -704.85 373.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cf8e69e6-5c91-454d-87ca-04944e263491")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0258")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:3V3_C")
+		(at 344.17 483.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8402f999-f483-482a-9301-0d69696540fe")
+		(property "Reference" "#PWR0027"
+			(at 344.17 476.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3V3_C"
+			(at 344.17 478.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					
+
+=== C. a GND power symbol instance block (nearest one to R50) ===
+		(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 134.62 483.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0402f0fc-1d0b-44dd-9673-20a849a7ecf3")
+		(property "Reference" "#PWR0159"
+			(at 134.62 480.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 487.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 483.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 483.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 134.62 483.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37098ca0-61b3-492d-8701-337c7ffe4b83")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0159")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 67.31 494.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "04b910a8-8702-4047-afef-08087699b330")
+		(property "Reference" "#PWR0006"
+			(at 67.31 486.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 488.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -236.22 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at -236.22 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "
+
+=== D. /E22_M1 copper on the board ===
+   SEG (237.00,112.00)-(228.00,112.00) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA2CCC69D0> >
+   SEG (227.00,113.00)-(216.75,113.00) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA28EDA310> >
+   SEG (213.85,115.90)-(209.50,115.90) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA2CCC6A00> >
+   SEG (259.25,160.75)-(259.25,158.50) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA28EDA310> >
+   SEG (263.50,164.92)-(263.42,164.92) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA2CCC69D0> >
+   SEG (216.75,113.00)-(213.85,115.90) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA28EDA310> >
+   SEG (263.42,164.92)-(259.25,160.75) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA2CCC6A00> >
+   SEG (237.00,136.25)-(237.00,112.00) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA28EDA310> >
+   SEG (228.00,112.00)-(227.00,113.00) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA2CCC69D0> >
+   SEG (259.25,158.50)-(237.00,136.25) w 0.30 B.Cu uuid <pcbnew.KIID; proxy of <Swig Object of type 'KIID *' at 0x000002CA28EDA310> >
+
+=== E. an 0603 resistor footprint block to clone (R50) ===
+(footprint "MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "d2bebe33-a8b2-46fd-af7c-80f5557db538")
+		(at 145.2 116.8)
+		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(tags "resistor handsolder")
+		(property "Reference" "R50"
+			(at 0 -2.2 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1590b47b-22db-42c5-b7e1-f25060f63ead")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 0 1.83 0)
+			(layer "F.Fab")
+			(uuid "81c36699-52c8-406e-9191-52db3003cc37")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d20592b7-65f4-44dc-a951-3811b7c9856c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ac9ae898-73b8-47f8-b1c0-d3fb9c2a494d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "33c0781c-86c1-4e3a-8827-7b8e579e027b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/811bc9a8-c893-4d68-bd00-d5369a38fe22")
+		(sheetname "/")
+		(sheetfile "MoriShield_Carrier.kicad_sch")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.727064 -0.91)
+			(end 0.727064 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "48d4ee4f-39ff-468b-b3a4-fffa72f674d0")
+		)
+		(fp_line
+			(start -0.727064 0.91)
+			(end 0.727064 0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "86372477-449c-4fc1-8a3d-b38cb382cd1a")
+		)
+		(fp_rect
+			(start -2.45 -1.13)
+			(end 2.45 1.13)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "c7110ac2-c08a-4b94-8965-114e6e7445f8")
+		)
+		(fp_rect
+			(start -1.6 -0.8)
+			(end 1.6 0.8)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "a6024087-37e0-4abb-b3eb-51da38d9fc15")
+		)
+		(pad "1" smd roundrect
+			(at -1.55 0)
+			(size 1.3 1.75)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.192308)
+			(net "/REED_PULSE")
+			(uuid "98da2dd1-5ab0-4d4b-bd10-fb1bb62b24b5")
+		)
+		(pad "2" smd roundrect
+			(at 1.55 0)
+			(size 1.3 1.75)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.192308)
+			(net "/REED_PULSE_F")
+			(uuid "15dd33f0-e9ca-476d-a3b8-3a1b68a24739")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Resistor_SMD:R_0805_20
+
+=== F. how a label attaches: the E22_M1 label block at J6 ===
+(label "E22_M1"
+		(at 113.03 327.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "04c4df98-c23b-4d50-b462-c6f3f044b334")
+	)
+	(label "3V3_SENS"
+		(at 600.71 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0516eeaa-41e0-4b53-954f-400914046f3a")
+	)
+	(label "3V3_SENS_SW"
+		(at 684.53 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0698676a-be20-4831-ad38-a2099b704ca9")
+	)
+	(label "WDT_MR"
+		(at 1093.47 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "07a1b9e5-6d4a-4a03-8a04-9da1a1effecd")
+	)
+	(label "+5V"
+		(at 516.89

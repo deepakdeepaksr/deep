@@ -1,0 +1,547 @@
+                                                     SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  1                                                                 Version: R2104 
+ 
+600W, 5V - 170V Surface Mount Transient Voltage Suppressor 
+ 
+FEATURES 
+● Ideal for automated placement 
+● Glass passivated junction 
+● Excellent clamping capability 
+● Fast response time: Typically less than 1.0ps  
+● Typical IR less than 1μA above 10V 
+● Meets ISO 7637-2 (Pulse 1/2a/2b/3a/3b) 
+● Moisture sensitivity level: level 1, per J-STD-020 
+● RoHS Compliant 
+● Halogen-free according to IEC 61249-2-21  
+ 
+APPLICATIONS 
+● Protect sensitive circuit from damage by high voltage 
+transients 
+● Lighting, ESD transient voltage protection of IC, system 
+● Inductive switching load protection of IC, system 
+● Electrical Fast Transient Immunity protection of IC, system 
+ 
+MECHANICAL DATA 
+● Case: DO-214AA (SMB) 
+● Molding compound meets UL 94V-0 flammability rating 
+● Terminal: Matte tin plated leads, solderable per J-STD-002 
+● Meet JESD 201 class 2 whisker test 
+● Polarity: As marked 
+● Weight: 0.090g (approximately) 
+  
+ 
+KEY PARAMETERS 
+PARAMETER VALUE UNIT 
+VWM  5 - 170 V 
+VBR (uni - directional) 6.4 - 231 V 
+VBR (bi - directional) 6.4 - 231 V 
+PPK 600 W 
+TJ MAX 150 
+Package DO-214AA (SMB) 
+Configuration Single die 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DO-214AA (SMB) 
+ 
+ 
+ABSOLUTE MAXIMUM RATINGS (TA = 25°C unless otherwise noted) 
+PARAMETER SYMBOL VALUE UNIT 
+Non-repetitive peak impulse power dissipation with 
+10/1000µs waveform(1) PPK 600 W 
+Steady state power dissipation at TA = 25°C PD 3 W 
+Peak forward surge current, 8.3ms single half sine-wave 
+superimposed on rated load for Uni-directional only IFSM 100 A 
+Forward Voltage @ IF = 50A for Uni-directional only(2) VF 3.5 / 5.0 V 
+Junction temperature  TJ - 55 to +150 °C 
+Storage temperature TSTG - 55 to +150 °C 
+Notes: 
+1.     Non-repetitive current pulse per Fig.3 and derated above TA = 25°C per Fig.2 
+2. VF = 3.5V on SMBJ5.0 - SMBJ90 devices and VF = 5.0V on SMBJ100 - SMBJ170 devices 
+ 
+Devices for Bipolar Applications 
+1. For bidirectional use C or CA suffix for types SMBJ5.0 - types SMBJ170 
+2. Electrical characteristics apply in both directions 
+ 
+                                                     SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  2                                                                 Version: R2104 
+ 
+THERMAL PERFORMANCE 
+PARAMETER SYMBOL TYP UNIT 
+Junction-to-case thermal resistance RӨJC 10 °C/W 
+Junction-to-ambient thermal resistance RӨJA 55 °C/W 
+ 
+ELECTRICAL SPECIFICATIONS (TA = 25°C unless otherwise noted) 
+Part number Marking code 
+Breakdown voltage 
+VBR@IT
+ 
+(V) 
+(Note 1) 
+Test 
+current 
+IT 
+(mA) 
+Working 
+stand-off 
+voltage 
+VWM 
+(V) 
+Maximum 
+blocking 
+leakage 
+current 
+ID@VWM 
+ (µA) 
+Maximum 
+peak 
+impulse 
+current 
+IPP 
+(A) 
+(Note 2) 
+Maximum 
+clamping 
+voltage 
+VC@IPP 
+(V) 
+Min Max 
+SMBJ5.0 KD 6.40  7.30  10 5.0  800 65.0  9.6  
+SMBJ5.0A KE 6.40  7.00  10 5.0  800 68.0  9.2  SMBJ5V0A 
+SMBJ6.0 KF 6.67  8.15  10 6.0  800 55.0  11.4  
+SMBJ6.0A KG 6.67  7.37  10 6.0  800 61.0  10.3  SMBJ6V0A 
+SMBJ6.5 KH 7.22  8.82  10 6.5  500 51.0  12.3  
+SMBJ6.5A KK 7.22  7.98  10 6.5  500 56.0  11.2  SMBJ6V5A 
+SMBJ7.0 KL 7.78  9.51  10 7.0  200 47.0  13.3  
+SMBJ7.0A KM 7.78  8.60  10 7.0  200 52.0  12.0  SMBJ7V0A 
+SMBJ7.5 KN 8.33  10.3  1  7.5  100 44.0  14.3  
+SMBJ7.5A KP 8.33  9.21  1  7.5  100 48.0  12.9  SMBJ7V5A 
+SMBJ8.0 KQ 8.89  10.9  1  8.0  50  42.0  15.0  
+SMBJ8.0A KR 8.89  9.83  1  8.0  50  46.0  13.6  SMBJ8V0A 
+SMBJ8.5 KS 9.44  11.5  1  8.5  10  39.0  15.9  
+SMBJ8.5A KT 9.44  10.4  1  8.5  10  43.0  14.4  SMBJ8V5A 
+SMBJ9.0 KU 10.0  12.2  1  9.0  5  37.0  16.9  
+SMBJ9.0A KV 10.0  11.1  1  9.0  5  40.0  15.4  SMBJ9V0A 
+SMBJ10 KW 11.1  13.6  1  10  5  33.0  18.8  
+SMBJ10A KX 11.1  12.3  1  10  5  37.0  17.0  
+SMBJ11 KY 12.2  14.9  1  11  1  31.0  20.1  
+SMBJ11A KZ 12.2  13.5  1  11  1  34.0  18.2  
+SMBJ12 LD 13.3  16.3  1  12  1  28.0  22.0  
+SMBJ12A LE 13.3  14.7  1  12  1  31.0  19.9  
+SMBJ13 LF 14.4  17.6  1  13  1  26.0  23.8  
+SMBJ13A LG 14.4  15.9  1  13  1  29.0  21.5  
+SMBJ14 LH 15.6  19.1  1  14  1  24.4  25.8  
+SMBJ14A LK 15.6  17.2  1  14  1  27.0  23.2  
+SMBJ15 LL 16.7  20.4  1  15  1  23.1  26.9  
+SMBJ15A LM 16.7  18.5  1  15  1  25.1  24.4  
+SMBJ16 LN 17.8  21.8  1  16  1  21.8  28.8  
+SMBJ16A LP 17.8  19.7  1  16  1  24.2  26.0  
+SMBJ17 LQ 18.9  23.1  1  17  1  20.0  30.5  
+SMBJ17A LR 18.9  20.9  1  17  1  22.8  27.6  
+SMBJ18 LS 20.0  24.4  1  18  1  19.5  32.2  
+SMBJ18A LT 20.0  22.1  1  18  1  21.5  29.2  
+SMBJ20 LU 22.2  27.1  1  20  1  17.6  35.8  
+SMBJ20A LV 22.2  24.5  1  20  1  19.4  32.4  
+SMBJ22 LW 24.4  29.8  1  22  1  15.0  39.4  
+SMBJ22A LX 24.4  26.9  1  22  1  17.7  35.5  
+SMBJ24 LY 26.7  32.6  1  24  1  14.6  43.0  
+SMBJ24A LZ 26.7  29.5  1  24  1  16.0  38.9                                                       SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  3                                                                 Version: R2104 
+ 
+ELECTRICAL SPECIFICATIONS (TA = 25°C unless otherwise noted) 
+Part number Marking code 
+Breakdown voltage 
+VBR@IT
+ 
+(V) 
+(Note 1) 
+Test 
+current 
+IT 
+(mA) 
+Working 
+stand-off 
+voltage 
+VWM 
+(V) 
+Maximum 
+blocking 
+leakage 
+current 
+ID@VWM 
+(µA) 
+Maximum 
+peak 
+impulse 
+current 
+IPP 
+(A) 
+(Note 2) 
+Maximum 
+clamping 
+voltage 
+VC@IPP 
+(V) 
+Min Max 
+SMBJ26 MD 28.9  35.3  1  26  1  13.5  46.6  
+SMBJ26A ME 28.9  31.9  1  26  1  14.9  42.1  
+SMBJ28 MF 31.1  38.0  1  28  1  12.6  50.0  
+SMBJ28A MG 31.1  34.4  1  28  1  13.8  45.4  
+SMBJ30 MH 33.3  40.7  1  30 1  11.7  53.5  
+SMBJ30A MK 33.3  36.8  1  30 1  13.0  48.4  
+SMBJ33 ML 36.7  44.9  1  33 1  10.6  59.0  
+SMBJ33A MM 36.7  40.6  1  33 1  11.8  53.3  
+SMBJ36 MN 40.0  48.9  1  36 1  9.8  64.3  
+SMBJ36A MP 40.0  44.2  1  36 1  10.8  58.1  
+SMBJ40 MQ 44.4  54.3  1  40 1  8.8  71.4  
+SMBJ40A MR 44.4  49.1  1  40 1  9.7  64.5  
+SMBJ43 MS 47.8  58.4  1  43 1  8.2  76.7  
+SMBJ43A MT 47.8  52.8  1  43 1  9.0  69.4  
+SMBJ45 MU 50.0  61.1 1 45 1  7.8  80.3  
+SMBJ45A MV 50.0  55.3 1 45 1  8.6  72.7  
+SMBJ48 MW 53.3  65.1 1 48 1  7.3  85.5  
+SMBJ48A MX 53.3  58.9 1 48 1  8.1  77.4  
+SMBJ51 MY 56.7  69.3 1 51 1  6.9  91.1  
+SMBJ51A MZ 56.7  62.7 1 51 1  7.6  82.4  
+SMBJ54 ND 60.0  73.3 1 54 1  6.5  96.3  
+SMBJ54A NE 60.0  66.3 1 54 1  7.2  87.1  
+SMBJ58 NF 64.4  78.7 1  58 1  6.1  103  
+SMBJ58A NG 64.4  71.2 1  58 1  6.7  93.6  
+SMBJ60 NH 66.7  81.5 1  60 1  5.8  107  
+SMBJ60A NK 66.7  73.7 1  60 1  6.5  96.8  
+SMBJ64 NL 71.1  86.9 1  64 1  5.5  114  
+SMBJ64A NM 71.1  78.6 1  64 1  6.1  103  
+SMBJ70 NN 77.8  95.1 1  70 1  5.0  125  
+SMBJ70A NP 77.8  86 1  70 1  5.5  113  
+SMBJ75 NQ 83.3  102 1  75 1  4.7  134  
+SMBJ75A NR 83.3  92.1 1  75 1  5.2  121  
+SMBJ78 NS 86.7  106 1  78 1  4.5  139  
+SMBJ78A NT 86.7  95.8 1  78 1  5.0  126  
+SMBJ85 NU 94.4  115 1  85 1  4.1  151  
+SMBJ85A NV 94.4  104 1  85 1  4.6  137  
+SMBJ90 NW 100  122 1  90 1  3.9  160  
+SMBJ90A NX 100  111 1  90 1  4.3  146  
+SMBJ100 NY 111  136 1  100 1  3.5  179  
+SMBJ100A NZ 111  123 1  100 1  3.8  162  
+SMBJ110 PD 122  149 1  110 1  3.2  196  
+SMBJ110A PE 122  135 1  110 1  3.5  177  
+SMBJ120 PF 133  163 1  120 1  2.9  214  
+SMBJ120A PG 133  147 1  120 1  3.2  193  
+SMBJ130 PH 144  176 1  130 1  2.7  231  
+SMBJ130A PK 144  159 1  130 1  3.0  209  
+SMBJ150 PL 167  204 1  150 1  2.3  266  
+SMBJ150A PM 167  185 1  150 1  2.5  243  
+SMBJ160 PN 178  218 1  160 1  2.2  287  
+SMBJ160A PP 178  197 1  160 1  2.4  259  
+SMBJ170 PQ 189  231 1  170 1  2.0  304                                                       SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  4                                                                 Version: R2104 
+ 
+ELECTRICAL SPECIFICATIONS (TA = 25°C unless otherwise noted) 
+Part number Marking code 
+Breakdown voltage 
+VBR@IT
+ 
+(V) 
+(Note 1) 
+Test 
+current 
+IT 
+(mA) 
+Working 
+stand-off 
+voltage 
+VWM 
+(V) 
+Maximum 
+blocking 
+leakage 
+current 
+ID@VWM 
+(µA) 
+Maximum 
+peak 
+impulse 
+current 
+IPP 
+(A) 
+(Note 2) 
+Maximum 
+clamping 
+voltage 
+VC@IPP 
+(V) 
+Min Max 
+SMBJ170A PR 189  209 1  170 1  2.2  275  
+Notes: 
+1. VBR measure after IT applied for 30ms, IT = square wave pulse or equivalent. 
+2. Surge current waveform per Fig.3 and derate per Fig.2. 
+3. All terms and symbols are consistent with ANSI/IEEE C62.35. 
+4. For bidirectional use C or CA suffix for types SMBJ5.0 - SMBJ170 
+5. For bipolar types having VWM of 10V (SMBJ10C) and under, the ID limit is doubled. 
+ 
+ORDERING INFORMATION 
+ORDERING CODE(1) PACKAGE PACKING 
+SMBJx DO-214AA (SMB) 3,000 / Tape & Reel 
+Notes:  
+1.  "x" defines voltage from 5V(SMBJ5.0) to 170V(SMBJ170A) 
+ 
+ 
+ 
+                                                      SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  5                                                                 Version: R2104 
+ 
+CHARACTERISTICS CURVES  
+(TA = 25°C unless otherwise noted) 
+ 
+                  Fig.1 Peak Pulse Power Rating Curve     
+        
+        Fig.2 Pulse Derating Curve   
+ 
+ 
+ 
+ 
+Fig.3 Clamping Power Pulse Waveform        
+  
+ Fig.4 Maximum Non-Repetitive Forward Surge 
+Current    
+   
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+0.1
+1
+10
+100
+0.1 1 10 100 1000 10000
+PPPM, PEAK PULSE POWER, KW 
+tp, PULSE WIDTH, (μs) 
+NON-REPETITIVE 
+PULSE WAVEFORM 
+SHOWN in Fig.3 
+0
+25
+50
+75
+100
+125
+0 25 50 75 100 125 150
+PEAK PULSE POWER(PPP) OR CURRENT (IPP)  A 
+DERATING IN PERCENTAGE (%) 
+TA, AMBIENT TEMPERATURE (°C) 
+10
+100
+1 10 100
+PEAK FORWARD SURGE CURRENT (A) 
+NUMBER OF CYCLES AT 60 Hz 
+8.3ms single half sine wave 
+UNIDIRECTIONAL ONLY 
+0
+20
+40
+60
+80
+100
+120
+140
+0 0.5 1 1.5 2 2.5 3
+IPPM, PEAK PULSE CURRENT (%) 
+t, TIME (ms) 
+td 
+Peak value 
+IPPM 
+Rise time tr=10μs to 100% 
+Half value-IPPM/2 
+Pulse width(td) is defined 
+as the point where the peak 
+current decays to 50% of IPPM 
+10/1000μs, waveform                                                      SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  6                                                                 Version: R2104 
+ 
+CHARACTERISTICS CURVES  
+(TA = 25°C unless otherwise noted)  
+        Fig.5 Typical Junction Capacitance 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+10
+100
+1000
+10000
+1 10 100
+  
+VR=0 
+VR-rated stand-off voltage 
+f=1.0MHz 
+Vsig=50mVp-p 
+V(BR), BREAKDOWN VOLTAGE (V) 
+ 
+CJ, JUNCTION CAPACITANCE (pF)  
+                                                      SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  7                                                                 Version: R2104 
+ 
+PACKAGE OUTLINE DIMENSIONS 
+ 
+DO-214AA (SMB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUGGESTED PAD LAYOUT  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MARKING DIAGRAM 
+P/N = Marking Code 
+G = Green Compound 
+YW = Date Code 
+F = Factory Code 
+ 
+   
+   
+   
+Cathode band for uni-directional products only 
+ 
+                                                     SMBJ SERIES 
+Taiwan Semiconductor 
+ 
+ 
+                  8                                                                 Version: R2104 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notice 
+ 
+Specifications of the products displayed herein are subject to change without notice. TSC or anyone on its behalf, 
+assumes no responsibility or liability for any errors or inaccuracies. 
+ 
+Purchasers are solely responsible for the choice, selection, and use of TSC products and TSC assumes no liability 
+for application assistance or the design of Purchasers’ products. 
+ 
+Information contained herein is intended to provide a product description only. No license, express or implied, to 
+any intellectual prop erty rights is granted by this document. Except as provided in TSC’s terms and conditions of 
+sale for such products, TSC assumes no liability whatsoever, and disclaims any express or implied warranty, 
+relating to sale and/or use of TSC products including liability or warranties relating to fitness for a particular purpose, 
+merchantability, or infringement of any patent, copyright, or other intellectual property right.  
+ 
+The products shown herein are not designed for use in medical, life -saving, or life-sustaining applications. 
+Customers using or selling these products for use in such applications do so at their own risk and agree to fully 
+indemnify TSC for any damages resulting from such improper use or sale.  

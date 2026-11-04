@@ -1,0 +1,4475 @@
+{
+ "silk_total": 124,
+ "silk_by_ref": [
+  [
+   "FIELD",
+   72
+  ],
+  [
+   "?",
+   52
+  ]
+ ],
+ "silk_detail": [
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of ESD20",
+    "Segment of ESD17 on F.Silkscreen"
+   ],
+   "pos": [
+    147.0,
+    122.15
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C9",
+    "Segment of C7 on F.Silkscreen"
+   ],
+   "pos": [
+    173.0,
+    156.62
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C8 on F.Silkscreen",
+    "Reference field of C10"
+   ],
+   "pos": [
+    177.038748,
+    156.235
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of J20",
+    "Segment of ESD19 on F.Silkscreen"
+   ],
+   "pos": [
+    295.2,
+    138.0
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of ESD19 on F.Silkscreen",
+    "Reference field of J20"
+   ],
+   "pos": [
+    294.86,
+    140.6
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of U4",
+    "Circle of TP6 on F.Silkscreen"
+   ],
+   "pos": [
+    222.0,
+    146.0
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C28",
+    "Segment of D7 on F.Silkscreen"
+   ],
+   "pos": [
+    216.0,
+    106.15
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD1 on F.Silkscreen",
+    "Reference field of ESD1"
+   ],
+   "pos": [
+    215.55,
+    130.49
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD2 on F.Silkscreen",
+    "Reference field of ESD2"
+   ],
+   "pos": [
+    203.55,
+    170.49
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C39 on F.Silkscreen",
+    "Reference field of TP8"
+   ],
+   "pos": [
+    240.738748,
+    154.735
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Circle of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    236.25,
+    166.0
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.13,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.17,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.21,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C4",
+    "Segment of C31 on F.Silkscreen"
+   ],
+   "pos": [
+    238.0,
+    169.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.29,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C4",
+    "Segment of C31 on F.Silkscreen"
+   ],
+   "pos": [
+    238.0,
+    169.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C4",
+    "Segment of C31 on F.Silkscreen"
+   ],
+   "pos": [
+    238.0,
+    169.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.41,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.45,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.49,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.53,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.57,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.61,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.65,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.69,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.73,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C4",
+    "Segment of C31 on F.Silkscreen"
+   ],
+   "pos": [
+    238.0,
+    169.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.81,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.85,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of C31 on F.Silkscreen",
+    "Reference field of C4"
+   ],
+   "pos": [
+    237.89,
+    167.04
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD10 on F.Silkscreen",
+    "Reference field of ESD10"
+   ],
+   "pos": [
+    248.55,
+    184.49
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C47",
+    "Segment of ESD10 on F.Silkscreen"
+   ],
+   "pos": [
+    250.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of R53",
+    "Circle of TP8 on F.Silkscreen"
+   ],
+   "pos": [
+    242.0,
+    158.35
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C45",
+    "Segment of ESD11 on F.Silkscreen"
+   ],
+   "pos": [
+    236.5,
+    188.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C45",
+    "Segment of ESD11 on F.Silkscreen"
+   ],
+   "pos": [
+    236.5,
+    188.32
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD11 on F.Silkscreen",
+    "Reference field of ESD11"
+   ],
+   "pos": [
+    235.05,
+    184.99
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of R26 on F.Silkscreen",
+    "Reference field of R25"
+   ],
+   "pos": [
+    175.272936,
+    184.235
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD7 on F.Silkscreen",
+    "Reference field of ESD7"
+   ],
+   "pos": [
+    166.55,
+    187.99
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Segment of ESD8 on F.Silkscreen",
+    "Reference field of C44"
+   ],
+   "pos": [
+    181.91,
+    187.56
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of C44",
+    "Segment of ESD8 on F.Silkscreen"
+   ],
+   "pos": [
+    181.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Polygon of ESD8 on F.Silkscreen",
+    "Reference field of ESD8"
+   ],
+   "pos": [
+    179.55,
+    184.49
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of J14",
+    "Segment of R42 on F.Silkscreen"
+   ],
+   "pos": [
+    253.5,
+    190.5
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of ESD9",
+    "Polygon of ESD9 on F.Silkscreen"
+   ],
+   "pos": [
+    271.0,
+    183.6
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of ESD12",
+    "Polygon of ESD12 on F.Silkscreen"
+   ],
+   "pos": [
+    285.0,
+    183.6
+   ]
+  },
+  {
+   "type": "silk_overlap",
+   "sev": "warning",
+   "items": [
+    "Reference field of J21",
+    "Segment of R46 on F.Silkscreen"
+   ],
+   "pos": [
+    289.0,
+    190.5
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C9",
+    "Pad 1 [3V3_C] of C7 on F.Cu"
+   ],
+   "pos": [
+    173.0,
+    156.62
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C9",
+    "Pad 2 [GND] of C7 on F.Cu"
+   ],
+   "pos": [
+    173.0,
+    156.62
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C10",
+    "Pad 1 [3V3_C] of C8 on F.Cu"
+   ],
+   "pos": [
+    177.3,
+    156.62
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C10",
+    "Pad 2 [GND] of C8 on F.Cu"
+   ],
+   "pos": [
+    177.3,
+    156.62
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of ESD20",
+    "Pad 2 [PE] of ESD17 on F.Cu"
+   ],
+   "pos": [
+    147.0,
+    122.15
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of Q9 on F.Silkscreen",
+    "Pad 2 [+5V_F] of Q9 on F.Cu"
+   ],
+   "pos": [
+    162.6,
+    102.95
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of Q9 on F.Silkscreen",
+    "Pad 2 [+5V_F] of Q9 on F.Cu"
+   ],
+   "pos": [
+    162.6,
+    102.95
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J20",
+    "Pad 1 [/I2C0_SCL_CH6] of R48 on F.Cu"
+   ],
+   "pos": [
+    295.2,
+    138.0
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of H2",
+    "Pad 2 [GND] of C3 on F.Cu"
+   ],
+   "pos": [
+    299.5,
+    97.0
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of U4",
+    "Pad 1 [/RST_ESP] of TP6 on F.Cu"
+   ],
+   "pos": [
+    222.0,
+    146.0
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of TP8",
+    "Pad 1 [/+5V_E22] of C39 on F.Cu"
+   ],
+   "pos": [
+    240.0,
+    155.002
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of U7",
+    "Pad 2 [GND] of C29 on F.Cu"
+   ],
+   "pos": [
+    240.0,
+    174.8
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 8 [/I2C0_SDA_CH2] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 9 [/I2C0_SCL_CH2] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 1 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 2 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 3 [/I2C_SW_RST] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 4 [/I2C0_MUX_SD0] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 5 [/I2C0_MUX_SC0] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 6 [/I2C0_MUX_SD1] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 7 [/I2C0_MUX_SC1] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 10 [/I2C0_SDA_CH3] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 11 [/I2C0_SCL_CH3] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 12 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.8,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 13 [/I2C0_SDA_CH4] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 14 [/I2C0_SCL_CH4] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 15 [/I2C0_SDA_CH5] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 16 [/I2C0_SCL_CH5] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 17 [/I2C0_SDA_CH6] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 18 [/I2C0_SCL_CH6] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 19 [unconnected-(U7-SD7-Pad19)] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 20 [unconnected-(U7-SC7-Pad20)] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 21 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 22 [/I2C0_SCL] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 23 [/I2C0_SDA] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U7 on F.Silkscreen",
+    "Pad 24 [3V3_C] of U7 on F.Cu"
+   ],
+   "pos": [
+    242.2,
+    176.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Circle of U7 on F.Silkscreen",
+    "Pad 1 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    237.9,
+    176.425
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C47",
+    "Pad 3 [/I2C0_SCL_CH3] of ESD10 on F.Cu"
+   ],
+   "pos": [
+    250.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 12 [GND] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 1 [unconnected-(U8-INT-Pad1)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 2 [GND] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 3 [GND] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 6 [/E22_EN] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 7 [unconnected-(U8-P03-Pad7)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 8 [unconnected-(U8-P04-Pad8)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 9 [unconnected-(U8-P05-Pad9)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 10 [unconnected-(U8-P06-Pad10)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 11 [/WDT_WDI] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 4 [/LED_DRV1] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 5 [/LED_DRV2] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.8,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 13 [unconnected-(U8-P10-Pad13)] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 14 [unconnected-(U8-P11-Pad14)] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 15 [unconnected-(U8-P12-Pad15)] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 16 [/PWR_EN] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 17 [unconnected-(U8-P14-Pad17)] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 18 [/BUZZER_EN] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 19 [/SENS_EN] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 20 [unconnected-(U8-P17-Pad20)] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 21 [GND] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 22 [/I2C0_SCL] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 23 [/I2C0_SDA] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Segment of U8 on F.Silkscreen",
+    "Pad 24 [3V3_C] of U8 on F.Cu"
+   ],
+   "pos": [
+    254.2,
+    163.6
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Circle of U8 on F.Silkscreen",
+    "Pad 1 [unconnected-(U8-INT-Pad1)] of U8 on F.Cu"
+   ],
+   "pos": [
+    249.9,
+    163.425
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C31",
+    "Pad 1 [3V3_C] of C4 on F.Cu"
+   ],
+   "pos": [
+    236.0,
+    170.5
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of ESD11",
+    "Pad 12 [GND] of U7 on F.Cu"
+   ],
+   "pos": [
+    236.5,
+    184.1
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of D6",
+    "Pad 2 [/LED_STAT_K] of R11 on F.Cu"
+   ],
+   "pos": [
+    134.5,
+    175.5
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of R25",
+    "Pad 1 [/I2C0_SCL_CH0] of R26 on F.Cu"
+   ],
+   "pos": [
+    175.5,
+    184.35
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of R25",
+    "Pad 2 [/3V3_SENS_SW] of R26 on F.Cu"
+   ],
+   "pos": [
+    175.5,
+    184.35
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J15",
+    "Pad 1 [/FSR_ADC_F] of C35 on F.Cu"
+   ],
+   "pos": [
+    152.88,
+    190.525
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J11",
+    "Pad 1 [/3V3_SENS_SW] of C44 on F.Cu"
+   ],
+   "pos": [
+    179.75,
+    190.525
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C44",
+    "Pad 3 [/I2C0_SCL_CH1] of ESD8 on F.Cu"
+   ],
+   "pos": [
+    181.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C44",
+    "Pad 4 [/3V3_SENS_SW] of ESD8 on F.Cu"
+   ],
+   "pos": [
+    181.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C47",
+    "Pad 4 [/3V3_SENS_SW] of ESD10 on F.Cu"
+   ],
+   "pos": [
+    250.0,
+    187.82
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J14",
+    "Pad 1 [/I2C0_SCL_CH3] of R42 on F.Cu"
+   ],
+   "pos": [
+    253.5,
+    190.5
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J17",
+    "Pad 1 [/I2C0_SCL_CH4] of R44 on F.Cu"
+   ],
+   "pos": [
+    274.75,
+    190.525
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C45",
+    "Pad 3 [/I2C0_SCL_CH2] of ESD11 on F.Cu"
+   ],
+   "pos": [
+    236.5,
+    188.32
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of C45",
+    "Pad 4 [/+5V_SENS] of ESD11 on F.Cu"
+   ],
+   "pos": [
+    236.5,
+    188.32
+   ]
+  },
+  {
+   "type": "silk_over_copper",
+   "sev": "warning",
+   "items": [
+    "Reference field of J21",
+    "Pad 1 [/I2C0_SCL_CH5] of R46 on F.Cu"
+   ],
+   "pos": [
+    289.0,
+    190.5
+   ]
+  }
+ ],
+ "tracks_by_layer": {
+  "F.Cu": 726,
+  "B.Cu": 382,
+  "In2.Cu": 63
+ },
+ "in2_by_net": [
+  [
+   "/LED_DRV2",
+   14
+  ],
+  [
+   "/+5V_SENS",
+   13
+  ],
+  [
+   "3V3_C",
+   10
+  ],
+  [
+   "/LED_DRV1",
+   8
+  ],
+  [
+   "/I2C0_SCL",
+   7
+  ],
+  [
+   "/SENS_EN",
+   7
+  ],
+  [
+   "+5V",
+   2
+  ],
+  [
+   "/I2C0_MUX_SC0",
+   2
+  ]
+ ],
+ "in2_len_mm": {
+  "/LED_DRV2": 109.84,
+  "/LED_DRV1": 100.84,
+  "/+5V_SENS": 76.76,
+  "3V3_C": 63.02,
+  "/SENS_EN": 52.62,
+  "/I2C0_SCL": 22.53,
+  "+5V": 17.08,
+  "/I2C0_MUX_SC0": 5.71
+ },
+ "in2_total_mm": 448.41,
+ "widths": {
+  "/+5V_SENS": {
+   "0.5": 33,
+   "0.8": 1,
+   "0.6": 3
+  },
+  "3V3_C": {
+   "0.5": 108,
+   "0.3": 24,
+   "0.25": 3,
+   "0.2": 10
+  },
+  "PE": {
+   "0.6": 61,
+   "0.35": 1,
+   "0.4": 2
+  },
+  "+5V": {
+   "1.0": 2,
+   "0.5": 10,
+   "0.6": 1,
+   "1.5": 2
+  }
+ },
+ "fps": {
+  "J16": {
+   "pos": [
+    163.94,
+    194.5
+   ],
+   "fpid": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      163.94,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "/FSR_ADC_RAW",
+     "pos": [
+      166.44,
+      194.5
+     ]
+    }
+   ]
+  },
+  "ESD4": {
+   "pos": [
+    141.0,
+    180.0
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/SOIL_ADC_RAW",
+     "pos": [
+      139.95,
+      180.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      142.05,
+      180.0
+     ]
+    }
+   ]
+  },
+  "J18": {
+   "pos": [
+    134.468,
+    107.25
+   ],
+   "fpid": "TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V_IN",
+     "pos": [
+      134.468,
+      107.25
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      134.468,
+      102.25
+     ]
+    }
+   ]
+  },
+  "J1": {
+   "pos": [
+    209.5,
+    154.0
+   ],
+   "fpid": "PinSocket_1x22_P2.54mm_Vertical_R180",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "3V3_C",
+     "pos": [
+      209.5,
+      154.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "3V3_C",
+     "pos": [
+      209.5,
+      151.46
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/RST_ESP",
+     "pos": [
+      209.5,
+      148.92
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C1_SDA",
+     "pos": [
+      209.5,
+      146.38
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/I2C1_SCL",
+     "pos": [
+      209.5,
+      143.84
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/MODEM_RST",
+     "pos": [
+      209.5,
+      141.3
+     ]
+    },
+    {
+     "n": "7",
+     "net": "/PWR_EN",
+     "pos": [
+      209.5,
+      138.76
+     ]
+    },
+    {
+     "n": "8",
+     "net": "unconnected-(J1-IO15-Pad8)",
+     "pos": [
+      209.5,
+      136.22
+     ]
+    },
+    {
+     "n": "9",
+     "net": "/E22_AUX",
+     "pos": [
+      209.5,
+      133.68
+     ]
+    },
+    {
+     "n": "10",
+     "net": "/UART1_LORA_TX",
+     "pos": [
+      209.5,
+      131.14
+     ]
+    },
+    {
+     "n": "11",
+     "net": "/UART1_LORA_RX",
+     "pos": [
+      209.5,
+      128.6
+     ]
+    },
+    {
+     "n": "12",
+     "net": "/I2C0_SDA",
+     "pos": [
+      209.5,
+      126.06
+     ]
+    },
+    {
+     "n": "13",
+     "net": "/EVENT_BTN",
+     "pos": [
+      209.5,
+      123.52
+     ]
+    },
+    {
+     "n": "14",
+     "net": "unconnected-(J1-IO46-Pad14)",
+     "pos": [
+      209.5,
+      120.98
+     ]
+    },
+    {
+     "n": "15",
+     "net": "/I2C0_SCL",
+     "pos": [
+      209.5,
+      118.44
+     ]
+    },
+    {
+     "n": "16",
+     "net": "/E22_M1",
+     "pos": [
+      209.5,
+      115.9
+     ]
+    },
+    {
+     "n": "17",
+     "net": "/E22_M0",
+     "pos": [
+      209.5,
+      113.36
+     ]
+    },
+    {
+     "n": "18",
+     "net": "unconnected-(J1-IO12-Pad18)",
+     "pos": [
+      209.5,
+      110.82
+     ]
+    },
+    {
+     "n": "19",
+     "net": "unconnected-(J1-IO13-Pad19)",
+     "pos": [
+      209.5,
+      108.28
+     ]
+    },
+    {
+     "n": "20",
+     "net": "unconnected-(J1-IO14-Pad20)",
+     "pos": [
+      209.5,
+      105.74
+     ]
+    },
+    {
+     "n": "21",
+     "net": "/+5V_ESP",
+     "pos": [
+      209.5,
+      103.2
+     ]
+    },
+    {
+     "n": "22",
+     "net": "GND",
+     "pos": [
+      209.5,
+      100.66
+     ]
+    }
+   ]
+  },
+  "C31": {
+   "pos": [
+    235.0,
+    166.0
+   ],
+   "fpid": "CP_Radial_D6.3mm_P2.50mm",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/+5V_SENS",
+     "pos": [
+      235.0,
+      166.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      237.5,
+      166.0
+     ]
+    }
+   ]
+  },
+  "J20": {
+   "pos": [
+    298.75,
+    141.75
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      298.75,
+      141.75
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      298.75,
+      139.25
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH6",
+     "pos": [
+      298.75,
+      136.75
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH6",
+     "pos": [
+      298.75,
+      134.25
+     ]
+    }
+   ]
+  },
+  "U4": {
+   "pos": [
+    222.0,
+    150.0
+   ],
+   "fpid": "SOT-23-5_HS",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/RST_ESP",
+     "pos": [
+      220.3,
+      150.95
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      220.3,
+      150.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/WDT_MR",
+     "pos": [
+      220.3,
+      149.05
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/WDT_WDI",
+     "pos": [
+      223.7,
+      149.05
+     ]
+    },
+    {
+     "n": "5",
+     "net": "3V3_C",
+     "pos": [
+      223.7,
+      150.95
+     ]
+    }
+   ]
+  },
+  "J2": {
+   "pos": [
+    183.5,
+    154.0
+   ],
+   "fpid": "PinSocket_1x22_P2.54mm_Vertical_R180",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "GND",
+     "pos": [
+      183.5,
+      154.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "unconnected-(J2-IO43_TX0-Pad2)",
+     "pos": [
+      183.5,
+      151.46
+     ]
+    },
+    {
+     "n": "3",
+     "net": "unconnected-(J2-IO44_RX0-Pad3)",
+     "pos": [
+      183.5,
+      148.92
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/FSR_ADC_F",
+     "pos": [
+      183.5,
+      146.38
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/SOIL_ADC_F",
+     "pos": [
+      183.5,
+      143.84
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/STATUS_LED",
+     "pos": [
+      183.5,
+      141.3
+     ]
+    },
+    {
+     "n": "7",
+     "net": "/REED_PULSE_F",
+     "pos": [
+      183.5,
+      138.76
+     ]
+    },
+    {
+     "n": "8",
+     "net": "unconnected-(J2-IO40-Pad8)",
+     "pos": [
+      183.5,
+      136.22
+     ]
+    },
+    {
+     "n": "9",
+     "net": "unconnected-(J2-IO39-Pad9)",
+     "pos": [
+      183.5,
+      133.68
+     ]
+    },
+    {
+     "n": "10",
+     "net": "unconnected-(J2-IO38-Pad10)",
+     "pos": [
+      183.5,
+      131.14
+     ]
+    },
+    {
+     "n": "11",
+     "net": "unconnected-(J2-IO37-Pad11)",
+     "pos": [
+      183.5,
+      128.6
+     ]
+    },
+    {
+     "n": "12",
+     "net": "unconnected-(J2-IO36-Pad12)",
+     "pos": [
+      183.5,
+      126.06
+     ]
+    },
+    {
+     "n": "13",
+     "net": "unconnected-(J2-IO35-Pad13)",
+     "pos": [
+      183.5,
+      123.52
+     ]
+    },
+    {
+     "n": "14",
+     "net": "unconnected-(J2-IO0-Pad14)",
+     "pos": [
+      183.5,
+      120.98
+     ]
+    },
+    {
+     "n": "15",
+     "net": "unconnected-(J2-IO45-Pad15)",
+     "pos": [
+      183.5,
+      118.44
+     ]
+    },
+    {
+     "n": "16",
+     "net": "/UART2_MOD_RX",
+     "pos": [
+      183.5,
+      115.9
+     ]
+    },
+    {
+     "n": "17",
+     "net": "/UART2_MOD_TX",
+     "pos": [
+      183.5,
+      113.36
+     ]
+    },
+    {
+     "n": "18",
+     "net": "/MPU_INT",
+     "pos": [
+      183.5,
+      110.82
+     ]
+    },
+    {
+     "n": "19",
+     "net": "unconnected-(J2-IO20-Pad19)",
+     "pos": [
+      183.5,
+      108.28
+     ]
+    },
+    {
+     "n": "20",
+     "net": "unconnected-(J2-IO19-Pad20)",
+     "pos": [
+      183.5,
+      105.74
+     ]
+    },
+    {
+     "n": "21",
+     "net": "GND",
+     "pos": [
+      183.5,
+      103.2
+     ]
+    },
+    {
+     "n": "22",
+     "net": "GND",
+     "pos": [
+      183.5,
+      100.66
+     ]
+    }
+   ]
+  },
+  "U6": {
+   "pos": [
+    186.0,
+    168.0
+   ],
+   "fpid": "SOT-23-5",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V",
+     "pos": [
+      184.863,
+      167.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      184.863,
+      168.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "+5V",
+     "pos": [
+      184.863,
+      168.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(U6-NC-Pad4)",
+     "pos": [
+      187.137,
+      168.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS",
+     "pos": [
+      187.137,
+      167.05
+     ]
+    }
+   ]
+  },
+  "ESD17": {
+   "pos": [
+    145.2,
+    121.5
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/REED_PULSE",
+     "pos": [
+      144.15,
+      121.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      146.25,
+      121.5
+     ]
+    }
+   ]
+  },
+  "ESD1": {
+   "pos": [
+    217.0,
+    132.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA",
+     "pos": [
+      215.863,
+      131.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      215.863,
+      132.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL",
+     "pos": [
+      215.863,
+      132.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(ESD1-IO3-Pad4)",
+     "pos": [
+      218.137,
+      132.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "3V3_C",
+     "pos": [
+      218.137,
+      132.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD1-IO4-Pad6)",
+     "pos": [
+      218.137,
+      131.05
+     ]
+    }
+   ]
+  },
+  "ESD2": {
+   "pos": [
+    205.0,
+    172.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C1_SDA",
+     "pos": [
+      203.863,
+      171.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      203.863,
+      172.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C1_SCL",
+     "pos": [
+      203.863,
+      172.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(ESD2-IO3-Pad4)",
+     "pos": [
+      206.137,
+      172.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "3V3_C",
+     "pos": [
+      206.137,
+      172.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD2-IO4-Pad6)",
+     "pos": [
+      206.137,
+      171.05
+     ]
+    }
+   ]
+  },
+  "ESD19": {
+   "pos": [
+    293.25,
+    139.75
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SCL_CH6",
+     "pos": [
+      294.3,
+      139.75
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      292.2,
+      139.75
+     ]
+    }
+   ]
+  },
+  "J17": {
+   "pos": [
+    271.0,
+    194.5
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      271.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      273.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH4",
+     "pos": [
+      276.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH4",
+     "pos": [
+      278.5,
+      194.5
+     ]
+    }
+   ]
+  },
+  "J15": {
+   "pos": [
+    150.38,
+    194.5
+   ],
+   "fpid": "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      150.38,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      152.88,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/SOIL_ADC_RAW",
+     "pos": [
+      155.38,
+      194.5
+     ]
+    }
+   ]
+  },
+  "U7": {
+   "pos": [
+    240.0,
+    180.0
+   ],
+   "fpid": "TSSOP-24_4.4x7.8mm_P0.65mm_HS",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "GND",
+     "pos": [
+      237.0,
+      176.425
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      237.0,
+      177.075
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C_SW_RST",
+     "pos": [
+      237.0,
+      177.725
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_MUX_SD0",
+     "pos": [
+      237.0,
+      178.375
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/I2C0_MUX_SC0",
+     "pos": [
+      237.0,
+      179.025
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/I2C0_MUX_SD1",
+     "pos": [
+      237.0,
+      179.675
+     ]
+    },
+    {
+     "n": "7",
+     "net": "/I2C0_MUX_SC1",
+     "pos": [
+      237.0,
+      180.325
+     ]
+    },
+    {
+     "n": "8",
+     "net": "/I2C0_SDA_CH2",
+     "pos": [
+      237.0,
+      180.975
+     ]
+    },
+    {
+     "n": "9",
+     "net": "/I2C0_SCL_CH2",
+     "pos": [
+      237.0,
+      181.625
+     ]
+    },
+    {
+     "n": "10",
+     "net": "/I2C0_SDA_CH3",
+     "pos": [
+      237.0,
+      182.275
+     ]
+    },
+    {
+     "n": "11",
+     "net": "/I2C0_SCL_CH3",
+     "pos": [
+      237.0,
+      182.925
+     ]
+    },
+    {
+     "n": "12",
+     "net": "GND",
+     "pos": [
+      237.0,
+      183.575
+     ]
+    },
+    {
+     "n": "13",
+     "net": "/I2C0_SDA_CH4",
+     "pos": [
+      243.0,
+      183.575
+     ]
+    },
+    {
+     "n": "14",
+     "net": "/I2C0_SCL_CH4",
+     "pos": [
+      243.0,
+      182.925
+     ]
+    },
+    {
+     "n": "15",
+     "net": "/I2C0_SDA_CH5",
+     "pos": [
+      243.0,
+      182.275
+     ]
+    },
+    {
+     "n": "16",
+     "net": "/I2C0_SCL_CH5",
+     "pos": [
+      243.0,
+      181.625
+     ]
+    },
+    {
+     "n": "17",
+     "net": "/I2C0_SDA_CH6",
+     "pos": [
+      243.0,
+      180.975
+     ]
+    },
+    {
+     "n": "18",
+     "net": "/I2C0_SCL_CH6",
+     "pos": [
+      243.0,
+      180.325
+     ]
+    },
+    {
+     "n": "19",
+     "net": "unconnected-(U7-SD7-Pad19)",
+     "pos": [
+      243.0,
+      179.675
+     ]
+    },
+    {
+     "n": "20",
+     "net": "unconnected-(U7-SC7-Pad20)",
+     "pos": [
+      243.0,
+      179.025
+     ]
+    },
+    {
+     "n": "21",
+     "net": "GND",
+     "pos": [
+      243.0,
+      178.375
+     ]
+    },
+    {
+     "n": "22",
+     "net": "/I2C0_SCL",
+     "pos": [
+      243.0,
+      177.725
+     ]
+    },
+    {
+     "n": "23",
+     "net": "/I2C0_SDA",
+     "pos": [
+      243.0,
+      177.075
+     ]
+    },
+    {
+     "n": "24",
+     "net": "3V3_C",
+     "pos": [
+      243.0,
+      176.425
+     ]
+    }
+   ]
+  },
+  "J4": {
+   "pos": [
+    269.5,
+    113.56
+   ],
+   "fpid": "PinSocket_1x12_P2.54mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/PWR_KEY",
+     "pos": [
+      269.5,
+      113.56
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      269.5,
+      116.1
+     ]
+    },
+    {
+     "n": "3",
+     "net": "3V3_C",
+     "pos": [
+      269.5,
+      118.64
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/UART2_MOD_RX",
+     "pos": [
+      269.5,
+      121.18
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/UART2_MOD_TX",
+     "pos": [
+      269.5,
+      123.72
+     ]
+    },
+    {
+     "n": "6",
+     "net": "GND",
+     "pos": [
+      269.5,
+      126.26
+     ]
+    },
+    {
+     "n": "7",
+     "net": "unconnected-(J4-VDD_1V8-Pad7)",
+     "pos": [
+      269.5,
+      128.8
+     ]
+    },
+    {
+     "n": "8",
+     "net": "/MODEM_RST",
+     "pos": [
+      269.5,
+      131.34
+     ]
+    },
+    {
+     "n": "9",
+     "net": "unconnected-(J4-GPIO1-Pad9)",
+     "pos": [
+      269.5,
+      133.88
+     ]
+    },
+    {
+     "n": "10",
+     "net": "unconnected-(J4-UART_LOG_RX-Pad10)",
+     "pos": [
+      269.5,
+      136.42
+     ]
+    },
+    {
+     "n": "11",
+     "net": "unconnected-(J4-UART_LOG_TX-Pad11)",
+     "pos": [
+      269.5,
+      138.96
+     ]
+    },
+    {
+     "n": "12",
+     "net": "GND",
+     "pos": [
+      269.5,
+      141.5
+     ]
+    }
+   ]
+  },
+  "ESD9": {
+   "pos": [
+    271.0,
+    186.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH4",
+     "pos": [
+      269.863,
+      185.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      269.863,
+      186.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH4",
+     "pos": [
+      269.863,
+      186.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      272.137,
+      186.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      272.137,
+      186.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD9-IO4-Pad6)",
+     "pos": [
+      272.137,
+      185.05
+     ]
+    }
+   ]
+  },
+  "Q9": {
+   "pos": [
+    162.0,
+    104.0
+   ],
+   "fpid": "SOT-23_PMOS_HS",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "GND",
+     "pos": [
+      162.938,
+      104.95
+     ]
+    },
+    {
+     "n": "2",
+     "net": "+5V_F",
+     "pos": [
+      162.938,
+      103.05
+     ]
+    },
+    {
+     "n": "3",
+     "net": "+5V",
+     "pos": [
+      161.062,
+      104.0
+     ]
+    }
+   ]
+  },
+  "ESD18": {
+   "pos": [
+    289.5,
+    128.0
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH6",
+     "pos": [
+      290.55,
+      128.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      288.45,
+      128.0
+     ]
+    }
+   ]
+  },
+  "J22": {
+   "pos": [
+    132.975,
+    120.25
+   ],
+   "fpid": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/REED_PULSE",
+     "pos": [
+      132.975,
+      120.25
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      132.975,
+      117.75
+     ]
+    }
+   ]
+  },
+  "J5": {
+   "pos": [
+    239.51,
+    95.83
+   ],
+   "fpid": "TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V",
+     "pos": [
+      239.51,
+      95.83
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      239.51,
+      100.83
+     ]
+    }
+   ]
+  },
+  "J3": {
+   "pos": [
+    235.5,
+    113.56
+   ],
+   "fpid": "PinSocket_1x12_P2.54mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/PWR_EN",
+     "pos": [
+      235.5,
+      113.56
+     ]
+    },
+    {
+     "n": "2",
+     "net": "unconnected-(J3-MIC_N-Pad2)",
+     "pos": [
+      235.5,
+      116.1
+     ]
+    },
+    {
+     "n": "3",
+     "net": "unconnected-(J3-MIC_P-Pad3)",
+     "pos": [
+      235.5,
+      118.64
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(J3-EAR_N-Pad4)",
+     "pos": [
+      235.5,
+      121.18
+     ]
+    },
+    {
+     "n": "5",
+     "net": "unconnected-(J3-EAR_P-Pad5)",
+     "pos": [
+      235.5,
+      123.72
+     ]
+    },
+    {
+     "n": "6",
+     "net": "GND",
+     "pos": [
+      235.5,
+      126.26
+     ]
+    },
+    {
+     "n": "7",
+     "net": "unconnected-(J3-SDA_1V8-Pad7)",
+     "pos": [
+      235.5,
+      128.8
+     ]
+    },
+    {
+     "n": "8",
+     "net": "unconnected-(J3-SCL_1V8-Pad8)",
+     "pos": [
+      235.5,
+      131.34
+     ]
+    },
+    {
+     "n": "9",
+     "net": "GND",
+     "pos": [
+      235.5,
+      133.88
+     ]
+    },
+    {
+     "n": "10",
+     "net": "unconnected-(J3-GPIO2_1V8-Pad10)",
+     "pos": [
+      235.5,
+      136.42
+     ]
+    },
+    {
+     "n": "11",
+     "net": "unconnected-(J3-ADC_1V8-Pad11)",
+     "pos": [
+      235.5,
+      138.96
+     ]
+    },
+    {
+     "n": "12",
+     "net": "GND",
+     "pos": [
+      235.5,
+      141.5
+     ]
+    }
+   ]
+  },
+  "U8": {
+   "pos": [
+    252.0,
+    167.0
+   ],
+   "fpid": "TSSOP-24_4.4x7.8mm_P0.65mm_HS",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "unconnected-(U8-INT-Pad1)",
+     "pos": [
+      249.0,
+      163.425
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      249.0,
+      164.075
+     ]
+    },
+    {
+     "n": "3",
+     "net": "GND",
+     "pos": [
+      249.0,
+      164.725
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/LED_DRV1",
+     "pos": [
+      249.0,
+      165.375
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/LED_DRV2",
+     "pos": [
+      249.0,
+      166.025
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/E22_EN",
+     "pos": [
+      249.0,
+      166.675
+     ]
+    },
+    {
+     "n": "7",
+     "net": "unconnected-(U8-P03-Pad7)",
+     "pos": [
+      249.0,
+      167.325
+     ]
+    },
+    {
+     "n": "8",
+     "net": "unconnected-(U8-P04-Pad8)",
+     "pos": [
+      249.0,
+      167.975
+     ]
+    },
+    {
+     "n": "9",
+     "net": "unconnected-(U8-P05-Pad9)",
+     "pos": [
+      249.0,
+      168.625
+     ]
+    },
+    {
+     "n": "10",
+     "net": "unconnected-(U8-P06-Pad10)",
+     "pos": [
+      249.0,
+      169.275
+     ]
+    },
+    {
+     "n": "11",
+     "net": "/WDT_WDI",
+     "pos": [
+      249.0,
+      169.925
+     ]
+    },
+    {
+     "n": "12",
+     "net": "GND",
+     "pos": [
+      249.0,
+      170.575
+     ]
+    },
+    {
+     "n": "13",
+     "net": "unconnected-(U8-P10-Pad13)",
+     "pos": [
+      255.0,
+      170.575
+     ]
+    },
+    {
+     "n": "14",
+     "net": "unconnected-(U8-P11-Pad14)",
+     "pos": [
+      255.0,
+      169.925
+     ]
+    },
+    {
+     "n": "15",
+     "net": "unconnected-(U8-P12-Pad15)",
+     "pos": [
+      255.0,
+      169.275
+     ]
+    },
+    {
+     "n": "16",
+     "net": "/PWR_EN",
+     "pos": [
+      255.0,
+      168.625
+     ]
+    },
+    {
+     "n": "17",
+     "net": "unconnected-(U8-P14-Pad17)",
+     "pos": [
+      255.0,
+      167.975
+     ]
+    },
+    {
+     "n": "18",
+     "net": "/BUZZER_EN",
+     "pos": [
+      255.0,
+      167.325
+     ]
+    },
+    {
+     "n": "19",
+     "net": "/SENS_EN",
+     "pos": [
+      255.0,
+      166.675
+     ]
+    },
+    {
+     "n": "20",
+     "net": "unconnected-(U8-P17-Pad20)",
+     "pos": [
+      255.0,
+      166.025
+     ]
+    },
+    {
+     "n": "21",
+     "net": "GND",
+     "pos": [
+      255.0,
+      165.375
+     ]
+    },
+    {
+     "n": "22",
+     "net": "/I2C0_SCL",
+     "pos": [
+      255.0,
+      164.725
+     ]
+    },
+    {
+     "n": "23",
+     "net": "/I2C0_SDA",
+     "pos": [
+      255.0,
+      164.075
+     ]
+    },
+    {
+     "n": "24",
+     "net": "3V3_C",
+     "pos": [
+      255.0,
+      163.425
+     ]
+    }
+   ]
+  },
+  "J7": {
+   "pos": [
+    212.11,
+    166.0
+   ],
+   "fpid": "PinSocket_1x08_P2.54mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/MPU_INT",
+     "pos": [
+      212.11,
+      166.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "3V3_C",
+     "pos": [
+      214.65,
+      166.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "unconnected-(J7-XCL-Pad3)",
+     "pos": [
+      217.19,
+      166.0
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(J7-XDA-Pad4)",
+     "pos": [
+      219.73,
+      166.0
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/I2C1_SDA",
+     "pos": [
+      222.27,
+      166.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/I2C1_SCL",
+     "pos": [
+      224.81,
+      166.0
+     ]
+    },
+    {
+     "n": "7",
+     "net": "GND",
+     "pos": [
+      227.35,
+      166.0
+     ]
+    },
+    {
+     "n": "8",
+     "net": "3V3_C",
+     "pos": [
+      229.89,
+      166.0
+     ]
+    }
+   ]
+  },
+  "J26": {
+   "pos": [
+    162.45,
+    181.35
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "3V3_C",
+     "pos": [
+      162.45,
+      181.35
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      164.95,
+      181.35
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C1_SCL",
+     "pos": [
+      167.45,
+      181.35
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C1_SDA",
+     "pos": [
+      169.95,
+      181.35
+     ]
+    }
+   ]
+  },
+  "J6": {
+   "pos": [
+    263.5,
+    177.62
+   ],
+   "fpid": "PinSocket_1x07_P2.54mm_Vertical_R90",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "GND",
+     "pos": [
+      263.5,
+      177.62
+     ]
+    },
+    {
+     "n": "2",
+     "net": "/+5V_E22",
+     "pos": [
+      263.5,
+      175.08
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/E22_AUX",
+     "pos": [
+      263.5,
+      172.54
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/UART1_LORA_RX",
+     "pos": [
+      263.5,
+      170.0
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/UART1_LORA_TX",
+     "pos": [
+      263.5,
+      167.46
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/E22_M1",
+     "pos": [
+      263.5,
+      164.92
+     ]
+    },
+    {
+     "n": "7",
+     "net": "/E22_M0",
+     "pos": [
+      263.5,
+      162.38
+     ]
+    }
+   ]
+  },
+  "J23": {
+   "pos": [
+    132.975,
+    130.5
+   ],
+   "fpid": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/EVENT_BTN",
+     "pos": [
+      132.975,
+      130.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      132.975,
+      128.0
+     ]
+    }
+   ]
+  },
+  "ESD20": {
+   "pos": [
+    147.0,
+    124.0
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/EVENT_BTN",
+     "pos": [
+      145.95,
+      124.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      148.05,
+      124.0
+     ]
+    }
+   ]
+  },
+  "J14": {
+   "pos": [
+    250.0,
+    194.5
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      250.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      252.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH3",
+     "pos": [
+      255.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH3",
+     "pos": [
+      257.5,
+      194.5
+     ]
+    }
+   ]
+  },
+  "J21": {
+   "pos": [
+    285.0,
+    194.5
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      285.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      287.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH5",
+     "pos": [
+      290.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH5",
+     "pos": [
+      292.5,
+      194.5
+     ]
+    }
+   ]
+  },
+  "J12": {
+   "pos": [
+    192.0,
+    194.5
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      192.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      194.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH1",
+     "pos": [
+      197.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH1",
+     "pos": [
+      199.5,
+      194.5
+     ]
+    }
+   ]
+  },
+  "J8": {
+   "pos": [
+    157.65,
+    161.5
+   ],
+   "fpid": "PinSocket_1x06_P2.54mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "unconnected-(J8-32K-Pad1)",
+     "pos": [
+      157.65,
+      161.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "unconnected-(J8-SQW-Pad2)",
+     "pos": [
+      160.19,
+      161.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C1_SCL",
+     "pos": [
+      162.73,
+      161.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C1_SDA",
+     "pos": [
+      165.27,
+      161.5
+     ]
+    },
+    {
+     "n": "5",
+     "net": "3V3_C",
+     "pos": [
+      167.81,
+      161.5
+     ]
+    },
+    {
+     "n": "6",
+     "net": "GND",
+     "pos": [
+      170.35,
+      161.5
+     ]
+    }
+   ]
+  },
+  "J11": {
+   "pos": [
+    176.0,
+    194.5
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      176.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      178.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH0",
+     "pos": [
+      181.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/I2C0_SDA_CH0",
+     "pos": [
+      183.5,
+      194.5
+     ]
+    }
+   ]
+  },
+  "ESD16": {
+   "pos": [
+    283.0,
+    103.0
+   ],
+   "fpid": "D_SMB_Handsoldering",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V",
+     "pos": [
+      280.3,
+      103.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "GND",
+     "pos": [
+      285.7,
+      103.0
+     ]
+    }
+   ]
+  },
+  "J24": {
+   "pos": [
+    132.975,
+    147.25
+   ],
+   "fpid": "JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V",
+     "pos": [
+      132.975,
+      147.25
+     ]
+    },
+    {
+     "n": "2",
+     "net": "/LED1_K",
+     "pos": [
+      132.975,
+      144.75
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/LED2_K",
+     "pos": [
+      132.975,
+      142.25
+     ]
+    },
+    {
+     "n": "4",
+     "net": "GND",
+     "pos": [
+      132.975,
+      139.75
+     ]
+    }
+   ]
+  },
+  "J13": {
+   "pos": [
+    236.0,
+    194.5
+   ],
+   "fpid": "JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/+5V_SENS",
+     "pos": [
+      236.0,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "/I2C0_SDA_CH2",
+     "pos": [
+      237.5,
+      194.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH2",
+     "pos": [
+      239.0,
+      194.5
+     ]
+    },
+    {
+     "n": "4",
+     "net": "GND",
+     "pos": [
+      240.5,
+      194.5
+     ]
+    },
+    {
+     "n": "5",
+     "net": "GND",
+     "pos": [
+      242.0,
+      194.5
+     ]
+    }
+   ]
+  },
+  "U10": {
+   "pos": [
+    141.0,
+    100.8
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "unconnected-(U10-~-Pad1)",
+     "pos": [
+      139.863,
+      99.85
+     ]
+    },
+    {
+     "n": "2",
+     "net": "unconnected-(U10-~-Pad2)",
+     "pos": [
+      139.863,
+      100.8
+     ]
+    },
+    {
+     "n": "3",
+     "net": "unconnected-(U10-~-Pad3)",
+     "pos": [
+      139.863,
+      101.75
+     ]
+    },
+    {
+     "n": "4",
+     "net": "unconnected-(U10-~-Pad4)",
+     "pos": [
+      142.137,
+      101.75
+     ]
+    },
+    {
+     "n": "5",
+     "net": "unconnected-(U10-~-Pad5)",
+     "pos": [
+      142.137,
+      100.8
+     ]
+    },
+    {
+     "n": "6",
+     "net": "/5V_PROT",
+     "pos": [
+      142.137,
+      99.85
+     ]
+    }
+   ]
+  },
+  "ESD11": {
+   "pos": [
+    236.5,
+    186.5
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH2",
+     "pos": [
+      235.363,
+      185.55
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      235.363,
+      186.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH2",
+     "pos": [
+      235.363,
+      187.45
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/+5V_SENS",
+     "pos": [
+      237.637,
+      187.45
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/+5V_SENS",
+     "pos": [
+      237.637,
+      186.5
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD11-IO4-Pad6)",
+     "pos": [
+      237.637,
+      185.55
+     ]
+    }
+   ]
+  },
+  "ESD8": {
+   "pos": [
+    181.0,
+    186.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH1",
+     "pos": [
+      179.863,
+      185.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      179.863,
+      186.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH1",
+     "pos": [
+      179.863,
+      186.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      182.137,
+      186.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      182.137,
+      186.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD8-IO4-Pad6)",
+     "pos": [
+      182.137,
+      185.05
+     ]
+    }
+   ]
+  },
+  "ESD3": {
+   "pos": [
+    150.0,
+    190.0
+   ],
+   "fpid": "D_SOD-323",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/FSR_ADC_RAW",
+     "pos": [
+      148.95,
+      190.0
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      151.05,
+      190.0
+     ]
+    }
+   ]
+  },
+  "J25": {
+   "pos": [
+    139.31,
+    194.5
+   ],
+   "fpid": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "+5V",
+     "pos": [
+      139.31,
+      194.5
+     ]
+    },
+    {
+     "n": "2",
+     "net": "/BZ_NEG",
+     "pos": [
+      141.81,
+      194.5
+     ]
+    }
+   ]
+  },
+  "ESD7": {
+   "pos": [
+    168.0,
+    189.5
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH0",
+     "pos": [
+      166.863,
+      188.55
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      166.863,
+      189.5
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH0",
+     "pos": [
+      166.863,
+      190.45
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      169.137,
+      190.45
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      169.137,
+      189.5
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD7-IO4-Pad6)",
+     "pos": [
+      169.137,
+      188.55
+     ]
+    }
+   ]
+  },
+  "ESD12": {
+   "pos": [
+    285.0,
+    186.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH5",
+     "pos": [
+      283.863,
+      185.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      283.863,
+      186.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH5",
+     "pos": [
+      283.863,
+      186.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      286.137,
+      186.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      286.137,
+      186.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD12-IO4-Pad6)",
+     "pos": [
+      286.137,
+      185.05
+     ]
+    }
+   ]
+  },
+  "ESD10": {
+   "pos": [
+    250.0,
+    186.0
+   ],
+   "fpid": "SOT-23-6",
+   "layer": "F.Cu",
+   "pads": [
+    {
+     "n": "1",
+     "net": "/I2C0_SDA_CH3",
+     "pos": [
+      248.863,
+      185.05
+     ]
+    },
+    {
+     "n": "2",
+     "net": "PE",
+     "pos": [
+      248.863,
+      186.0
+     ]
+    },
+    {
+     "n": "3",
+     "net": "/I2C0_SCL_CH3",
+     "pos": [
+      248.863,
+      186.95
+     ]
+    },
+    {
+     "n": "4",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      251.137,
+      186.95
+     ]
+    },
+    {
+     "n": "5",
+     "net": "/3V3_SENS_SW",
+     "pos": [
+      251.137,
+      186.0
+     ]
+    },
+    {
+     "n": "6",
+     "net": "unconnected-(ESD10-IO4-Pad6)",
+     "pos": [
+      251.137,
+      185.05
+     ]
+    }
+   ]
+  }
+ },
+ "outline_mm": [
+  178.15,
+  118.15
+ ],
+ "outline_xy": [
+  126.425,
+  87.425
+ ],
+ "rule_areas": [],
+ "zones": [
+  {
+   "net": "PE",
+   "layer": "F.Cu",
+   "area_mm2": 2042.8
+  },
+  {
+   "net": "GND",
+   "layer": "F.Cu",
+   "area_mm2": 19714.4
+  },
+  {
+   "net": "/3V3_SENS_SW",
+   "layer": "F.Cu",
+   "area_mm2": 937.2
+  },
+  {
+   "net": "/3V3_SENS_SW",
+   "layer": "F.Cu",
+   "area_mm2": 2306.0
+  },
+  {
+   "net": "+5V",
+   "layer": "F.Cu",
+   "area_mm2": 16052.3
+  }
+ ],
+ "board_texts": [
+  {
+   "layer": "F.Silkscreen",
+   "text": "Q1\nbuzzer",
+   "pos": [
+    132.5,
+    188.5
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "5v -",
+   "pos": [
+    128.0,
+    100.268
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "5v +",
+   "pos": [
+    128.0,
+    105.268
+   ]
+  },
+  {
+   "layer": "User.Drawings",
+   "text": "GY-521 VCC@bottom",
+   "pos": [
+    164.0,
+    178.5
+   ]
+  },
+  {
+   "layer": "User.Drawings",
+   "text": "EDGEHAX ESP32-S3",
+   "pos": [
+    196.5,
+    136.0
+   ]
+  },
+  {
+   "layer": "User.Drawings",
+   "text": "A7672S MODEM COMPONENTS-DOWN (SIM UP)",
+   "pos": [
+    253.5,
+    146.06
+   ]
+  },
+  {
+   "layer": "User.Drawings",
+   "text": "E22-900T22D SMA edge",
+   "pos": [
+    257.0,
+    170.5
+   ]
+  },
+  {
+   "layer": "User.Drawings",
+   "text": "DS3231 RTC 32K@top",
+   "pos": [
+    219.5,
+    192.0
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J18 +5V IN",
+   "pos": [
+    137.5,
+    95.5
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J15 SOIL",
+   "pos": [
+    152.812,
+    201.525
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J11 SGP41 0x59",
+   "pos": [
+    178.312,
+    201.525
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J12 SHT45 0x44",
+   "pos": [
+    194.312,
+    201.525
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J3 UART",
+   "pos": [
+    236.0,
+    108.56
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J4 PWR",
+   "pos": [
+    269.56,
+    109.06
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J14 BME688 0x76",
+   "pos": [
+    272.5,
+    202.5
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J13 SPS30 5V",
+   "pos": [
+    301.0,
+    137.0
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "J5 MODEM 5V",
+   "pos": [
+    233.0,
+    98.5
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "GY-521",
+   "pos": [
+    163.75,
+    166.0
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "ESP32-S3 DevKitC",
+   "pos": [
+    195.0,
+    93.0
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "A7672S MODEM",
+   "pos": [
+    253.5,
+    107.56
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "E22-900T22D",
+   "pos": [
+    262.5,
+    169.87
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "DS3231 RTC",
+   "pos": [
+    229.85,
+    184.5
+   ]
+  },
+  {
+   "layer": "F.Fab",
+   "text": "",
+   "pos": [
+    210.5,
+    90.0
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "MoriShield Carrier",
+   "pos": [
+    139.5,
+    202.6
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "Rev C",
+   "pos": [
+    139.5,
+    200.2
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "S/N",
+   "pos": [
+    150.0,
+    200.2
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "1",
+   "pos": [
+    232.2,
+    113.56
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "1",
+   "pos": [
+    272.4,
+    113.56
+   ]
+  },
+  {
+   "layer": "F.Silkscreen",
+   "text": "MODEM THIS WAY UP",
+   "pos": [
+    240.0,
+    108.6
+   ]
+  }
+ ]
+}

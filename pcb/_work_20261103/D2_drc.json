@@ -1,0 +1,132 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:45:21",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'FSR' on F.Silkscreen",
+                    "pos": {
+                        "x": 163.94,
+                        "y": 201.3
+                    },
+                    "uuid": "8df71488-4627-43e7-b16b-200a9a8e6129"
+                },
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 199.2
+                    },
+                    "uuid": "bf8e1852-b810-46a4-b5b3-d7e129b47c91"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 201.3
+                    },
+                    "uuid": "2eb4b4aa-fd85-4183-ac26-dea014b4e998"
+                },
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 199.2
+                    },
+                    "uuid": "bf8e1852-b810-46a4-b5b3-d7e129b47c91"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of J6",
+                    "pos": {
+                        "x": 260.5,
+                        "y": 170.0
+                    },
+                    "uuid": "8b081d69-2317-4d7c-8819-01acf5d3c22f"
+                },
+                {
+                    "description": "PCB text 'RXD' on F.Silkscreen",
+                    "pos": {
+                        "x": 261.6,
+                        "y": 170.0
+                    },
+                    "uuid": "93410709-f74c-4bc5-9d23-dfefd10289c2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'REED' on F.Silkscreen",
+                    "pos": {
+                        "x": 135.2,
+                        "y": 125.0
+                    },
+                    "uuid": "cc1c970c-95cb-481c-937f-40339c4d0074"
+                },
+                {
+                    "description": "Rectangle of J23 on F.Silkscreen",
+                    "pos": {
+                        "x": 130.515,
+                        "y": 133.06
+                    },
+                    "uuid": "d3ec7a20-7489-4175-ab57-020780201344"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J23 on F.Silkscreen",
+                    "pos": {
+                        "x": 132.775,
+                        "y": 125.45
+                    },
+                    "uuid": "b19c8143-43d2-44fb-9d73-dbcaf7afc050"
+                },
+                {
+                    "description": "PCB text 'REED' on F.Silkscreen",
+                    "pos": {
+                        "x": 135.2,
+                        "y": 125.0
+                    },
+                    "uuid": "cc1c970c-95cb-481c-937f-40339c4d0074"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

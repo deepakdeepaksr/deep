@@ -1,0 +1,1435 @@
+
+
+===== PAGE 1 =====
+SERIGREEN TECHNOLOGIES PRIVATE LIMITED
+Salem, Tamil Nadu
+MoriShield
+Pesticide-drift early warning at the plot boundary
+Confidential. Prepared for Serigreen and its build team. Not for onward circulation.
+Carrier PCB, Rev B: package review
+The 4-layer and 6-layer package checked against the 59 open items and the
+release gate
+Document
+MS-CAR-REV-B-001, version 1.0
+Date
+29 October 2026
+From
+Dr. Shanmugakumar Murugesan, Co-founder and CTO, Serigreen Technologies Private Limited
+To
+Deepak (hardware and electronics) and Aswin (firmware and software)
+Covers
+The Rev B carrier package (files dated 27 October 2026): the KiCad project in a 4-layer and a 6-layer
+variant, Gerbers, drill, placement, BOM, DRC and ERC reports and the 6-layer QA note. Checked
+against the 59 items and the release gate of MS-CAR-REV-A-004 v1.0, and against
+MS-CAR-REV-A-003 v1.1.
+Status
+For action. Rev B is not released for fabrication. Serigreen carries the 4-layer variant forward and
+withdraws the 6-layer. The 5 V input is accepted on the conditions in section 6. Nothing is ordered
+before Serigreen's written release.
+Classification
+Confidential
+How this check was done
+Every number here comes from the package's own files (board, netlist, Gerbers, drill, BOM, placement and reports), read with Serigreen's
+scripts, or from datasheets and a DC model whose assumptions are listed in Appendix A. No board was built or measured. Where a result rests
+on an assumption, the assumption is stated, and the item it supports says what measurement closes it.
+
+
+===== PAGE 2 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 2 of 19
+Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+1. Verdict
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+Two decisions Serigreen has taken on this package
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+2. What we checked
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+3. What Rev B gets right
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+4. The package against the release gate
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+5. Blocking findings in the production files
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+5.1 The 6-layer Gerbers short the ESP32 header (R1)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+5.2 The watchdog input is not connected on the 4-layer (R2)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+5.3 Files that do not match the board
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+6. Power: the 5 V input, accepted on conditions
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+6.1 Loads
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+6.2 The path as built
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+6.3 Why the path is lossy, and what else it lacks
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+6.4 The six conditions
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 9
+6.5 Decoupling
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+7. Module fit, pins and control
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+7.1 Spacing and alignment
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+7.2 Parts under the modem board (R10)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+7.3 Pin plan
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+7.4 Modem control (R7)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+7.5 Watchdog (R8)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+7.6 The cabled I2C bus can lock the board (R17)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+7.7 Module outlines on the wrong sockets (R14)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12
+8. EMC, protection and layout
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12
+8.1 The ESP32 antenna (E3, raised to P1)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12
+8.2 Cuts in the 5 V plane (R12)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+8.3 Protection and earth (C8, R9)
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+8.4 Smaller layout items
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+9. Why the 4-layer goes forward
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 14
+10. Status of the 59 items
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16
+11. New items from this review
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 17
+12. What the next package needs, and how to respond
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18
+Appendix A. Method, assumptions and measurements
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18
+A.1 Loads
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18
+A.2 The DC budget to the modem board
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+A.3 Measurements quoted in this review
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+Appendix B. References
+
+
+===== PAGE 3 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 3 of 19
+1. Verdict
+Rev B is a real step forward, and it is not ready to print. The board has been rebuilt around a continuous ground
+plane, switched sensor supplies, an I2C switch with one segment per cabled port, protection returned to an earth
+terminal, and a watchdog. Of the 59 open items in MS-CAR-REV-A-004, 6 are closed, 24 are partly done, 28 are still
+open and 1 no longer applies. This review adds 17 new items, 5 of them blocking. Both variants have a fault in their
+production files, and the package does not yet carry the evidence the release gate asks for (section 4).
+Area
+What the check found
+Verdict
+Production files,
+6-layer
+The plane clearances around J1 were not refilled after J1 moved 0.25 mm. Every J1
+pad meets the ground and 5 V planes, which joins 5 V to ground.
+Blocking: R1. Variant
+withdrawn
+Production files,
+4-layer
+Netlist and board agree pin for pin. The watchdog input is not connected, which the
+team's own DRC reports. The BOM has no part numbers or quantities; the watchdog
+chip is missing from the placement file.
+Blocking: R2. Fix F1, R8
+Power
+J18 now takes 5 V from an external converter. Even with J18 held at exactly 5.10 V, a
+modem burst takes the modem board below its 4.75 V minimum: 4.73 V at 25 °C
+and 4.60 V when warm. J18's legend is printed the wrong way round, nothing
+protects against a reversed or over-voltage supply, and one 0.3 mm via carries the
+whole board.
+Accepted on conditions (B10).
+Blocking: R3 to R5
+Module fit and pins
+Socket rows now level (A8 closed). Spacing still unmeasured; E22 M1 and M0 on the
+microSD pins; the wind reed on an LED pin; two drivers on PWR_EN; the watchdog
+wiring fights the ESP32 board; one stuck sensor cable can lock the I2C bus that
+carries the watchdog kick.
+Fix: A1, A7, A10, R7, R8, R11,
+R17
+EMC and protection
+Solid ground plane (E1 closed) and ESD on every sensor port. No antenna keep-out,
+with both planes under the antenna; earth not bonded; tracks routed on In2 cut the
+5 V plane.
+Fix: E3 (now P1), C8, R9, R12
+Interfaces
+FDC1004 port and ADC filters in (C3, C12 closed); event button, buzzer and per-port
+I2C segments in, with gaps (C4, C6). RS485 removed; microSD blocked.
+Decide C1; fix C2, C4
+Evidence
+No change log, simulation, decoupling map, readings, test-fit, 3D check with
+modules, FMEA or bring-up plan.
+Missing (section 4)
+Table 1. Findings by area. The sections below give the evidence for each row.
+Two decisions Serigreen has taken on this package
+5 V input
+Accepted on conditions. The carrier keeps its 5 V input at J18, fed by an external 12 V to 5 V converter, provided the
+six conditions in section 6 are met. B10 is restated as those conditions and closes on the bench trace at the modem
+board.
+Layer count
+The 4-layer board goes forward; the 6-layer is withdrawn (section 9). The next package is one 4-layer design.
+What happens next. The team makes the changes in sections 5 to 8 on the 4-layer board and returns the next package with
+the evidence in section 12. Serigreen re-runs its checks on those exact files and releases them in writing; nothing is ordered
+before that. 69 items need action: 52 carried from 004 (24 partly done, 28 open) and the 17 new items in section 11 (5 P0, 8
+P1, 4 P2). The P0 items carried over are A1, A6, A7, A10, B10, C1, C2 and G1, still open, and A2, A4, A9 and C4, partly done.
+
+
+===== PAGE 4 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 4 of 19
+2. What we checked
+Check
+Method
+Integrity
+The schematic netlist (netlist.net) against each board file, pin for pin; the copper of every net, plane fills included,
+checked for breaks; the team's ERC and DRC reports.
+Production data
+The Gerbers and drill files against the board files, inner-layer pads and plane clearances included; the BOM and
+placement file against the footprints; the job file and the design-rule file.
+Power
+The 5 V path from J18 to J5 traced in the 4-layer file; resistance at 1 oz copper; a DC budget to the modem board's
+input (Appendix A); IPC-2221 heating; datasheet ratings of Q9, F1, D2 and the 5 V loads.
+Placement
+Courtyards against the module outlines the team drew; decoupling distances; distance from each connector pin to its
+protection part.
+Layout
+Copper on each layer; tracks on the plane layers and the cuts they make; signals crossing them; copper under the
+ESP32 antenna; the smallest gaps between nets, earth (PE) in particular.
+Pins
+Every module pin against 003's map of the EdgeHax board and its section 9 plan.
+Against 004
+Each of the 59 items, and the ten rows of the release gate.
+Table 2. Checks run on both variants.
+Limits. Load currents and contact resistances are datasheet values and stated assumptions, so the power figures show margins
+rather than guarantees; G1 and the bench trace in B10 confirm them. Module dimensions are 003's estimates from photos
+until the team's readings arrive (A10).
+3. What Rev B gets right
+A good deal of 004 has been taken on board, and some of it goes further than asked. These are worth keeping as the design
+moves on:
+Change in Rev B
+Items
+A continuous ground plane on In1 (94 percent of the board) and a 5 V plane on In2
+E1 closed; B4 advanced
+TCA9548A I2C switch: one segment per cabled port, 4.7 kΩ pull-ups on each; the GY-521 and
+DS3231 modules on I2C-1
+C3 closed; C6, C11 advanced
+Sensor supplies from a low-quiescent LDO (TPS7A2033), switched off by default; switched E22
+supply with a ferrite
+B5, H2, E7 advanced
+ESD arrays on every sensor port, returned to an earth net with its own terminal (J19)
+C8, H1 advanced
+Event button on GPIO3 with pull-up, RC and ESD; status LED on GPIO42; panel lamps and buzzer on
+an I2C expander
+C4 advanced
+RC filters on both ADC inputs; Schottky diode D7 to the ESP32 board's 5 V pin
+C12 closed; B6 advanced
+Socket rows level; the modem board moved 15 mm down, drawn components-down, and its pins
+mapped to match; modem UART moved to GPIO47 and 48
+A8 closed; A2, A9, A12 advanced
+A supervisor and an I/O expander for watchdog and housekeeping; a pull-down that holds PWR_EN
+low in reset
+H2, A11 advanced
+DC-solve directives (padne) in the schematic, ready to be brought up to date for Rev B
+G1 started
+Eleven test points, 0805 and 1206 passives for hand assembly, thermal reliefs, X2 Gerbers; netlist
+and board agree
+E2, D1 closed; E4, F2 advanced
+A QA note with real DFM findings (vias in pads, missing part numbers, silkscreen)
+R15, R16, F1
+Table 3. What Rev B delivers.
+
+
+===== PAGE 5 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 5 of 19
+4. The package against the release gate
+004 section 7 listed what the Rev B package had to carry before a release check could start. The table compares the package
+with that list.
+#
+004 asked for
+The Rev B package has
+Status
+1
+Change log against all 59 items
+None. The QA note is a DFM check, not a response to the items.
+Missing
+2
+Project and schematic PDF; ERC 0 errors and 0
+warnings; DRC 0 on the saved file with zones
+refilled
+Project and PDF supplied. ERC 0 errors, 328 warnings (6-layer 635).
+4-layer DRC: 1 unconnected item, 134 rule warnings and 209 parity
+warnings (cosmetic). 6-layer: saved with stale plane fills (R1), and its
+parity check had no schematic to compare.
+Not met
+3
+Gerbers with revision and X2, drill, IPC-356
+netlist, placement in mm, fab drawing
+X2 Gerbers, drill, job file and placement in mm. Revision "rev?"; no
+IPC-356, fab drawing, stack-up or finish.
+Partly
+4
+BOM with part numbers, ratings, plating and
+two builds
+Values and footprints only; quantities blank.
+Not met
+5
+Module fit: root readings, side-on photo,
+test-fit photo, signed pin map, A6 decision,
+nothing on J1 pins 16 to 20, rows level
+Rows level. J1 pins 16 and 17 in use; nothing else supplied.
+Not met
+6
+Power: G1 results, supply-path resistances or
+a DC solve, decoupling map, B10 trace or plan
+None.
+Missing
+7
+EMC layout: stitching, keep-outs, protection
+at every port
+Ground plane in place. No antenna keep-out; protection on the sensor
+ports but not within 5 mm; none on J24 and J25.
+Partly
+8
+Interfaces: RS485, microSD archive, FDC1004
+port, event button, with their bench plan
+FDC1004 port and button in. RS485 removed; microSD blocked.
+Partly
+9
+3D check with every module and the
+enclosure
+Renders of the carrier's own parts; no modules, no enclosure.
+Missing
+10
+Bring-up plan and FMEA
+None.
+Missing
+Table 4. The package against the release gate of 004 section 7.
+The 6-layer QA note calls the design a release candidate. Its DFM findings are sound and we agree with them: vias in pads (it
+counts 56; the boards have 65 and 66), missing part numbers, silkscreen over copper. But it describes a 0.4 mm-pitch QFN U7
+that is not on this board (U7 is a TSSOP-24), and it reports 0 electrical errors, every net as a single conductor group and a
+passing cross-check of the production data, while the 6-layer's saved fills and Gerbers short J1. Its clean parity check compared
+nothing: the 6-layer project lists no schematic sheet (its folder holds MoriShield_Carrier.kicad_sch, not a 6-layer schematic).
+And its DRC, run with zone refill, ran about a minute after the Gerbers were plotted, which is how a refilled check can pass
+while the plotted copper is stale (section 5.1). A QA note has to come from the files it ships with.
+
+
+===== PAGE 6 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 6 of 19
+5. Blocking findings in the production files
+5.1 The 6-layer Gerbers short the ESP32 header (R1)
+In the 6-layer board J1 sits at x 209.25 mm; in the 4-layer it is at 209.5. The 6-layer file's plane fills, and the Gerbers plotted
+from them, still have J1's clearance holes centred on 209.5. Every J1 pad on In1 and In2 now meets the edge of the plane: the
+gap is under 0.001 mm, which no process can etch, so in practice pad and plane are one piece of copper; pin 1, the square pad,
+meets it along a whole edge. Every J1 pin then joins ground on In1 and 5 V on In2, and pin 22, which is ground, joins the 5 V
+plane directly. A board made from these files would short its 5 V supply to ground at the first power-up.
+Figure 1. In1 ground plane around J1 pins 1 to 4, read from each variant's Gerbers. Left, 4-layer: a 0.25 mm clearance all round. Right, 6-layer: the
+pads have moved 0.25 mm and touch the plane, pin 1 (square) along its whole edge. In2 is the same with the 5 V plane.
+The DRC in the package does not show this because a DRC that refills zones checks the refilled copper in memory, not the fills
+saved in the file that the Gerbers come from. The order that prevents it is the one in 004 F2: refill, save, run DRC on the saved
+file, then plot. The same move narrows the ESP32 rows to 25.75 mm (section 7). The 6-layer is withdrawn (section 9); the
+check stays for every Gerber set.
+5.2 The watchdog input is not connected on the 4-layer (R2)
+/WDT_WDI runs from U4 pin 4 to a via at x 244.5, y 173.5, and from U8 pin 17 (expander port P14) to a via at x 257.0, y 168.1.
+Nothing joins the two vias, 13.6 mm apart. The team's DRC lists exactly this as its one unconnected item. With WDI floating,
+the TPS3823's watchdog is disabled, so the board would build and run with no watchdog at all. The 6-layer has the net routed
+(on In4); the 4-layer does not. Route it with the changes in section 7.5, and clear the dangling copper the same DRC lists: a 13
+mm 3V3_C stub on B.Cu at x 169.0, y 129.25, 1 mm of EVENT_BTN track, and dangling vias on PWR_EN, I2C0_SDA and
+BUZZER_EN.
+5.3 Files that do not match the board
+• U4 (the supervisor) carries the board-only, exclude-from-BOM and exclude-from-placement flags on the PCB, so the
+placement file has 141 parts and no U4, while the schematic BOM lists it. An assembler would buy the chip and not fit it
+(R8).
+• The BOM has 65 lines of values and footprints: no manufacturer part numbers, no quantities (F1).
+• The job file says revision "rev?" and finish "None"; the board declares no stack-up, so the job file carries KiCad's default (F2).
+• The design-rule file refers to nets, rule areas and parts that are not on this board (RS485_A and B, SDA0 and SCL0, areas
+LOOSE5V and LOOSE_U7, a QFN U7), and its comments give 0.30 mm as the standard clearance while the net class is 0.20
+mm (R15).
+• 65 vias sit inside SMD pads, open to solder (R16).
+
+
+===== PAGE 7 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 7 of 19
+6. Power: the 5 V input, accepted on conditions
+Rev A took 12 V at J18 and made 5 V with a buck module on the board, and 004 asked for a dedicated converter for the
+modem (B10). Rev B removes the buck. J18 now takes 5 V, and everything runs from it through F1 (a 4 A PTC), Q9 and the In2
+plane. Serigreen accepts this on the six conditions in section 6.4. With the converter off the board, B1, B2, B3 and B8 move into
+its specification.
+6.1 Loads
+If every peak coincides, about 2.6 A comes in through J18: about 1.8 A for the modem board in a GSM burst, about 0.5 A for
+the ESP32 board in Wi-Fi transmit, and about 0.3 A for the E22, the SPS30, the sensor rail, the lamps and the buzzer together
+(Table 15, Appendix A). A budget per operating mode remains B5.
+6.2 The path as built
+Element (4-layer file)
+mΩ at 25 °C
+mΩ at +70 °C
+J18 contacts, both poles (3 mΩ each, typical)
+6.0
+6.0
++5V_IN track, 0.5 mm × 13.8 mm
+13.9
+16.3
+F1 (fuse or PTC, 20 to 50 mΩ)
+30.0
+50.0
++5V_F track, 0.5 mm × 6.8 mm
+6.8
+8.0
+Q9 on-resistance (60 mΩ max at 4.5 V gate drive, 25 °C; × 1.4 hot)
+60.0
+84.0
+Q9 output stub and one 0.3 mm via
+1.5
+1.8
+5 V and ground planes, Q9 to J5 and back
+4.0
+4.8
+J18 to J5, both conductors
+122
+171
+Table 5. Resistance from J18 to J5. Track lengths are measured between pad edges; F1, Q9 and the contacts are datasheet values; Appendix A
+gives the basis of each.
+The modem board needs 4.75 to 5.25 V at its own input. In a burst, 2.6 A runs through this path and the modem's 1.8 A then
+runs on through J5, its lead and the contacts at both ends. Even with J18 held at exactly 5.10 V, the modem board would see
+about 4.73 V at 25 °C and 4.60 V at +70 °C, below its minimum both times. A set point alone cannot fix this. At 25 °C the
+present path needs J18 between 5.12 and 5.27 V. A fixed set point has to meet the burst with the parts hot and light load with
+them cold, which leaves a window of about 20 mV (5.25 to 5.27 V), before any converter tolerance or droop. These figures
+already assume a good lead to the modem board (condition 5). Figure 2 traces the same burst from the converter through the
+leads, with the allocation that section 6.4 sets.
+Figure 2. Voltage from the converter to the modem board during a burst (2.6 A total, 1.8 A to the modem), with the converter at its lowest set
+point and the leads at their allocated resistance. The two lower lines use the board as built; the upper line uses the 60 mΩ board allocation of
+condition 3.
+
+
+===== PAGE 8 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 8 of 19
+6.3 Why the path is lossy, and what else it lacks
+The legend on J18 is the wrong way round (R3). The silkscreen prints "5v +" beside pad 2, which is ground, and "5v -" beside
+pad 1, the +5 V input. Anyone who wires to the legend reverses the supply, and nothing on the board stops it, as the next
+paragraph explains. The schematic titles this block "POWER INPUT and REVERSE-POLARITY PROTECTION"; as fitted, Q9 gives
+no reverse protection.
+Q9 is reversed for its job (R4). Q9 (AO3401A, P-channel) has its source on the input side and its drain on the load. That way
+round it conducts in normal use, but its body diode points from the loads back to J18, so a reversed supply drives the loads
+negative through the diode: there is no reverse protection. Wired to the legend, the supply drives D2 and ESD16 forward, and
+the fault current runs through Q9's body diode, rated 2 A, and through F1, which needs about 8 A to trip, so in practice only
+the converter's current limit bounds it; meanwhile every 5 V load except the ESP32 board (behind D7) sits near −1 V. Fitted the
+other way (drain to J18, source to the load, gate to ground) the same part would block a reversed supply. It also adds up to 60
+mΩ, about half the path. Its heating is not the problem: 0.41 W at the full burst current, but bursts are short, and averaged
+over a GSM frame it is about 0.1 W.
+Q9's footprint has been edited (R5). The team's DRC flags Q9 as the one footprint that does not match its library. Its pads are
+turned 90 degrees, so each land runs 0.6 mm along the lead and 1.475 mm across it, and the gate pad (ground) sits 0.425 mm
+from the source pad (+5V_F), against 1.3 mm on the library part. A solder bridge there shorts the input to ground behind F1,
+and the lands leave almost no fillet on the one part that carries the whole board's current. Restore the library footprint, for Q9
+or whatever replaces it.
+Nothing stops an over-voltage (R4). With 12 V on J18, D2 (SMCJ5.0A) clamps at roughly 7 to 9 V and conducts heavily until F1
+trips or D2 fails, while every 5 V load sees that voltage; the SPS30 is rated to 5.5 V at most. Q9's gate sits on ground, so the
+same 12 V puts −12 V on its gate, the AO3401A's absolute maximum; a battery on charge (about 14 V) or the 22 to 25 V of a
+battery disconnect (B8) breaks it. A 5 V screw terminal that looks like every other screw terminal in the box will meet 12 V one
+day.
+The copper is sized below its fuse (R5). The whole board's current leaves Q9 on a 1 mm stub of 0.5 mm track into a single 0.3
+mm via to the In2 plane; the input itself is 0.5 mm track, 13.8 mm from J18 to F1 and 6.8 mm from F1 to Q9. A 0.3 mm via is
+commonly sized for about 1 A. F1 holds 4 A indefinitely, and a 4 A-hold PTC such as MF-R400 can carry up to its trip current,
+about 8 A, before it is sure to trip (a 5 by 20 mm glass fuse carries 1.5 times its rating for an hour). Already at 4 A, IPC-2221
+puts a long 0.5 mm track about 101 °C above ambient (Table 6). The copper has to be sized for everything up to the
+protection's trip or limit current, and the protection chosen with the copper in mind. F1 also has a footprint problem:
+"PTC_4A" sits on clips for a 5 by 20 mm glass fuse, where a radial PTC cannot be fitted.
+Outer-layer conductor, 1 oz
+Rise at 2.6 A
+Rise at 4 A
+0.5 mm track (the input path today)
+38 °C
+101 °C
+1.0 mm track
+12 °C
+32 °C
+3 mm pour (condition 3)
+2 °C
+5 °C
+Table 6. Temperature rise of a long track by IPC-2221. Short tracks between large pads run cooler; the via cannot be read from this table, which is
+why condition 3 asks for via arrays.
+The sensor-rail switches do not fully turn off (R6). Q2 (3.3 V sensor rail) and Q3 (5 V sensor rail, which feeds the SPS30) share
+one gate net, pulled by 100 kΩ to 3.3 V and by 100 kΩ to 5 V. When the rails are meant to be off, the gate sits near 4.15 V, so
+Q3 sees −0.85 V gate to source, and −0.93 V at the 5.15 V set point: right at the AO3401A's typical threshold of −0.9 V (−0.5 to
+−1.3 V). On many parts the 5 V sensor rail will stay partly on. Give each FET its own pull-up to its own source, and pull both
+gates down from the same enable: a second N-FET, or two diodes from Q4's drain. The firmware rule that goes with switched
+rails also applies here: never enable a switch channel while its rail is off, because the channel pull-ups and the ESD arrays'
+supply pins sit on that rail; and hold UART1, M0 and M1 low while Q7 has the E22 switched off, or the module is fed through its
+own inputs.
+
+
+===== PAGE 9 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 9 of 19
+6.4 The six conditions
+#
+Condition
+Requirement
+1
+The converter
+A named part, datasheet in the package. Input rated 40 V or more and covering the charge controller's disconnect
+voltage (B8); its own input fuse and surge part (B1, B3). Output 5.15 V within 1 percent, 3 A continuous at +70 °C
+inside the closed box, at most 50 mV droop at its own terminals for the burst step (0.15 to 2.6 A). Its no-load
+current in the power budget (B5).
+2
+Protection at J18
+Reverse-polarity protection, and an over-voltage cut-off that disconnects the board before its 5 V rail reaches 5.5
+V and survives 12 V or 24 V on J18 indefinitely; current limit near 3.5 A. Any FET in the path either sits behind the
+cut-off or has its gate protected against those voltages (a gate resistor and a gate-source zener of about 10 V). D2
+after the protection; D2 and ESD16, both on +5V, with a stand-off above the converter's highest output (today 5.0
+V, against up to 5.20 V), or their leakage, up to about 1 mA each at stand-off, counted in B5. One way is an
+industrial eFuse with an adjustable over-voltage cut-off, such as TI's TPS26630 or TPS26631 (4.5 to 60 V; 31 mΩ
+typical, 45 mΩ at most at 85 °C), with its external blocking FET. With the J18 contacts and the planes that comes
+to about 58 to 60 mΩ at worst before any track, so it meets condition 3 only at typical values; an over-voltage and
+reverse-polarity controller driving low-resistance FETs leaves real room.
+3
+Copper
+J18 to the protection and on to the 5 V plane at pour width (3 mm or more), with six or more 0.3 mm vias at every
+layer change, sized for the protection's current limit. Resistance from J18 to J5, both conductors and the
+protection included: 60 mΩ or less at +70 °C.
+4
+Bulk at J5
+470 µF low-ESR (105 °C, 16 V or more) plus 10 µF and 100 nF ceramics, within 10 mm of J5 along the copper.
+Today the nearest capacitor is a 100 nF at 41.5 mm, and the nearest 10 µF or larger is 75 mm away.
+5
+Leads
+Converter to J18 at most 15 mΩ there and back (for example 200 mm of 0.75 mm² each way). J5 to the modem
+board at most 30 mΩ with its contacts, or the modem board fed by its own lead from the converter.
+6
+Proof
+The G1 model of the chain as built, then B10's bench trace at the modem board's own input: 4.75 to 5.25 V
+throughout an LTE attach and with GSM forced, the converter at its lowest set point. That trace closes B10.
+Table 7. Conditions for keeping the 5 V input (B10). R4 and R5 are conditions 2 and 3 applied to this board.
+With these allocations the modem board sees about 4.80 V in the worst burst and about 5.19 V at light load, inside its 4.75 to
+5.25 V window with about 50 mV to spare at each end (Figure 2, Appendix A). The allocation is a budget, not a design: the
+team may divide it differently, as long as the G1 model and the bench trace show the window held.
+6.5 Decoupling
+Supply point
+Nearest capacitor (straight line)
+Item
+Modem 5 V (J5)
+100 nF at 41.5 mm; 10 µF or more at 75 mm
+Condition 4
+5 V 100 nF capacitors C3, C14, C41,
+C42
+All four in a row in the top-right corner, 8 to 17 mm from ESD16 and
+41.5 mm or more from the nearest load (J5)
+B12: place at the loads
+E22 supply (J6 pin 2)
+10 µF at 28.4 mm
+B12
+Modem UART reference (J4 pin 3)
+100 nF at 51.3 mm
+B12
+TPS7A2033 input and output (U6)
+1 µF at 11.6 mm and at 9.3 mm
+B7: place at the pins
+SPS30 (J13)
+10 µF at 5.3 mm; 100 µF at 28.5 mm; 100 nF at about 22 mm
+C7
+ESP32 5 V pin (J1 pin 21)
+10 µF at 6.9 mm
+Good
+Cabled sensor ports
+100 nF at 4.9 to 13.0 mm
+Good; 10 mm or less is the aim
+Table 8. Decoupling at the main supply points, 4-layer file.
+
+
+===== PAGE 10 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 10 of 19
+7. Module fit, pins and control
+7.1 Spacing and alignment
+Centre to centre, mm
+003 estimate
+v3
+Rev B 4-layer
+Rev B 6-layer
+ESP32 board, J1 to J2
+26.2 (26.1 to 26.3)
+26.00
+26.00
+25.75
+Modem board, J3 to J4
+33.8 (33.7 to 33.9)
+33.56
+34.00
+34.00
+Row offset, J1 and J2 / J3 and J4
+0
+0.30 / 0.50
+0 / 0
+0 / 0
+Table 9. Socket spacing. A8 (rows level) is closed. A10 is open: the ESP32 rows are unchanged at 26.00 mm, and the modem rows moved from
+33.56 to 34.00 mm, past the estimate, with no readings in the package to say which is right.
+A 1:1 print of the socket layer with both boards pressed in settles this in minutes, as 003 asked. The modem board is now
+drawn components-down ("SIM up"), 15 mm lower, with the functions of its two pin rows swapped to match; the side-on
+photo that confirms the pin direction (A9) is still needed.
+7.2 Parts under the modem board (R10)
+J5, the modem's own 5 V terminal, sits inside the modem board's outline as the team drew it, and so do the 5 V and ground
+test points TP2, TP3 and TP5. With the modem fitted, J5's screws cannot be reached and its wires have nowhere to go, and the
+three test points are covered. There are still no standoff holes for the modem board (A12). Move J5 outside the outline at the
+edge nearest the modem board's supply connector, move the test points out, and add four standoffs.
+7.3 Pin plan
+Rev B moves the modem lines off the microSD pins, as 003 asked, but puts other lines on them, and adds a wind sensor (the
+title block names an AS5600 and a reed switch). Six lines need attention:
+Line
+Rev B
+Problem
+Change
+E22 M1
+GPIO10 (J1 pin 16)
+microSD chip select (A7, C2)
+GPIO40 (J2 pin 8), as 003 planned: M1 idles low
+E22 M0
+GPIO11 (J1 pin 17)
+microSD data (A7, C2)
+GPIO15 (J1 pin 8), as 003 planned, if the board has no 32
+kHz crystal on GPIO15 and 16. If it has one, M0 takes
+GPIO39 and E22 AUX (now GPIO16, J1 pin 9) has to
+move too
+Wind reed pulse
+GPIO41 (J2 pin 7)
+Drives the white LED: an input there
+reads the LED as well as the reed (R11)
+GPIO39 (J2 pin 9) while RS485 is off the board and there
+is no crystal; see the note below
+Modem PWR_EN
+GPIO7 and expander
+P13
+Two drivers on one line (R7)
+GPIO7 alone; R16 holds it low in reset, which the truth
+table (A11) has to show means off
+Modem PWRKEY
+1 kΩ to ground only
+Its effect depends on the modem
+board's level translator (A11)
+Keep if A11 confirms automatic power-on; otherwise a
+GPIO
+Watchdog WDI
+Expander P14
+Holds its level through ESP32 resets
+and USB flashing (R8)
+See section 7.5
+Table 10. Pin changes against 003 section 9. The remaining lines follow it, except that the expander sits on I2C-0 (section 7.6); battery sense on
+GPIO6 (B9) is still to be added.
+RS485 and the pin budget. The schematic's title block says RS485 was removed for off-board USB testing. C1 is a P0 item:
+either RS485 comes back, or Serigreen defers it in writing. If it comes back (TX and RX on GPIO38 and 39, as 003 planned), or if
+the board has the 32 kHz crystal, the N16R8 board as bought is short of pins: one for the reed, and with the crystal one for AUX
+as well. The non-octal EdgeHax variant that A6 calls for frees GPIO35 to 37 and settles these questions together. Please also
+say which port the AS5600 uses.
+
+
+===== PAGE 11 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 11 of 19
+7.4 Modem control (R7)
+/PWR_EN is driven by GPIO7 and by the expander's P13, with R16 (4.7 kΩ) to ground. At power-up both drivers are inputs and
+R16 holds PWR_EN low, which is the right safe state if low means off; like PWRKEY's, that polarity belongs in the truth table
+A11 asked for. Once firmware sets both as outputs they can fight, and after an ESP32 reset the expander keeps driving
+whatever it last drove. Keep one driver, GPIO7. PWRKEY is held by R15 (1 kΩ to ground) and nothing else, and RESET is gone.
+Whether a low PWRKEY means "pressed" depends on the modem board's translator. If A11 confirms automatic power-on,
+PWR_EN power-cycling is the whole recovery path, and that is fine; the truth table must say so.
+7.5 Watchdog (R8)
+The supervisor is a good addition, and three things stop it working with this ESP32 board. First, the TPS3823 has a push-pull
+output, and it drives EN, which the ESP32 board's reset button and USB auto-reset circuit also pull low: they fight. The TPS3828
+is the same part with an open-drain output, and is the one to use. Second, WDI comes from the expander, which is not reset
+with the ESP32 and keeps its last level. After a watchdog reset nothing toggles WDI until the new firmware does, and the
+TPS3823 times out after 1.6 s typical, 0.9 s at the least. In USB download mode nothing toggles it at all, so the watchdog resets
+the ESP32 in the middle of flashing. Third, U4 is flagged out of the placement file and BOM on the board.
+Drive WDI from a pin with no pull-up or pull-down at reset, which stays high-impedance through reset and download mode
+(the TPS382x treats a floating WDI as "watchdog off"); or keep it on the expander with a jumper in series for flashing and
+firmware that kicks within 0.9 s of reset. Clear U4's three flags.
+7.6 The cabled I2C bus can lock the board (R17)
+Rev B puts the I/O expander (U8) on I2C-0 beside the switch (U7), upstream of the cabled ports, and U7's reset comes only
+from a power-on RC (R24, C29). If a sensor or its cable holds SDA low while its channel is selected, all of I2C-0 is held low.
+Firmware can then reach neither U7, to deselect the channel, nor U8, which carries the watchdog kick, the sensor-rail enable
+and PWR_EN. The watchdog resets the ESP32, but nothing resets U7, so the bus stays stuck until the box is power-cycled.
+Move U8 to I2C-1, as 003 planned, and reset U7 with the ESP32, from the supervisor's reset line or a GPIO.
+7.7 Module outlines on the wrong sockets (R14)
+J7 has the GY-521's eight-pin pinout (INT on pin 1) and J8 the DS3231's six-pin pinout (32K, SQW, SCL, SDA, VCC, GND). The
+outlines and labels on F.Fab and Dwgs.User are the other way round: the sockets have swapped places since v3, but the
+drawings have not. The larger DS3231 board, about 38 by 22 mm with its coin cell underneath, actually hangs from J8 over J16,
+part of J15 and the parts around them (ESD7, R5, C35, C43, and Q3 with R20, R25, R26 and C26), not where it is drawn; the
+ADC filters stay clear of it. Swap the drawings and redo the 3D check (A4).
+
+
+===== PAGE 12 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 12 of 19
+8. EMC, protection and layout
+Figure 3. The 4-layer board seen through In2. Pale teal: the 5 V plane; beige: the switched sensor-rail islands; black: tracks routed on In2; red
+crosses: B.Cu tracks crossing a cut. A: the ESP32 antenna footprint. B: J5 under the modem board. C: TP2, TP3 and TP5 under the modem board. D:
+the In2 tracks.
+8.1 The ESP32 antenna (E3, raised to P1)
+v3 had a keep-out under the antenna, blocking pour only, and 003 asked for it to be widened and to block tracks, vias and
+pads. Rev B has no keep-out at all, and it adds two full planes. Under the antenna footprint (x 187.5 to 205.5, y 154 to 162;
+Figure 3, A) the In1 ground plane and the In2 5 V plane each cover 100 percent of the area. In the wider area 003 defined (x
+182 to 211, y 152 to 170), ground covers 97 percent and 5 V 86 percent, 46 track segments of 13 nets and 7 vias cross it, and
+J7, Q2, Q4 and U6 sit in it. Copper this close detunes the antenna and cuts its range. If Wi-Fi or Bluetooth is used at the box, for
+setup or service, clear the area on every layer or move the module so its antenna overhangs the board edge; if it is not,
+Serigreen can accept a written statement and the item returns to P2.
+8.2 Cuts in the 5 V plane (R12)
+In the 4-layer stack (signal, ground, 5 V, signal) the In2 5 V plane is the reference for every B.Cu signal: about 2,150 mm of B.Cu
+track on 36 nets, besides PE's 411 mm. In2 also carries 431 mm of tracks on seven other nets (LED_DRV1 and 2, +5V_SENS,
+3V3_C, SENS_EN, I2C0_SCL and I2C0_MUX_SC0), 140 mm of it on the two supplies, and each cuts a slot in the plane. B.Cu
+tracks cross those slots at 54 places, and the edges of the sensor-rail islands at 8 more (Figure 3, red crosses). About half the
+slot crossings are supplies and slow control lines (3V3_C alone has 11); the rest are I2C, UART and interrupt lines with fast
+edges. At each of those the return current has to go round the cut, which makes a loop that radiates and picks up noise. Move
+the seven nets to the outer layers so that In2 is a plane under every B.Cu signal.
+
+
+===== PAGE 13 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 13 of 19
+8.3 Protection and earth (C8, R9)
+Every sensor port now has ESD protection returned to the PE net, which is the right idea. Three things are left. The parts sit 5.4
+to 21.8 mm from the pins they protect (one supply pin, J20 pin 1, is 46 mm from its array), against the 5 mm 004 asked for
+(C8). J24 and J25 run by cable to the panel lamps and the buzzer; lamps on the panel can be touched from outside, and these
+lines have no protection. And PE has no defined bond to ground on the board: J19 brings PE and GND to a terminal and leaves
+the bond to the installer, so the arrays clamp each line to PE but not, during the event, to the ground its chip uses. Bond PE to
+ground at one point beside the sensor ports (a link, with an RC footprint as the alternative), keep PE copper 0.5 mm or more
+from other nets except at the protection parts' pins, and write the earthing scheme into the README (R9). Today PE runs
+0.225 mm from the sensor rail at J11 and J17, and its B.Cu pour runs 0.25 mm from about 110 mm of BUZZER_EN and from
+J20's signal pads.
+8.4 Smaller layout items
+Logic-level switches (R13). Q1, Q5 and Q6 (2N7000) switch the buzzer and panel lamps from the expander's 3.3 V outputs. The
+2N7000's threshold is 0.8 to 3.0 V and its on-resistance is specified only at 4.5 V and 10 V, so at 3.3 V some parts will barely
+turn on. Use parts specified at 2.5 V gate drive.
+Vias in pads (R16). 65 vias sit inside SMD pads, unfilled and untented; solder runs into them and leaves starved joints. The
+team's own QA note ranks this first among its findings. Move them off the pads or specify filled and capped vias.
+9. Why the 4-layer goes forward
+The two variants are the same circuit: both netlists match their boards pin for pin. The 6-layer moves eight parts (J1; the 5 V
+capacitors C3, C14, C41 and C42; C30; TP2 and TP5) and runs some tracks differently. On this design the extra layers buy
+nothing and cost a good deal:
+4-layer
+6-layer
+Production files
+Watchdog input open (R2), easy to route
+J1 shorted to ground and 5 V on every pin (R1)
+ESP32 row spacing
+26.00 mm
+25.75 mm, further from the 26.2 mm estimate
+Stack
+Signal, ground (94 percent), 5 V (77 percent, plus 15
+percent of sensor-rail islands), signal
+Signal, ground, 5 V, In3 (3 percent copper), In4 (3
+percent), signal
+Reference for B.Cu
+The 5 V plane, one dielectric away (about 0.5 mm in the
+default stack)
+The 5 V plane, three dielectrics away (about 0.8 mm); In3
+and In4 between them are almost empty
+Copper balance
+Symmetrical about the middle
+Two full planes above the middle and two nearly empty
+layers below: a bow and twist risk in lamination
+Cost and lead time
+Lower
+Higher
+What needs doing
+R12: move seven nets off In2
+Would need its own rework of the stack
+Table 11. The two variants compared.
+So the 4-layer goes forward and the 6-layer is withdrawn. A 6-layer stack could earn its place later if routing density demands
+it, built as signal, ground, signal, 5 V, ground, signal so that every signal layer has a plane beside it; it is not needed now. One
+thing to carry over from the 6-layer is the spread of the four 5 V 100 nF capacitors: on the 4-layer they sit together in the
+top-right corner, away from every load (Table 8, B12).
+
+
+===== PAGE 14 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 14 of 19
+10. Status of the 59 items
+Status is judged on the 4-layer files. Closed: designed in as asked; any bench result the item calls for comes from the first
+boards. Partly: some of the change is in, and the note says what is missing. Open: not done, done in a way that does not meet
+the item, or made worse. Superseded: no longer applies because the design changed. E3 is raised from P2 to P1 (section 8.1).
+Item
+Status
+What the Rev B package shows
+A1
+P0
+Open
+Rows are level (A8), but the spacing is unmeasured (A10), and Rev B puts new lines on the board's own
+pins: E22 M1 and M0 on the microSD pins GPIO10 and 11, the wind reed input on the LED pin GPIO41.
+A2
+P0
+Partly
+Rows level, drawn components-down, and the stale 35.56 mm note gone. Spacing 34.00 mm
+unmeasured; no truth table (A11); supply per section 6 (B10).
+A3
+P1
+Partly
+J5 is now a screw terminal, unlike the sensor ports. Module outlines and labels are on F.Fab and
+Dwgs.User only, which are not printed.
+A4
+P0
+Partly
+Five module outlines on user layers, two of them on the wrong sockets (R14); no heights; the 3D views
+show the carrier's own parts only; no enclosure.
+A5
+P1
+Open
+No GPIO map in the package.
+A6
+P0
+Open
+No decision on the ESP32 module variant.
+A7
+P0
+Open
+The modem lines are off GPIO10 to 14, but E22 M1 and M0 now sit on GPIO10 and 11 (J1 pins 16 and
+17).
+A8
+P0
+Closed
+Pin 1 of J1 and J2 at y 154.00 mm; of J3 and J4 at y 113.56 mm.
+A9
+P0
+Partly
+Components-down orientation drawn, and the pins mapped to match; the side-on photo that confirms
+it is missing.
+A10
+P0
+Open
+No readings or test-fit. ESP32 rows 26.00 mm (6-layer 25.75) against about 26.2; modem rows 34.00
+mm against about 33.8.
+A11
+P1
+Partly
+R16 holds PWR_EN low in reset, the right safe state if low means off. No truth table to confirm that;
+PWR_EN has two drivers; PWRKEY is held by a 1 kΩ pull-down only; RESET is dropped (R7).
+A12
+P1
+Partly
+Modem moved 15 mm down. No standoff holes; ESP32 board not clamped; J5 and three test points
+under the modem (R10).
+B1
+P1
+Open
+No 12 V input on the board any more: moves into the external converter's specification (section 6).
+B2
+P1
+Open
+No buck on the board: its ratings become condition 1 for the external converter.
+B3
+P1
+Partly
+F1 is a 4 A PTC on a glass-fuse clip footprint; C13 carries a ceramic code on an electrolytic footprint; no
+ratings in the BOM.
+B4
+P1
+Partly
+5 V plane on In2. The input path narrows to 0.5 mm tracks and one 0.3 mm via (R5).
+B5
+P1
+Partly
+Low-quiescent LDO and switched sensor rails that default off; panel lamps switchable. D3 and D4
+always on; no power budget.
+B6
+P2
+Partly
+D7 (SS56) feeds J1 pin 21. No USB service rule: the package has no README.
+B7
+P1
+Open
+U6 (TPS7A2033) is now the carrier's 3.3 V regulator, the case B7 covers. Its 1 µF capacitors C26 and C27
+sit 11.6 and 9.3 mm from its pins in a straight line, against 5 mm along the copper.
+B8
+P1
+Open
+Moves to the converter (condition 1) and to the over-voltage protection at J18 (condition 2).
+B9
+P1
+Open
+GPIO6 unused; no battery divider. With 5 V at J18, the battery voltage needs its own sense lead to the
+board.
+B10
+P0
+Open
+Restated as the six conditions in section 6. Closes on the bench trace at the modem board.
+B11
+P2
+Superseded
+No buck on the board.
+B12
+P1
+Partly
+ESP32 5 V pin decoupled (10 µF at 6.9 mm). Nothing within 41 mm of J5; E22 at 28.4 mm; modem UART
+reference at 51 mm. The four 5 V 100 nF capacitors sit together in the top-right corner, away from
+every load.
+C1
+P0
+Open
+RS485 removed "for off-board USB testing" (title block). Restore it, or Serigreen defers it in writing.
+C2
+P0
+Open
+The microSD slot cannot be used while E22 M1 and M0 sit on GPIO10 and 11.
+C3
+P0
+Closed
+FDC1004 port J21 on its own switch segment (CH5) with pull-ups and ESD.
+C4
+P0
+Partly
+Button on GPIO3 with pull-up, RC and ESD; buzzer on the expander. GPIO42 drives D6 on the carrier,
+not a light seen from outside the box; the panel lamps on J24 run from the expander. Say which is the
+status light.
+C5
+P1
+Partly
+M0 and M1 on separate pins, but on the microSD pins (section 7).
+
+
+===== PAGE 15 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 15 of 19
+Item
+Status
+What the Rev B package shows
+C6
+P1
+Partly
+One switch segment per cabled port with 4.7 kΩ pull-ups; the GY-521 and DS3231 on I2C-1. But the
+expander shares I2C-0 with the switch, whose reset is a power-on RC only, so one stuck cable can hold
+the bus (R17).
+C7
+P1
+Partly
+10 µF at 5.3 mm from J13; the 100 µF is 28.5 mm away; nearest 100 nF about 22 mm.
+C8
+P1
+Partly
+Every sensor port protected and returned to PE, but the parts sit 5.4 to 21.8 mm from the pins; J24 and
+J25 have none.
+C9
+P2
+Open
+J16, R5 and ESD3 remain, with no stated purpose.
+C10
+P2
+Open
+No build variants in the BOM.
+C11
+P1
+Partly
+SPS30 on its own segment (CH2); the cable is not specified.
+C12
+P2
+Closed
+1 kΩ and 100 nF on both ADC inputs.
+C13
+P1
+Open
+No pin map. Table 10 lists the lines that depart from 003 section 9; say which port the AS5600 uses.
+D1
+P1
+Closed
+Netlist and board agree pin for pin.
+D2
+P2
+Partly
+Title block filled, but the sheet is A0 and the revision reads "Proto-Simple Rev 0.2".
+D3
+P2
+Open
+ERC: 0 errors, 328 warnings (635 on the 6-layer), against 7 in v3.
+E1
+P1
+Closed
+Continuous ground plane on In1, 94 percent of the board.
+E2
+P1
+Closed
+Thermal reliefs on every plane connection.
+E3
+P1 (was P2)
+Open
+No keep-out. Ground and 5 V planes under the whole antenna footprint; four parts and 46 track
+segments in 003's area.
+E4
+P2
+Partly
+Eleven test points; three under the modem; none on I2C-1 or UART1.
+E5
+P2
+Open
+J18's legend is printed the wrong way round (R3). No board name, revision or serial box on the
+silkscreen.
+E6
+P2
+Partly
+Modem SIM side noted ("SIM up"); USB and microSD access not shown.
+E7
+P1
+Partly
+Ferrite and capacitors on the E22 supply. 47 Ω on CH0 and CH1 only; no input filter.
+F1
+P2
+Open
+BOM has values and footprints only; quantity column empty; no part numbers.
+F2
+P2
+Partly
+X2 Gerbers, drill and placement in mm. Revision "rev?"; no stack-up, finish, fab drawing, IPC-356 or
+README.
+G1
+P0
+Open
+No simulation results. The schematic carries DC-solve directives (padne), but they still describe Rev A.
+G2
+P1
+Open
+No FMEA.
+G3
+P1
+Open
+No bring-up plan.
+G4
+P2
+Open
+No EMC test plan.
+H1
+P1
+Partly
+Earth terminal J19 and ESD returned to PE. No defined bond to ground (R9); no arrestors on the
+antenna feeds; the 12 V surge parts move to the converter.
+H2
+P1
+Partly
+Supervisor, expander and E22 switch fitted. WDI open on the 4-layer (R2); push-pull output on EN; U4
+not in the placement file (R8); a stuck I2C-0 survives a reset (R17).
+H3
+P1
+Open
+No temperature column in the BOM.
+H4
+P1
+Open
+No plating or coating in the BOM.
+H5
+P2
+Open
+Enclosure not chosen.
+H6
+P1
+Open
+No radio record.
+Table 12. The 59 items of MS-CAR-REV-A-004: 6 closed, 24 partly done, 28 open, 1 superseded. P0 closed: A8 and C3; partly: A2, A4, A9 and C4;
+open: A1, A6, A7, A10, B10, C1, C2 and G1.
+
+
+===== PAGE 16 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 16 of 19
+11. New items from this review
+These come from Rev B itself. They carry the same priorities as 004: P0 must be designed in and evidenced before fabrication;
+P1 closes, or is deferred in writing by Serigreen with a reason; P2 is fixed now where cheap, or listed for Rev C.
+Item
+Change
+Closed when
+R1
+P0
+6-layer production files short the ESP32 header. The 6-layer is withdrawn. For
+every Gerber set from now on: refill zones, save, run DRC on the saved file, then
+plot.
+Serigreen's Gerber check finds every pad
+clearance in place.
+R2
+P0
+Watchdog input not connected on the 4-layer. Route /WDT_WDI to U4 pin 4,
+together with the R8 changes. Remove the dangling copper the same DRC lists: the
+13 mm 3V3_C stub on B.Cu, 1 mm of EVENT_BTN track, and the vias on PWR_EN,
+I2C0_SDA and BUZZER_EN.
+DRC on the saved file: 0 unconnected
+items, no dangling tracks or vias.
+R3
+P0
+J18 legend printed the wrong way round. Swap the silkscreen legend so that "+"
+sits beside pad 1 (+5V_IN) and "-" beside pad 2 (ground); state the polarity in the
+README.
+The silkscreen Gerber shows "+" beside
+the +5V_IN pad.
+R4
+P0
+Reverse and over-voltage protection at J18 (B10, condition 2). Protection per
+condition 2. If a P-channel FET is kept for reverse protection, its drain goes to J18
+and its source to the load, and it gets a gate resistor and a gate-source zener of
+about 10 V or sits behind the over-voltage cut-off: 12 V on J18 already reaches the
+AO3401A's ±12 V gate limit. D2 and ESD16 re-rated for the converter's highest
+output.
+Bench: a reversed supply, 12 V and 24 V
+on J18 for a minute each leave the board
+unharmed; the cut-off acts below 5.5 V.
+R5
+P0
+Input copper sized to its protection (B10, condition 3). Pour-width copper and via
+arrays from J18 to the 5 V plane, rated for the protection's trip or limit current
+rather than its hold current; a footprint that matches the protection part; the
+library footprint restored for Q9, or for whatever replaces it (its pads are turned,
+leaving 0.425 mm between gate and source).
+Layout; the board resistance in condition
+3; no footprint mismatch in the DRC.
+R6
+P1
+Sensor-rail switch gates. Separate gate networks for Q2 and Q3, each pulled up to
+its own source and both pulled down by the same enable (a second N-FET, or two
+diodes from Q4's drain). Write the switched-rail firmware rules of section 6.3 into
+the README.
+Bench: 5 V sensor rail below 0.1 V when
+off, with the SPS30 fitted.
+R7
+P1
+One driver per modem control line. One driver for PWR_EN; PWRKEY decided
+with A11.
+Truth table (A11); bring-up shows
+firmware power-cycling the modem.
+R8
+P1
+A watchdog that works with the ESP32 board. TPS3828 (open-drain) on EN; WDI
+from a pin that floats through reset and download mode, or through a jumper; U4
+in the BOM and placement file.
+A firmware hang ends in a reset; USB
+flashing works with the watchdog fitted;
+U4 in the placement file.
+R9
+P1
+Defined earth bond; PE kept apart. Bond PE to ground at one point beside the
+sensor ports (a link, with an RC footprint as the alternative); PE copper 0.5 mm or
+more from other nets except at the protection parts' pins (today 0.225 to 0.25
+mm, along about 110 mm of BUZZER_EN alone); earthing scheme in the README.
+Layout and README; ESD test per G4.
+R10
+P1
+Nothing under the modem board. J5 outside the modem board's outline, at the
+edge nearest its supply connector, with a short lead; test points outside the
+outline (the standoffs stay under A12).
+3D check with the modem fitted.
+R11
+P1
+Wind reed input off the LED pin. Move REED_PULSE_F per the pin table in section
+7.
+Pin map (C13); bench counts that match
+a reference at 1, 10 and 50 Hz.
+R12
+P2
+Keep In2 a plane. Move the seven nets routed on In2 to the outer layers, so that
+no B.Cu signal crosses a cut in the 5 V plane.
+Layout.
+R13
+P2
+Logic-level switches. Replace Q1, Q5 and Q6 (2N7000) with parts specified at 2.5 V
+gate drive.
+BOM.
+R14
+P2
+Module outlines on the right sockets. Swap the GY-521 and DS3231 drawings and
+labels; redo the 3D check.
+User layers and 3D views.
+R15
+P2
+Files that match the board. Correct the "U8 decoupling" descriptions, C13's value,
+F1's value (4 A, against 5 A in its description), the F.Fab labels (the ESP32
+"DevKitC"; the J13 and J14 labels beside J20 and J17; "J3 UART" and "J4 PWR",
+swapped by the remap), the schematic title "REVERSE-POLARITY PROTECTION"
+over Q9, J24's symbol pin names (pin 2 "GND" carries LED1_K, pin 3 "SCL" carries
+LED2_K, pin 4 "SDA" is ground, so a harness built from the names would be
+miswired), and the DC-solve directives that still describe 12 V at J18, D1, U1 and J9;
+delete or rewrite the stale design rules; regenerate the QA note from the files it
+ships with.
+Files.
+
+
+===== PAGE 17 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 17 of 19
+Item
+Change
+Closed when
+R16
+P1
+Vias in SMD pads. Move the 65 vias off the pads, or specify filled and capped vias
+in the fab notes.
+Layout or fab drawing.
+R17
+P1
+A cabled I2C bus that cannot lock the board. Move U8 to I2C-1, as 003 planned,
+and reset U7 with the ESP32 (from the supervisor's reset line, or a GPIO).
+Bench: SDA held low on a cabled port;
+the board recovers without a power
+cycle.
+Table 13. New items: 5 P0, 8 P1, 4 P2.
+12. What the next package needs, and how to respond
+The next package is the 4-layer board only, with every item in Tables 12 and 13 answered. It carries the ten rows of 004's
+release gate, adjusted for the two decisions in section 1:
+1
+A response sheet against the 59 items and R1 to R17: what changed and the evidence. Every P0 designed in and evidenced (for A2, B10
+and C1 to C4, the bench result or the agreed plan to take it on the first boards); each P1 closed or deferred in writing with Serigreen's
+agreement; each P2 closed or listed for Rev C; any rejection with its reason.
+2
+The 4-layer KiCad project and schematic PDF. ERC 0 errors and 0 warnings; DRC 0 errors, 0 warnings and 0 unconnected items on the
+saved file with zones refilled, and a clean parity check.
+3
+Gerbers with the revision set and X2 attributes, drill files, an IPC-356 netlist, placement in mm with U4 in it, and a fab drawing with the
+stack-up, finish and via treatment (F2, R16).
+4
+A BOM with manufacturer part numbers, quantities, ratings, temperature range, plating and the two build variants (F1, H3, H4, C10).
+5
+Module fit: root readings, the side-on modem photo, the 1:1 test-fit photo and a signed pin map with the changes in Table 10 and the
+AS5600's port (A1, A2, A9, A10, C13); the A6 decision with the module marking; nothing on J1 pins 16 to 20 (A7).
+6
+Power: the six conditions met, with the converter named (section 6.4); the G1 results (modem rail under bursts, SPS30 start, LoRa
+transmit, J18 against reverse, 12 V and 24 V, thermal at +70 °C); supply-path resistances or a DC solve for every load, with Table 5 filled in
+from the new board; the decoupling map with copper distances (B7, B12, C7, condition 4); the B10 trace and the modem registering on
+the network (A2), or the agreed plan to take them on the first boards.
+7
+EMC layout: the antenna keep-out (E3), protection within 5 mm of every pin that leaves the box, J24 and J25 included (C8), the PE bond
+(R9), the E22 filter and 47 Ω on every cabled I2C line (E7), In2 as a plane (R12).
+8
+Interfaces: the RS485 decision (C1), the microSD archive (C2), the FDC1004 port and the button and status light (C3, C4), with their bench
+plans; the I2C recovery path (R17).
+9
+The 3D check with every module on its right socket and the enclosure; the enclosure and shield drawing; the modem standoffs and
+nothing under the modem (A4, A12, R10, R14).
+10
+The bring-up plan and the FMEA (G3, G2).
+Table 14. The next package, row for row against 004's release gate.
+A workable order:
+1
+Decisions and readings first: RS485 (C1), the ESP32 module variant (A6), the converter and the J18 protection parts (conditions 1 and 2);
+the root readings and test-fit, so that the sockets are placed once (A10).
+2
+Schematic: J18 protection with the TVS parts re-rated, and bulk (R4, condition 4), the sensor-rail gates (R6), the watchdog (R8), the
+expander on I2C-1 and the switch reset (R17), one PWR_EN driver and the PWRKEY decision (R7), the pin moves (Table 10), battery sense
+(B9), the PE bond (R9), the E22 and I2C filters (E7), logic-level switches (R13).
+3
+Layout: route the watchdog input and clear the dangling copper (R2); the J18 legend (R3); the input copper and Q9's footprint (R5); J5
+and the test points out from under the modem (R10) and the standoffs (A12); capacitors at U6, J5, the E22 and the SPS30, and the four 5
+V 100 nF capacitors at the loads (B7, B12, C7); the antenna area (E3); In2 as a plane (R12); protection within 5 mm of each pin (C8); vias
+out of pads (R16); outlines on the right sockets (R14).
+4
+Evidence and files: G1, the decoupling map, the 3D check, the BOM, the fab files and the corrections in R15, the FMEA and the bring-up
+plan.
+5
+Send the package for the release check. A schematic-only review before layout is welcome and may save a loop.
+Rev B moved the design a long way in under two weeks, and most of what remains is well defined and cheap to fix before
+copper is ordered. I am glad to go through any item on a call.
+
+
+===== PAGE 18 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 18 of 19
+Appendix A. Method, assumptions and measurements
+A.1 Loads
+Load
+Fed through
+Peak
+Basis
+Modem board (A7672S)
+J5
+About 1.8 A at its 5 V input in a GSM burst (about 1 A in
+LTE)
+004 Table 3
+ESP32 board (EdgeHax)
+J1 pin 21, through D7
+About 0.5 A in Wi-Fi transmit
+004 Table 3
+E22-900T22D
+J6, through Q7 and FB2
+About 0.11 A transmitting at 22 dBm
+Ebyte
+SPS30
+J13, through Q3
+0.08 A at fan start (0.065 A maximum measuring)
+Sensirion
+Sensor 3.3 V rail
+U6, through Q2
+Under 0.05 A
+Sensor datasheets
+Panel lamps, buzzer; D3 and
+D4
+J24 and J25; D3 and D4 on
+the board
+About 0.07 A
+Assumed
+Total through J18
+About 2.6 A if every peak coincides
+Table 15. Peak loads on the 5 V input.
+A.2 The DC budget to the modem board
+A burst lasts many time constants of the supply path (004 Appendix A), so the minimum at the modem board is in effect a DC
+calculation: the converter's output, less its load-step droop, less the burst current times the resistance of each part of the path.
+Assumptions:
+Copper
+1 oz (35 µm) on all layers, the job file's value; resistivity 1.72 × 10-8 Ωm at 20 °C, corrected by 0.393 percent per °C to
+25 °C and to +70 °C (about 17 percent more hot). Series track lengths between pad edges in the 4-layer file, on the
+pads as placed (Q9's rotated lands, F1's rounded corners).
+Contacts and lead
+Screw terminal contacts 3 mΩ each, a typical value (the terminal maker's specification was not available). Lead from
+J5 to the modem board 30 mΩ there and back with its contacts, the allocation of condition 5. 004 assumed 45 mΩ for
+v3's cable, which would make every burst figure here about 27 mV lower.
+F1
+20 to 50 mΩ (4 A PTC or 5 by 20 mm glass fuse with its clips): 30 mΩ at 25 °C, 50 mΩ hot.
+Q9
+AO3401A, 60 mΩ maximum at 4.5 V gate drive and 25 °C (47 mΩ typical; AOS datasheet); 1.4 times that hot. The
+BOM names no maker, and second-source parts can be higher.
+Planes and via
+Q9's 0.3 mm via and output stub 1.5 mΩ; the 5 V and ground planes from Q9 to J5 and back 4 mΩ.
+Loads
+2.6 A through J18 in the burst, 1.8 A of it to the modem board (Table 15); 0.15 A total and 0.02 A to the modem at
+light load, where the conditions column takes the board cold, at 40 mΩ.
+Converter and leads
+Set point 5.15 V within 1 percent; 50 mV droop at its terminals for the 0.15 to 2.6 A burst step; 15 mΩ from the
+converter to J18 there and back.
+Table 16. Assumptions of the DC budget.
+Point on the path (volts at the burst)
+With the conditions
+As built, 25 °C
+As built, +70 °C
+Converter, lowest set point
+5.10
+5.10
+5.10
+After its load-step droop
+5.05
+5.05
+5.05
+At J18, after the lead
+5.01
+5.01
+5.01
+At J5, after the board
+4.85
+4.69
+4.57
+At the modem board
+4.80
+4.64
+4.51
+Modem board at light load, 0.15 A (highest voltage)
+5.19
+5.18
+5.17
+Table 17. The values plotted in Figure 2.
+
+
+===== PAGE 19 =====
+MoriShield carrier PCB, Rev B  ·  package review
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-B-001 v1.0  ·  29 October 2026
+Page 19 of 19
+A.3 Measurements quoted in this review
+Quantity
+Value
+Source
+J1 pad to plane of another net, In1 and In2,
+6-layer
+Under 0.001 mm at every pin (4-layer: 0.250 mm)
+Gerbers and board fills
+ESP32 and modem row spacing
+26.00 and 34.00 mm (6-layer: 25.75 and 34.00)
+Footprint positions
+Plane fills, 4-layer
+Ground 94.0 percent of the board; 5 V 76.5; sensor-rail islands
+15.5
+Board file fills
+All copper by layer, pads included
+4-layer: F.Cu 7.8, In1 96.2, In2 94.8, B.Cu 16.0 percent; 6-layer:
+In3 2.9, In4 2.6
+Board file with fills
+J18 legend
+"5v +" at y 100.55 to 103.02, beside pad 2 (ground, y 102.25);
+"5v -" at y 107.05 to 109.18, beside pad 1 (+5V_IN, y 107.25)
+Board file and silkscreen
+Gerber
+Tracks on In2, 4-layer
+431 mm on seven nets, 140 mm of it on +5V_SENS and 3V3_C;
+54 B.Cu crossings
+Board file
+Q9 lands
+Pads turned 90 degrees; gate to source gap 0.425 mm (library
+part 1.3 mm)
+Board file, DRC, F.Cu Gerber
+Series input track, 0.5 mm
+J18 to F1 13.8 mm; F1 to Q9 6.8 mm, between pad edges
+Board file
+Antenna footprint, x 187.5 to 205.5, y 154 to
+162
+Ground and 5 V planes 100 percent each
+Board file with fills
+Protection part to connector pin
+5.4 to 21.8 mm on signal pins; J20 pin 1: 46.0 mm
+Pad centres
+Smallest PE gap
+0.225 mm (B.Cu, to the sensor rail at J11 and J17); the PE pour
+at 0.25 mm along about 110 mm of BUZZER_EN
+Board file
+Vias inside SMD pads
+65 (6-layer 66; the QA note counts 56)
+Board files
+Placement file, BOM
+141 parts, no U4; 65 lines, no part numbers or quantities
+Package files
+Table 18. Measurements from the package files.
+Appendix B. References
+1
+MS-CAR-REV-A-001 v1.2, Carrier PCB Rev A: design review and change requests for Rev B, 12 October 2026.
+2
+MS-CAR-REV-A-003 v1.1, Carrier PCB Rev A: module fit, 16 October 2026.
+3
+MS-CAR-REV-A-004 v1.0, Carrier PCB Rev A: fabrication readiness, 16 October 2026.
+4
+MoriShield carrier Rev B package, files dated 27 October 2026: 4-layer and 6-layer KiCad 10 projects, Gerbers, drill, placement, BOM, DRC
+and ERC reports, netlist, schematic PDF, 3D views and the 6-layer QA note.
+5
+Texas Instruments TPS3823 and TPS3828 (TPS382x) datasheet; TPS2663x datasheet (SLVSE94G).
+6
+Alpha and Omega Semiconductor AO3401A datasheet (Rev 3.1); onsemi 2N7000 datasheet; Sensirion SPS30 datasheet; Bourns MF-R400
+datasheet; SMCJ series TVS datasheet.
+7
+IPC-2221B (generic PCB design: conductor sizing and spacing).
+8
+IEC 61000-4-2 and IEC 61000-4-5 (ESD and surge immunity).

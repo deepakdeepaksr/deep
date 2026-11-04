@@ -1,0 +1,1832 @@
+
+
+===== PAGE 1 =====
+SERIGREEN TECHNOLOGIES PRIVATE LIMITED
+Salem, Tamil Nadu
+MoriShield
+Pesticide-drift early warning at the plot boundary
+Confidential. Prepared for Serigreen and its consultant team. Not for onward circulation.
+Carrier PCB, Rev A (package v3)
+Design review and change requests for Rev B: detailed version
+Document
+MS-CAR-REV-A-001, version 1.2 (detailed, against package v3)
+Date
+12 October 2026
+From
+Dr. Shanmugakumar Murugesan, Co-founder and CTO, Serigreen Technologies Private Limited
+To
+Deepak (hardware and electronics) and Aswin (firmware and software)
+Subject
+MoriShield Carrier review package v3 of 12 October 2026 (schematic, PCB, fabrication files),
+compared with the package of 6 October 2026 and the Edge Telemetry Node schematic of 19
+September 2026
+Status
+For action. Package v3 is not released for fabrication; Rev B should close the requests in section 8.
+Classification
+Confidential
+Document history
+Version
+Date
+Change
+1.0
+12 Oct 2026
+First draft, 35 change requests. Not issued.
+1.1
+12 Oct 2026
+Every finding checked twice against the source files and datasheets. Wording corrected where the evidence was
+weaker than stated; pin allocation and radio rules corrected; 11 requests added for field readiness (46 in total).
+Not issued.
+1.2
+12 Oct 2026
+Re-checked against package v3 of 12 Oct, in which only J1 and J4 moved and the schematic and BOM are
+unchanged. A v3 status added to every request; the ground-pour refill in v3 recorded; A1, A2, A6, B4, B6, E1, E3,
+E5, F2 and H2 updated; board map redrawn for v3.
+
+
+===== PAGE 2 =====
+Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+1. Summary
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+What decides whether Rev B can go to the field
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+What works well
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+2. What changed in package v3
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+3. Scope, method and validation
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+4. What the board must do in the field
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+5. Direction for Rev B
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+6. Board map
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+Where to look
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 7
+7. Change request index
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+8. Change requests in detail
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 8
+8.1 Module fit and pin map
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+8.2 Power
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+8.3 Interfaces and sensors
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16
+8.4 Schematic
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 16
+8.5 PCB layout
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18
+8.6 Fabrication pack
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 18
+8.7 Evidence before fabrication
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+8.8 Field hardening
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 20
+9. Rev B release gates
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 21
+10. How to respond
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 22
+Appendix A. Module identity and ratings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 22
+Appendix B. Pin budget and proposed GPIO allocation
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23
+Appendix C. Radio rules for the E22 in India
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23
+Appendix D. References
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 2 of 23
+
+
+===== PAGE 3 =====
+1. Summary
+Package v3 of 12 October changes the layout only. J1 and J4 have moved, the tracks to them are re-routed, both
+ground pours are refilled and the J1 label now sits beside its socket. The refill matters: in the 6 October files the
+ground pours overlapped +12V, +5V and FSR_ADC copper, so boards made from those files would have had all three
+shorted to ground; v3 has no such overlap. The schematic, BOM, project file and schematic PDF are byte-for-byte
+identical to the 6 October package, so v3 closes none of the 46 requests below (E5 is partly closed). This review had
+not reached you when v3 was prepared, so that is expected. The socket moves themselves need evidence before
+anything else moves: the new row spacings (26.00 mm for the ESP32 board, 33.56 mm for the modem) are not
+whole multiples of the 2.54 mm header grid, the rows are offset by 0.30 mm and 0.50 mm, and the README still asks
+for both to be checked against the physical boards. The 26.00 mm spacing also no longer fits the Espressif DevKitC-1
+that A6 proposes.
+Electrically, v3 hangs together well. The netlist re-derived from the schematic matches the routed PCB pad for pad, every net is
+joined in copper, the pours keep their clearances, the Gerbers match the PCB object for object, and the layout passes DRC,
+although DRC cannot see module bodies or the enclosure (A4). It is not ready to fabricate for the field. Judged as the
+field-ready MoriShield node, the board lacks the wind (RS485), local logging, FDC1004, event-button and status channels the
+node design requires. The two largest plug-in boards are not confirmed to match their sockets, and the ESP32 module in the
+order is rated only to +65 °C. The input stage suits a mains adapter rather than the solar kit, there is no surge protection,
+earthing or hardware watchdog, and the board does not fit the enclosure in the order.
+Section 8 sets out 46 change requests, each with its status in v3. Please start with A1, A2 and A6, which settle the two large
+modules; the pin map and most other items depend on them. Please hold further layout changes until A1, A2, A4 and A6 are
+answered, because they decide where the sockets go, the pin map and the power design.
+Priority
+Meaning
+Count
+P0
+Blocking. Other requests depend on these, or they decide whether a board may be ordered at all. Close them first; no
+Rev B board is ordered until they are closed.
+9
+P1
+Required in Rev B. Designed into the Rev B schematic and layout, then verified on the bench before any unit goes to
+the field.
+24
+P2
+Quality, serviceability and documentation. Close in Rev B unless we agree otherwise.
+13
+What decides whether Rev B can go to the field
+Area
+What has to be true
+Requests
+Modules
+The exact ESP32 and modem boards, their pin maps, the modem supply and the ESP32
+module's temperature rating.
+A1, A2, A5, A6
+Missing channels
+Wind on RS485, the microSD archive, the FDC1004 port, the event button and a visible status
+LED.
+C1 to C4
+Power from the solar kit
+An input chain sized for charge voltage and for a battery disconnect; a buck that covers the
+whole battery range; a power budget.
+B1, B2, B5, B8
+Field hardening
+Surge protection and earthing, a hardware watchdog, temperature ratings, coating and gold
+contacts.
+H1 to H4
+Fit and enclosure
+Module clearances, the enclosure and the vented sensor shield.
+A4
+What works well
+Several choices are right, and some fix problems in the 19 September draft. Neither I2C bus has an address clash, and the
+MPU-6050 sits on its own bus, clear of the RTC at 0x68. The 3.3 V probes use JST XH-4 ports and the 5 V SPS30 a ZH-5, so a 3.3
+V probe cannot be plugged into the SPS30 port (J5 and J16 are the exception, A3). The RTC runs on 3.3 V, so its coin cell is not
+charged. The modem has moved off the console UART, and its PWR_EN, PWRKEY and RESET lines are wired to
+firmware-controlled pins (whether they act as intended depends on the real board, A2). The strapping, PSRAM and native-USB
+pins are left free. Analog inputs are on ADC1, so they work with WiFi on. The input now has a fuse, a reverse-polarity diode and
+bulk capacitance, and the sensors have their own 3.3 V regulator. The README lists the physical checks still to be done. v3
+refills both ground pours correctly, adds the project's own symbol and footprint libraries, and puts the J1 label beside its
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 3 of 23
+
+
+===== PAGE 4 =====
+socket.
+2. What changed in package v3
+We compared every file in v3 with the 6 October package. Apart from the refilled ground pours, the changes are confined to
+two sockets and the tracks that reach them.
+Item
+6 Oct package
+v3, 12 Oct
+Requests
+J1, ESP32 right-hand row
+Pin 1 at (206.36, 153.84); rows
+22.86 mm apart and aligned
+Pin 1 at (209.50, 154.14); rows 26.00 mm apart; J1 0.30
+mm lower than J2
+A1, A6
+J4, modem right-hand row
+Pin 1 at (271.06, 98.50); rows 35.56
+mm apart and aligned
+Pin 1 at (269.06, 99.00); rows 33.56 mm apart; J4 0.50
+mm lower than J3
+A2
+Ground pours, both layers
+Not refilled after the last track
+changes: the pours overlapped or
+touched the +12V via and tracks
+beside D2 (both layers), nine 2.0 to
+2.2 mm +5V segments on the
+bottom layer, and the FSR_ADC
+track along y 181 on top. Shorts in
+the Gerbers.
+Refilled: no overlap with any other net, and nothing
+inside the 0.3 mm zone clearance
+F2 (plotting checks)
+Tracks and vias
+847 track segments, 38 vias
+785 segments, 38 vias (5 moved). Tracks to J1 and J4
+re-routed; the branch to J1 pin 21 is 0.4 mm wide and
+passes 0.22 to 0.25 mm from six J1 pins; two vias now
+overlap the pads of J1 pins 19 and 20 (same nets)
+B4, B6
+J1 label
+37 mm from its socket
+Beside its socket
+E5, partly closed
+README
+Modem row gap given as 35.56 mm;
+ESP32 gap not given
+Gaps of 26.0 mm (J1 to J2) and 33.56 mm (J3 to J4),
+both marked "verify against physical module"; libraries
+listed; the validation block is word for word the 6 Oct
+text
+A1, A2
+Schematic, project file,
+schematic PDF, BOM
+As reviewed
+Byte-for-byte identical to 6 Oct
+All schematic and BOM
+requests stay open
+ERC and DRC reports
+ERC 0 errors, 7 warnings; DRC 0
+violations
+Same results, re-run on 12 Oct
+D3
+Gerber files
+Revision "rev?"; X2 file attributes
+Revision "rev?"; file attributes written only as
+comments
+F2
+v3 is internally consistent: the netlist still matches the schematic pad for pad, every net is joined in copper, the pours keep
+their clearance from other nets, and the Gerbers and drill file match the PCB. What it does not change is everything else in
+section 8: the modem still gets 5 V on J5, the input stage and I2C structure are as they were, and RS485, microSD, the FDC1004
+port, the event button and the status LED are still missing.
+3. Scope, method and validation
+Review package v3, 12 Oct 2026
+The same set as 6 Oct, regenerated, plus the project's symbol and footprint libraries. Reviewed in full and
+compared file by file with 6 Oct.
+Review package, 6 Oct 2026
+KiCad 10 project, schematic (5 Oct), routed PCB, Gerber set and drill, BOM, placement file, schematic PDF,
+renders, ERC and DRC reports, README. Board 168 x 118 mm, two layers, 1.6 mm, 1 oz.
+Earlier schematic, 19 Sep 2026
+"Edge Telemetry Node", Rev A, used to see what changed between versions.
+1
+Netlist re-derived from the schematic and matched pad by pad against the routed PCB: 178 pins against 178 pads, 0 mismatches, in both
+packages.
+2
+Gerbers compared with the PCB object by object: tracks, flashes, pours and all 189 drill hits (147 plated pads, 38 vias, 4 mounting holes). In
+v3, 527 top and 258 bottom track draws match the PCB's segments, and the moved J1 and J4 pads are in the copper files.
+3
+ERC and DRC reports re-read: ERC 0 errors and 7 warnings; DRC 0 violations and 0 unconnected pads, with the courtyard, footprint-filter,
+footprint-type, via-centring and tuning-profile checks set to ignore. Same in both packages.
+4
+Every socket checked against the modules in Robu order SO283553 and against published pin orders and datasheets (Appendix D).
+5
+The board judged as the field-ready node: Serigreen's node design set (node handover of 29 June, board specifications, Phase-2 gate pack of
+28 July), adjusted by the directions in section 5.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 4 of 23
+
+
+===== PAGE 5 =====
+6
+Every finding checked a second time by a separate reviewer working only from the source files and public datasheets, including the v3 status
+of every request. Corrections from that check are in this version.
+7
+Package v3 compared with 6 Oct file by file: schematic, project file, schematic PDF and BOM identical; only J1 and J4 moved on the PCB.
+8
+Copper connectivity of v3 checked net by net (tracks, vias, pads and pour fills): every pad is joined, matching DRC's 0 unconnected.
+9
+Ground pours checked against every other net's copper, in the board files and in the Gerbers, for both packages: the 6 Oct pours overlapped
++12V, +5V and FSR_ADC copper; the v3 pours do not.
+Between 19 September and 6 October the board gained input protection, a separate 3.3 V sensor rail, modem power and reset
+control, and a cleaner UART allocation. It lost RS485, microSD, separate E22 mode pins and the second SGP41 port.
+Coordinates are in millimetres: PCB coordinates from the .kicad_pcb file, schematic coordinates from the A3 sheet. "Gate Pack" refers to
+Serigreen's Phase-2 gate pack, available on request.
+4. What the board must do in the field
+Rev B is judged against this list. It comes from Serigreen's node design set and the directions in section 5; source numbers are
+section numbers in those documents. The last row lists what this review adds.
+Area
+Requirement
+Source
+Environment
+Lives on a pole at the plot boundary in sun, wind, rain, dust and humidity above 70
+percent. Electronics in a sealed IP65 box; air sensors in a louvered, vented radiation shield.
+Board specifications 0, 1
+Temperature
+Designed for +70 °C inside the box. Parts rated -10 to +85 °C. Junctions at or under 80
+percent of their maximum.
+Board specifications 1; Gate
+Pack 1.2
+Power
+An off-the-shelf solar charge controller and a 12.8 V LiFePO4 battery. About three cloudy
+days of autonomy.
+Direction 3; board
+specifications 1
+Sensing
+SHT45, BME688, SGP41, SPS30, FDC1004 spray contact, wind speed and direction on
+RS485; 7-in-1 soil optional on the same bus.
+Node handover 1
+Time and data
+Battery-backed RTC; the full raw record on microSD; a ground-truth event button.
+Node handover 1
+Radio
+LoRa inside India's licence-exempt 865 to 868 MHz band; 4G only on uplink nodes.
+GSR 853(E); direction 2
+Reliability
+Hardware watchdog, brownout detection and a safe restart. Surge protection and earthing
+on every external cable; ESD protection on every line leaving the box; conformal coating.
+Board specifications 1
+Service
+Status LEDs for power, comms and fault; SIM, fuse and SD card reachable on opening, with
+no unsoldering; keyed connectors that cannot be mis-inserted; strain relief; few cable
+glands.
+Board specifications 1; node
+handover 7
+Added by this
+review
+Status readable from outside the closed box; board name, revision and serial printed on
+the board; radio channel, power and duty cycle recorded; a power budget per mode.
+Requests C4, E5, H6, B5
+Process
+Simulation before fabrication; ERC 0/0; DRC clean; FMEA with every RPN over 100
+mitigated; current-limited bring-up.
+Node handover 8; Gate Pack 2
+5. Direction for Rev B
+Serigreen has decided the following for the pilot build.
+1. Plug-in modules
+Accepted for the pilot build, on four conditions: modules held down mechanically (standoffs, clamps or ties); orientation
+keyed or clearly marked; carrier and modules conformal-coated with contacts masked (H4); desiccant and a breather
+vent in the box. A custom PCB remains the production path.
+2. 4G per unit
+Optional. One carrier builds two variants: a LoRa node, and a LoRa plus 4G uplink node. 4G is not required on every unit.
+3. Power
+An off-the-shelf solar charge controller with a 12.8 V LiFePO4 battery. The carrier input runs at 10 to 15 V in normal use.
+Input parts are rated 40 V or more, because a battery or protection-circuit disconnect can put panel voltage (about 22 V
+open-circuit) on the load terminals of some controllers (B8). The step-down keeps working down to about 9 V.
+4. Two layers
+Accepted, provided the FDC1004 electronics stay on their own breakout at the electrode, not on the carrier.
+5. Soil
+The analog soil probe is accepted for now. The RS485 7-in-1 plugs into the wind bus later.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 5 of 23
+
+
+===== PAGE 6 =====
+6. Board map
+Where the located change requests sit on the v3 board. Colours give the priority. Requests without a fixed position (new ports,
+the earth terminal, schematic and file items) are listed in section 7.
+Where to look
+Location on the board
+Requests
+J1, J2: ESP32-S3 sockets (centre)
+A1, A6 (J1 moved in v3); B6 at J1 pin 21 (5 V); H2 at J1 pin 3 (reset)
+J3, J4: modem sockets; J5: modem supply (top right)
+A2 (J4 moved in v3); B4 at J5
+Red dimension arrows (top)
+A1, A2: v3 row spacings and offsets
+J6: E22 socket (right of centre)
+A3, C5
+J7: IMU socket; J8: RTC socket
+A3
+J9: buck socket (left)
+A3, B2
+J18 input, F1 fuse, D2 TVS and C6 (top left)
+B1, B3, B8, H1; E5 for J18 polarity
+C5 and the orange 5 V feed from J9 to J5
+B4; E1, because the feed splits the bottom pour
+U1 regulator (lower left)
+B7
+Sensor row J11, J12, J14, J17 (bottom edge)
+C6, C8
+J13: SPS30 port; J16: FSR port
+C7, C11 at J13; C9 at J16
+Dashed area between J7 and J8
+E1: top-layer pour dropped as an island
+Hatched ESP32 antenna keep-out
+E3
+Cross: where the ESD3 label is printed
+E5
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 6 of 23
+
+
+===== PAGE 7 =====
+7. Change request index
+ID
+Title
+Priority
+Group
+Status in v3
+A1
+ESP32-S3 board identity and socket pin order
+P0
+Module fit and pin map
+Open, changed in v3
+A2
+LTE modem board identity, supply and interface
+P0
+Module fit and pin map
+Open, changed in v3
+A3
+Orientation and keying of single-row sockets
+P1
+Module fit and pin map
+Open
+A4
+Module clearances, enclosure and sensor shield
+P0
+Module fit and pin map
+Open
+A5
+One agreed GPIO map, with enough pins
+P1
+Module fit and pin map
+Open
+A6
+ESP32 module temperature rating
+P0
+Module fit and pin map
+Open
+B1
+Input TVS
+P1
+Power
+Open
+B2
+Buck converter input range
+P1
+Power
+Open
+B3
+Fuse and capacitor ratings
+P1
+Power
+Open
+B4
+5 V feed to the modem
+P1
+Power
+Open, changed in v3
+B5
+Power budget, standing drain and switching
+P1
+Power
+Open
+B6
+USB and carrier supplies
+P2
+Power
+Open
+B7
+Regulator input capacitor
+P2
+Power
+Open
+B8
+Battery-disconnect and over-voltage case
+P1
+Power
+Open
+B9
+Battery-voltage sensing
+P1
+Power
+Open
+C1
+RS485 port for wind and soil
+P0
+Interfaces and sensors
+Open
+C2
+microSD raw archive
+P0
+Interfaces and sensors
+Open
+C3
+FDC1004 port
+P0
+Interfaces and sensors
+Open
+C4
+Event button, status LED and buzzer
+P0
+Interfaces and sensors
+Open
+C5
+E22 mode pins and radio settings
+P1
+Interfaces and sensors
+Open
+C6
+I2C bus structure
+P1
+Interfaces and sensors
+Open
+C7
+SPS30 local decoupling
+P1
+Interfaces and sensors
+Open
+C8
+ESD protection at external connectors
+P1
+Interfaces and sensors
+Open
+C9
+FSR input
+P2
+Interfaces and sensors
+Open
+C10
+Optional modem and radio coexistence
+P2
+Interfaces and sensors
+Open
+C11
+SPS30 link over a cable
+P1
+Interfaces and sensors
+Open
+C12
+Analog input filtering
+P2
+Interfaces and sensors
+Open
+D1
+Latent +5 V to GND short in the schematic
+P1
+Schematic
+Open
+D2
+Schematic legibility and records
+P2
+Schematic
+Open
+D3
+ERC to zero warnings
+P2
+Schematic
+Open
+E1
+Ground stitching and pour integrity
+P1
+PCB layout
+Open
+E2
+Thermal reliefs for hand soldering
+P1
+PCB layout
+Open
+E3
+ESP32 antenna area
+P2
+PCB layout
+Open
+E4
+Test points
+P2
+PCB layout
+Open
+E5
+Silkscreen
+P2
+PCB layout
+Partly closed
+F1
+Bill of materials
+P2
+Fabrication pack
+Open
+F2
+Fab notes and file hygiene
+P2
+Fabrication pack
+Open
+G1
+Simulation gate
+P0
+Evidence before fabrication
+Open
+G2
+FMEA
+P1
+Evidence before fabrication
+Open
+G3
+Bring-up plan
+P1
+Evidence before fabrication
+Open
+H1
+Surge protection and earthing
+P1
+Field hardening
+Open
+H2
+Watchdog and recovery
+P1
+Field hardening
+Open
+H3
+Temperature ratings of parts and modules
+P1
+Field hardening
+Open
+H4
+Coating and contact plating
+P1
+Field hardening
+Open
+H5
+Cable retention and enclosure hardware
+P2
+Field hardening
+Open
+H6
+Radio compliance record
+P1
+Field hardening
+Open
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 7 of 23
+
+
+===== PAGE 8 =====
+8. Change requests in detail
+Each request gives its status in v3, where it is, what we found, why it matters on a farm, what to change, and the evidence that
+closes it.
+8.1 Module fit and pin map
+A1 · ESP32-S3 board identity and socket pin order
+P0
+Status in v3
+Open, changed in v3: v3 moved J1 by 3.14 mm across and 0.30 mm along the row; the README says this still needs
+checking against the physical module.
+Where
+J1, J2: two 1 x 22 sockets. In v3, pin 1 at (209.50, 154.14) and (183.50, 153.84): rows 26.00 mm apart, with J1 0.30 mm lower
+than J2. In the 6 Oct package the rows were 22.86 mm apart and aligned.
+Finding
+The sockets follow Espressif's ESP32-S3-DevKitC-1 pin order exactly; v3 moved J1 without changing the pin order. The board
+in Robu order SO283553 is an EdgeHax ESP32-S3 N16R8 with two USB-C ports and its own microSD slot, for which we found
+no published pinout. README item 3 gives I2C-0 on GPIO21/22, I2C-1 on GPIO47/48 and EN on GPIO18; the schematic uses
+IO8/IO9 for I2C-0, IO4/IO5 for I2C-1 and IO18 for LoRa RX. The ESP32-S3 has no GPIO22. The v3 README still asks for the
+26.0 mm gap to be verified against the physical module. 26.00 mm is not a whole multiple of the 2.54 mm grid that board
+headers are normally placed on, and it no longer fits Espressif's own DevKitC-1 (22.86 mm). If the EdgeHax board's headers
+sit on that grid, the nearest spacing is 25.40 mm, 0.60 mm from v3's, enough to force the pins sideways in the sockets.
+Field impact
+A pin-order or spacing mismatch makes every unit dead on arrival. A microSD slot wired to IO10 to IO14 would collide with
+the modem control and UART lines.
+Change required
+Fix the exact board, taking A6 into account, and send a measured drawing of its headers (row spacing, row offset, pin 1
+positions) or a test-fit before moving the sockets again. Match socket pin order, row spacing and row alignment to it, and
+keep carrier signals off the pins used by its microSD slot, RGB LED and USB-serial chip.
+Acceptance
+Photos of both sides of the board; the measured header drawing; a pin table signed by hardware and firmware; one board
+test-fitted in sockets on a bare PCB or a 1:1 paper template.
+A2 · LTE modem board identity, supply and interface
+P0
+Status in v3
+Open, changed in v3: v3 moved J4 2.00 mm closer to J3 and 0.50 mm along the row; the supply question is untouched.
+Where
+J3, J4: two 1 x 12 sockets, in v3 at x 235.50 and 269.06 (33.56 mm apart; 35.56 mm on 6 Oct), with J4 pin 1 0.50 mm lower
+than J3 (y 99.00 against 98.50). J5: modem 5 V feed at (286.5, 136.5). J3 pin 3 (VDD_IN_UART) is on the 3.3 V sensor rail.
+Finding
+J5 feeds the modem 5 V. The A7672S board in the order is listed at 3.4 to 4.2 V, and its photo shows a battery connector;
+SIMCom specifies 3.4 to 4.2 V for the module, with peaks of about 2 A, and a 1.8 V UART. The README, unchanged on this
+point in v3, calls 5 V "within module tolerance" and describes the header as 9 + 2 pins, while the PCB has two 12-pin rows,
+moved in v3 to 33.56 mm apart and offset by 0.50 mm. 33.56 mm is not a whole multiple of 2.54 mm; the nearest grid
+spacing, 33.02 mm, is 0.54 mm away. PWR_EN, PWRKEY and RESET go to pins of that assumed header, so whether
+firmware can power-cycle or reset the modem depends on the real board. The drawing-layer note still reads "A7672S
+MODEM VERIFY 35.56mm".
+Field impact
+5 V on a 4.2 V supply input destroys the modem at first power-up. A wrong header map leaves the uplink dead.
+Change required
+Identify the board (link, datasheet, photos). If its input is the module supply, add a dedicated 3.8 V rail rated for 2 A bursts,
+switched by firmware so the modem can be hard power-cycled, with bulk capacitance at the connector (see B4). If a board
+with its own wide-input regulator and level shifter is chosen instead, feed it from the 12 V input. Redraw J3 and J4 to a
+measured drawing of the header, and send that drawing before moving them again. Confirm the UART level shifter and
+what J3 pin 3 expects. Drive PWRKEY and RESET open-drain with defined default states (SIMCom: never hold both low
+together; no more than 100 nF on either line). Confirm the module variant covers the Indian LTE bands.
+Acceptance
+Datasheet extract and photos. On a bench unit, the modem supply measured during a transmit burst stays inside its range,
+and the modem registers on the network.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 8 of 23
+
+
+===== PAGE 9 =====
+A3 · Orientation and keying of single-row sockets
+P1
+Status in v3
+Open
+Where
+J6 (E22, pin 1 at (247.5, 176.12)), J7 (GY-521, (170.5, 166.5)), J8 (RTC, (226.35, 166.5)), J9 (buck, (139.69, 142.5)). J5 and J16.
+Finding
+J6 and J7 are numbered from the opposite end to their modules, so each module works one way round only, and the
+printed pin-1 marks point at the module's last pin. The sockets are not keyed: a reversed E22 puts 5 V on M1, and a
+reversed GY-521 puts 3.3 V on INT. J9's pin names and all orientation notes sit on the Dwgs.User layer, which is not in the
+Gerber set. J5 (modem 5 V) and J16 (FSR, 3.3 V) use the same JST XH-2 housing.
+Field impact
+A module fitted backwards at a farm, or during a swap, can destroy it or the carrier.
+Change required
+Print each module's outline, its own pin-1 mark and its pin names on the top silkscreen for J6 to J9. Key the sockets where
+possible (a blanked position with a clipped module pin, or polarised headers). Give J5 a different connector type from the
+sensor ports.
+Acceptance
+The silkscreen Gerber shows outline and orientation for every module. A reversed module either cannot be inserted or is
+obvious from the print.
+A4 · Module clearances, enclosure and sensor shield
+P0
+Status in v3
+Open
+Where
+Whole board (168 x 118 mm) and the module stack on J1 to J9.
+Finding
+The 3D renders show empty sockets, so no module body was checked, and DRC cannot see module bodies or the enclosure.
+The board does not fit the 115 x 90 x 55 mm IP65 boxes in the order. The modem board (56 x 42 mm per the order) must
+clear the top edge, about 11 mm above J3 and J4 pin 1. The node design calls for a sealed electronics box plus a vented
+radiation shield for the air sensors, a UV-stabilised gasketed enclosure and few cable glands (Board specifications section 1).
+The box in the order is ABS with no UV rating.
+Field impact
+A board that does not fit, or modules that clash, stops assembly. A sealed SPS30 gets no airflow. ABS yellows and cracks in
+sun.
+Change required
+Put every module's outline and height on a user layer and run a 3D check with all modules fitted. Choose the enclosure
+(UV-stable, gasketed, sized for board, standoffs and glands) and the vented shield for the SGP41, SHT45, BME688 and
+SPS30. Then fit the board, cable glands, antenna exits (E22 SMA at the right-hand edge, modem u.FL pigtail) and strain relief
+to it.
+Acceptance
+3D views with all modules fitted; an enclosure and shield drawing showing the board, glands, antenna exits and cable
+routes.
+A5 · One agreed GPIO map, with enough pins
+P1
+Status in v3
+Open
+Where
+Pin assignment in the README, the schematic and the firmware.
+Finding
+The README and schematic give different pin maps. On a DevKitC-1-style board with an octal-PSRAM module, 25 of the 36
+header GPIOs are usable once the strapping, PSRAM, native-USB and USB-serial pins are excluded. Rev A uses 16, leaving 9,
+one of which drives the board's RGB LED. The new functions in this document need 12 more (13 with an RS485 direction
+pin), or 10 if an I2C expander takes the slow outputs.
+Field impact
+Pin conflicts found after fabrication mean a respin or bodge wires on every unit.
+Change required
+Publish one Rev B GPIO map agreed by hardware and firmware. Close the gap with a module that frees GPIO35 to 37 (A6)
+and an I2C GPIO expander for slow outputs. Appendix B gives a starting allocation.
+Acceptance
+A table in the Rev B README that matches the schematic net names, signed by both of you.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 9 of 23
+
+
+===== PAGE 10 =====
+A6 · ESP32 module temperature rating
+P0
+Status in v3
+Open: v3's 26.00 mm row spacing no longer fits the Espressif DevKitC-1-N8R2 proposed here.
+Where
+The ESP32-S3 board on J1, J2. The board in the order carries an ESP32-S3-WROOM-1-N16R8 module.
+Finding
+Espressif rates WROOM-1 modules with octal PSRAM (R8, such as N16R8) for -40 to +65 °C ambient; quad-PSRAM (R2) and
+no-PSRAM variants are rated -40 to +85 °C. With PSRAM ECC enabled, R8 modules may run to +85 °C at the cost of 1/16 of
+the PSRAM. The node design assumes +70 °C inside a sun-exposed box and asks for parts rated to +85 °C.
+Field impact
+The processor module would run above its rating on hot afternoons, which is when spraying, drift and alerts matter most.
+Change required
+Use a board with an N8R2, N8 or N16 module. Espressif's ESP32-S3-DevKitC-1-N8R2 has the DevKitC-1 pin order and frees
+GPIO35 to 37 for A5, but its rows are 22.86 mm apart: it fits the 6 Oct sockets, not v3's 26.00 mm. Some boards sold under
+the DevKitC-1 name are 25.4 mm between rows, so measure the one bought. Decide A1 and A6 together. If N16R8 boards
+must be used, enable PSRAM ECC in firmware and record the decision.
+Acceptance
+Photo of the module marking; datasheet rating of +85 °C or higher, or ECC enabled and confirmed in the firmware build.
+8.2 Power
+B1 · Input TVS
+P1
+Status in v3
+Open
+Where
+D2 at (144.5, 131.5), on +12V after F1 and D1.
+Finding
+The SMBJ12CA is bidirectional, with a 12 V standoff and a breakdown of 13.3 to 14.7 V at 1 mA. Behind D1 it sees about
+14.1 to 14.3 V while a LiFePO4 or lead-acid battery charges at 14.4 to 14.6 V, which is inside its breakdown spread.
+Field impact
+Parts at the low end of the spread conduct continuously, overheat and usually fail short, which then blows F1. The unit stays
+dead until someone visits.
+Change required
+A unidirectional TVS with standoff above the highest input it must survive and clamp below the buck's maximum input,
+sized together with B2 and the battery-disconnect case in B8. For example, an SMBJ24A or SMCJ24A stands off 24 V and
+clamps at about 39 V at its rated current, so pair it with a buck rated 60 V. Use the 1500 W (SMC) size at the cable entry,
+with H1.
+Acceptance
+Clamp simulation (Gate Pack simulation 3) with documented values; bench run at the highest charge voltage with no
+measurable TVS current.
+B2 · Buck converter input range
+P1
+Status in v3
+Open
+Where
+J9: plug-in 12 to 24 V to 5 V, 3 A module.
+Finding
+The module is listed for 12 to 24 V. After D1's drop it runs below that range once J18 falls under about 12.4 V, which a 12.8
+V LiFePO4 reaches late in its discharge (it rests near 13 V and falls towards 10 V). The clamp of any TVS that tolerates charge
+voltage is above 24 V.
+Field impact
+Behaviour below 12 V is unknown (dropout, oscillation or brownout resets at night), and there is no margin above 24 V.
+Change required
+A buck, module or on-board, rated 60 V input (40 V at the very least, see B1), working from about 6 V, delivering 5 V at 3 A
+continuous at +70 °C, with low no-load current (B5) and input and output capacitance at the converter. Consider an
+ideal-diode controller in place of D1 to save its 0.3 to 0.5 V drop.
+Acceptance
+5 V within 5 percent from 9 V to the highest input in B8, at full load including a modem burst (simulation, then bench);
+temperature rise measured inside the closed box.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 10 of 23
+
+
+===== PAGE 11 =====
+B3 · Fuse and capacitor ratings
+P1
+Status in v3
+Open
+Where
+F1: 5 A glass fuse in clips, (137.5 to 157.5, 114.5). C6: 100 µF, 25 V at (132.5, 129.5). All electrolytics.
+Finding
+A glass fuse cannot recover in the field, and clips loosen with vibration and corrode. C6 at 25 V gives 1.7 times margin at
+14.6 V (the rule is 2 times) and less if panel voltage reaches the input (B8). Electrolytic types and temperature ratings are
+not specified.
+Field impact
+One surge or fault ends the unit's season. An under-rated or 85 °C electrolytic ages fast at +70 °C.
+Change required
+A resettable PTC sized for the load and rated 40 V or more, or a specified slow-blow fuse in a sealed holder. C6 rated 50 V.
+105 °C long-life electrolytics throughout, with ratings in the BOM.
+Acceptance
+Part numbers and ratings in the BOM.
+B4 · 5 V feed to the modem
+P1
+Status in v3
+Open, changed in v3: Feed path identical in v3; the new branch to J1 pin 21 is 0.4 mm wide and passes 0.22 to 0.25 mm
+from six J1 pins.
+Where
+C5 (470 µF) at (167.0, 154.5); J5 at (286.5, 136.5); the 5 V path from J9 pin 1.
+Finding
+The bulk capacitor sits by the buck, about 120 mm from J5. The 5 V path from J9 pin 1 to J5 is about 220 mm of
+bottom-layer track, routed through the E22 socket's supply pad (J6 pin 2) and necked to 0.75 mm and 0.5 mm for 2 mm
+each near (168, 137). It also cuts the bottom ground pour. These necks sit between the buck and every 5 V load except the
+3.3 V regulator, C5 included. All of this is unchanged in v3. v3 also feeds the ESP32 board's 5 V pin (J1 pin 21) through about
+21 mm of 0.4 mm top-layer track and a via, where the 6 Oct layout used the 2.2 mm trunk. That track runs 0.25 mm from J1
+pins 16 to 20 for about 13 mm and passes 0.22 mm between pins 15 and 16 (SCL0, MODEM_RESET, PWRKEY, IO12, TX2 and
+RX2).
+Field impact
+Modem bursts of about 2 A dip the supply at the modem and couple into the LoRa supply. Resets during network attach are
+a classic field failure. On the hand-soldered J1 socket, one solder bridge to the new 5 V track puts 5 V on an ESP32 pin.
+Change required
+Place 470 to 1000 µF low-ESR plus 100 nF within 10 mm of the modem supply input, or move the 5 V (or 3.8 V, A2) source
+next to the modem. Route the feed, and the branch to J1 pin 21, at full width and at least 0.3 mm from other pads (hand
+assembly), without neck-downs and not through another module's pad, with its ground return alongside.
+Acceptance
+Transient simulation of the modem rail with a 2 A burst and SPS30 fan start (Gate Pack simulation 1): dip within 5 percent.
+Bench scope capture at the modem supply pins during network attach.
+B5 · Power budget, standing drain and switching
+P1
+Status in v3
+Open
+Where
+D3 and D4 (always-on lamps), U1 (AMS1117), the SPS30 and cabled-sensor rails, and the ESP32 board.
+Finding
+There is no power budget. The two lamps draw about 4 mA together, the AMS1117 about 5 mA on its own, and the ESP32
+board's regulator, power LED and USB-serial chip add more. Nothing can be switched off. The Gate Pack's energy skeleton
+has the SPS30 fan dominating active draw (about 1.2 W for about 30 s per sample) and assumes about 10 mW asleep (Gate
+Pack 1.3).
+Field impact
+On solar, standing drains decide whether a unit survives three cloudy days.
+Change required
+A budget per mode (sleep, sample, LoRa transmit, LTE session) and per day against the solar kit and the three cloudy-day
+target. A low-quiescent regulator rated to -40 °C for the sensor rail. Firmware-controlled switches for the cabled-sensor rails
+(the 3.3 V probes, the SPS30 5 V and the 12 V RS485 feed), with pull-downs so they default off at reset; use the SPS30's own
+sleep command between samples. Lamps on a jumper or a GPIO.
+Acceptance
+Budget table; measured sleep and active current of a complete unit and of each module.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 11 of 23
+
+
+===== PAGE 12 =====
+B6 · USB and carrier supplies
+P2
+Status in v3
+Open
+Where
+J1 pin 21 (5 V), at (209.50, 103.34) in v3.
+Finding
+Carrier 5 V goes straight to the ESP32 board's 5 V pin. Espressif treats its USB ports, 5 V pin and 3V3 pin as mutually
+exclusive supplies. With USB plugged in and the carrier powered, two supplies may be joined, depending on the board's
+own protection; with USB alone, the laptop feeds the modem, E22 and SPS30 through the 5 V rail.
+Field impact
+A technician's laptop port, the buck or the board may be damaged during field service.
+Change required
+A series Schottky or ideal diode from the carrier 5 V to J1 pin 21, plus a written service rule.
+Acceptance
+Schematic and service note.
+B7 · Regulator input capacitor
+P2
+Status in v3
+Open
+Where
+U1 at (145.5, 172.5).
+Finding
+The nearest input capacitor is about 28 mm from U1.
+Field impact
+Possible regulator instability and noise on the sensor rail.
+Change required
+10 µF within 5 mm of the regulator input, also for its replacement in B5.
+Acceptance
+Layout.
+B8 · Battery-disconnect and over-voltage case
+P1
+Status in v3
+Open
+Where
+J18 input chain: D1, D2, C6, the buck (B1 to B3).
+Finding
+Under direction 3 the carrier sits behind an off-the-shelf charge controller. If the battery or its protection circuit
+disconnects, some controllers pass panel voltage to the load terminals: about 22 V, the cold open-circuit voltage of the
+panel class used with 12 V batteries. This is why the Gate Pack (1.1) asks for 40 V on the panel-facing input.
+Field impact
+A battery fault or a loose battery lug becomes a board failure.
+Change required
+Size the input chain (TVS, buck, capacitors) for the controller's worst-case load-terminal voltage, or add an over-voltage
+cutoff ahead of the buck. Name the controller and record its behaviour.
+Acceptance
+Bench test with the battery disconnected and the panel, or a 22 V supply, connected: no damage, and the unit restarts
+when the battery returns.
+B9 · Battery-voltage sensing
+P1
+Status in v3
+Open
+Where
++12V rail; ADC1 pins.
+Finding
+Firmware cannot read the supply or battery voltage.
+Field impact
+The unit cannot report a failing battery, shed load before a brownout, or explain night-time gaps in the data.
+Change required
+A divider and RC filter from the 12 V input to a free ADC1 pin (IO6 in Appendix B), high-impedance or switched to keep its
+drain small.
+Acceptance
+Reading within 2 percent of a meter from 9 V to 15 V.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 12 of 23
+
+
+===== PAGE 13 =====
+8.3 Interfaces and sensors
+C1 · RS485 port for wind and soil
+P0
+Status in v3
+Open
+Where
+New port. The 19 Sep draft had RS485 on GPIO40 to 42 with a 120 ohm termination; Rev A removed it.
+Finding
+Rev A has no RS485. Wind speed and direction are the anchor channel of the node design, and the 7-in-1 soil probe shares
+that bus (Node handover section 1, items 7 and 8).
+Field impact
+Without wind direction, a rise in VOC or particulates cannot be tied to the neighbour's field.
+Change required
+A 3.3 V, fault-protected RS485 transceiver (the 12 V sensor supply shares the cable, so a miswire can put up to 15 V on A or
+B), 120 ohm termination on a jumper, fail-safe bias, an RS485 TVS returned to the earth terminal (H1), and a pluggable
+terminal at the board edge carrying a switched 12 V feed through a PTC, GND, A and B. Check each sensor's supply range
+against the 10 to 15 V battery range. Use a spare UART routed through the GPIO matrix to free pins. Do not use GPIO43 or
+GPIO44: the board's USB-serial chip drives them, and the boot log goes out on them at every reset.
+Acceptance
+Both wind sensors and the soil probe read over Modbus at the installed cable length; the bus survives a 12 V-to-A/B
+miswire.
+C2 · microSD raw archive
+P0
+Status in v3
+Open
+Where
+New. The 19 Sep draft had an SD module; Rev A removed it.
+Finding
+Rev A has no microSD. The node design keeps the full raw archive on microSD, harvested on site visits from far nodes (Node
+handover section 1, item 13).
+Field impact
+Raw data lives or dies with the radio link, and failed uplinks lose the evidence needed to check drift events.
+Change required
+A microSD socket on the carrier (SPI or SDMMC) wired to the pins in Appendix B, or the ESP32 board's own slot with its pins
+confirmed clear (A1). Use an industrial or high-endurance card.
+Acceptance
+A 24-hour logging run with write, power-cut and read-back; no corrupt files after 20 unplanned power cuts.
+C3 · FDC1004 port
+P0
+Status in v3
+Open
+Where
+New.
+Finding
+There is no connector for the spray-contact channel. The node design populates it in pilot builds and asks for the FDC1004
+to sit on its own quiet bus (Node handover sections 4 and 5).
+Field impact
+The deposition channel is the terminal confirmation of drift in the node design. Without it the unit cannot confirm contact.
+Change required
+A dedicated, labelled 4-pin port for the FDC1004 breakout (address 0x50), on its own I2C segment through the I2C switch in
+C6, with the breakout mounted at the electrode.
+Acceptance
+Bench read of the FDC1004 at the installed cable length with the modem transmitting.
+C4 · Event button, status LED and buzzer
+P0
+Status in v3
+Open
+Where
+New. D3 and D4 are power lamps only.
+Finding
+The board has only two always-on power lamps. The node design requires a ground-truth button, status LEDs (power,
+comms, fault) and a buzzer (Node handover section 1, items 15 and 16).
+Field impact
+Without a button, spray events cannot be labelled in the data. Without visible status, a field visit cannot tell a dead unit
+from a quiet one.
+Change required
+An input for an external waterproof event button (pull-up, RC debounce, ESD). A firmware-driven status LED visible from
+outside the box, through a panel LED or light pipe; the ESP32 board's own RGB LED is hidden inside the sealed box. A buzzer
+driver.
+Acceptance
+A press marks an event in the log with the RTC time. The status LED shows power, link and fault from outside the closed
+box.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 13 of 23
+
+
+===== PAGE 14 =====
+C5 · E22 mode pins and radio settings
+P1
+Status in v3
+Open
+Where
+J6 M0 and M1, both on IO15.
+Finding
+With M0 and M1 tied, configuration mode (M1 high, M0 low) cannot be reached. The factory channel is 868.125 MHz,
+outside India's licence-exempt 865 to 868 MHz band (GSR 853(E), 10 December 2021). The 19 Sep draft had M0 and M1 on
+separate pins.
+Field impact
+Every module has to be set up by hand on a bench, a replacement fitted in the field transmits out of band, and firmware
+cannot apply the adaptive power control the rules require for this category (H6).
+Change required
+M0 and M1 on separate GPIOs (M1 on IO12 in Appendix B).
+Acceptance
+Firmware sets and reads back the channel, address, power and key at every boot.
+C6 · I2C bus structure
+P1
+Status in v3
+Open
+Where
+I2C-0 (IO8, IO9; R1, R2 at 1k8) and I2C-1 (IO4, IO5; R3, R4 at 4k7).
+Finding
+I2C-0 carries the SGP41, SHT45, BME688, SPS30, RTC and expansion port, mostly over cables. Each 1k8 pull-up alone draws
+about 1.6 mA when a device pulls its line to 0.4 V; with the RTC board's 4.7 k and three typical 10 k breakout pull-ups, the
+total passes the 3 mA a standard-mode device must sink (likely; not measured). A fault on any cable also stops the clock.
+Sensors that are switched off can be back-powered through pull-ups tied to an always-on rail.
+Field impact
+One corroded connector or latched sensor takes down every channel and the timestamp.
+Change required
+I2C-1 for on-board modules only: RTC 0x68, its EEPROM 0x57, the MPU-6050 with AD0 tied high (0x69) and the GPIO
+expander (A5). Cabled sensors on I2C-0 through an I2C switch (for example a TCA9548A at 0x70), one segment per port:
+SGP41 0x59, SHT45 0x44, BME688 0x76 or 0x77 (confirm on the probe), SPS30 0x69 (or C11), FDC1004 0x50. Pull-ups on the
+switched sensor rail, sized for 3 mA or less with module pull-ups counted.
+Acceptance
+Address table. With installed cable lengths at 100 kHz: rise time under 1 µs and low level under 0.4 V. Disconnecting or
+shorting one sensor cable leaves the others and the RTC working.
+C7 · SPS30 local decoupling
+P1
+Status in v3
+Open
+Where
+J13 at (265.0 to 271.0, 192.5).
+Finding
+The nearest 5 V capacitor is about 99 mm from J13. The node handover asks for 100 µF, 10 µF and 100 nF close to the SPS30
+supply (section 4).
+Field impact
+The fan's start-up current dips the shared 5 V rail.
+Change required
+100 µF, 10 µF and 100 nF at J13; we suggest within 10 mm.
+Acceptance
+Layout; scope capture of 5 V at J13 during fan start.
+C8 · ESD protection at external connectors
+P1
+Status in v3
+Open
+Where
+ESD1 to ESD4 (DFN1006) and every external connector.
+Finding
+Four single-line ESD parts cover SDA0, SCL0, FSR and soil once each, however many connectors share the signal. Their value
+is "D" in the schematic and "ESD5V0-DNP" on the PCB, while the BOM fits them. DFN1006 parts are impractical to
+hand-solder, and the README says the board is hand-assembled.
+Field impact
+Cable-borne ESD reaches the ESP32 and sensors unclamped at most connectors.
+Change required
+Populated protection on every pin that leaves the box, signals and supplies, within 5 mm of each connector, returned to the
+earth terminal (H1), in hand-solderable packages (SOD-323 or SOT-23), consistent across schematic, PCB and BOM.
+Acceptance
+Schematic, PCB and BOM agree; ESD test on each external port at IEC 61000-4-2 ±4 kV contact and ±8 kV air (Gate Pack 1.2).
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 14 of 23
+
+
+===== PAGE 15 =====
+C9 · FSR input
+P2
+Status in v3
+Open
+Where
+J16, R5, ESD3; IO1.
+Finding
+The FSR has no defined job in the node design.
+Field impact
+An undefined channel adds a cable entry and uses a pin for no data value.
+Change required
+State its purpose and test plan, or remove J16, R5 and ESD3 and free IO1 (Appendix B uses it if freed).
+Acceptance
+A written purpose, or removal.
+C10 · Optional modem and radio coexistence
+P2
+Status in v3
+Open
+Where
+J3 to J5; the E22 and modem antennas.
+Finding
+Direction 2 makes 4G optional per unit. On an uplink node the modem transmits at 824 to 849 MHz (Band 5) and 880 to 915
+MHz (Band 8, up to 2 W in GSM fallback), a few tens of MHz from the LoRa receiver at 865 to 868 MHz. LoRa transmissions
+sit 1 to 4 MHz below the Band 5 downlink (869 to 894 MHz).
+Field impact
+Missed LoRa packets on uplink nodes, or LTE dropouts during LoRa transmit.
+Change required
+Show the two builds (LoRa node; LoRa plus 4G uplink node) in the BOM. Separate the antennas as far as the enclosure
+allows, and schedule LoRa traffic away from modem transmit bursts.
+Acceptance
+BOM variants. LoRa link margin measured on an uplink node with the modem idle and with it transmitting.
+C11 · SPS30 link over a cable
+P1
+Status in v3
+Open
+Where
+J13; the SPS30 in the vented shield.
+Finding
+Sensirion recommends I2C only with cables under 10 cm or well shielded, and UART for cables over 20 cm. The SPS30 sits in
+the vented shield, outside the sealed box, on a longer cable. On uplink nodes all three of the S3's UARTs are in use (E22,
+modem, RS485).
+Field impact
+I2C errors and lock-ups in a noisy outdoor installation.
+Change required
+Keep the SPS30 on its own I2C segment (C6) with a shielded lead as short as the shield layout allows, or use a differential
+I2C extender pair (for example PCA9615). Use UART where a UART is free, as on LoRa-only nodes.
+Acceptance
+Error-free operation for 72 hours at the installed cable length with the modem and LoRa transmitting.
+C12 · Analog input filtering
+P2
+Status in v3
+Open
+Where
+SOIL_ADC (IO2, about 108 mm of track) and FSR_ADC (IO1, about 117 mm).
+Finding
+The analog lines cross the board with no series resistor or RC filter at the ESP32.
+Field impact
+Pickup from the modem and the buck shows up as noise in the readings.
+Change required
+A series resistor and capacitor at each ADC input, sized for the sensor's output impedance and the sampling rate.
+Acceptance
+Readings stable within the sensor's specification with the modem transmitting.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 15 of 23
+
+
+===== PAGE 16 =====
+8.4 Schematic
+D1 · Latent +5 V to GND short in the schematic
+P1
+Status in v3
+Open
+Where
+J9 area, schematic coordinates x 99.06 to 102.87, y 44.45.
+Finding
+A +5 V symbol and a GND symbol sit on two overlapping wire segments. KiCad keeps them apart today, so the PCB is right,
+but any clean-up or wire edit there merges them into a +5 V to GND short.
+Field impact
+The next schematic edit can silently short the main rail in the netlist and on the next PCB.
+Change required
+Redraw the junction with separate, non-overlapping wires.
+Acceptance
+A re-derived netlist still matches the PCB.
+D2 · Schematic legibility and records
+P2
+Status in v3
+Open
+Where
+The whole A3 sheet.
+Finding
+The title block is empty; power symbols are unannotated (#PWR?); text overlaps at most connectors, U1 and C6; the solver
+notes run outside the frame; D2 is drawn in series although it is a shunt.
+Field impact
+Reviewers and future engineers misread the circuit, and units in the field cannot be traced to a revision.
+Change required
+Fill the title block (MoriShield Carrier, Rev B, date, Serigreen Technologies Private Limited). Annotate, tidy, and draw shunt
+parts to ground.
+Acceptance
+A legible A3 print.
+D3 · ERC to zero warnings
+P2
+Status in v3
+Open
+Where
+Spare GPIO labels IO6, IO12, IO19, IO20, IO38, IO47, IO48.
+Finding
+ERC shows 7 warnings from spare-pin labels that go nowhere.
+Field impact
+Real warnings get lost among accepted ones.
+Change required
+Bring true spares to an expansion header (3.3 V, GND and spare GPIOs, but not IO19 or IO20, the native USB lines), or add
+no-connect flags.
+Acceptance
+ERC 0 errors, 0 warnings.
+8.5 PCB layout
+E1 · Ground stitching and pour integrity
+P1
+Status in v3
+Open: Pours refilled in v3 (see section 2); the stitching and pour-integrity points stand.
+Where
+GND pours on F.Cu and B.Cu.
+Finding
+There is one ground via on the whole board. Long bottom-layer runs (the 5 V modem feed of about 220 mm, and SDA0
+along y 194) split the bottom pour into one main piece and nine smaller ones, eight of them each tied to ground through a
+single pad. Some areas carry no ground copper at all: about 350 mm² of top-layer pour between J7 and J8 (x 186 to 209, y
+167 to 185), enclosed by the 3V3_C and SOIL_ADC tracks, was dropped as an unconnected island, and about 280 mm² of
+that area has no ground pour on either layer.
+Field impact
+Weak return paths raise noise and emissions around the modem and radio, and make the sensors and ADC readings less
+stable.
+Change required
+Stitching vias about every 10 mm along the edges and around the modem, E22 and buck. Keep long runs on the top layer, or
+bridge the pour.
+Acceptance
+Layout plot; no pour piece held by a single pad.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 16 of 23
+
+
+===== PAGE 17 =====
+E2 · Thermal reliefs for hand soldering
+P1
+Status in v3
+Open
+Where
+GND zones on F.Cu and B.Cu.
+Finding
+Both zones connect pads solidly. Through-hole ground pins on two large pours are hard to hand-solder well.
+Field impact
+Cold joints on ground pins, which carry the modem's burst return current.
+Change required
+Thermal-relief connections for through-hole pads.
+Acceptance
+Zone settings.
+E3 · ESP32 antenna area
+P2
+Status in v3
+Open
+Where
+Keep-out zone (180.5 to 209.5, 148.5 to 158.5).
+Finding
+The keep-out blocks copper pour only. About two dozen track segments from nine nets cross it, including the 2.2 mm 5 V
+trunk and the E22 lines. Unchanged in v3, where J1's pads now sit on the zone's right-hand edge.
+Field impact
+Reduced WiFi range, used for local data transfer.
+Change required
+Re-centre the zone on the chosen board's antenna (A1), route those tracks out of it, or let the antenna end overhang the
+board edge.
+Acceptance
+Layout.
+E4 · Test points
+P2
+Status in v3
+Open
+Where
+Whole board.
+Finding
+There are no test points.
+Field impact
+Slow bring-up and field diagnosis.
+Change required
+Test points on +12V, +5V, 3V3_C, GND, the ESP32 reset (EN), both I2C buses and both UARTs (Node handover section 8:
+power, reset, comms).
+Acceptance
+Layout.
+E5 · Silkscreen
+P2
+Status in v3
+Partly closed: J1 label moved beside its socket in v3.
+Where
+Top silkscreen.
+Finding
+v3 moved the J1 label beside its socket (it sat 37 mm away, near J6 and J8). The ESD3 label still sits 43 mm from its part. R1
+to R7 have no printed designator or value. J18 has a pin-1 arrow and "+12V IN" but no + and - marks per terminal. There is
+no board name or revision, and an empty text object sits at (210.5, 90).
+Field impact
+Wrong values fitted during hand assembly, and units that cannot be traced to a revision.
+Change required
+The ESD3 label beside its part; R designators and values shown; J18 polarity marked per terminal; "MoriShield Carrier Rev B,
+Serigreen Technologies, date, S/N" with a blank serial box; rail voltage beside each connector.
+Acceptance
+Silkscreen Gerber.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 17 of 23
+
+
+===== PAGE 18 =====
+8.6 Fabrication pack
+F1 · Bill of materials
+P2
+Status in v3
+Open
+Where
+MoriShield_Carrier_BOM.csv.
+Finding
+There are no manufacturer part numbers. Modules, mating housings and crimps are not listed. DNP status differs from the
+PCB.
+Field impact
+Wrong or substitute parts bought, and unit-to-unit differences in the field.
+Change required
+Manufacturer and supplier part number for every part; module SKUs with links; JST housings and crimps; fuse type; plating
+(H4) and temperature rating (H3) columns; the two build variants (C10).
+Acceptance
+BOM.
+F2 · Fab notes and file hygiene
+P2
+Status in v3
+Open: v3 fixed the stale pours of 6 Oct; the plotting checks asked for here are still missing.
+Where
+README, Gerber job file, placement file.
+Finding
+The README lists fab settings but gives no IPC class, no laminate Tg and no fab drawing. The Gerber revision field reads
+"rev?". The placement file is in inches, measured from the KiCad page origin. The README is out of step with the design
+(AMS1117 "600 mA" load, GPIO notes, modem header). The 6 Oct Gerbers were plotted from ground pours that had not
+been refilled after the last track changes (section 2); v3's are refilled, but nothing in the package shows a check that would
+catch it next time. v3's Gerbers also carry their file attributes only as comments.
+Field impact
+Fab houses build to their defaults, and the files do not identify the revision built. Stale pours in the Gerbers short nets on
+every board built, and the fab's electrical test passes them unless it has the design netlist.
+Change required
+A fab drawing and notes with IPC-6012 Class 2, FR-4 with Tg 150 °C or more, 1.6 mm, 1 oz and the finish (Node handover
+section 8). Revision set in the Gerbers, with X2 attributes. Refill all zones, save, re-run DRC on the saved file, then plot; send
+an IPC-356 netlist with the Gerbers so the fab's electrical test checks the bare board against the design. Placement file in
+mm from the board origin. README rewritten for Rev B.
+Acceptance
+Files.
+8.7 Evidence before fabrication
+G1 · Simulation gate
+P0
+Status in v3
+Open
+Where
+Power and protection circuits.
+Finding
+Only a DC voltage-drop solve was supplied.
+Field impact
+Faults that simulation would have found appear on the bench or in the field instead.
+Change required
+Transient simulation of the 5 V (and modem) rail with a 2 A modem burst, SPS30 fan start and LoRa transmit; input clamp
+under surge and in the battery-disconnect case (B8); thermal at +70 °C inside the box for the buck, the regulator, D1, the
+E22 amplifier and the modem (Gate Pack section 2, simulations 1, 3 and 5).
+Acceptance
+Gate Pack criteria: rail within 5 percent; clamp below every downstream maximum; junctions at or under 80 percent of
+maximum.
+G2 · FMEA
+P1
+Status in v3
+Open
+Where
+Carrier and modules.
+Finding
+No failure analysis was supplied.
+Field impact
+Field failure modes are found by farmers instead of by the design team.
+Change required
+An FMEA for the carrier and its modules, with every RPN over 100 mitigated (Node handover section 8).
+Acceptance
+FMEA table.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 18 of 23
+
+
+===== PAGE 19 =====
+G3 · Bring-up plan
+P1
+Status in v3
+Open
+Where
+First boards.
+Finding
+No bring-up plan was supplied.
+Field impact
+A short or a wrong supply on first power-up can destroy modules.
+Change required
+A written plan: current-limited first power-up, then rails, MCU, comms and sensors, in that order; the modem supply
+checked before the modem is fitted; neither radio transmits without its antenna or a 50 ohm load.
+Acceptance
+The plan, then the bench record.
+8.8 Field hardening
+H1 · Surge protection and earthing
+P1
+Status in v3
+Open
+Where
+J18 input; the RS485 port (C1); the 12 V sensor feed; antenna cables; mounting.
+Finding
+Rev A has no earth terminal and no surge-rated protection, only D2 on the input. The node design requires induced-surge
+protection on the supply, the antennas and every external cable, with an earth rod, for a pole in an open field (Board
+specifications section 1).
+Field impact
+Surges induced by nearby lightning reach the board through the cables running up the mast.
+Change required
+An earth terminal near the cable entries, bonded to the earth rod; surge-rated protection on the 12 V input (with B1),
+RS485 A and B and the 12 V sensor feed; arrestors on external antenna feeds; an agreed test level (for example IEC
+61000-4-5 on the cable ports).
+Acceptance
+Surge test at the agreed level on the supply and RS485 ports, with the unit recovering on its own.
+H2 · Watchdog and recovery
+P1
+Status in v3
+Open
+Where
+J1 pin 3 (ESP32 reset, unconnected; at (209.50, 149.06) in v3); the 5 V rail to the ESP32 board and the E22 (unswitched).
+Finding
+The node design requires a hardware watchdog, brownout detection and a safe restart. On Rev A the ESP32 reset pin is
+unconnected, and the ESP32 board and E22 sit on an unswitched 5 V rail. Only the modem can be power-cycled, and only if
+its board's PWR_EN works as assumed.
+Field impact
+A hung ESP32 or E22 needs a site visit.
+Change required
+An external supervisor or watchdog that resets the ESP32 (J1 pin 3) or power-cycles the 5 V loads if firmware stops servicing
+it, or a documented case that the ESP32's internal watchdogs and brownout detector are enough (Gate Pack 1.2 allows
+either). In both cases, a switch on the E22 supply, since an ESP32 restart does not reset the E22, and defined behaviour for
+the slow supply ramps a solar kit gives at dawn.
+Acceptance
+A firmware hang and a slow supply ramp (0 to 15 V over several minutes) both end in a clean restart without intervention.
+H3 · Temperature ratings of parts and modules
+P1
+Status in v3
+Open
+Where
+All parts and modules; the BOM.
+Finding
+The node design asks for parts rated -10 to +85 °C and designs for +70 °C inside the box. Some parts fall short or are
+unknown: the WROOM-1 N16R8 (+65 °C, A6); the SPS30 (-10 to +60 °C, so it must live in the shaded shield, not the box); the
+AMS1117 (rated from 0 °C); the DS3231 (S suffix 0 to 70 °C, SN suffix -40 to +85 °C; the module's chip is not stated); the
+unnamed coin cell; the buck module and module capacitors (unknown).
+Field impact
+Parts outside their rating drift, lose data or fail in the hottest weeks.
+Change required
+A BOM column with each part's and module's rated range; replace parts that miss the requirement; name the backup cell;
+confirm the DS3231 suffix.
+Acceptance
+BOM column complete; a 24-hour soak of a closed unit at +70 °C with all functions running.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 19 of 23
+
+
+===== PAGE 20 =====
+H4 · Coating and contact plating
+P1
+Status in v3
+Open
+Where
+Carrier, sockets and plug-in modules.
+Finding
+Direction 1 asks for coating around the sockets. The node design requires conformal coating on field boards and gold-plated
+connectors. Tin-plated sockets and pins fret and corrode under humidity and temperature cycling, and the plug-in modules
+themselves are uncoated.
+Field impact
+Intermittent contacts after a few months of dew and dust, the hardest field fault to diagnose.
+Change required
+Gold-flash sockets and module headers. Mask contacts and connectors, then coat the carrier and the modules. Desiccant
+and a breather in the box.
+Acceptance
+Plating shown in the BOM; a coating procedure with a masking drawing.
+H5 · Cable retention and enclosure hardware
+P2
+Status in v3
+Open
+Where
+External connectors (J11 to J18 and the new ports); the enclosure.
+Finding
+External cables land on friction-lock JST headers with no strain relief. The box in the order is ABS with no UV rating (A4).
+Field impact
+Cables work loose with wind-driven vibration; the box degrades in sun.
+Change required
+Strain relief at every external port (anchor points or locking connectors), drip loops, glands sized to the cables, a UV-stable
+enclosure.
+Acceptance
+Pull test on each cable; enclosure material stated in the BOM.
+H6 · Radio compliance record
+P1
+Status in v3
+Open
+Where
+The E22 and the modem.
+Finding
+India's rules (GSR 853(E), 2021) allow data-acquisition devices in 865 to 868 MHz at up to 500 mW e.r.p., a duty cycle of 2.5
+percent (10 percent for network access points), a bandwidth of up to 200 kHz and adaptive power control, and they require
+type approval.
+Field impact
+A pilot under a government programme must stay inside these limits.
+Change required
+State the channel, power, antenna gain, duty cycle and category in the Rev B README. Implement adaptive power control
+in firmware (needs C5). Record the type-approval position for the E22 and the modem.
+Acceptance
+README section; a firmware log of channel, power and duty cycle over 24 hours.
+9. Rev B release gates
+Rev B moves through four gates. A gate is passed when every request listed against it is closed with its evidence.
+1. Before the layout is finalised
+Module identity, supply and rating confirmed (A1, A2, A6); enclosure and shield chosen and module
+clearances checked (A4); new ports defined (C1 to C4); and the P1 decisions that change footprints or
+placement settled: pin map (A5), input chain (B1, B2, B8), bus structure and SPS30 link (C6, C11).
+2. Before boards are ordered
+Simulations documented and passing (G1); all P1 changes in the schematic and layout; D1 redrawn and ERC
+0/0 (D3); DRC clean; BOM with part numbers, plating and temperature ratings (F1, H3, H4); fab notes (F2);
+silkscreen (A3, E5).
+3. Before first power-up
+Bring-up plan (G3); current-limited supply; modem supply measured before the modem is fitted (A2);
+module orientation checked (A3).
+4. Before any unit goes to the field
+Bench acceptance for every P1 request; 24-hour closed-box soak at +70 °C (H3); surge and ESD tests (H1,
+C8); hang and slow-ramp tests (H2); battery-disconnect test (B8); 72-hour run with both radios (C10, C11);
+FMEA closed (G2); radio settings recorded (H6).
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 20 of 23
+
+
+===== PAGE 21 =====
+10. How to respond
+Please reply in one sheet with a row per request, using the columns below. The evidence under "Acceptance" is what we will
+check when Rev B comes in.
+ID
+Response
+Note
+Evidence attached
+Target
+A1
+Accepted / alternative /
+query
+What you will change, or your alternative and
+why
+Photo, datasheet, simulation or test
+record
+Date
+Send A1, A2 and A6 first: photos of both sides of the ESP32-S3 board, the modem board and the buck module you will fit, with
+pin labels readable, the module marking on the ESP32 board, and the modem's datasheet or product link. Then propose a date
+for the Rev B package; we will review it against the gates in section 9. Please send this reply before the next package, and hold
+layout changes until A1, A2, A4 and A6 are closed: v3 shows the cost of moving sockets before the module drawings are in.
+Dr. Shanmugakumar Murugesan
+Co-founder and CTO, Serigreen Technologies Private Limited
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 21 of 23
+
+
+===== PAGE 22 =====
+Appendix A. Module identity and ratings
+Socket
+Module
+What we checked
+Rated temperature
+What you need to confirm
+J1, J2
+EdgeHax ESP32-S3
+N16R8
+Pin order follows DevKitC-1. In v3 the
+rows are 26.00 mm apart (DevKitC-1:
+22.86 mm) and offset 0.30 mm. No
+published EdgeHax pinout found.
+WROOM-1 N16R8: -40 to
++65 °C
+Pin labels, row spacing, microSD,
+RGB LED and USB-serial pins;
+module variant (A6)
+J3, J4, J5
+A7672S LTE board
+PCB has 2 x 12 pins, in v3 33.56 mm
+apart (35.56 mm on 6 Oct) and offset
+0.50 mm; README says 9 + 2. Listing
+gives 3.4 to 4.2 V.
+Confirm in SIMCom data
+Supply input, UART shifting, J3 pin
+3, variant and bands, antenna
+connector
+J6
+E22-900T22D-V2
+Pin order matches, numbered from the
+other end. 21 x 36 mm. Factory channel
+868.125 MHz.
+Confirm in Ebyte manual
+Orientation, SMA exit at the
+right-hand edge, channel setting
+J7
+GY-521 (MPU-6050)
+Pin order matches, numbered from the
+other end. AD0 tied to GND today.
+MPU-6050 not for new
+designs (TDK)
+Orientation; AD0 high for 0x69
+(C6); driver change, since the node
+design and V2 firmware use an
+MPU6500
+J8
+SmartElex DS3231 with
+AT24C32
+ZS-042 6-pin order, taken from the
+listing photo. On 3.3 V, so the coin cell is
+not charged.
+DS3231S 0 to 70 °C;
+DS3231SN -40 to +85 °C
+Header order on the board; chip
+suffix; named coin cell
+J9
+12-24 V to 5 V module
+Pin order not verified.
+Unknown
+Replace per B2
+J11 to J17
+SGP41 board (J11),
+7Semi SHT45 probe
+(J12), SPS30 (J13),
+7Semi BME688 probe
+(J14), Cytron soil
+sensor (J15), FSR406
+(J16), expansion (J17)
+Supply voltages match the carrier rails.
+SPS30: -10 to +60 °C
+Probe cables re-terminated;
+BME688 address; SPS30 cable (not
+supplied); SPS30 in the shaded
+shield
+Appendix B. Pin budget and proposed GPIO allocation
+Counted on a DevKitC-1-style board. The ESP32-S3 can route any UART, I2C or SPI signal to any free GPIO.
+GPIOs on the two headers
+36
+Not usable: strapping (IO0, IO3, IO45, IO46), native USB (IO19, IO20), USB-serial chip (IO43, IO44)
+8
+Not usable with an octal-PSRAM module such as N16R8 (IO35, IO36, IO37)
+3
+Usable: with N16R8 / with N8R2, N8 or N16
+25 / 28
+Used by Rev A
+16
+Free: with N16R8 / with N8R2, N8 or N16 (each includes the pin driving the board's RGB LED)
+9 / 12
+Needed for the new functions: E22 M1, RS485 TX and RX, microSD on the carrier (4), event button, status LED,
+battery voltage, buzzer, sensor-rail enable
+12 (13 with an RS485 DE pin)
+With an N8R2, N8 or N16 module and an I2C GPIO expander for the slow outputs (buzzer, sensor-rail enable), the functions fit:
+IO38 stays with the board's RGB LED, and one more pin is spare if RS485 uses an auto-direction transceiver, or IO1 if the FSR
+goes (C9). A starting allocation, to be confirmed against the actual board (A1):
+Function
+Rev A
+Proposed Rev B
+Note
+I2C-0, cabled sensors through the I2C
+switch
+IO8, IO9
+IO8, IO9
+C6
+I2C-1, on-board modules and the GPIO
+expander
+IO4, IO5
+IO4, IO5
+RTC moves here (C6)
+E22 UART TX, RX; AUX
+IO17, IO18; IO16
+Unchanged
+E22 M0 / M1
+IO15 (tied)
+IO15 / IO12
+C5
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 22 of 23
+
+
+===== PAGE 23 =====
+Function
+Rev A
+Proposed Rev B
+Note
+Modem UART TX, RX
+IO13, IO14
+Unchanged
+Check the board's microSD pins
+(A1)
+Modem PWRKEY, RESET, PWR_EN
+IO11, IO10, IO7
+Unchanged
+Open-drain, defined defaults (A2)
+MPU-6050 INT
+IO21
+IO21
+Soil (ADC1)
+IO2
+IO2
+Add RC (C12)
+FSR (ADC1)
+IO1
+IO1, or freed
+C9
+Battery voltage (ADC1)
+None
+IO6
+B9
+RS485 TX, RX; DE
+None
+IO39, IO40; IO41
+Not IO43/IO44 (C1); DE not needed
+with auto-direction. IO39 to IO42
+are the JTAG pins: debug over USB
+microSD (SPI) CS, SCK, MOSI, MISO
+None
+IO42, IO35, IO36, IO37
+IO35 to IO37 need an N8R2, N8 or
+N16 module (A6)
+Event button
+None
+IO47
+C4
+External status LED
+None
+IO48 (IO38 drives the RGB LED on
+DevKitC-1 v1.1)
+Swap with IO38 on boards whose
+RGB LED is on IO48
+Buzzer; sensor-rail enable
+None
+I2C GPIO expander, for example
+TCA9535 at 0x20
+Pull-downs so outputs default off
+at reset (B5)
+Keep free
+IO0, IO3, IO45, IO46; IO19, IO20 (USB
+console); IO43, IO44 (USB-serial); IO38
+(RGB LED)
+Appendix C. Radio rules for the E22 in India
+Rule
+G.S.R. 853(E), 10 December 2021: Use of Low Power Equipment in the Frequency Band 865 to 868 MHz for Short Range
+Devices (Exemption from Licence) Rules, 2021. It replaced the 2005 rules for 865 to 867 MHz.
+Category
+Tracking, tracing and data acquisition (includes sensors and meter reading).
+Limits
+500 mW e.r.p.; duty cycle 2.5 percent or less (10 percent or less for network access points); bandwidth 200 kHz or less;
+adaptive power control required; standard EN 300 220.
+Approval
+Equipment must be type approved (Rule 5).
+This board
+E22 at 22 dBm with the 1.8 dBi antenna in the order gives about 150 mW e.r.p. LoRa at 125 kHz bandwidth is inside the limit.
+The factory channel, 868.125 MHz, is outside the band and must be changed (C5).
+Appendix D. References
+1
+MoriShield Carrier review package v3, 12 October 2026, and the package of 6 October 2026 (as received); Edge Telemetry Node schematic,
+Rev A, 19 September 2026.
+2
+MoriShield Node Hardware Handover v1.0, 29 June 2026; Board Specifications v1.0, 29 June 2026; Hardware Phase-2 Gate Pack v1.0, 28 July
+2026.*
+3
+Module BOM of 21 September 2026 and Robu order SO283553 (the modules the sockets must take).
+4
+Espressif: ESP32-S3-WROOM-1 datasheet (temperature by variant); ESP32-S3-DevKitC-1 user guide (header pins, USB-serial port, RGB LED,
+power options); ESP-IDF GPIO reference (strapping, JTAG and USB pins).
+5
+Ebyte E22-900T22D user manual (operating modes, pin order, factory channel); SIMCom A7672S specification and hardware design guide.
+6
+Sensirion SPS30 datasheet (supply, I2C address, cable-length advice, temperature); Littelfuse SMBJ series datasheet.
+7
+NXP UM10204 I2C-bus specification; 3GPP TS 36.101 (LTE bands); G.S.R. 853(E), 2021.
+* Available from Serigreen on request.
+MoriShield Carrier PCB  ·  package v3 review and change requests (detailed)
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-REV-A-001 v1.2  ·  12 October 2026
+Page 23 of 23

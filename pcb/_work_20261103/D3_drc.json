@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:45:46",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'FSR' on F.Silkscreen",
+                    "pos": {
+                        "x": 163.94,
+                        "y": 201.3
+                    },
+                    "uuid": "8df71488-4627-43e7-b16b-200a9a8e6129"
+                },
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 199.2
+                    },
+                    "uuid": "bf8e1852-b810-46a4-b5b3-d7e129b47c91"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text 'SGP41' on F.Silkscreen",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 201.3
+                    },
+                    "uuid": "2eb4b4aa-fd85-4183-ac26-dea014b4e998"
+                },
+                {
+                    "description": "Rectangle on F.Silkscreen",
+                    "pos": {
+                        "x": 156.5,
+                        "y": 199.2
+                    },
+                    "uuid": "bf8e1852-b810-46a4-b5b3-d7e129b47c91"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

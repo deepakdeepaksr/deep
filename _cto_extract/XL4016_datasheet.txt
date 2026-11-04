@@ -1,0 +1,483 @@
+                                       Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+1 
+Features 
+ Recommended operating voltage range 
+8V~36V 
+ Output Adjustable from 1.25V to 32V 
+ Maximum Duty Cycle 100% 
+ Minimum Drop Out 0.3V 
+ Fixed 180KHz Switching Frequency 
+ 12A Constant Output Current Capability 
+ Internal Optimize Power MOSFET 
+ High efficiency up to 96% 
+ Excellent line and load regulation 
+ Built in thermal shutdown function 
+ Built in current limit function 
+ Built in output short protection function 
+ Available in TO220-5L package 
+ 
+ 
+ 
+ 
+Applications 
+ LCD Monitor and LCD TV 
+ Portable instrument power supply 
+ Telecom / Networking Equipment 
+ 
+ 
+ 
+ 
+General Description 
+The XL4016 is a 180 KHz fixed frequency 
+PWM buck (step -down) DC/DC converter,  
+capable of driving a 12A load with  high 
+efficiency, low ripple and  excellent line and 
+load regulation. Requiring a minimum 
+number of external components, the 
+regulator is simple to use and include 
+internal frequency compensation and a 
+fixed-frequency oscillator.  
+ 
+The PWM control circuit is able to adjust the 
+duty ratio linearly from 0  to 100%. An over 
+current protect ion function  is built inside . 
+When short protection function happens, the 
+operation frequency will be reduced from 
+180KHz to 48KHz. An internal compensation 
+block is built in to minimize  external 
+component count. 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure1. Package Type of XL4016                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+2 
+Pin Configurations 
+ 
+1
+2
+3
+4
+5 VIN
+SW
+FB
+GND
+VC
+TO220-5L
+Metal Tab SW
+ 
+ 
+Figure2. Pin Configuration of XL4016 (Top View) 
+ 
+Table 1 Pin Description 
+ 
+Pin Number Pin Name Description 
+1 GND 
+Ground Pin. Care must be taken in layout. This pin should be 
+placed outside of t he Schottky Diode to output capacitor 
+ground path to prevent switching current spikes from 
+inducing voltage noise into XL4016. 
+2 FB 
+Feedback Pin (FB) . Through an external resistor divider 
+network, FB senses the output voltage and regulates it. The 
+feedback threshold voltage is 1.25V. 
+3 SW Power Switch  Output Pin (SW) . SW is the switch node that 
+supplies power to the output. 
+4 VC Internal Voltage Regulator Bypass Capacit or Pin (VC) . The 
+VC pin connect a 1uf capacitor to VIN. 
+5 VIN 
+Supply Voltage Input Pi n. XL4016 operates from a  8V to 36V 
+DC voltage . Bypass Vin to GND with a suitably large 
+capacitor to eliminate noise on the input. 
+ 
+                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+3 
+Function Block 
+EA
+GND
+FB
+3.3V
+1.25V
+ 
+ 
+EA
+COMP
+Oscillator
+180KHz/48KHz
+3.3V  Regulator
+1.25V  Reference Start Up
+Latch
+  
+COMP2
+COMP1
+Driver
+Thermal Shutdown
+VINVC
+SW
+220mV 200mV
+20mΩ
+Current  
+Limit
+Power  
+PMOS
+1:100020KΩ
+3.3nF
+OSP
+ 
+Figure3. Function Block Diagram of XL4016 
+Typical Application Circuit 
+XL4016
+CIN
+470uF/50V
+COUT
+1000uF/25V
+R2
+10K
+R1
+3.3K
+L1 47uH/12A
+D1
+MBR2045
+C1
+105
+C2
+105
+5 3
+1 2
+VIN
+4
+VOUT=1.25*(1+R2/R1)
+IOUT=0~12AVIN
+VC
+SW
+GND
+FB
+CC
+105
+CFF
+33nF
+VOUT
+ 
+VIN=8V~20V, VOUT=5V/9A; VIN=20V~36V, VOUT=5V/12A 
+Figure4. XL4016 Typical Application Circuit (VIN=8V~36V, VOUT=5V/12A)                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+4 
+Ordering Information  
+Order Information Marking ID Package Type Packing Type Supplied As 
+XL4016E1 XL4016E1 TO220-5L 
+50 Units Per Tube/ 
+1000 Units Per Box 
+ 
+XLSEMI Pb-free products, as designated with “E1” suffix in the par number, are RoHS compliant. 
+ 
+Absolute Maximum Ratings（Note1） 
+Parameter Symbol Value Unit 
+Input Voltage Vin -0.3 to 40 V 
+Feedback Pin Voltage VFB -0.3 to 7 V 
+Output Switch Pin Voltage VSW -0.3 to Vin V 
+Power Dissipation PD Internally limited mW 
+Thermal Resistance (TO220-5L) 
+(Junction to Ambient, No Heatsink, Free Air) RJA 30 
+o
+C/W 
+Operating Junction Temperature TJ -40 to 125 
+o
+C 
+Storage Temperature TSTG -65 to 150 
+o
+C 
+Lead Temperature (Soldering, 10 sec) TLEAD 260 
+o
+C 
+ESD (HBM)  >2000 V 
+ 
+Note1: Stresses greater than those listed under Maximum Ratings may cause permanent 
+damage to the device. This is a stress rating only and functional operatio n of the device at 
+these or any other conditions above those indicated in the operation is not implied. Exposure 
+to absolute maximum rating conditions for extended periods may affect reliability.                                         Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+5 
+XL4016 Electrical Characteristics 
+Ta = 25℃;unless otherwise specified. 
+Symbol Parameter Test Condition Min. Typ. Max. Unit 
+System parameters test circuit figure 4 
+VFB 
+Feedback 
+Voltage 
+Vin = 8V to 40V, Vout=5V 
+Iload=0.5A to 8A 
+1.225 1.25 1.275 V 
+η Efficiency 
+Vin=12V,Vout=5V 
+Iout=6A 
+- 87 - % 
+η Efficiency 
+Vin=24V,Vout=12V 
+Iout=6A 
+- 93 - % 
+ 
+Electrical Characteristics (DC Parameters) 
+Vin = 24V, GND=0V, Vin & GND parallel connect a 470uf/50V capacitor; Iout=500mA, Ta = 25℃; 
+the others floating unless otherwise specified. 
+Parameters Symbol Test Condition Min. Typ. Max. Unit 
+Input operation voltage Vin  8  36 V 
+Quiescent Supply Current Iq VFB =5V  2.1 5 mA 
+Oscillator Frequency Fosc  144 180 216 KHz 
+Output Short Frequency Fosp   48  KHz 
+Switch Current Limit IL VFB =0V  14  A 
+Max. Duty Cycle  DMAX VFB=0V  100  % 
+Output Power PMOS Rdson 
+VFB=0V, Vin=24V, 
+ISW=12A 
+ 40 50 mohm 
+                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+6 
+Typical System Application (VOUT=5V/12A) 
+XL4016
+CIN
+470uF/50V
+COUT
+1000uF/25V
+R2
+10K
+R1
+3.3K
+L1 47uH/12A
+D1
+MBR2045
+C1
+105
+C2
+105
+5 3
+1 2
+VIN
+4
+VOUT=1.25*(1+R2/R1)
+IOUT=0~12AVIN
+VC
+SW
+GND
+FB
+CC
+105
+CFF
+33nF
+VOUT
+ 
+Figure5. XL4016 System Parameters Test Circuit (VIN=8V~36V, VOUT=5V/12A) 
+0 1 2 3 4 5 6 7 8 9 10 11 12
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+ 
+Efficiency VS Load current
+Efficiency(%)
+Load current(A)
+ Vin=8V,Vout=5V
+ Vin=12V,Vout=5V
+ Vin=24V,Vout=5V
+ Vin=36V,Vout=5V
+ 
+Figure6. XL4016 System Efficiency Curve                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+7 
+Typical System Application (VOUT=12V/9A) 
+XL4016
+CIN
+470uF/50V
+COUT
+1000uF/25V
+R2
+13K
+R1
+1.5K
+L1 47uH/12A
+D1
+MBR1545
+C1
+105
+C2
+105
+5 3
+1 2
+VIN
+4
+VOUT=1.25*(1+R2/R1)
+IOUT=0~9AVIN
+VC
+SW
+GND
+FB
+CC
+105
+CFF
+33nF
+VOUT
+ 
+Figure7. XL4016 System Parameters Test Circuit (VIN=14V~36V, VOUT=12V/9A) 
+ 
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+ 
+Efficiency VS Load current
+Efficiency(%)
+Load current(A)
+ Vin=15V,Vout=12V
+ Vin=24V,Vout=12V
+ Vin=36V,Vout=12V
+ 
+Figure8. XL4016 System Efficiency Curve 
+                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+8 
+Typical System Application (TTL shutdown function) 
+Logic level signals shutdown function can be used in typical system application with external 
+components. When the TTL high voltage above 3.3V(referenced to ground, lower than 7V), 
+the converter will shutdown, input current less than 5mA; when the TTL L ow voltage below 
+0.8V(referenced to ground), the converter will turn on.  
+ 
+ 
+XL4016
+CIN
+470uF/50V
+COUT
+1000uF/25V
+R2
+10K
+R1
+3.3K
+L1 47uH/12A
+D1
+MBR2045
+C1
+105
+C2
+105
+5 3
+1 2VIN 4
+VOUT=1.25*(1+R2/R1)
+IOUT=0~12AVIN
+VC
+SW
+GND
+FB
+CC
+105 R3
+10K
+D2
+1N4148
+OFF(High>3.3V)
+ON(Low<0.8V)
+TTL current capability larger than TTL 
+high voltage/(R1+R3)
+CFF
+33nF
+VOUT
+ 
+Figure9. XL4016 Typical Application Circuit 
+                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+9 
+Package Information 
+ 
+TO220-5L 
+ 
+Symbol Dimensions In Millimeters Dimensions In Inches 
+Min. Nom. Max. Min. Nom. Max. 
+A 4.37 4.57 4.77 0.172 0.180 0.188 
+A1 1.17 1.27 1.42 0.046 0.050 0.056 
+A2 2.47 2.67 2.87 0.097 0.105 0.113 
+b 0.76 0.89 1.02 0.030 0.035 0.040 
+c 0.33 0.38 0.64 0.013 0.015 0.025 
+D 25.65 26.00 26.35 1.009 1.023 1.037 
+D1 8.38 8.70 9.00 0.330 0.342 0.354 
+D2 5.50 5.84 6.14 0.216 0.230 0.242 
+E 9.86 10.26 10.39 0.388 0.404 0.409 
+E4 7.30 8.33 9.30 0.287 0.328 0.366 
+e 1.55 1.70 1.85 0.061 0.067 0.073 
+H1 6.10 6.35 6.60 0.240 0.250 0.260 
+L 13.34 13.74 14.10 0.525 0.541 0.555 
+ΦP 3.70 3.84 3.95 0.146 0.151 0.156 
+Q 2.54 2.75 3.05 0.100 0.108 0.120                                        Datasheet                                                                                       
+ 
+12A 180KHz 40V Buck DC to DC Converter                                XL4016 
+ 
+ 
+Rev 1.6                                                                               www.xlsemi.com            
+10 
+Important Notice 
+XLSEMI reserve the right to make modifications, enhancements, improvements, corrections 
+or other changes without notice at any time. XLSEMI does not assume any liability arising out 
+of the application or use of any product described herein; neither does it conv ey any license 
+under its patent rights, nor th e rights of others. XLSEMI assumes no liability for applications 
+assistance or the design of Buyers’ products. Buyers are responsible for their products and 
+applications using XLSEMI components. To minimize the risks associated with Buyers’ 
+products and applications, Buyers should provide adequate design and operating safeguards. 
+XLSEMI warrants performance of its products to the specifications applicable at the time of 
+sale, in accordance with the warranty in XLSEMI’s terms and conditions of sale of 
+semiconductor products. Testing and other quality control techniques are used to the extent 
+XLSEMI deems necessary to support this warranty. Except where mandated by applicable 
+law, testing of all parameters of each component is not necessarily performed.  
+For the latest product information, go to www.xlsemi.com.  
+ 

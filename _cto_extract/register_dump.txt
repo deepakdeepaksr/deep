@@ -1,0 +1,80 @@
+rows: 79
+A1  |P0 |Open     | Rows level but spacing unmeasured; E22 M1/M0 sit on the microSD pins, the reed on the LED pin. Take readings, sign the pin table, move those lines.
+A2  |P0 |Partly   | Rows level, drawn components-down, stale 35.56 mm note gone. Missing: measurements, truth table, 5 V supply proof.
+A3  |P1 |Partly   | Outlines and labels live on F.Fab/Dwgs.User (not printed); sockets not keyed. J5 is a screw terminal, unlike the sensor ports.
+A4  |P0 |Partly   | Five outlines, two on the wrong sockets; no heights; 3D shows only carrier parts; no enclosure.
+A5  |P1 |Open     | No GPIO map in the package.
+A6  |P0 |Open     | No decision on the ESP32 module variant (octal PSRAM takes GPIO35–37).
+A7  |P0 |Open     | Modem lines are off GPIO10–14, but E22 M1/M0 now sit on GPIO10/11 (J1 pins 16/17).
+A8  |P0 |Closed   | J1/J2 at y 154.00, J3/J4 at y 113.56 — keep. Re-verify after any placement move.
+A9  |P0 |Partly   | Components-down drawn and pins mapped; the side-on photo is missing.
+A10 |P0 |Open     | No readings, no test-fit; 26.00 mm (6L 25.75) against ~26.2; 34.00 against ~33.8.
+A11 |P1 |Partly   | R16 holds PWR_EN low in reset; no truth table; two drivers on PWR_EN; PWRKEY held by 1 kΩ only; RESET dropped.
+A12 |P1 |Partly   | Modem moved 15 mm down; no standoffs; ESP32 not clamped; J5 + 3 test points under the modem.
+B1  |P1 |Open     | 12 V input is off-board: the TVS requirement moves into the converter's input specification (≥40 V, clamp below the converter's maximum).
+B2  |P1 |Open     | No buck on the board: the converter must be 40 V in minimum, 5 V/3 A at +70 °C, low no-load.
+B3  |P1 |Partly   | F1 is a 4 A PTC on glass-fuse clips; C13 has a ceramic code on an electrolytic footprint; no ratings in the BOM.
+B4  |P1 |Partly   | 5 V plane on In2 stands; the input path narrows to 0.5 mm and one 0.3 mm via.
+B5  |P1 |Partly   | LDO and switched rails fitted, default off; D3/D4 always on; no budget.
+B6  |P2 |Partly   | D7 feeds J1 pin 21; no USB service rule and no README.
+B7  |P1 |Open     | U6 (TPS7A2033) is now the 3.3 V regulator; C26/C27 are 11.6 and 9.3 mm from its pins in a straight line.
+B8  |P1 |Open     | Moves into the converter input (cover the battery-disconnect voltage) and into the J18 over-voltage cut-off.
+B9  |P1 |Open     | GPIO6 unused; no divider. With 5 V at J18 the battery needs its own sense lead.
+B10 |P0 |Open     | Restated as the six conditions of review §6.4; the board resistance still exceeds the 60 mΩ allocation and the copper is below its protection.
+B11 |P2 |Superseded| No buck on the board — no action; record the reason in the response sheet.
+B12 |P1 |Partly   | ESP32 5 V pin decoupled (10 µF at 6.9 mm); nothing within 41 mm of J5; E22 at 28.4 mm; UART reference at 51 mm; the four 100 nF sit together in a corn
+C1  |P0 |Open     | RS485 removed in the title block "for off-board USB testing", never agreed. Restore (transceiver, termination jumper, fail-safe bias, TVS to earth, pi
+C2  |P0 |Open     | microSD slot unusable while E22 M1/M0 sit on GPIO10/11.
+C3  |P0 |Closed   | FDC1004 port J21 on CH5 with pull-ups and ESD — keep; bench read still owed on first boards.
+C4  |P0 |Partly   | Button on GPIO3 with RC and ESD; buzzer on the expander; GPIO42 drives D6 **on the carrier**, not a light seen from outside.
+C5  |P1 |Partly   | M0/M1 on separate pins but on the microSD pins.
+C6  |P1 |Partly   | One segment per cabled port with 4.7 kΩ pull-ups; GY-521/DS3231 on I2C-1; but the expander shares I2C-0 and U7's reset is a power-on RC.
+C7  |P1 |Partly   | 10 µF at 5.3 mm from J13; the 100 µF is 28.5 mm away; nearest 100 nF about 22 mm.
+C8  |P1 |Partly   | Every sensor port has ESD returned to PE, but 5.4–21.8 mm from the pins (J20 pin 1: 46 mm) and none on J24/J25.
+C9  |P2 |Open     | J16, R5 and ESD3 remain with no stated purpose.
+C10 |P2 |Open     | No build variants in the BOM; antenna separation and LoRa scheduling unaddressed.
+C11 |P1 |Partly   | SPS30 on its own segment (CH2); the cable is not specified.
+C12 |P2 |Closed   | 1 kΩ + 100 nF on both ADC inputs — keep; readings still to be shown stable with the modem transmitting.
+C13 |P1 |Open     | No pin map; the AS5600's port is unnamed.
+D1  |P1 |Closed   | The +5 V/GND overlap near J9 is redrawn — keep. Re-prove netlist parity in the Rev C package.
+D2  |P2 |Partly   | Title block filled, but the sheet is A0 and the revision reads "Proto-Simple Rev 0.2".
+D3  |P2 |Open     | ERC is now 0/0, from 522 warnings, with four check classes ignored. Justify each ignore in one line or remove it.
+E1  |P1 |Closed   | Continuous ground plane with stitching — keep. The release gate still asks for the **stitching plot**.
+E2  |P1 |Closed   | Thermal reliefs on plane connections — keep; zone settings are the evidence.
+E3  |P1 |Open     | No keep-out; both planes cover the antenna footprint 100 %; 46 segments, 7 vias and 4 parts in 003's area.
+E4  |P2 |Partly   | Eleven test points; three under the modem; none on I2C-1 or UART1; the +12 V point is obsolete (no 12 V on the board).
+E5  |P2 |Open     | J18 legend reversed; no board name, revision or serial box; rail voltages not shown.
+E6  |P2 |Partly   | SIM side noted ("SIM up"); USB and microSD access not shown.
+E7  |P1 |Partly   | Ferrite and capacitors on the E22 supply; 47 Ω on CH0/CH1 only; no input filter.
+F1  |P2 |Open     | BOM has values and footprints only: no MPN, module SKUs, housings, crimps, ratings, plating or variants.
+F2  |P2 |Partly   | X2 Gerbers, drill and placement in mm; but revision "rev?", no stack-up, finish, fab drawing, IPC-356 or README; passives already 0805/1206 where it m
+G1  |P0 |Open     | No simulation results; the `!padne` directives still describe 12 V at J18, D1, U1 and J9.
+G2  |P1 |Open     | No FMEA.
+G3  |P1 |Open     | No bring-up plan.
+G4  |P2 |Open     | No EMC test plan.
+H1  |P1 |Partly   | Earth terminal J19 and ESD returned to PE; no defined bond to ground; no arrestors on the antenna feeds; the 12 V surge parts move to the converter.
+H2  |P1 |Partly   | Supervisor, expander and E22 switch fitted; WDI open; push-pull output on EN; U4 out of the placement file; a stuck I2C-0 survives a reset.
+H3  |P1 |Open     | No temperature column; DS3231 suffix and backup cell not named.
+H4  |P1 |Open     | No plating or coating in the BOM.
+H5  |P2 |Open     | Enclosure not chosen; no strain relief, glands or drip loops.
+H6  |P1 |Open     | No radio record.
+R1  |P0 |6-layer Gerbers short the ESP32 header; the variant is withdrawn. For **every** Gerber set from now on: refill, save, DRC on the saved file, then plot.| Serigreen's Gerber check finds every pad clearance in place.
+R2  |P0 |Route `/WDT_WDI` to U4 pin 4 (islands at vias 244.5,173.5 and 257.0,168.1), together with R8; delete the dangling 3V3_C stub, EVENT_BTN track and the PWR_EN / I2C0_SDA / BUZZER_EN vias.| DRC on the saved file: 0 unconnected items, no dangling tracks or vias.
+R3  |P0 |Swap the J18 legend: "+" beside pad 1 (`+5V_IN`), "−" beside pad 2 (`GND`); state polarity in the README.| The silkscreen Gerber shows "+" beside the +5V_IN pad.
+R4  |P0 |Reverse and over-voltage protection per condition 2; if a P-channel FET is kept, drain to J18, source to load, gate resistor + ~10 V gate-source zener, or sit it behind the cut-off; re-rate D2 and ESD16.| Bench: reversed supply, 12 V and 24 V on J18 for a minute each leave the board unharmed; the cut-off acts below 5.5 V.
+R5  |P0 |Pour-width copper and via arrays from J18 to the 5 V plane, sized for the protection's trip/limit current; a footprint that matches the protection part; the library footprint restored for Q9.| Layout; the board resistance in condition 3; no footprint mismatch in the DRC.
+R6  |P1 |Separate gate networks for Q2 and Q3, each pulled up to its own source, both pulled down by one enable; switched-rail firmware rules into the README.| Bench: 5 V sensor rail below 0.1 V when off, with the SPS30 fitted.
+R7  |P1 |One driver per modem control line (PWR_EN on GPIO7); PWRKEY decided with A11.| Truth table (A11); bring-up shows firmware power-cycling the modem.
+R8  |P1 |TPS3828 (open-drain) on EN; WDI from a pin that floats through reset and download, or through a jumper; U4 in the BOM and placement file.| A firmware hang ends in a reset; USB flashing works with the watchdog fitted; U4 in the placement file.
+R9  |P1 |Bond PE to ground at one point beside the sensor ports (link, RC alternative); PE copper ≥0.5 mm from other nets except at protection pins; earthing scheme in the README.| Layout and README; ESD test per G4.
+R10 |P1 |Nothing under the modem board: J5 outside its outline at the edge nearest its supply connector, with a short lead; test points outside.| 3D check with the modem fitted.
+R11 |P1 |Move the wind reed input off the LED pin, per the Table 10 pin plan.| Pin map (C13); bench counts that match a reference at 1, 10 and 50 Hz.
+R12 |P2 |Move the seven nets routed on In2 to the outer layers so no B.Cu signal crosses a cut in the 5 V plane.| Layout.
+R13 |P2 |Replace Q1, Q5, Q6 (2N7000) with parts specified at 2.5 V gate drive.| BOM.
+R14 |P2 |Swap the GY-521 and DS3231 outlines and labels; redo the 3D check.| User layers and 3D views.
+R15 |P2 |Correct the descriptions, values, F.Fab labels, J24 symbol pin names and stale DC-solve directives; delete or rewrite stale rules; regenerate the QA note from the shipped files.| Files.
+R16 |P1 |Move the 65 vias off SMD pads, or specify filled and capped vias in the fab notes.| Layout or fab drawing.
+R17 |P1 |Move U8 to I2C-1 and reset U7 with the ESP32 (supervisor reset line or a GPIO); firmware bus recovery.| Bench: SDA held low on a cabled port; the board recovers without a power cycle.
+R3  |P0 |Silk: "+" moved beside pad 1 (`+5V_IN`), "−" beside pad 2 (`GND`); polarity added to README §2| F.Silkscreen Gerber, J18 area; screenshot with pad nets highlighted
+B7  |P1 |C26/C27 (1 µF) moved to 2.1 and 2.4 mm from U6 pins 1 and 5 along the copper| Decoupling map row U6; scope capture 3V3_C, 38 mV pp
+C1  |P0 |RS485 deferred to Rev C| Serigreen's message of `<date>`

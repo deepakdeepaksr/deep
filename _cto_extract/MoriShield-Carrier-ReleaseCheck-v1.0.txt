@@ -1,0 +1,872 @@
+
+
+===== PAGE 1 =====
+SERIGREEN TECHNOLOGIES PRIVATE LIMITED
+Salem, Tamil Nadu
+MoriShield
+Pesticide-drift early warning at the plot boundary
+Confidential. Prepared for Serigreen and its build team. Not for onward circulation.
+Carrier PCB: release check
+What Serigreen checks before a board goes to fabrication, and how to run the
+same checks before you send a package
+Document
+MS-CAR-CHK-001, version 1.0
+Date
+30 October 2026
+From
+Dr. Shanmugakumar Murugesan, Co-founder and CTO, Serigreen Technologies Private Limited
+To
+Deepak (hardware and electronics) and Aswin (firmware and software)
+Applies to
+Every carrier PCB package from Rev B onwards, and any other Serigreen board that goes through
+the same gate. The open items themselves live in the reviews (MS-CAR-REV-A-004 and
+MS-CAR-REV-B-001); this document is the procedure, so that the next package passes the first
+time.
+Status
+Standing procedure. A board is ordered only on Serigreen's written release, which names the files
+by checksum.
+Classification
+Confidential
+How to use this document
+Read sections 1 and 2 once. Section 3 says what to send. Section 4 is the check list: run every check on the files you are about to send, in the
+order given, and keep the evidence each one produces. Section 7 is the response sheet that goes with every package. Appendix C is the
+one-page list to tick before you press send.
+
+
+===== PAGE 2 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 2 of 15
+Contents
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+1. What this document is for
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 3
+2. How Serigreen checks a package
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+3. What a package contains
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 5
+4. The checks
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+5. The order of work
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+6. Where packages have lost time so far
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 11
+7. The response sheet
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 12
+Appendix A. KiCad settings to set once
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+Appendix B. Numbers and formulas
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+B.1 Copper resistance
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 13
+B.2 The modem supply budget in force
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 14
+B.3 Distances and spacings
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 14
+Appendix C. Before you send
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 15
+References
+
+
+===== PAGE 3 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 3 of 15
+1. What this document is for
+Each carrier package so far has gone back with a long list, and most of the list was found by checks you can run
+yourselves in KiCad in an afternoon. This document gives you those checks, with the setting or menu to use, what
+each one catches, and what "pass" means. Run them before you send, put the results in the response sheet, and the
+review becomes a confirmation rather than a discovery.
+Three rules sit behind every check:
+#
+Rule
+What it means in practice
+1
+The files are the evidence
+A claim about the board ("the plane is continuous", "the modem gets 5 V") counts only when it can be
+seen in the files you ship, in a datasheet, or in a measurement with its setup described. A note that
+says "checked" without that behind it does not count, whoever or whatever wrote it.
+2
+Check the file you ship, not the
+one on screen
+KiCad can show you refilled copper in memory while the saved file and the Gerbers still hold the old
+fills. Every check runs on the saved file, after the zones were refilled and saved, and the Gerbers are
+plotted from that same file afterwards. Section 4, check C3, gives the order.
+3
+Every change answers an item
+Changes are made against the numbered items in the reviews (A1, B10, R3 and so on), and each item
+has a "closed when" line that says what evidence closes it. The response sheet (section 7) lists every
+item with what changed and where the evidence is. A change nobody asked for is agreed with
+Serigreen first, by message, before it is drawn.
+Table 1. The three rules behind the release check.
+How to read our reviews. Items are grouped by letter (A modules and fit, B power, C interfaces, D schematic, E layout, F files,
+G process, H field) and numbered within the group; items that a review adds are R1, R2 and so on. Priorities: P0 must be
+designed in and evidenced before fabrication; P1 is closed, or deferred in writing by Serigreen with a reason; P2 is fixed now
+where cheap, or listed for the next revision. Status words: Closed (designed in as asked), Partly (some of the change is in; the
+note says what is missing), Open (not done, or done in a way that does not meet the item), Superseded (no longer applies).
+The "closed when" column of each item is the acceptance test; aim at that, not at the wording of the finding.
+2. How Serigreen checks a package
+There is no PCB testing software behind the reviews. Serigreen uses Claude, working directly from the files you send: KiCad 10
+for ERC, DRC with schematic parity and refilled zones, and the Gerber viewer; its own scripts that read the board file, the
+netlist, the Gerbers and the drill files and check connectivity, clearances, distances and copper coverage; the part datasheets;
+IPC-2221 for conductor heating; and a DC budget model for the supply paths. Every figure in a review is then reproduced by a
+second, independent pass from the same files before the review is issued. No board is built or measured on Serigreen's side;
+the bench results come from you, which is why the reviews ask for them.
+Two things follow for you. First, anything in the files will be found, so it is faster to find it yourselves with the checks below.
+Second, the tool is never the evidence: the reviews quote the file, the coordinate, the datasheet page or the formula, and your
+package should do the same. If you use a tool of your own to write a QA note, run it on the exact files you ship, and check its
+numbers against those files before you send it. A QA note that describes a part that is not on the board, or counts vias
+differently from the board file, costs more time than no note.
+
+
+===== PAGE 4 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 4 of 15
+3. What a package contains
+One zip, one board variant, one revision, named with the revision and date (for example
+MoriShield_Carrier_RevC_2026-11-20.zip). It holds:
+Item
+Format
+What it must contain
+Response sheet
+PDF or spreadsheet (section 7)
+Every open item and every new item from the last review: what changed,
+where, the evidence, the status. First file in the zip.
+KiCad project
+.kicad_pro, .kicad_sch, .kicad_pcb,
+.kicad_dru, library tables, any project
+libraries
+Opens cleanly on another machine with no missing symbols, footprints or 3D
+models. Zones refilled and saved. Title block filled: board name, revision, date,
+your names.
+Schematic PDF
+PDF, one sheet per page
+Plotted from the same schematic, with the revision in the title block.
+Reports
+ERC and DRC as JSON or text, from KiCad
+Run on the saved files, after the plot settings of check C3. ERC 0 errors and 0
+warnings; DRC 0 errors, 0 warnings, 0 unconnected items, parity clean.
+Production files
+Gerber X2 with netlist attributes,
+Excellon drill (mm), job file (.gbrjob),
+IPC-D-356 netlist
+Plotted after refill and save. Job file carries the revision, the finish and the real
+stack-up. Drill map included.
+Assembly files
+BOM (CSV or spreadsheet), placement
+file (mm, both sides), fab drawing (PDF)
+BOM with manufacturer, part number, quantity, rating and temperature
+range per line, and a column for each build variant. Placement file with every
+fitted part. Fab drawing with board size, stack-up, finish, via treatment, mask
+and silk colours, any notes for the fab.
+3D check
+Renders or screenshots, both sides, with
+every plug-in module and the enclosure
+Each module on its own socket with its real height; nothing under a module
+that has to be reached; the box closes.
+Evidence
+Section 4, check C13
+Readings and photos, the DC solve or simulation, the decoupling map, the
+FMEA, the bring-up plan, the pin map, as the open items require.
+Table 2. Contents of a release package.
+If you want a look at the schematic before you lay out the board, send the schematic, the ERC report and the response sheet
+on their own. A schematic-only pass is quick and usually saves a layout loop.
+
+
+===== PAGE 5 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 5 of 15
+4. The checks
+Run them in this order. Each block says what the check catches, how to run it in KiCad 10 (menu names as in KiCad 9 and 10),
+and what pass means. Where a check has caught something in a MoriShield package already, the block says so, so that you
+know it is not theoretical. Keep a screenshot or the report of each pass; those go into the response sheet as evidence.
+C1 · Schematic: ERC, libraries and title block
+What it catches
+Unconnected pins, two outputs on one net, power pins with no driver, mismatched labels, symbols that no longer match
+their library, a title block that still says the previous revision.
+How to run it
+• In the schematic editor: Inspect, Electrical Rules Checker. Run it with every severity on. Do not hide warnings; fix
+them or mark the pin with a no-connect flag where it is really unused.
+• Library links: Tools, Edit Symbol Fields shows every symbol in one table; a symbol flagged as not matching its library is
+fixed by updating it from the library (right click, Update Symbol), not by editing it in place.
+• Title block: File, Page Settings. Board name, revision, date, your names, and a one-line note of what changed since the
+last revision. The revision here must match the one in the job file and the Gerbers.
+Pass when
+ERC reports 0 errors and 0 warnings on the saved schematic, and the title block carries the right revision. The reviews ask
+for 0 warnings because a list of 300 harmless warnings hides the one that matters.
+Seen so far
+Rev B shipped with 328 warnings (635 on its second variant), most of them library mismatches that one update would
+have cleared, and a title block reading "Proto-Simple Rev 0.2".
+C2 · Board against schematic: parity and connectivity
+What it catches
+A board that no longer matches the schematic (a pin moved in one and not the other), nets that are routed in two
+pieces, a via that connects to nothing, a track that ends in the air.
+How to run it
+• Tools, Update PCB from Schematic (F8). It must report nothing to change. If it does, the two files have drifted: apply
+the update and look at every changed footprint.
+• Inspect, Design Rules Checker. Tick "Refill all zones before performing DRC" and "Test for parity between PCB and
+schematic". Read all three tabs: Violations, Unconnected Items, Schematic Parity.
+• Dangling tracks and vias appear as warnings; delete them. They are leftover copper from earlier routing and they
+confuse every later check.
+Pass when
+0 unconnected items, 0 parity differences, no dangling track or via, on the saved file. Then save again (check C3 explains
+why the save matters).
+Seen so far
+Rev B's 4-layer shipped with the watchdog input in two pieces 13.6 mm apart; its own DRC report listed it. The same
+report listed a 13 mm dangling stub and four dangling vias.
+C3 · Zones, the saved file, and the plot order
+What it catches
+The most expensive mistake so far: copper planes that were refilled on screen but not in the saved file. The Gerbers are
+plotted from the saved fills, so a part that was moved after the last refill ends up inside the plane's copper in the Gerbers
+while DRC, which refills in memory, reports nothing.
+How to run it
+• The order is always: Edit, Fill All Zones (B); File, Save; Inspect, Design Rules Checker on the saved file; fix; refill; save;
+DRC again until clean; only then File, Plot.
+• In the Plot dialog tick "Check zone fills before plotting" so that KiCad refuses to plot stale fills. Keep "Use extended X2
+format" and "Include netlist attributes" on; they let the Gerber viewer show net names.
+• After any edit, however small (a part nudged, a track moved), the whole order runs again. There is no safe "small
+edit" after the plot.
+• Compare the timestamps: the DRC report's date must be later than the last save, and the Gerbers' creation time later
+than the DRC. If the Gerbers are older than the DRC, they were plotted from a different state.
+Pass when
+DRC on the saved file is clean, the Gerbers were plotted after that DRC, and the plot dialog's zone check was on. State
+the three times (save, DRC, plot) in the response sheet.
+Seen so far
+Twice. The 6 October files would have shorted 12 V, 5 V and an ADC line to ground; Rev B's 6-layer Gerbers short every
+ESP32 header pin to ground and 5 V, because the header had moved 0.25 mm after the last refill. In both cases the DRC
+in the package was clean.
+
+
+===== PAGE 6 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 6 of 15
+C4 · Production files against the board
+What it catches
+Gerbers that do not show what the board file shows: a missing layer, a wrong polarity, a stale fill, a drill that misses its
+pad, an inner layer plotted without its clearances.
+How to run it
+• Open the plotted Gerbers and the drill files in the Gerber viewer (gerbview). Walk every layer once. On the inner
+layers look at every through-hole connector and every via field: each pad must sit inside a clear ring of the plane, with
+a thermal relief where one is intended.
+• With X2 netlist attributes on, hovering a pad or a track shows its net. Use it around the places you edited last.
+• File, Export to PCB Editor turns the Gerbers into a board you can lay over the original to see differences.
+• Open the drill map and check the hole count against the board (Inspect, Board Statistics gives it).
+• Export File, Fabrication Outputs, IPC-D-356 Netlist File. The fab uses it for an electrical test, and it is the file Serigreen
+checks the Gerbers against.
+Pass when
+Every copper layer, mask, paste, silk, outline and drill file matches the board, inner-layer clearances included, and the
+IPC-D-356 file is in the package.
+C5 · Footprints and assembly
+What it catches
+A footprint edited by hand so that it no longer matches its library part, pads turned or shrunk, courtyards that overlap,
+vias inside solder pads, mask slivers too thin to make, annular rings the fab cannot plate.
+How to run it
+• Board Setup, Violation Severity: set "Footprint does not match library" to error, and run DRC. Any footprint it names
+is replaced from the library (right click, Update Footprint), never kept.
+• Inspect, Compare Footprint with Library on each power part (fuse, FETs, input connector, TVS) as a second look.
+• Courtyard overlaps and silk over pads are in the DRC Violations tab; do not downgrade them to ignored.
+• Vias in pads: either move them off the pad, or specify filled and capped vias on the fab drawing. Unfilled vias in a pad
+drain the solder and leave a starved joint, and this board is hand assembled.
+• Board Setup, Constraints: minimum annular ring 0.15 mm, minimum via drill 0.3 mm, minimum clearance and track
+width 0.2 mm, unless the fab's capability sheet says otherwise and that sheet is in the package.
+• Hand assembly: use the hand-solder footprint variants for passives (0805 or larger), and keep the library lands on
+every SOT and SOIC part; a land shortened to fit a track is a bridge waiting to happen.
+Pass when
+No footprint mismatch, no courtyard overlap, no silk over pads, no via in a pad without a fab note, constraints met.
+Seen so far
+Rev B's input FET footprint had its pads turned 90 degrees, leaving 0.425 mm between the ground pad and the 5 V pad
+where the library has 1.3 mm; 65 vias sat inside solder pads.
+C6 · BOM, placement file, job file and fab drawing
+What it catches
+A part the assembler cannot buy (no part number), cannot count (no quantity), or does not fit because a flag excluded it
+from the placement file; a job file with no revision, finish or stack-up; a board with no drawing to tell the fab how to
+make it.
+How to run it
+• Give every symbol the fields Manufacturer, MPN, Rating (voltage, current or power as applies), Temp (the operating
+range) and Variant (which builds fit it). Tools, Edit Symbol Fields fills them in one table. Then export the Bill of
+Materials from the schematic editor with those fields as columns, grouped by value and footprint, with quantities.
+• For every footprint that is fitted, open Footprint Properties, Attributes, and make sure "Exclude from position files",
+"Exclude from bill of materials" and "Not in schematic" are all clear. Then File, Fabrication Outputs, Component
+Placement, in mm, both sides. Count the lines against the BOM.
+• Board Setup, Physical Stackup: enter the real layers, dielectric thicknesses and copper weights, and the finish (Board
+Finish). The job file is generated from this, and it carries the revision from the title block.
+• Fab drawing: a PDF with the outline and dimensions, the stack-up table, the finish, the solder mask and silk colours,
+the via treatment (tented, filled, capped), the minimum track and gap, and a note of any controlled clearance.
+Dwgs.User is the layer for it.
+Pass when
+Every BOM line has manufacturer, part number, quantity, rating and temperature range; the placement file has every
+fitted part; the job file shows revision, finish and the real stack; the fab drawing is in the package.
+Seen so far
+Both packages so far had a BOM of values and footprints only, with blank quantities; Rev B's supervisor chip was flagged
+out of the placement file and BOM while the schematic BOM listed it; the job file read "rev?" with finish "None".
+
+
+===== PAGE 7 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 7 of 15
+C7 · Power paths
+What it catches
+A supply that cannot hold its load inside the load's voltage window, copper too thin for the current the protection allows
+through it, a part rated at the edge of its working voltage, a via carrying a whole board.
+How to run it
+• Draw the path for each supply from the input terminal to each load, as a list of elements: contact, track (width and
+length), fuse, FET or diode, via, plane, connector, cable. Measure track lengths with Inspect, Measure Tool, between
+pad edges.
+• Resistance of each track: R = ρ L / (w t), with ρ = 1.72 × 10-8 Ωm at 20 °C (add 0.39 percent per °C), t = 35 µm for 1 oz
+copper. Appendix B has a worked example and a table. Add the datasheet values for the fuse, the FET (maximum
+on-resistance at the gate drive you really have, times 1.4 when hot) and the contacts.
+• Heating: the PCB Calculator (from the KiCad project window), Track Width tab (IPC-2221), gives the temperature rise
+for a width and current; use the current the protection lets through (the fuse's trip current or the limiter's limit), not
+the normal load. Appendix B has the table.
+• The DC budget: for each load, lowest supply voltage, minus the converter's droop, minus the burst current times each
+resistance in series, must stay above the load's minimum; the highest supply voltage at light load must stay below its
+maximum. The budget in force for the modem board is in Appendix B.
+• Ratings: every part in a path is rated at twice its working voltage and above the highest transient it can see (for the 12
+V side, the charge controller's battery-disconnect voltage, about 22 to 25 V), at 1.5 times its working current, and its
+junction stays below 80 percent of its maximum at +70 °C inside the box. Write the datasheet value beside each part
+in the response sheet.
+• Simulation (item G1): the input chain and each regulator in the KiCad simulator (Inspect, Simulator, ngspice) or the DC
+solve you already use (padne), with the Rev B values, for the cases the review lists: modem rail under bursts, sensor
+start-up, radio transmit, reversed input, 12 V and 24 V on the input, thermal at +70 °C.
+Pass when
+Every load sits inside its window at the worst case, with the figures and their sources in the response sheet; every
+conductor carries the protection's fault current with less than 10 °C rise; every part passes the rating rule; the simulation
+results are in the package.
+Seen so far
+In v3 and again in Rev B the modem board falls below its 4.75 V minimum during a GSM burst, by the model; Rev B
+carried the whole board's current through one 0.3 mm via and 0.5 mm tracks behind a 4 A fuse.
+C8 · Protection at the inputs and the connectors
+What it catches
+An input that a reversed or wrong supply destroys, protection parts that are rated below the rail they sit on, ESD parts
+too far from the pins they protect, an earth net with no defined bond to ground.
+How to run it
+• Input: walk through three events on paper and in the simulation: the supply reversed; 12 V applied to a 5 V input (or
+24 V to a 12 V one); a surge. For each, say what conducts, what current flows, what stops it, and what every load sees.
+A series FET for reverse protection has its body diode blocking the reversed supply (for a P-channel part: drain to the
+input, source to the load, gate to ground), and its gate is protected to its own gate-source limit (a gate resistor and a
+zener of about 10 V).
+• TVS and clamp diodes: the stand-off voltage must be above the highest voltage the rail reaches in normal use, or the
+part leaks and warms all day. The clamping voltage must be below what the loads survive.
+• ESD: every line that leaves the box has its ESD array within 5 mm of the connector pin, along the copper, before any
+other part. Measure with Inspect, Measure Tool. Panel lamps, buttons and buzzers count as leaving the box.
+• Earth (PE): one defined bond between PE and ground on the board (a link, with an RC footprint as the alternative),
+beside the sensor ports; PE copper 0.5 mm or more from every other net except at the protection parts' pins; the
+earthing scheme written in the README.
+Pass when
+The three input events are written up with the simulation; stand-off and clamp voltages are stated against the rail; every
+ESD part is within 5 mm of its pin; the PE bond is on the board and described.
+Seen so far
+Rev B had no reverse or over-voltage protection on its 5 V input, a polarity legend printed on the wrong pads, TVS parts
+whose stand-off was below the planned set point, ESD parts 5 to 22 mm from their pins, and PE with no bond to ground.
+
+
+===== PAGE 8 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 8 of 15
+C9 · Placement
+What it catches
+Capacitors too far from the pins they serve, modules drawn on the wrong socket, connectors and test points hidden
+under a module, modules with nothing to hold them, parts that collide with the enclosure.
+How to run it
+• Decoupling: for each supply pin, the nearest 100 nF within 5 mm along the copper (3 mm for an IC's own pin), and the
+bulk capacitor (10 µF or more) within 10 mm. Measure along the track, not in a straight line. Put the result in the
+decoupling map (check C13).
+• Modules: draw each plug-in module's outline and height on a user layer (F.Fab for the outline, with the module's
+name), attach a 3D model to its socket footprint (Footprint Properties, 3D Models), and look at View, 3D Viewer from
+both sides. Check each outline against the pinout of the socket it hangs on, not against the label.
+• Nothing a person has to reach (screw terminal, test point, USB port, SIM, microSD, button) sits under a module. Every
+module that hangs from a header has standoff holes or a clamp.
+• Connectors on the board edges, pin 1 marked, cable exits pointing at the gland they will use. Mounting holes 5 mm
+from the edges and matched to the enclosure drawing.
+• Enclosure: the box model in the 3D view with the lid on. The antenna end of the radio module, the SIM side of the
+modem, the USB ports and the glands all have to be reachable or visible as the item requires.
+Pass when
+The decoupling map shows every supply pin inside the distance; the 3D check shows every module on its right socket
+with the box closed; nothing reachable sits under a module.
+Seen so far
+Rev B drew two module outlines on each other's sockets, put the modem's own 5 V terminal and three test points under
+the modem, and placed four 5 V capacitors together in a corner 41 mm from the nearest load.
+C10 · Layout
+What it catches
+A ground plane with cuts under signals, tracks routed on a plane layer, copper under the radio antenna, clearances
+below the rule, power tracks sized for the normal load instead of the fault current, layer changes through a single via.
+How to run it
+• Ground: one continuous plane on the layer next to the top signal layer. In the Appearance panel set inactive layers to
+Hide, select the plane layer, and look for anything but the plane on it. No track, no slot, no island.
+• Plane layers: nothing but the plane. If a net has to cross the board, it goes on an outer layer. A track on a plane layer
+cuts a slot, and every signal crossing that slot on the next layer loses its return path.
+• Antenna: Place, Add Rule Area over the module's antenna footprint plus a margin, on all copper layers, with tracks,
+vias, pads and copper fill all ticked as kept out. Then look at the area on every layer.
+• Spacing: Board Setup, Net Classes: 0.2 mm minimum everywhere; 0.25 mm between any two nets at component
+terminations; 0.3 mm from any net above 15 V to ground; 0.5 mm from PE to any other net. Put the exceptions in a
+custom rule (.kicad_dru) that matches this board, and delete rules that refer to nets or areas that no longer exist.
+• Power copper: pour width (3 mm or more) for the input path, six or more 0.3 mm vias at every layer change, sized for
+the fault current (check C7). Treat a 0.3 mm via as good for about 1 A.
+• Stitching: ground vias so that no point of a ground pour is more than 10 mm from one, and a via beside every signal
+via that changes reference plane.
+• Inspect, Net Inspector lists each net's total track length and layers; use it to find nets that wander onto the plane
+layers.
+Pass when
+The plane layers show nothing but their planes; the antenna rule area is in the file and empty on every layer; the spacing
+rules are met with the rule file matching the board; the power copper meets check C7; stitching is in.
+Seen so far
+Rev B routed 431 mm of track on the 5 V plane layer, crossed by bottom-layer signals at 54 places, ran both planes under
+the whole antenna footprint with no keep-out, and kept a rule file written for the previous board.
+
+
+===== PAGE 9 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 9 of 15
+C11 · Pins and control lines
+What it catches
+A module pin used for two things, a line driven from two places, an input on a pin that the module already drives, a
+watchdog that a reset or a firmware download defeats, a bus that one bad cable can lock.
+How to run it
+• Keep one signed pin map (spreadsheet) for the ESP32 board and the modem board: pin number, module function,
+carrier net, direction, state at reset, and who drives it. Every change goes through this sheet first and the schematic
+second. The reviews' pin tables (MS-CAR-REV-A-003 section 9, MS-CAR-REV-B-001 Table 10) are the starting point.
+• ESP32-S3 pins that are not free on the EdgeHax board: GPIO0, GPIO3, GPIO45 and GPIO46 are strapping pins and
+must not be loaded at reset; GPIO19 and GPIO20 are USB; GPIO43 and GPIO44 are the console UART; GPIO26 to 32
+are the flash; GPIO35 to 37 are taken by PSRAM on the octal (R8) boards; GPIO10 to 14 are the board's own microSD;
+GPIO40 to 42 carry the board's LEDs and are outputs only, never inputs.
+• One driver per line. A line that two devices can drive (a GPIO and an expander port, say) has one of them removed.
+Every control line has a defined state at reset, set by a resistor, and the truth table says what that state means for the
+module (off, on, pressed).
+• Watchdog: the kick comes from a pin that is high-impedance through reset and through USB download mode; the
+supervisor's output is open-drain if anything else drives the same reset or enable line.
+• Buses: an I2C bus that goes out on a cable can be held low by one bad cable or sensor. Nothing that the board needs
+to recover (the watchdog kick, a power enable, a rail switch) sits on that bus; the bus switch can be reset by the
+processor; the firmware has a bus-recovery routine (clock out nine pulses, then re-initialise).
+Pass when
+The signed pin map is in the package and matches the schematic; no pin is double-used; every control line has one driver
+and a defined reset state in the truth table; the watchdog survives reset and download; the bus recovery is designed and
+described.
+Seen so far
+Rev B put the radio's mode lines on the microSD pins, a reed input on an LED pin, two drivers on the modem's power
+enable, the watchdog kick on an expander that sits on the cabled bus, and a push-pull supervisor output on the ESP32
+board's enable pin, which its own reset button also drives.
+C12 · Silkscreen and marking
+What it catches
+A polarity mark on the wrong pad, labels on a layer that is not printed, a board with no name or revision, silk over
+copper.
+How to run it
+• Polarity: for every power terminal, click the pad, read its net in the status bar (or Highlight Net), and check that the
+"+" is printed beside the pad that carries the positive net. Do it on the plotted silk Gerber too, because text can move
+with a footprint rotation.
+• Labels that a person needs (connector names, pin 1, polarity, port names) go on F.Silkscreen or B.Silkscreen. F.Fab
+and Dwgs.User are not printed.
+• Board name, revision and a blank serial box on the silkscreen; the revision matches the title block and job file.
+• DRC reports silk over pads and silk overlaps; clear them. Text thickness 0.15 mm or more, height 1 mm or more.
+Pass when
+Every polarity mark sits beside the right pad on the plotted Gerber; the board carries name, revision and serial box; no
+silk over copper.
+Seen so far
+Rev B printed "5v +" beside the ground pad and "5v -" beside the 5 V pad of the input terminal, with no reverse
+protection behind it.
+
+
+===== PAGE 10 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 10 of 15
+C13 · The evidence documents
+What it catches
+A package that looks finished but cannot show that it works: no proof the modules fit, no proof the supply holds, no plan
+for the first power-up, no thought about what fails first.
+How to run it
+• Readings: the module dimensions and header spacings measured with calipers (not from photos), the 1:1 print of the
+socket layer with both boards pressed into it, and a side-on photo of each module on its socket. These close the fit
+items in one go.
+• DC solve or simulation: the supply paths with the real resistances from check C7, for each case the review lists, as
+plots or a table with the setup described.
+• Decoupling map: one table, supply pin by supply pin, with the nearest capacitor, its value and the distance along the
+copper.
+• FMEA: a table of the parts and connections that can fail (each fuse, FET, regulator, connector, cable, the watchdog),
+with the failure, its effect on the board and on the farmer, how it is detected, and the safe state. Twenty to thirty rows
+is the right size for this board.
+• Bring-up plan: the first power-up as a numbered list: what to fit first, what to measure at each step, the expected
+value and the stop condition. Start with the input stage alone, then the regulators, then one module at a time.
+• Pin map and truth table: check C11. README: the earthing scheme, the switched-rail rules for firmware, the USB
+service rule, the polarity of each terminal.
+Pass when
+Each document is in the package and the response sheet points at it from the items it closes.
+5. The order of work
+Most of the time lost so far has been spent drawing before deciding, and routing before the schematic was settled. This order
+avoids both:
+Step
+Stage
+What happens
+1
+Decide and measure
+Settle the open decisions with Serigreen by message before anything is drawn (for Rev C: RS485, the
+ESP32 module variant, the converter and the input protection parts). Take the module readings and the
+1:1 test-fit, so that the sockets are placed once.
+2
+Schematic
+Make the schematic changes against the items. Run C1. Fill the pin map and the truth table (C11). Send
+the schematic, the ERC report and a draft response sheet for a schematic-only look.
+3
+Layout
+Place (C9), route (C10), protect (C8), size the copper (C7). Run C2, C3, C5 as you go, not at the end.
+4
+Evidence
+C6 files, C13 documents, the 3D check, the simulation. Fill the response sheet from the items, one row
+each.
+5
+Final pass and send
+Refill, save, DRC, plot (C3). Gerber viewer walk (C4). Silk check (C12). Appendix C ticked. Zip named with
+revision and date, response sheet first.
+Table 3. The order of work for a revision.
+
+
+===== PAGE 11 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 11 of 15
+6. Where packages have lost time so far
+None of these is unusual, and none is personal. They are listed so that the next package does not repeat them.
+What happened
+Where
+Check
+Gerbers plotted before the zones were refilled
+and saved
+Twice (6 Oct files, Rev B 6-layer). Both would have shorted supplies to
+ground.
+C3
+A footprint edited by hand on a power part
+Pads turned, 0.425 mm between ground and 5 V.
+C5
+Polarity legend beside the wrong pad
+On the only power input, with no reverse protection behind it.
+C12, C8
+A part flagged out of the placement file and
+BOM
+The supervisor would have been bought and not fitted.
+C6
+BOM without part numbers or quantities
+Both packages.
+C6
+Files left over from the previous revision
+A design-rule file naming nets and areas not on the board; a QA note
+describing a part not on the board.
+C10, section 2
+Two drivers on one line; an input that floats at
+reset
+Modem power enable; watchdog kick.
+C11
+Changes made without agreement first
+The input voltage changed from 12 V to 5 V, RS485 removed, a second
+layer count added. Each may be right; each needed a message first.
+Rule 3
+No item-by-item response
+The review had to rediscover what had changed, and some changes were
+missed on both sides.
+Section 7
+Module dimensions estimated, never
+measured
+Socket spacing wrong in two revisions.
+C13
+Table 4. Where time has been lost, and the check that prevents it.
+7. The response sheet
+One row per item from the current review, in the review's order, plus one row for every change you made that no item asked
+for. A spreadsheet is fine. The columns, with four example rows:
+Item
+Prio
+What changed, and where
+Evidence (file, page, measurement)
+Status
+R3
+P0
+Silkscreen: "+" moved beside pad 1 (+5V_IN), "-"
+beside pad 2 (GND); polarity added to the
+README
+F.Silkscreen Gerber, J18 area; screenshot of the
+plotted layer with the pad nets highlighted
+Done
+B7
+P1
+C26 and C27 (1 µF) moved to 2.1 mm and 2.4 mm
+from U6 pins 1 and 5 along the copper
+Decoupling map row U6; screenshot
+Done
+C1
+P0
+RS485 deferred to Rev C
+Serigreen's message of (date) agreeing the deferral
+Deferred, agreed
+(new)
+J5 changed from JST XH to a screw terminal
+Schematic sheet 2; Serigreen's message of (date)
+Agreed before
+drawing
+Table 5. The response sheet. Status is one of Done, Partly (say what is missing), Deferred (with Serigreen's agreement named), Rejected (with the
+reason), or Agreed before drawing for a change nobody asked for. All four rows are examples of the form, not a record of what has been done.
+Write the evidence column so that someone who has never seen the board can open the named file and find the thing in a
+minute: layer, area, reference designator, page. "Fixed" and "checked" on their own are not evidence.
+
+
+===== PAGE 12 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 12 of 15
+Appendix A. KiCad settings to set once
+Set these once per project and they stay in the project files.
+Where
+Setting
+DRC dialog (Inspect, Design Rules
+Checker)
+Refill all zones before performing DRC: on. Test for parity between PCB and schematic: on. Report all
+errors for each track: on. Read Violations, Unconnected Items and Schematic Parity every time.
+Board Setup, Violation Severity
+Footprint does not match library: error. Courtyard overlap: error. Silkscreen over copper: warning at
+least. Nothing set to ignore.
+Board Setup, Constraints
+Minimum clearance 0.2 mm; minimum track width 0.2 mm; minimum via diameter 0.6 mm, drill 0.3
+mm; minimum annular ring 0.15 mm; copper to edge 0.5 mm. Adjust only to the fab's capability
+sheet.
+Board Setup, Net Classes
+Default 0.2 mm clearance and width. A Power class for the input and 5 V nets with the pour width. A
+PE class with 0.5 mm clearance. A class for any net above 15 V with 0.3 mm clearance to ground.
+Board Setup, Custom Rules
+Only rules that name nets and areas on this board. Delete the rest. Keep the comments in step with
+the constraints.
+Board Setup, Physical Stackup and
+Board Finish
+The real layer count, thicknesses, copper weights and finish, so that the job file is right.
+Schematic symbol fields
+Manufacturer, MPN, Rating, Temp, Variant on every part (Tools, Edit Symbol Fields).
+Footprint attributes
+Exclude from position files, Exclude from BOM, Not in schematic: all clear on every fitted part.
+Footprint 3D models
+A model on every socket for a plug-in module, with the module's real height, and on the enclosure
+outline.
+Table 6. Project settings.
+Where
+Setting
+File, Plot
+Gerber. Use extended X2 format: on. Include netlist attributes: on. Check zone fills before plotting:
+on. Subtract soldermask from silkscreen: on. Use drill/place file origin: on, with the origin set at a
+board corner. Plot all copper, mask, paste, silk, fab, courtyard, Edge.Cuts and Dwgs.User.
+Generate Drill Files
+Excellon, mm, decimal format, PTH and NPTH as the fab prefers (say which in the fab drawing), drill
+map as PDF.
+File, Fabrication Outputs
+Component Placement in mm, both sides, with the same origin. IPC-D-356 Netlist File. The Bill of
+Materials from the schematic editor, with the fields above.
+Gerber viewer
+Open the plotted set plus the drill files; walk each layer; hover pads around every edited area to
+read the net; File, Export to PCB Editor when a difference is suspected.
+Table 7. Output settings.
+
+
+===== PAGE 13 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 13 of 15
+Appendix B. Numbers and formulas
+B.1 Copper resistance
+R = ρ L / (w t). Resistivity ρ = 1.72 × 10-8 Ωm at 20 °C, rising 0.39 percent per °C (about 17 percent more at +70 °C). Thickness t =
+35 µm for 1 oz finished copper. Length L between pad edges, width w as drawn. Worked example, Rev B's input track: 0.5 mm
+wide, 13.8 mm long: R = 1.72 × 10-8 × 0.0138 / (0.0005 × 0.000035) = 13.6 mΩ at 20 °C, 16.2 mΩ at +70 °C. At 2.6 A that is 42
+mV lost in one short track.
+Width (1 oz)
+mΩ per 10 mm, 20 °C
+Rise at 1 A
+2 A
+3 A
+4 A
+6 A
+0.3 mm
+16.4
+10
+48
+122
+over 200
+over 200
+0.5 mm
+9.8
+4
+21
+52
+101
+over 200
+1.0 mm
+4.9
+1
+7
+17
+32
+81
+2.0 mm
+2.5
+0
+2
+5
+10
+26
+3.0 mm
+1.6
+0
+1
+3
+5
+13
+Table 8. Resistance per 10 mm and IPC-2221 temperature rise (°C) of a long outer-layer track, 1 oz copper. Rise = (I / (0.048 × A0.725))1/0.44 with A
+in mil²; inner layers use 0.024 and run about twice as hot. Serigreen's limit: 10 °C rise at the protection's fault current. A 0.3 mm via is treated as
+good for about 1 A; use arrays.
+B.2 The modem supply budget in force
+From MS-CAR-REV-B-001 section 6.4. The modem board needs 4.75 to 5.25 V at its own input. In a GSM burst it draws about
+1.8 A and the whole board about 2.6 A through the input terminal. The voltage at the modem board is:
+Vmodem = Vset × (1 − tolerance) − droop − Itotal × (Rlead in + Rboard) − Imodem × Rmodem lead
+Element
+Allocation
+Source
+Converter set point
+5.15 V within 1 percent (lowest 5.10 V)
+Condition 1
+Load-step droop
+50 mV at the converter's terminals, 0.15 to 2.6 A
+Condition 1
+Lead, converter to J18
+15 mΩ there and back (200 mm of 0.75 mm² each way)
+Condition 5
+Board, J18 to J5, both conductors,
+protection included
+60 mΩ or less at +70 °C
+Condition 3
+Lead, J5 to the modem board, with contacts
+30 mΩ there and back
+Condition 5
+Result at the burst
+4.80 V, against a 4.75 V minimum
+Proof
+The simulation (G1), then the bench trace at the modem board's own input
+through an LTE attach and with GSM forced, converter at its lowest set
+point: never below 4.75 V, never above 5.25 V
+Condition 6
+Table 9. The allocation in force for the modem supply. The team may divide it differently if the model and the trace show the window held.
+
+
+===== PAGE 14 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 14 of 15
+B.3 Distances and spacings
+Quantity
+Serigreen's figure
+100 nF decoupling to its supply pin
+5 mm along the copper; 3 mm for an IC's own pin
+Bulk capacitor (10 µF or more) to its load
+10 mm along the copper
+ESD or TVS part to the connector pin it protects
+5 mm along the copper, before any other part
+Any two nets
+0.2 mm (project minimum); 0.25 mm at component terminations
+Net above 15 V to ground
+0.3 mm (IPC-2221B Table 6-1, terminations with coating)
+PE (earth) to any other net
+0.5 mm, except at the protection parts' pins
+Ground stitching
+No point of a ground pour more than 10 mm from a ground via
+Power layer change
+Six or more 0.3 mm vias; pour width 3 mm or more on the input path
+Annular ring, via drill, track and gap
+0.15 mm, 0.3 mm, 0.2 mm, 0.2 mm (or the fab's sheet)
+Mounting holes
+M3, 5 mm from the board edges, matched to the enclosure drawing
+Crystal or oscillator to its IC
+10 mm, with a ground ring
+Part ratings
+Voltage 2 × working and above the highest transient; current 1.5 ×
+working; junction at most 80 percent of its maximum at +70 °C
+ambient
+Table 10. Distances, spacings and margins used in the reviews.
+Appendix C. Before you send
+Tick each line on the files in the zip, not on the files on screen.
+Check
+Pass means
+Done
+C1
+ERC 0 errors, 0 warnings; title block with the right revision
+C2
+Update PCB from Schematic reports nothing; DRC 0 unconnected, 0 parity differences, no dangling copper
+C3
+Zones refilled, saved, DRC clean on the saved file, then plotted with "Check zone fills before plotting" on; the three
+times noted
+C4
+Gerbers and drill walked in the viewer, inner layers at every connector; IPC-D-356 in the package
+C5
+No footprint mismatch, courtyard overlap or silk over pads; vias in pads handled; constraints met
+C6
+BOM with manufacturer, MPN, quantity, rating, temperature; placement file with every fitted part; job file with
+revision, finish, stack-up; fab drawing
+C7
+Each supply path listed with resistances and sources; heating at the fault current under 10 °C; ratings written;
+simulation in
+C8
+Reverse, over-voltage and surge events written up; TVS stand-off above the rail; ESD within 5 mm; PE bond on the
+board
+C9
+Decoupling map; 3D check with every module on its right socket and the box closed; nothing reachable under a
+module; standoffs
+C10
+Plane layers carry nothing but planes; antenna rule area; spacing rules and rule file match the board; power copper
+and vias; stitching
+C11
+Signed pin map; one driver per line; reset states in the truth table; watchdog survives reset and download; bus
+recovery
+C12
+Polarity marks beside the right pads on the plotted silk; name, revision, serial box; no silk over copper
+C13
+Readings and photos; simulation; decoupling map; FMEA; bring-up plan; README
+7
+Response sheet: every item, every unrequested change, evidence named; first file in the zip
+3
+Zip named with revision and date; one variant; nothing from the previous revision left inside
+Table 11. The list to tick before sending.
+
+
+===== PAGE 15 =====
+MoriShield carrier PCB  ·  release check
+Serigreen Technologies Private Limited
+Confidential  ·  MS-CAR-CHK-001 v1.0  ·  30 October 2026
+Page 15 of 15
+When the package arrives, Serigreen runs the same checks on the files in the zip, writes the response sheet's status column
+from what the files show, and releases in writing with the checksums of the files, or returns the short list that stops the
+release. The aim is one loop, not three.
+References
+1
+MS-CAR-REV-A-001 v1.2, Carrier PCB Rev A: design review and change requests for Rev B, 12 October 2026.
+2
+MS-CAR-REV-A-003 v1.1, Carrier PCB Rev A: module fit, 16 October 2026.
+3
+MS-CAR-REV-A-004 v1.0, Carrier PCB Rev A: fabrication readiness, 16 October 2026 (the 59 items and the release gate).
+4
+MS-CAR-REV-B-001 v1.0, Carrier PCB Rev B: package review, 29 October 2026 (the current items and the power conditions).
+5
+IPC-2221B, generic standard on printed board design (conductor sizing, Table 6-1 spacing).
+6
+IPC-6012, qualification and performance of rigid printed boards (annular ring, Class 2); IPC-7351, surface mount land patterns.
+7
+IEC 61000-4-2 and IEC 61000-4-5, ESD and surge immunity.
+8
+KiCad 10 documentation: Design Rules Checker, Plot, Gerber viewer, Calculator Tools.

@@ -1,0 +1,360 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-01T17:44:03",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 1 [/MPU_INT] of J7",
+                    "pos": {
+                        "x": 212.11,
+                        "y": 166.0
+                    },
+                    "uuid": "e8ece8b0-a09e-4767-9aaf-4b2044f8b34d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [3V3_C] of J7",
+                    "pos": {
+                        "x": 214.65,
+                        "y": 166.0
+                    },
+                    "uuid": "2c953902-ddaa-4b31-8cd9-15bd42a8037c"
+                },
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Modem' clearance 0.2500 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 7.4000 mm",
+                    "pos": {
+                        "x": 185.338,
+                        "y": 166.2
+                    },
+                    "uuid": "5eb246f1-94d6-4921-9d18-1367bfee4f20"
+                },
+                {
+                    "description": "Via [+5V] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 184.862501,
+                        "y": 167.050001
+                    },
+                    "uuid": "b2561e79-a673-40dd-a007-d851e1f07b62"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [unconnected-(J7-XCL-Pad3)] of J7",
+                    "pos": {
+                        "x": 217.19,
+                        "y": 166.0
+                    },
+                    "uuid": "2d4f863a-7e4f-4ba6-b8c8-a686114a1a16"
+                },
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 8 [3V3_C] of J7",
+                    "pos": {
+                        "x": 229.89,
+                        "y": 166.0
+                    },
+                    "uuid": "ba324eca-3dfe-4674-b185-5157fbcdea39"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 4 [unconnected-(J7-XDA-Pad4)] of J7",
+                    "pos": {
+                        "x": 219.73,
+                        "y": 166.0
+                    },
+                    "uuid": "d5637627-34d5-4db5-ab4a-337f2a8677fc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 5 [/I2C1_SDA] of J7",
+                    "pos": {
+                        "x": 222.27,
+                        "y": 166.0
+                    },
+                    "uuid": "fc6b132f-d176-4565-ab14-1ca847dbb407"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 6 [/I2C1_SCL] of J7",
+                    "pos": {
+                        "x": 224.81,
+                        "y": 166.0
+                    },
+                    "uuid": "f0065a5f-0831-4f2e-9b97-a7f8823be25a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 21.2000 mm",
+                    "pos": {
+                        "x": 231.138,
+                        "y": 167.4
+                    },
+                    "uuid": "695b3ff3-1a71-46da-a256-e28886cb5777"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J7",
+                    "pos": {
+                        "x": 227.35,
+                        "y": 166.0
+                    },
+                    "uuid": "7e718760-4026-49c9-ae63-04c043e1a3c2"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1100 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on F.Cu, length 6.7500 mm",
+                    "pos": {
+                        "x": 243.125,
+                        "y": 195.875
+                    },
+                    "uuid": "28780653-4287-4c99-b3fe-fcd7a2bfe1aa"
+                },
+                {
+                    "description": "PTH pad 4 [GND] of J13",
+                    "pos": {
+                        "x": 240.5,
+                        "y": 194.5
+                    },
+                    "uuid": "cd2033f5-8250-4358-8d9d-a26475a5bbca"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1100 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 5 [GND] of J13",
+                    "pos": {
+                        "x": 242.0,
+                        "y": 194.5
+                    },
+                    "uuid": "1de2f3ee-8b31-41c6-b2cc-615c77aeb1d2"
+                },
+                {
+                    "description": "Track [/+5V_SENS] on F.Cu, length 6.7500 mm",
+                    "pos": {
+                        "x": 243.125,
+                        "y": 195.875
+                    },
+                    "uuid": "28780653-4287-4c99-b3fe-fcd7a2bfe1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1100 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/I2C0_SDA_CH2] of J13",
+                    "pos": {
+                        "x": 237.5,
+                        "y": 194.5
+                    },
+                    "uuid": "03cae7f2-7fd5-4826-9557-8335408f9f8e"
+                },
+                {
+                    "description": "Track [/+5V_SENS] on F.Cu, length 6.7500 mm",
+                    "pos": {
+                        "x": 243.125,
+                        "y": 195.875
+                    },
+                    "uuid": "28780653-4287-4c99-b3fe-fcd7a2bfe1aa"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1100 mm)",
+            "items": [
+                {
+                    "description": "Track [/+5V_SENS] on F.Cu, length 6.7500 mm",
+                    "pos": {
+                        "x": 243.125,
+                        "y": 195.875
+                    },
+                    "uuid": "28780653-4287-4c99-b3fe-fcd7a2bfe1aa"
+                },
+                {
+                    "description": "PTH pad 3 [/I2C0_SCL_CH2] of J13",
+                    "pos": {
+                        "x": 239.0,
+                        "y": 194.5
+                    },
+                    "uuid": "5531299b-faa0-4497-8fa6-0a3bbf05ab99"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Power_5V_Sens' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Via [3V3_C] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 209.25,
+                        "y": 168.0
+                    },
+                    "uuid": "6e33b8f1-90c6-476c-8702-049d08832018"
+                },
+                {
+                    "description": "Track [/+5V_SENS] on In2.Cu, length 23.4000 mm",
+                    "pos": {
+                        "x": 209.738,
+                        "y": 167.2
+                    },
+                    "uuid": "ae9ab673-9e02-4fca-a3f9-6c2710ad8543"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

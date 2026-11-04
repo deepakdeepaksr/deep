@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "MoriShield_Carrier")(type "KiCad")(uri "\${KIPRJMOD}/MoriShield_Carrier.pretty")(options "")(descr "MoriShield Carrier project footprints"))
+)

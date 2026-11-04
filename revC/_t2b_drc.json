@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T18:16:18",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [
+        {
+            "description": "Pad net (/REED_PULSE_F) doesn't match net given by schematic (unconnected-(J2-IO39-Pad9))",
+            "items": [
+                {
+                    "description": "PTH pad 9 [/REED_PULSE_F] of J2",
+                    "pos": {
+                        "x": 183.5,
+                        "y": 133.68
+                    },
+                    "uuid": "0cac9c6a-4de3-4817-9c92-2d5e81deb46d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

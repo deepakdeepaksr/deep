@@ -1,0 +1,150 @@
+6.2 Normal mode（Mode 0）
+Type
+M0 = 0，M1 = 0
+Transmitting
+Users can input data through the serial port and the module will start wireless transmission.
+Receiving
+The module wireless receiving function is turned on, and after receiving the wireless data, it will be output through the serial
+port TXD pin.
+6.3 WOR mode（Mode 1）
+Type
+M0 = 1，M1 =0
+
+=== PAGE 15 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+14
+Transmitting
+When defined as a transmitting party, a preamble is automatically added before transmitting.
+Receiving
+It can receive data normally, the receiving function is the same as mode 0.
+6.4 Configuration mode（Mode 2）
+Type
+M0 = 0，M1 = 1
+Transmitting
+Wireless transmitting off
+Receiving
+Wireless receiving off
+Configuration
+Users can access the registers to configure the module's operation state.
+6.5 Deep sleep mode（Mode 3）
+Type
+M0 = 1，M1 = 1
+Transmitting
+Unable to transmit wireless data
+Receiving
+Unable to receive wireless data
+Note
+When from the sleep mode to other modes, the module will reconfigure the parameters. During the configuration process,
+AUX will remain low; After configuration,it outputs high level, we suggest that user test rising edge AUX.
+7 Register read and write control
+7.1 Command format
+In configuration mode (mode 2: M1 = 1, M0 = 0), the list of supported commands are as follows (only 9600, 8N1 format is
+supported when)：
+No.
+Command format
+Description
+1
+Set register
+Command: C0+starting address+length+parameters
+Response: C1+starting address+length+parameters
+E.g 1: Channel is 0x09
+command
+starting address
+length
+parameter
+Send:
+C0
+05
+01
+09
+
+=== PAGE 16 ===
+Chengdu Ebyte Electronic Technology Co., Ltd.
+E22-900T22D User Manual
+Copyright ©2012–2018，Chengdu Ebyte Electronic Technology Co.,Ltd.
+15
+Returen:
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: C0 00 04 12 34 00 61
+Return: C1 00 04 12 34 00 61
+2
+Read register
+Command: C1+starting address+parameters
+Response: C1+starting address+length+parameters
+E.g 1：Read channel
+command
+starting address
+length
+parameter
+Send:
+C1
+05
+01
+Returen:
+C1
+05
+01
+09
+E.g 2: Read module address, network address, serial port and air data rate.
+Send: C1 00 04
+Return: C1 00 04 12 34 00 61
+3
+Set
+temporary
+registers
+Command: C2+starting address+parameters
+Response: C1+starting address+length+parameters
+E.g 1: Channel is 0x09
+command
+starting address
+length
+parameter
+Send:
+C2
+05
+01
+09
+Returen:
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: C2 00 04 12 34 00 61
+Return: C1 00 04 12 34 00 61
+5
+Wireless
+configuration
+Command: CF CF + normal command
+Respond：CF CF + normal respond
+E.g 1: Channel is 0x09
+Command head
+command
+starting address
+length
+parameter
+Send:
+CF CF
+C0
+05
+01
+09
+Returen:
+CF CF
+C1
+05
+01
+09
+E.g 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1) and air data rate
+(1.2K).
+Send: CF CF C2 00 04 12 34 00 61
+Return: CF CF C1 00 04 12 34 00 61
+PS ： 1. Wireless configuration can only be used in transparent

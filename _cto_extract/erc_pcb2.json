@@ -1,0 +1,1733 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-01T01:01:56",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/d80462c8-fe11-4e1d-8672-0e34f7f857a2",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C_Polarized]",
+                            "pos": {
+                                "x": 0.3937,
+                                "y": 1.3081
+                            },
+                            "uuid": "785202ce-35e5-4145-a510-7614b4127371"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J25 [JST_XH_2]",
+                            "pos": {
+                                "x": 0.4064,
+                                "y": 5.0673
+                            },
+                            "uuid": "03e44212-2d4d-46ba-b289-f41acf4a382b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R51 [R]",
+                            "pos": {
+                                "x": 0.5842,
+                                "y": 5.1308
+                            },
+                            "uuid": "fdeef242-eaa6-4d50-8565-2e757abda3b7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [Fuse]",
+                            "pos": {
+                                "x": 0.5969,
+                                "y": 1.2446
+                            },
+                            "uuid": "85a92cba-5eed-48f7-b6fb-8e49c03cf1cd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [Q_2N7000]",
+                            "pos": {
+                                "x": 0.5969,
+                                "y": 4.8895
+                            },
+                            "uuid": "ad1aac64-7382-4e1b-9e47-e512c96231d9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R52 [R]",
+                            "pos": {
+                                "x": 0.8509,
+                                "y": 5.1054
+                            },
+                            "uuid": "29f632d9-5116-48c3-9c3c-ea69ebc96bb3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 [SW_Push]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 4.8387
+                            },
+                            "uuid": "6a7e4dfa-8c76-4e0a-b58b-7000f91fc441"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D_TVS]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 1.2446
+                            },
+                            "uuid": "8c30d121-0f04-4a3a-a846-3cfee5132157"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol ESD16 [D]",
+                            "pos": {
+                                "x": 1.0287,
+                                "y": 6.5913
+                            },
+                            "uuid": "a177e84b-bb92-4e7f-9b42-7727fe71a0f4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J11 [JST_XH_4]",
+                            "pos": {
+                                "x": 1.0414,
+                                "y": 6.4135
+                            },
+                            "uuid": "3953e00a-55a3-4c7c-97ae-0a280877d7ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 1.2065,
+                                "y": 1.3081
+                            },
+                            "uuid": "7777d4a0-8158-4fff-8562-818f5564a942"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Sock_1x22_L]",
+                            "pos": {
+                                "x": 1.2065,
+                                "y": 2.8956
+                            },
+                            "uuid": "4258ae90-1c7a-4c33-bdb0-8e57ad333d24"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 1.3081
+                            },
+                            "uuid": "14f49c93-6c44-4886-b83c-dbbf3b47572f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol D3 [LED]",
+                            "pos": {
+                                "x": 1.4097,
+                                "y": 4.8387
+                            },
+                            "uuid": "48e0f8fc-20c9-46ad-8315-67e1fdff19da"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [Sock_1x22_R]",
+                            "pos": {
+                                "x": 1.4732,
+                                "y": 2.8956
+                            },
+                            "uuid": "14f9490a-da68-4a74-8120-27f296c8bf79"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C_Polarized]",
+                            "pos": {
+                                "x": 1.4859,
+                                "y": 1.3081
+                            },
+                            "uuid": "762aa9df-2e05-49e0-87d9-4ddf6bb9d563"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol D4 [LED]",
+                            "pos": {
+                                "x": 1.6764,
+                                "y": 4.8387
+                            },
+                            "uuid": "78c66bf9-3f1d-407f-820f-33d43032f17c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [ScrewTerm_2]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 1.2446
+                            },
+                            "uuid": "0d04aea7-c686-4a08-854f-2ce8c1e5b66b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J18 [ScrewTerm_2]",
+                            "pos": {
+                                "x": 1.9177,
+                                "y": 1.2446
+                            },
+                            "uuid": "0f9d1386-fc6e-47f2-bc37-4e98faa1ae44"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol D7 [D_Schottky]",
+                            "pos": {
+                                "x": 1.9431,
+                                "y": 2.8956
+                            },
+                            "uuid": "694184fb-93a1-47d2-aed5-f5dbdffec6e5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol Q5 [Q_2N7000]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 4.8895
+                            },
+                            "uuid": "c129b141-3aa6-44ec-91ff-a1a2307eb2bf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [C_Polarized]",
+                            "pos": {
+                                "x": 2.1463,
+                                "y": 2.9591
+                            },
+                            "uuid": "0d74acc1-34a7-4167-a1fd-4ea20869c9f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J19 [ScrewTerm_2]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 1.2954
+                            },
+                            "uuid": "56bd01ad-963c-4cb4-8be1-7f1370206803"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [C]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 2.9845
+                            },
+                            "uuid": "9c1228f4-3084-4551-9893-ca2462ed3ac6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R11 [R]",
+                            "pos": {
+                                "x": 2.4003,
+                                "y": 4.8387
+                            },
+                            "uuid": "da709763-c0d9-4912-9b29-37b681d6e66b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R16 [R]",
+                            "pos": {
+                                "x": 2.4257,
+                                "y": 2.9591
+                            },
+                            "uuid": "303c671b-d18e-4988-8138-826b5e58c921"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol D6 [LED]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 4.8387
+                            },
+                            "uuid": "12822c8e-3a39-4e6e-8e47-adddeefa5c7f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J12 [JST_XH_4]",
+                            "pos": {
+                                "x": 2.6543,
+                                "y": 6.4135
+                            },
+                            "uuid": "d286c2f4-42ce-4aa5-b343-40e843e38a7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol Q6 [Q_2N7000]",
+                            "pos": {
+                                "x": 2.8575,
+                                "y": 4.8895
+                            },
+                            "uuid": "6b418f48-4df5-46ff-b67c-0a3582e8c6e2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R6 [R]",
+                            "pos": {
+                                "x": 3.1623,
+                                "y": 4.9022
+                            },
+                            "uuid": "ee923c82-72d8-4b8a-8026-cc740f3597e8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R7 [R]",
+                            "pos": {
+                                "x": 3.302,
+                                "y": 4.9022
+                            },
+                            "uuid": "3a59a4e0-9a9c-4a12-9957-213d7a2e3962"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R10 [R]",
+                            "pos": {
+                                "x": 3.4417,
+                                "y": 4.9022
+                            },
+                            "uuid": "d67fc51e-5039-4b10-bede-ab6e188acdb7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C27 [C]",
+                            "pos": {
+                                "x": 3.5179,
+                                "y": 1.2954
+                            },
+                            "uuid": "f69a9dff-40c9-454a-b678-558abd20f3a5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C49 [C]",
+                            "pos": {
+                                "x": 3.5179,
+                                "y": 1.524
+                            },
+                            "uuid": "f61085d9-4a8a-422f-8ab2-a25f30acf7f8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R14 [R]",
+                            "pos": {
+                                "x": 3.7211,
+                                "y": 4.9022
+                            },
+                            "uuid": "71c5df7f-3e75-4505-b8f2-6504c675a7db"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C28 [C]",
+                            "pos": {
+                                "x": 3.7846,
+                                "y": 1.2954
+                            },
+                            "uuid": "1c48a4af-3651-4570-bb64-18d1751274f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C50 [C]",
+                            "pos": {
+                                "x": 3.8227,
+                                "y": 1.524
+                            },
+                            "uuid": "0a394f34-12ab-45ef-b1db-6d1671c12e1c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C16 [C]",
+                            "pos": {
+                                "x": 4.0005,
+                                "y": 4.9022
+                            },
+                            "uuid": "3b4221a0-e707-424a-843f-94151437b347"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C30 [C]",
+                            "pos": {
+                                "x": 4.0386,
+                                "y": 1.2954
+                            },
+                            "uuid": "64180d33-4021-4775-afd5-57c23f366171"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C51 [C]",
+                            "pos": {
+                                "x": 4.1275,
+                                "y": 1.524
+                            },
+                            "uuid": "3aafbbc5-5903-4e01-80c9-3c7d8b63c4f9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C31 [C_Polarized]",
+                            "pos": {
+                                "x": 4.1783,
+                                "y": 1.2954
+                            },
+                            "uuid": "41c2c166-33b1-4698-aafc-bf24970ea213"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R39 [R]",
+                            "pos": {
+                                "x": 4.2037,
+                                "y": 6.6802
+                            },
+                            "uuid": "48e666b3-ba40-471f-b5bf-af4be9dabe5d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R40 [R]",
+                            "pos": {
+                                "x": 4.2037,
+                                "y": 6.9088
+                            },
+                            "uuid": "eb9be07b-a469-448e-a037-6ad406ea6bc1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [Sock_1x12_L]",
+                            "pos": {
+                                "x": 4.2545,
+                                "y": 3.0226
+                            },
+                            "uuid": "295f195e-0d38-4459-a263-cae30a2a10d8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J13 [JST_ZH_5]",
+                            "pos": {
+                                "x": 4.2799,
+                                "y": 6.4135
+                            },
+                            "uuid": "a0dff06a-ac3a-4e76-979c-b7d23112da33"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J4 [Sock_1x12_R]",
+                            "pos": {
+                                "x": 4.4069,
+                                "y": 3.0226
+                            },
+                            "uuid": "9deef6eb-b3c5-4324-b926-9fdc3b5fa4c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C32 [C]",
+                            "pos": {
+                                "x": 4.445,
+                                "y": 1.2954
+                            },
+                            "uuid": "6fb48605-a7d0-4640-bb40-f068a7e2679b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R15 [R]",
+                            "pos": {
+                                "x": 4.5974,
+                                "y": 3.0734
+                            },
+                            "uuid": "d04f8b50-3430-45e1-8798-5e54c0906630"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J23 [JST_XH_2]",
+                            "pos": {
+                                "x": 4.6355,
+                                "y": 4.8387
+                            },
+                            "uuid": "545824a1-e1c3-4bee-8674-8ee4115a01ae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C33 [C]",
+                            "pos": {
+                                "x": 4.7117,
+                                "y": 1.2954
+                            },
+                            "uuid": "326bd5cf-8961-4d43-8058-8c3f1176b54f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [Sock_1x07]",
+                            "pos": {
+                                "x": 4.9022,
+                                "y": 3.0226
+                            },
+                            "uuid": "363c2b1e-504b-4ce1-a74e-33a4f4bbdc8e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J24 [JST_XH_4]",
+                            "pos": {
+                                "x": 4.9149,
+                                "y": 4.8387
+                            },
+                            "uuid": "5ff69215-dd76-4318-a23c-82dd1a99f1a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C41 [C]",
+                            "pos": {
+                                "x": 4.9784,
+                                "y": 1.2954
+                            },
+                            "uuid": "47af6953-b10f-40fe-937c-c0c1f60893fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C42 [C]",
+                            "pos": {
+                                "x": 5.1689,
+                                "y": 1.2954
+                            },
+                            "uuid": "ced134cc-9309-44bd-8780-8752db7333ed"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [Sock_1x08]",
+                            "pos": {
+                                "x": 5.2451,
+                                "y": 3.0226
+                            },
+                            "uuid": "c2b38ab1-323c-4d70-ab66-2c618b6807fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C43 [C]",
+                            "pos": {
+                                "x": 5.3594,
+                                "y": 1.2954
+                            },
+                            "uuid": "1f300a5b-7a68-454b-8865-dde997b32034"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C7 [C]",
+                            "pos": {
+                                "x": 5.4483,
+                                "y": 1.0668
+                            },
+                            "uuid": "ccfd6d2d-6efb-4a82-a3db-19586c8763f1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Sock_1x06]",
+                            "pos": {
+                                "x": 5.5118,
+                                "y": 3.0226
+                            },
+                            "uuid": "a89bc51c-2fc0-4537-aa10-1988d5acf082"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C8 [C]",
+                            "pos": {
+                                "x": 5.588,
+                                "y": 1.0668
+                            },
+                            "uuid": "de2d2635-4f8d-434b-a942-f7d30fb6b454"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C44 [C]",
+                            "pos": {
+                                "x": 5.6642,
+                                "y": 1.2954
+                            },
+                            "uuid": "2db1b71b-5256-48e7-983b-4a6370f96a59"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [C]",
+                            "pos": {
+                                "x": 5.7277,
+                                "y": 1.0668
+                            },
+                            "uuid": "49e13c8a-0310-4bf0-b6f5-7aeca14e4e79"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R41 [R]",
+                            "pos": {
+                                "x": 5.8293,
+                                "y": 6.6548
+                            },
+                            "uuid": "209f03a3-4da8-4e0b-9710-f0ea95e51897"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R42 [R]",
+                            "pos": {
+                                "x": 5.8293,
+                                "y": 6.8834
+                            },
+                            "uuid": "26baf8ea-912d-4a9d-9e0d-c63f28e87600"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C10 [C]",
+                            "pos": {
+                                "x": 5.8674,
+                                "y": 1.0668
+                            },
+                            "uuid": "641fcf28-ac8d-495d-9786-b512e0e4159f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J14 [JST_XH_4]",
+                            "pos": {
+                                "x": 5.9055,
+                                "y": 6.4135
+                            },
+                            "uuid": "ef4917b6-32ca-46a4-92ba-343de94da257"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C45 [C]",
+                            "pos": {
+                                "x": 5.969,
+                                "y": 1.2954
+                            },
+                            "uuid": "bdc1615d-c250-4238-8195-0a17f6c04d96"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 6.2357,
+                                "y": 5.0165
+                            },
+                            "uuid": "984b3b17-12c8-496f-92ce-62ac46ada406"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C46 [C]",
+                            "pos": {
+                                "x": 6.2738,
+                                "y": 1.2954
+                            },
+                            "uuid": "75c7b2d3-599c-42bd-86a3-5dba95575aa5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C47 [C]",
+                            "pos": {
+                                "x": 6.5405,
+                                "y": 1.2954
+                            },
+                            "uuid": "d89ffb0f-0c37-43af-a773-676c508b191a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J15 [JST_XH_3]",
+                            "pos": {
+                                "x": 6.6167,
+                                "y": 4.953
+                            },
+                            "uuid": "d1f4f19c-74bb-46fb-8190-344905565eb1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C48 [C]",
+                            "pos": {
+                                "x": 6.8453,
+                                "y": 1.2954
+                            },
+                            "uuid": "41905975-7702-461f-94d4-7064bcae047d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J16 [JST_XH_2]",
+                            "pos": {
+                                "x": 6.9469,
+                                "y": 4.953
+                            },
+                            "uuid": "e2fdd0ca-646c-4906-bee1-3d057dcde2b9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 6.9723,
+                                "y": 2.921
+                            },
+                            "uuid": "0b2ba7e4-cd55-4b7c-ac02-f6b41dd322ac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C26 [C]",
+                            "pos": {
+                                "x": 7.1247,
+                                "y": 1.0668
+                            },
+                            "uuid": "3a0e3ef5-0747-4cfe-90ef-246808eddd9a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R43 [R]",
+                            "pos": {
+                                "x": 7.4422,
+                                "y": 6.6548
+                            },
+                            "uuid": "324c1ba2-700f-4ca0-90d2-0e79a2b1a0bf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R44 [R]",
+                            "pos": {
+                                "x": 7.4422,
+                                "y": 6.8834
+                            },
+                            "uuid": "aca361bf-12b4-4a62-a757-de8c49816628"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J17 [JST_XH_4]",
+                            "pos": {
+                                "x": 7.5184,
+                                "y": 6.4135
+                            },
+                            "uuid": "9336c8f7-b262-44b4-9344-7c1fb2b45e99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 7.5819,
+                                "y": 2.921
+                            },
+                            "uuid": "1d352b91-e766-4ccb-9d53-9e87fee64d15"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C34 [C]",
+                            "pos": {
+                                "x": 7.8105,
+                                "y": 5.0165
+                            },
+                            "uuid": "4f9cd93a-fd10-46b8-9b17-9b4fa2565656"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R35 [R]",
+                            "pos": {
+                                "x": 7.9502,
+                                "y": 3.4036
+                            },
+                            "uuid": "e9b4e0a3-a9dc-4fab-a443-5b6027c7774a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol U7 [TCA9548A]",
+                            "pos": {
+                                "x": 7.9756,
+                                "y": 3.0861
+                            },
+                            "uuid": "145323a6-aa3b-4679-b7b7-8c85f824bf14"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C35 [C]",
+                            "pos": {
+                                "x": 8.1026,
+                                "y": 5.0165
+                            },
+                            "uuid": "46d7a322-51dd-41f2-a804-085e055b186a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R36 [R]",
+                            "pos": {
+                                "x": 8.2169,
+                                "y": 3.4036
+                            },
+                            "uuid": "0f9603c1-89e7-40fa-b917-6625e0e85264"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C36 [C]",
+                            "pos": {
+                                "x": 8.382,
+                                "y": 5.0165
+                            },
+                            "uuid": "f1f5f64a-7b69-4b49-a7c3-e4d767f4f785"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R37 [R]",
+                            "pos": {
+                                "x": 8.4836,
+                                "y": 3.4036
+                            },
+                            "uuid": "59c511bf-f21e-4c82-aeb0-6612cb771a99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol U8 [TCA9535]",
+                            "pos": {
+                                "x": 8.5852,
+                                "y": 3.0353
+                            },
+                            "uuid": "e5090ca5-532c-4cbe-9060-3f38f86caa82"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R38 [R]",
+                            "pos": {
+                                "x": 8.7503,
+                                "y": 3.4036
+                            },
+                            "uuid": "743b083e-c2ed-48d0-97de-6fc8cfea7ba3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C38 [C]",
+                            "pos": {
+                                "x": 8.8392,
+                                "y": 1.1811
+                            },
+                            "uuid": "eab1210a-8217-45fb-975b-37cffd68bcb0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R45 [R]",
+                            "pos": {
+                                "x": 9.0678,
+                                "y": 6.6548
+                            },
+                            "uuid": "a7497972-c000-4ca7-97da-a3470a82e232"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R46 [R]",
+                            "pos": {
+                                "x": 9.0678,
+                                "y": 6.8834
+                            },
+                            "uuid": "69f6b037-cad9-4861-94ab-8528eea18dac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C39 [C]",
+                            "pos": {
+                                "x": 9.0932,
+                                "y": 1.1811
+                            },
+                            "uuid": "d86ec9ce-d4a3-4f2c-86f1-df92e775cc38"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J21 [JST_XH_4]",
+                            "pos": {
+                                "x": 9.1694,
+                                "y": 6.4135
+                            },
+                            "uuid": "56068a7e-dba8-4b2c-a4fd-2cd3a8d86142"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C29 [C]",
+                            "pos": {
+                                "x": 9.3091,
+                                "y": 2.921
+                            },
+                            "uuid": "6363d0eb-13fd-4893-9a9c-373c1cdfc0dc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 [TP]",
+                            "pos": {
+                                "x": 9.9441,
+                                "y": 3.0607
+                            },
+                            "uuid": "b47398cb-57b3-49d5-a099-024ba17a1a01"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP10 [TP]",
+                            "pos": {
+                                "x": 9.9441,
+                                "y": 3.2131
+                            },
+                            "uuid": "e1a295c1-5a39-4c3e-b9eb-4fa045337196"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J22 [JST_XH_2]",
+                            "pos": {
+                                "x": 10.0203,
+                                "y": 4.953
+                            },
+                            "uuid": "1890b1ed-44cd-4577-ae91-37397ba554ba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TP]",
+                            "pos": {
+                                "x": 10.0838,
+                                "y": 3.0607
+                            },
+                            "uuid": "340055c6-d962-4541-b4e0-332004d8f852"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP4 [TP]",
+                            "pos": {
+                                "x": 10.2235,
+                                "y": 3.0607
+                            },
+                            "uuid": "d4ed60e3-b339-4bac-a203-76a0c909584d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol C40 [C]",
+                            "pos": {
+                                "x": 10.2362,
+                                "y": 5.0165
+                            },
+                            "uuid": "bd0e9b9f-483e-40f8-9216-9e8820ede280"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP11 [TP]",
+                            "pos": {
+                                "x": 10.2743,
+                                "y": 3.2131
+                            },
+                            "uuid": "b2ddb7a8-c074-45b5-8c16-b727d6a2bf02"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP5 [TP]",
+                            "pos": {
+                                "x": 10.3632,
+                                "y": 3.0607
+                            },
+                            "uuid": "dd022ee4-e805-444d-8960-d09d883540c0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP6 [TP]",
+                            "pos": {
+                                "x": 10.5029,
+                                "y": 3.0607
+                            },
+                            "uuid": "019a6fb6-779a-4f86-88f9-948b76b1fc82"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R49 [R]",
+                            "pos": {
+                                "x": 10.5283,
+                                "y": 5.0165
+                            },
+                            "uuid": "998ada36-a4da-460c-a526-e84317799bbb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [TPS3823]",
+                            "pos": {
+                                "x": 10.541,
+                                "y": 1.27
+                            },
+                            "uuid": "731f4ecd-5d89-4d80-9986-586fe0ce6785"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP12 [TP]",
+                            "pos": {
+                                "x": 10.6045,
+                                "y": 3.2131
+                            },
+                            "uuid": "c44b812a-d0b1-4b37-81c5-24e4bd2c2adf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R47 [R]",
+                            "pos": {
+                                "x": 10.6934,
+                                "y": 6.7056
+                            },
+                            "uuid": "fda62149-cdff-42d6-8e23-2e6598c440b8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R48 [R]",
+                            "pos": {
+                                "x": 10.6934,
+                                "y": 6.9342
+                            },
+                            "uuid": "5ac927b6-e2bf-478b-8af4-481d6738ff8f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP7 [TP]",
+                            "pos": {
+                                "x": 10.7569,
+                                "y": 3.0607
+                            },
+                            "uuid": "2f5c075d-1859-4601-a8dc-12800fdf2cba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol J20 [JST_XH_4]",
+                            "pos": {
+                                "x": 10.7696,
+                                "y": 6.4643
+                            },
+                            "uuid": "6e671446-fd11-46d2-a418-6d0a0159f6f3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R50 [R]",
+                            "pos": {
+                                "x": 10.8204,
+                                "y": 5.0165
+                            },
+                            "uuid": "811bc9a8-c893-4d68-bd00-d5369a38fe22"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol R13 [R]",
+                            "pos": {
+                                "x": 10.9347,
+                                "y": 1.3081
+                            },
+                            "uuid": "d50d8d68-157f-43e6-8d69-23f2709dc405"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP8 [TP]",
+                            "pos": {
+                                "x": 11.0236,
+                                "y": 3.0607
+                            },
+                            "uuid": "0567c1ab-ca52-4502-8eed-f1409a3f2162"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'MoriShield_Carrier'",
+                    "items": [
+                        {
+                            "description": "Symbol TP9 [TP]",
+                            "pos": {
+                                "x": 11.2903,
+                                "y": 3.0607
+                            },
+                            "uuid": "8a0b306b-f9d8-4b40-950a-ec378f887566"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_sch"
+}

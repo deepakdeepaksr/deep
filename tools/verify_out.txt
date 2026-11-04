@@ -1,0 +1,11 @@
+KiCad wxWidgets alert guard - verification
+
+  [OK] background watchdog running   GUARD RUNNING  - PID(s): 16588
+  [OK] -Pause leaves the alert alone    still open after 3000ms - nothing dismissed it
+  [OK] alert auto-cancelled in 0.26s     closed within 0.26s - dismissed by the background guard
+  [OK] closed by a real button click, no force-close
+        2026-10-25 15:53:26  alert dialog seen  win=0xC0A0E pid=21900 proc=powershell buttons=[Yes | No | Cancel]
+        2026-10-25 15:53:26    dismissed (further wx warnings are now suppressed for this KiCad session)
+  [OK] restarts at logon via Startup folder entry
+
+ALL 5 CHECKS PASSED

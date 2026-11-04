@@ -1,0 +1,2038 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-01T23:47:48",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J17",
+                    "pos": {
+                        "x": 273.5,
+                        "y": 194.5
+                    },
+                    "uuid": "a9f9e704-6655-4a99-8692-8ef5f9e9392c"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J15",
+                    "pos": {
+                        "x": 152.88,
+                        "y": 194.5
+                    },
+                    "uuid": "c9ca44ee-14cd-4c9b-b042-f45e7cc62d8b"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; 1 spokes connected to isolated island)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 7 [GND] of J7",
+                    "pos": {
+                        "x": 227.35,
+                        "y": 166.0
+                    },
+                    "uuid": "7e718760-4026-49c9-ae63-04c043e1a3c2"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J14",
+                    "pos": {
+                        "x": 252.5,
+                        "y": 194.5
+                    },
+                    "uuid": "b40acd39-4907-42b0-a671-282d3c8242aa"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J21",
+                    "pos": {
+                        "x": 287.5,
+                        "y": 194.5
+                    },
+                    "uuid": "369a8ea3-4858-4801-931f-4493e1c5ab96"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J12",
+                    "pos": {
+                        "x": 194.5,
+                        "y": 194.5
+                    },
+                    "uuid": "f40d1424-bb6b-4d54-a932-04d89783b5c8"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu, priority 0",
+                    "pos": {
+                        "x": 126.6,
+                        "y": 87.6
+                    },
+                    "uuid": "42e0a988-ad8b-48c0-9801-e060f931dd90"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of J11",
+                    "pos": {
+                        "x": 178.5,
+                        "y": 194.5
+                    },
+                    "uuid": "6c38c32a-4cc2-41f0-8d67-7dbaaf19480c"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C36",
+                    "pos": {
+                        "x": 228.0,
+                        "y": 152.0
+                    },
+                    "uuid": "0060cefb-73d2-4aa0-85e9-13555e1a206c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 282.0,
+                        "y": 120.0
+                    },
+                    "uuid": "0145bd78-9d71-46d4-9821-ef5d87f5e317"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J19",
+                    "pos": {
+                        "x": 298.0,
+                        "y": 109.5
+                    },
+                    "uuid": "0160c887-6e8b-46f8-9cc0-af0f5564fdae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J16",
+                    "pos": {
+                        "x": 163.94,
+                        "y": 194.5
+                    },
+                    "uuid": "021d23d5-7c97-4cf5-856f-cc19abf24367"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 92.5
+                    },
+                    "uuid": "048989f6-4e5c-4ed6-bfe6-cd380dd46d5c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 274.75,
+                        "y": 138.5
+                    },
+                    "uuid": "088e9caf-0bab-473c-9739-f769b3af9cda"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J18",
+                    "pos": {
+                        "x": 134.4675,
+                        "y": 107.25
+                    },
+                    "uuid": "08b1ac92-e4ed-4275-b2c7-18713e3b4711"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 189.0
+                    },
+                    "uuid": "09115337-5ce4-41b8-ab6f-65ce879e29b0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R51",
+                    "pos": {
+                        "x": 154.75,
+                        "y": 147.5
+                    },
+                    "uuid": "09c64e2f-5bb7-4298-a072-9a1809f63fa4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 276.25,
+                        "y": 126.5
+                    },
+                    "uuid": "0aac4d0a-daf6-4302-99c2-0072b1f78118"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP9",
+                    "pos": {
+                        "x": 289.25,
+                        "y": 120.0
+                    },
+                    "uuid": "0b87ce15-65a7-49ce-a6c4-fa6c9aa80283"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C47",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 189.5
+                    },
+                    "uuid": "0ec88741-0b75-4959-9eb4-7d3f29e24d78"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 200.5
+                    },
+                    "uuid": "0f161d02-f527-48a4-8507-dcaaa2c34bf4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C45",
+                    "pos": {
+                        "x": 236.5,
+                        "y": 190.0
+                    },
+                    "uuid": "106487c2-0491-4899-8f52-3758da57b823"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 209.5,
+                        "y": 154.0
+                    },
+                    "uuid": "11d151c9-b10d-42dd-bd23-224507017bc2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C31",
+                    "pos": {
+                        "x": 235.0,
+                        "y": 166.0
+                    },
+                    "uuid": "1329e86d-2deb-4302-9aab-d43a0d83d988"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 298.75,
+                        "y": 141.75
+                    },
+                    "uuid": "143bb37f-c226-4ef4-a9a5-ccf53deec7fe"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q3",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 168.0
+                    },
+                    "uuid": "14ba8cb6-7f1a-4ebb-b233-cd29b625c95e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 238.0,
+                        "y": 171.0
+                    },
+                    "uuid": "15cced82-f5b6-4288-8e98-4e30e21f65f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R36",
+                    "pos": {
+                        "x": 216.0,
+                        "y": 124.0
+                    },
+                    "uuid": "16b926d2-95f2-4108-b23e-da30569e4b06"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP8",
+                    "pos": {
+                        "x": 240.0,
+                        "y": 157.0
+                    },
+                    "uuid": "18ff49c6-628d-425b-aa49-5aea66f9e2c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 170.0,
+                        "y": 124.0
+                    },
+                    "uuid": "1a736378-9777-45f3-b3ed-d7fe1b284a72"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 299.5,
+                        "y": 92.5
+                    },
+                    "uuid": "1c5efc32-28aa-47c9-aead-e2bfaafaf1d7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C33",
+                    "pos": {
+                        "x": 248.0,
+                        "y": 175.0
+                    },
+                    "uuid": "1cdd410e-844f-4f55-a49c-47f750922fa5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C49",
+                    "pos": {
+                        "x": 299.75,
+                        "y": 147.5
+                    },
+                    "uuid": "1f9688ce-e2e9-4ead-81e2-cc50c7ec4321"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R37",
+                    "pos": {
+                        "x": 196.0,
+                        "y": 172.0
+                    },
+                    "uuid": "21394b3b-d6e5-4265-a23c-db73f2fc3fea"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP6",
+                    "pos": {
+                        "x": 222.0,
+                        "y": 145.0
+                    },
+                    "uuid": "219e0c66-0b85-4e70-9ab0-de54dd3b35eb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 222.0,
+                        "y": 150.0
+                    },
+                    "uuid": "23338c51-12f9-4aa1-9fe7-0107dc8106f9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 226.0,
+                        "y": 144.0
+                    },
+                    "uuid": "24e12358-f133-4bdf-a9fb-1c86ac0f839b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 183.5,
+                        "y": 154.0
+                    },
+                    "uuid": "274bd993-f571-4b8d-8bbc-05b0d134196c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 292.0,
+                        "y": 95.0
+                    },
+                    "uuid": "2c4e2707-e0cc-4b1a-ab4e-ceba7456d496"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R13",
+                    "pos": {
+                        "x": 218.0,
+                        "y": 156.0
+                    },
+                    "uuid": "2d222ba7-a05c-40dc-bfac-a5d82f964ecc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 299.5,
+                        "y": 200.5
+                    },
+                    "uuid": "31782302-c137-405a-8c97-053aba01b9c6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C43",
+                    "pos": {
+                        "x": 161.0,
+                        "y": 189.5
+                    },
+                    "uuid": "3400f997-4540-48bb-9c33-6364891c9f7f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R38",
+                    "pos": {
+                        "x": 200.0,
+                        "y": 175.0
+                    },
+                    "uuid": "35c0235d-2ea2-4631-8c5a-0def3bfeee80"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C38",
+                    "pos": {
+                        "x": 246.0,
+                        "y": 154.0
+                    },
+                    "uuid": "362a9a35-cc9e-484f-9e47-be6778ae9548"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 127.0
+                    },
+                    "uuid": "36e6edca-dc70-4bbe-b6c0-8b6b7e4194de"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 159.0
+                    },
+                    "uuid": "374e52eb-2327-4c4d-a8aa-d6200b235a3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 181.0,
+                        "y": 173.0
+                    },
+                    "uuid": "3aacf27b-2113-4415-9b82-71a28b28e762"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R49",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 116.8
+                    },
+                    "uuid": "3c104887-9159-4f7a-bd5e-0b5be375a9a6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 132.5,
+                        "y": 184.0
+                    },
+                    "uuid": "3d32c02e-ab98-4a6a-8109-6383de324da2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C30",
+                    "pos": {
+                        "x": 245.0,
+                        "y": 164.25
+                    },
+                    "uuid": "45358922-cf45-4f44-96e5-09570712b56a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q4",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 168.0
+                    },
+                    "uuid": "47588d8a-bb3b-4904-b794-fad4fb441467"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 171.04
+                    },
+                    "uuid": "4a971429-8d11-4695-91a9-d0a61819f21b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 275.75,
+                        "y": 132.75
+                    },
+                    "uuid": "4c802d25-be32-4302-bfa4-23bf573bd76c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J17",
+                    "pos": {
+                        "x": 271.0,
+                        "y": 194.5
+                    },
+                    "uuid": "4d6fb6ef-89ca-4053-9bb1-8bfba75de842"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D6",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 177.0
+                    },
+                    "uuid": "4dbe7829-f5bb-4d99-9072-4e357482ab3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 158.3
+                    },
+                    "uuid": "4e17d644-b198-41b1-a84d-5c80a6c02d18"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J15",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 194.5
+                    },
+                    "uuid": "52283e8f-dd2a-45f5-8088-0153cf6652fb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U7",
+                    "pos": {
+                        "x": 240.0,
+                        "y": 180.0
+                    },
+                    "uuid": "53a52d1f-a89b-4639-875c-2c15c45ccbec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R11",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 175.0
+                    },
+                    "uuid": "53cac18f-063d-4ab0-8eba-2d5ff9ad62fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C35",
+                    "pos": {
+                        "x": 155.0,
+                        "y": 190.0
+                    },
+                    "uuid": "542f0117-4b12-4994-81ec-077c2ba8f9ad"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP11",
+                    "pos": {
+                        "x": 294.75,
+                        "y": 128.25
+                    },
+                    "uuid": "543f5e48-bd65-4ecb-8ff4-39afdcdedff9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C28",
+                    "pos": {
+                        "x": 216.0,
+                        "y": 108.0
+                    },
+                    "uuid": "54b678ca-7064-4c13-a213-b1a0d0d0bcd3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 230.75,
+                        "y": 193.0
+                    },
+                    "uuid": "54ece046-eee2-4e93-978d-a3c8b83c1321"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 269.5,
+                        "y": 113.56
+                    },
+                    "uuid": "551952af-50aa-445e-8137-7665310a9659"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C51",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 173.0
+                    },
+                    "uuid": "587a2319-52a7-4f9d-9bcd-8489e22073ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint SW1",
+                    "pos": {
+                        "x": 146.0,
+                        "y": 132.0
+                    },
+                    "uuid": "588c1255-8737-44a5-9e6d-2dad74c30515"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D7",
+                    "pos": {
+                        "x": 220.0,
+                        "y": 103.0
+                    },
+                    "uuid": "593f2b2b-9724-4899-8454-68d8ac9bfcd7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q9",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 104.0
+                    },
+                    "uuid": "59a42dd9-6137-4911-aad0-aa677b39e550"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C16",
+                    "pos": {
+                        "x": 174.0,
+                        "y": 131.0
+                    },
+                    "uuid": "5bc9c339-6907-4c30-b232-faceee2ec3ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R44",
+                    "pos": {
+                        "x": 271.75,
+                        "y": 190.0
+                    },
+                    "uuid": "5c5efdcc-8729-401f-aa15-0518b0e5617b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R45",
+                    "pos": {
+                        "x": 290.0,
+                        "y": 186.0
+                    },
+                    "uuid": "5f8608b4-b615-49d8-869f-2358e2588a11"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 121.5
+                    },
+                    "uuid": "61e42449-8b4c-4bfb-b3d6-d7034780a53c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP12",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 144.75
+                    },
+                    "uuid": "663ed59a-1e90-4ceb-8c55-6381f3278731"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C48",
+                    "pos": {
+                        "x": 264.75,
+                        "y": 191.25
+                    },
+                    "uuid": "672eb9f4-613d-4a4f-b862-f3e3017c0afc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R41",
+                    "pos": {
+                        "x": 255.0,
+                        "y": 186.0
+                    },
+                    "uuid": "6e1d6f03-7399-4a83-a46d-e49e0f8d7dfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R43",
+                    "pos": {
+                        "x": 276.0,
+                        "y": 186.0
+                    },
+                    "uuid": "6e5dad40-f261-4c9f-b903-ab99943a56e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J22",
+                    "pos": {
+                        "x": 132.975,
+                        "y": 120.25
+                    },
+                    "uuid": "70f47193-6cae-43fb-b62f-a7c9fa9ef451"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R35",
+                    "pos": {
+                        "x": 216.0,
+                        "y": 120.0
+                    },
+                    "uuid": "73f796f3-5b58-4042-b587-38cf7ca2fa35"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 239.51,
+                        "y": 95.83
+                    },
+                    "uuid": "747dccb2-3c11-4897-b4eb-cea43c7b4a33"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C42",
+                    "pos": {
+                        "x": 287.0,
+                        "y": 95.0
+                    },
+                    "uuid": "7532c566-e737-4e3d-b869-e602ea0cdd2c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 235.5,
+                        "y": 113.56
+                    },
+                    "uuid": "76d32abb-5187-4675-960c-b6e3e984a89b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U8",
+                    "pos": {
+                        "x": 252.0,
+                        "y": 167.0
+                    },
+                    "uuid": "785ca688-67d8-4c77-a44c-b0d54ab9acda"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 212.11,
+                        "y": 166.0
+                    },
+                    "uuid": "798862c8-b282-4eaa-bb0a-dd95b97c7f14"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J26",
+                    "pos": {
+                        "x": 162.45,
+                        "y": 181.35
+                    },
+                    "uuid": "7a992e31-a0a9-45d8-ac0d-608b53b9ea8d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 177.3,
+                        "y": 155.5
+                    },
+                    "uuid": "8055cfa6-d441-4c81-97ce-b14578735919"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q2",
+                    "pos": {
+                        "x": 181.0,
+                        "y": 168.0
+                    },
+                    "uuid": "81139078-adc0-4396-afd3-62f049df0c10"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 226.0,
+                        "y": 133.0
+                    },
+                    "uuid": "81f98eef-b49c-4cb3-800c-5234f2c7c29d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 155.5
+                    },
+                    "uuid": "84959187-9128-4b56-833a-8cdf689f76d4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R47",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 134.0
+                    },
+                    "uuid": "851230f7-466f-48f6-8385-011a7fede2f0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 263.5,
+                        "y": 177.62
+                    },
+                    "uuid": "860d5127-e3b6-436b-ac6f-31c1dd6cb986"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R14",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 189.0
+                    },
+                    "uuid": "8a45be52-51a0-4bb6-aace-fda135d05d41"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 238.0,
+                        "y": 174.5
+                    },
+                    "uuid": "8c3fbd98-d247-414d-84b4-90d5f157abc2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R16",
+                    "pos": {
+                        "x": 225.25,
+                        "y": 118.0
+                    },
+                    "uuid": "8dbbf597-59d8-4fef-9e80-ab125746b225"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J23",
+                    "pos": {
+                        "x": 132.975,
+                        "y": 130.5
+                    },
+                    "uuid": "8de3399f-2191-49b3-aece-cc296a4ca570"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C44",
+                    "pos": {
+                        "x": 181.0,
+                        "y": 189.5
+                    },
+                    "uuid": "90619b5e-edb9-4851-be7f-8b700f6e3c6b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q5",
+                    "pos": {
+                        "x": 147.25,
+                        "y": 147.21
+                    },
+                    "uuid": "909429d8-f35e-4b37-980a-fe41fbe5eb55"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C26",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 173.0
+                    },
+                    "uuid": "91ea6cdd-12c7-4a36-9e1d-c19abc6cd7ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J14",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 194.5
+                    },
+                    "uuid": "9209f18b-1aae-4658-8100-836a5205a901"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J21",
+                    "pos": {
+                        "x": 285.0,
+                        "y": 194.5
+                    },
+                    "uuid": "93a0d910-27ad-467c-9e5b-0a4afc3438e4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R40",
+                    "pos": {
+                        "x": 241.5,
+                        "y": 189.5
+                    },
+                    "uuid": "9af83f30-987a-4f90-a03a-1c474430ad6c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C46",
+                    "pos": {
+                        "x": 252.5,
+                        "y": 175.0
+                    },
+                    "uuid": "9e64773e-9792-48ad-a6f7-e5b166c78b12"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 169.0,
+                        "y": 131.0
+                    },
+                    "uuid": "a1b0f398-cebb-4c69-a92a-bf95768c4ef1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J12",
+                    "pos": {
+                        "x": 192.0,
+                        "y": 194.5
+                    },
+                    "uuid": "a45cb3c1-95df-40b3-92e6-a0fb5f657d8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 157.65,
+                        "y": 161.5
+                    },
+                    "uuid": "a5a83824-6d0f-4456-8485-19781443bbd8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 146.5,
+                        "y": 96.0
+                    },
+                    "uuid": "a7946a0b-a4a1-4941-b488-435a82709637"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C50",
+                    "pos": {
+                        "x": 295.5,
+                        "y": 188.0
+                    },
+                    "uuid": "a9eaeaa2-110e-40c1-b17d-db4be9a5da37"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J11",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 194.5
+                    },
+                    "uuid": "abc7ff42-c3ed-41c6-96ec-9541bcb8aec4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 297.5,
+                        "y": 98.0
+                    },
+                    "uuid": "acf34126-d8b2-41ab-9c74-f98da907fe44"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R52",
+                    "pos": {
+                        "x": 153.5,
+                        "y": 139.5
+                    },
+                    "uuid": "ae2362da-1e61-4254-a804-eaf69e3477df"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C34",
+                    "pos": {
+                        "x": 145.0,
+                        "y": 186.0
+                    },
+                    "uuid": "b25cb609-fc4f-4256-a31e-4773932f30a5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q6",
+                    "pos": {
+                        "x": 147.25,
+                        "y": 140.98
+                    },
+                    "uuid": "b5df4e08-2d58-47b2-8566-1b96cd64c073"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint ESD16",
+                    "pos": {
+                        "x": 283.0,
+                        "y": 103.0
+                    },
+                    "uuid": "baef3588-235c-4f64-bc2d-a14dddbbbe95"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R48",
+                    "pos": {
+                        "x": 293.0,
+                        "y": 136.75
+                    },
+                    "uuid": "bcb6ccf0-188d-4db5-b003-8a0c29aedb27"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q8",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 158.5
+                    },
+                    "uuid": "bf86270a-85d9-478e-a344-4b327ee72087"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R46",
+                    "pos": {
+                        "x": 290.0,
+                        "y": 189.5
+                    },
+                    "uuid": "c1046ec2-98d8-48f5-95e0-19f9a5c81262"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP10",
+                    "pos": {
+                        "x": 285.625,
+                        "y": 120.0
+                    },
+                    "uuid": "c44d8106-4846-4fc5-b5bb-20525a81edce"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J24",
+                    "pos": {
+                        "x": 132.975,
+                        "y": 147.25
+                    },
+                    "uuid": "c48fe833-511c-492c-b350-046d62f7fed9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J13",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 194.5
+                    },
+                    "uuid": "c9558bf0-9b51-4ef3-bc0c-f7126c0705b0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP7",
+                    "pos": {
+                        "x": 232.0,
+                        "y": 157.5
+                    },
+                    "uuid": "caa35435-4ccc-4fac-ba32-72ae692fd5be"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R42",
+                    "pos": {
+                        "x": 255.0,
+                        "y": 189.5
+                    },
+                    "uuid": "cd1503c1-f29c-4851-a9b9-1ec41355ffd0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R15",
+                    "pos": {
+                        "x": 282.75,
+                        "y": 113.5
+                    },
+                    "uuid": "cd4e5b8e-bb06-41f1-b085-991ac61f5b8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R39",
+                    "pos": {
+                        "x": 241.5,
+                        "y": 186.0
+                    },
+                    "uuid": "cdaab569-179c-419a-a7a0-98705bc9da52"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R50",
+                    "pos": {
+                        "x": 145.2,
+                        "y": 116.8
+                    },
+                    "uuid": "d2bebe33-a8b2-46fd-af7c-80f5557db538"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 137.75,
+                        "y": 168.75
+                    },
+                    "uuid": "d6233a31-86c5-492e-99f5-b404e73a5cae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 241.0,
+                        "y": 154.0
+                    },
+                    "uuid": "d80f4225-e074-45dc-979a-532f32859b3f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C41",
+                    "pos": {
+                        "x": 282.0,
+                        "y": 95.0
+                    },
+                    "uuid": "e1964f40-8365-4f4e-bbe6-286b8fd0947a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 172.5,
+                        "y": 104.0
+                    },
+                    "uuid": "e3f80afd-efce-4a4f-8460-a93ce22f6364"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J25",
+                    "pos": {
+                        "x": 139.31,
+                        "y": 194.5
+                    },
+                    "uuid": "e792d6e5-0995-495e-912a-eabb4705438c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint D4",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 165.0
+                    },
+                    "uuid": "e83659fd-d785-47a3-bcfb-b0f0a52612f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 177.3,
+                        "y": 158.3
+                    },
+                    "uuid": "ef065328-0852-4b1b-a39f-b5dd496f2020"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q7",
+                    "pos": {
+                        "x": 251.0,
+                        "y": 154.0
+                    },
+                    "uuid": "ef732e0a-b65f-40af-9e54-a6bfa2d8818f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'MoriShield_Carrier' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 114.0
+                    },
+                    "uuid": "f8f8f809-3b46-4a74-beb6-470b062c8a26"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

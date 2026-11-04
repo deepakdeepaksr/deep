@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MoriShield_Carrier")(type "KiCad")(uri "${KIPRJMOD}/../morishield/morishield_hardware/libraries/MoriShield_Carrier.pretty")(options "")(descr "MoriShield Carrier footprints"))
+)

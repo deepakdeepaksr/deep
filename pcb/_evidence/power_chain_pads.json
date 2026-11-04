@@ -1,0 +1,208 @@
+{
+ "TP2": {
+  "value": "+5V",
+  "library_id": "MoriShield_Carrier:TestPoint_Pad_D2.0mm",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "+5V"
+   }
+  ]
+ },
+ "J18": {
+  "value": "ScrewTerm_2",
+  "library_id": "MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "+5V_IN"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "GND"
+   }
+  ]
+ },
+ "C31": {
+  "value": "100uF/16V",
+  "library_id": "MoriShield_Carrier:CP_Radial_D6.3mm_P2.50mm",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "/+5V_SENS"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "GND"
+   }
+  ]
+ },
+ "C13": {
+  "value": "10uF/50V_X7R",
+  "library_id": "MoriShield_Carrier:CP_Radial_D10.0mm_P5.00mm",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "+5V"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "GND"
+   }
+  ]
+ },
+ "D7": {
+  "value": "SS56",
+  "library_id": "MoriShield_Carrier:D_SMC_Handsoldering",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "/+5V_ESP"
+   },
+   {
+    "pad": "2",
+    "type": "smd",
+    "net": "+5V"
+   }
+  ]
+ },
+ "Q9": {
+  "value": "AO3401A",
+  "library_id": "MoriShield_Carrier:SOT-23_PMOS_HS",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "GND"
+   },
+   {
+    "pad": "2",
+    "type": "smd",
+    "net": "+5V_F"
+   },
+   {
+    "pad": "3",
+    "type": "smd",
+    "net": "+5V"
+   }
+  ]
+ },
+ "J5": {
+  "value": "MX126-5.0-02P",
+  "library_id": "MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "+5V"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "GND"
+   }
+  ]
+ },
+ "F1": {
+  "value": "PTC_4A",
+  "library_id": "MoriShield_Carrier:Fuseholder_Clip-5x20mm_Littelfuse_111_Inline_P20.00x5.00mm_D1.05mm_Horizontal",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "+5V_IN"
+   },
+   {
+    "pad": "1",
+    "type": "thru_hole",
+    "net": "+5V_IN"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "+5V_F"
+   },
+   {
+    "pad": "2",
+    "type": "thru_hole",
+    "net": "+5V_F"
+   }
+  ]
+ },
+ "ESD16": {
+  "value": "SMBJ5.0A",
+  "library_id": "MoriShield_Carrier:D_SMB_Handsoldering",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "+5V"
+   },
+   {
+    "pad": "2",
+    "type": "smd",
+    "net": "GND"
+   }
+  ]
+ },
+ "U10": {
+  "value": "eFuse",
+  "library_id": "Package_TO_SOT_SMD:SOT-23-6",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad1)"
+   },
+   {
+    "pad": "2",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad2)"
+   },
+   {
+    "pad": "3",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad3)"
+   },
+   {
+    "pad": "4",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad4)"
+   },
+   {
+    "pad": "5",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad5)"
+   },
+   {
+    "pad": "6",
+    "type": "smd",
+    "net": "unconnected-(U10-~-Pad6)"
+   }
+  ]
+ },
+ "D2": {
+  "value": "SMCJ5.0A",
+  "library_id": "MoriShield_Carrier:D_SMC_Handsoldering",
+  "pads": [
+   {
+    "pad": "1",
+    "type": "smd",
+    "net": "+5V"
+   },
+   {
+    "pad": "2",
+    "type": "smd",
+    "net": "GND"
+   }
+  ]
+ }
+}

@@ -1,0 +1,75 @@
+Vias inside SMD pads - MoriShield Carrier Rev C
+source: every via centre tested against every SMD pad on the board
+count:  67 of 319 vias
+
+ref      pad  pad net          footprint                          via net              x mm     y mm via drill
+C10      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   178.34   158.30   0.30
+C14      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   170.14   108.50   0.30
+C26      1    +5V              C_0805_2012Metric_Pad1.18x1.45mm_H +5V                   174.96   173.00   0.30
+C26      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   177.04   173.00   0.30
+C27      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   182.04   173.00   0.30
+C29      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   239.04   174.50   0.30
+C30      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   244.00   164.25   0.30
+C33      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   238.04   198.50   0.30
+C38      2    GND              C_1206_3216Metric_Pad1.33x1.80mm_H GND                   247.56   154.00   0.30
+C4       1    3V3_C            C_0805_2012Metric_Pad1.18x1.45mm_H 3V3_C                 236.96   171.00   0.30
+C4       2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   239.04   171.00   0.30
+C41      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   163.10   106.75   0.30
+C45      1    /3V3_SENS_SW     C_0805_2012Metric_Pad1.18x1.45mm_H /3V3_SENS_SW          235.46   190.00   0.30
+C45      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   237.54   190.00   0.30
+C46      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   253.54   175.00   0.30
+C47      1    /3V3_SENS_SW     C_0805_2012Metric_Pad1.18x1.45mm_H /3V3_SENS_SW          248.96   189.50   0.30
+C47      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   251.04   189.50   0.30
+C48      1    /3V3_SENS_SW     C_0805_2012Metric_Pad1.18x1.45mm_H /3V3_SENS_SW          263.71   191.25   0.30
+C48      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   265.79   191.25   0.30
+C49      1    /3V3_SENS_SW     C_0805_2012Metric_Pad1.18x1.45mm_H /3V3_SENS_SW          298.75   147.50   0.30
+C49      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   300.75   147.50   0.30
+C50      1    /3V3_SENS_SW     C_0805_2012Metric_Pad1.18x1.45mm_H /3V3_SENS_SW          295.50   189.04   0.30
+C50      2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   295.50   186.96   0.30
+C51      2    GND              C_1206_3216Metric_Pad1.33x1.80mm_H GND                   187.56   173.00   0.30
+C7       2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   174.04   155.50   0.30
+C8       2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   178.34   155.50   0.30
+C9       2    GND              C_0805_2012Metric_Pad1.18x1.45mm_H GND                   174.04   158.30   0.30
+ESD10    1    /I2C0_SDA_CH3    SOT-23-6                           /I2C0_SDA_CH3         248.86   185.05   0.30
+ESD10    5    /3V3_SENS_SW     SOT-23-6                           /3V3_SENS_SW          251.14   186.00   0.30
+ESD11    4    /+5V_SENS        SOT-23-6                           /+5V_SENS             237.65   187.50   0.45
+ESD12    1    /I2C0_SDA_CH5    SOT-23-6                           /I2C0_SDA_CH5         283.86   185.05   0.30
+ESD12    4    /3V3_SENS_SW     SOT-23-6                           /3V3_SENS_SW          286.14   186.95   0.30
+ESD12    5    /3V3_SENS_SW     SOT-23-6                           /3V3_SENS_SW          286.14   186.00   0.30
+ESD16    1    +5V              D_SMB_Handsoldering                +5V                   280.30   103.00   0.30
+ESD16    2    GND              D_SMB_Handsoldering                GND                   285.70   103.00   0.30
+ESD8     1    /I2C0_SDA_CH1    SOT-23-6                           /I2C0_SDA_CH1         179.86   185.05   0.30
+ESD9     1    /I2C0_SDA_CH4    SOT-23-6                           /I2C0_SDA_CH4         269.86   185.05   0.30
+ESD9     5    /3V3_SENS_SW     SOT-23-6                           /3V3_SENS_SW          272.14   186.00   0.30
+Q3       2    +5V              SOT-23_HS                          +5V                   175.06   168.95   0.30
+Q4       2    GND              SOT-23_HS                          GND                   190.06   168.95   0.30
+Q7       2    +5V              SOT-23_HS                          +5V                   250.06   154.95   0.30
+R21      1    +5V              R_0805_2012Metric_Pad1.20x1.40mm_H +5V                   180.00   178.00   0.30
+R24      1    3V3_C            R_0805_2012Metric_Pad1.20x1.40mm_H 3V3_C                 244.00   171.00   0.30
+R31      1    /I2C0_MUX_SD0    R_0805_2012Metric_Pad1.20x1.40mm_H /I2C0_MUX_SD0         227.75   177.50   0.30
+R37      1    /I2C1_SCL        R_1206_3216Metric_Pad1.30x1.75mm_H /I2C1_SCL             194.45   172.00   0.30
+R38      2    3V3_C            R_1206_3216Metric_Pad1.30x1.75mm_H 3V3_C                 201.55   175.00   0.30
+R39      1    /I2C0_SDA_CH2    R_1206_3216Metric_Pad1.30x1.75mm_H /I2C0_SDA_CH2         239.95   186.00   0.30
+R39      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          243.05   186.00   0.30
+R40      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          243.05   189.50   0.30
+R41      1    /I2C0_SDA_CH3    R_1206_3216Metric_Pad1.30x1.75mm_H /I2C0_SDA_CH3         253.25   186.00   0.30
+R41      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          256.55   186.00   0.30
+R42      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          256.55   189.50   0.30
+R43      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          277.55   186.00   0.30
+R44      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          270.00   190.00   0.30
+R45      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          291.55   186.00   0.30
+R46      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          291.50   189.50   0.30
+R47      1    /I2C0_SDA_CH6    R_1206_3216Metric_Pad1.30x1.75mm_H /I2C0_SDA_CH6         294.55   134.00   0.30
+R47      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          291.45   134.00   0.30
+R48      2    /3V3_SENS_SW     R_1206_3216Metric_Pad1.30x1.75mm_H /3V3_SENS_SW          291.50   136.75   0.30
+R51      1    /LED_DRV1        R_1206_3216Metric_Pad1.30x1.75mm_H /LED_DRV1             153.95   149.05   0.30
+R52      1    /LED_DRV2        R_1206_3216Metric_Pad1.30x1.75mm_H /LED_DRV2             152.70   141.05   0.30
+R55      2    GND              R_0805_2012Metric_Pad1.20x1.40mm_H GND                   252.00   158.50   0.30
+R6       2    +5V              R_1206_3216Metric_Pad1.30x1.75mm_H +5V                   139.25   168.75   0.30
+R7       2    3V3_C            R_1206_3216Metric_Pad1.30x1.75mm_H 3V3_C                 143.55   159.00   0.30
+U6       1    +5V              SOT-23-5                           +5V                   184.86   167.05   0.30
+U6       2    GND              SOT-23-5                           GND                   184.86   168.00   0.30
+U6       3    +5V              SOT-23-5                           +5V                   184.86   168.95   0.30
+
+Fix: specify plug/fill/cap per IPC-4761 Class B or C on the fab drawing
+(see FAB_NOTES.md). Re-count after any layout change.

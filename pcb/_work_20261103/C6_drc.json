@@ -1,0 +1,86 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:42:09",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C41 on F.Silkscreen",
+                    "pos": {
+                        "x": 161.798748,
+                        "y": 106.015
+                    },
+                    "uuid": "5327aa19-a887-4313-bd5c-4749ccc4ba81"
+                },
+                {
+                    "description": "Reference field of Q9",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 106.5
+                    },
+                    "uuid": "937cbb98-cfe6-475c-b3f6-15417ee19842"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of Q9",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 106.5
+                    },
+                    "uuid": "937cbb98-cfe6-475c-b3f6-15417ee19842"
+                },
+                {
+                    "description": "Pad 1 [+5V] of C41 on F.Cu",
+                    "pos": {
+                        "x": 161.0225,
+                        "y": 106.75
+                    },
+                    "uuid": "1fc623a8-04ac-4718-8cb4-b90f4154e4fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of Q9",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 106.5
+                    },
+                    "uuid": "937cbb98-cfe6-475c-b3f6-15417ee19842"
+                },
+                {
+                    "description": "Pad 2 [GND] of C41 on F.Cu",
+                    "pos": {
+                        "x": 163.0975,
+                        "y": 106.75
+                    },
+                    "uuid": "e04d0fa8-a8fb-4af4-a34e-ef8b49b73488"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

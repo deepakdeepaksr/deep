@@ -1,0 +1,15 @@
+{
+ "before": {
+  "footprints": 159,
+  "segments": 1180,
+  "vias": 314,
+  "zones": 6
+ },
+ "after": {
+  "footprints": 159,
+  "segments": 1178,
+  "vias": 313,
+  "zones": 6
+ },
+ "snapshot": "C:\\Users\\aswin\\OneDrive\\Desktop\\PCB\\SERIGREEN\\new pcb\\pcb\\_snap\\T_C_caps_20261103_194152"
+}

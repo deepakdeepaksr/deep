@@ -1,0 +1,167 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-03T19:46:47",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [
+        {
+            "description": "Value (J7) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 212.11,
+                        "y": 166.0
+                    },
+                    "uuid": "798862c8-b282-4eaa-bb0a-dd95b97c7f14"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J8) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 157.65,
+                        "y": 161.5
+                    },
+                    "uuid": "a5a83824-6d0f-4456-8485-19781443bbd8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J11) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J11",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 194.5
+                    },
+                    "uuid": "abc7ff42-c3ed-41c6-96ec-9541bcb8aec4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J12) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J12",
+                    "pos": {
+                        "x": 192.0,
+                        "y": 194.5
+                    },
+                    "uuid": "a45cb3c1-95df-40b3-92e6-a0fb5f657d8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J13) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J13",
+                    "pos": {
+                        "x": 236.0,
+                        "y": 194.5
+                    },
+                    "uuid": "c9558bf0-9b51-4ef3-bc0c-f7126c0705b0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J14) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J14",
+                    "pos": {
+                        "x": 250.0,
+                        "y": 194.5
+                    },
+                    "uuid": "9209f18b-1aae-4658-8100-836a5205a901"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J15) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J15",
+                    "pos": {
+                        "x": 150.38,
+                        "y": 194.5
+                    },
+                    "uuid": "52283e8f-dd2a-45f5-8088-0153cf6652fb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J16) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J16",
+                    "pos": {
+                        "x": 163.94,
+                        "y": 194.5
+                    },
+                    "uuid": "021d23d5-7c97-4cf5-856f-cc19abf24367"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J22) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J22",
+                    "pos": {
+                        "x": 132.975,
+                        "y": 120.25
+                    },
+                    "uuid": "70f47193-6cae-43fb-b62f-a7c9fa9ef451"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (J26) doesn't match symbol value ()",
+            "items": [
+                {
+                    "description": "Footprint J26",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 153.5
+                    },
+                    "uuid": "7a992e31-a0a9-45d8-ac0d-608b53b9ea8d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        }
+    ],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

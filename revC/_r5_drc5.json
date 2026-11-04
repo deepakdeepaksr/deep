@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-02T22:31:34",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "MoriShield_Carrier.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [PE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 292.2,
+                        "y": 140.75
+                    },
+                    "uuid": "dacc920e-1411-4540-ad2a-d50e0314362b"
+                },
+                {
+                    "description": "Track [PE] on F.Cu, length 1.0130 mm",
+                    "pos": {
+                        "x": 283.863,
+                        "y": 186.0
+                    },
+                    "uuid": "0d17dc5a-e413-47dc-ae8a-6fcfcd63605d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Items not allowed",
+            "items": [
+                {
+                    "description": "Track [/3V3_SENS_SW] on B.Cu, length 37.0500 mm",
+                    "pos": {
+                        "x": 298.75,
+                        "y": 178.800002
+                    },
+                    "uuid": "e427c0f1-8264-4c0d-8394-fc159ef07235"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        },
+        {
+            "description": "Items not allowed",
+            "items": [
+                {
+                    "description": "Track [/I2C0_SDA_CH3] on B.Cu, length 46.0000 mm",
+                    "pos": {
+                        "x": 295.875,
+                        "y": 132.625
+                    },
+                    "uuid": "4c235229-233f-4a97-87a9-18d4b13127b6"
+                }
+            ],
+            "severity": "error",
+            "type": "items_not_allowed"
+        }
+    ]
+}
