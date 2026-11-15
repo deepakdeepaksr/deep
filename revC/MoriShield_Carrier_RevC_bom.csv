@@ -1,75 +1,75 @@
-"Refs","Value","Footprint","Qty","DNP","Manufacturer","MPN","Rating","Temp","Variant"
-"C1","10uF/25V","MoriShield_Carrier:CP_Radial_D5.0mm_P2.50mm","1","","","","","",""
-"C5","470uF/25V","MoriShield_Carrier:CP_Radial_D10.0mm_P5.00mm","1","","","","","",""
-"C3,C4,C7-C10,C14,C16,C29,C30,C34-C36,C39-C50","100nF","MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder","25","","","","","",""
-"C13","10uF/50V_X7R","MoriShield_Carrier:CP_Radial_D10.0mm_P5.00mm","1","","","","","",""
-"C26,C27","1uF/10V","MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder","2","","","","","",""
-"C28,C38","10uF/10V","MoriShield_Carrier:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder","2","","","","","",""
-"C31","100uF/16V","MoriShield_Carrier:CP_Radial_D6.3mm_P2.50mm","1","","","","","",""
-"C32,C51","10uF/16V","MoriShield_Carrier:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder","2","","","","","",""
-"C33","100nF/16V","MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder","1","","","","","",""
-"D2","SMCJ5.0A","MoriShield_Carrier:D_SMC_Handsoldering","1","","","","","",""
-"D3","GRN","MoriShield_Carrier:LED_D3.0mm","1","","","","","",""
-"D4","YEL","MoriShield_Carrier:LED_D3.0mm","1","","","","","",""
-"D6","RED","MoriShield_Carrier:LED_D3.0mm","1","","","","","",""
-"D7","SS56","MoriShield_Carrier:D_SMC_Handsoldering","1","","","","","",""
-"ESD1,ESD2,ESD7-ESD12","SRV05-4","Package_TO_SOT_SMD:SOT-23-6","8","","","","","",""
-"ESD16","SMBJ5.0A","MoriShield_Carrier:D_SMB_Handsoldering","1","","","","","",""
-"ESD3,ESD4,ESD17-ESD20","PESD5V0S1BA","Diode_SMD:D_SOD-323","6","","","","","",""
-"F1","PTC_4A","MoriShield_Carrier:Fuseholder_Clip-5x20mm_Littelfuse_111_Inline_P20.00x5.00mm_D1.05mm_Horizontal","1","","","","","",""
-"FB2","120R@100MHz 2A","Inductor_SMD:L_0805_2012Metric","1","","","","","",""
-"H1-H4","M3","MoriShield_Carrier:MountingHole_3.2mm_M3","4","","","","","",""
-"J1","Sock_1x22_L","MoriShield_Carrier:PinSocket_1x22_P2.54mm_Vertical_R180","1","","","","","",""
-"J2","Sock_1x22_R","MoriShield_Carrier:PinSocket_1x22_P2.54mm_Vertical_R180","1","","","","","",""
-"J3","Sock_1x12_L","MoriShield_Carrier:PinSocket_1x12_P2.54mm_Vertical","1","","","","","",""
-"J4","Sock_1x12_R","MoriShield_Carrier:PinSocket_1x12_P2.54mm_Vertical","1","","","","","",""
-"J5","MX126-5.0-02P","MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270","1","","","","","",""
-"J6","Sock_1x07","MoriShield_Carrier:PinSocket_1x07_P2.54mm_Vertical_R90","1","","","","","",""
-"J7","GY-521_MPU6050","MoriShield_Carrier:PinSocket_1x08_P2.54mm_Vertical","1","","","","","",""
-"J8","DS3231_RTC","MoriShield_Carrier:PinSocket_1x06_P2.54mm_Vertical","1","","","","","",""
-"J11","SGP41","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"J12","SHT45","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"J13","SPS30_5V","MoriShield_Carrier:JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical","1","","","","","",""
-"J14","BME688","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"J15","SOIL_ANALOG","MoriShield_Carrier:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical","1","","","","","",""
-"J16","FSR_ANALOG","MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical","1","","","","","",""
-"J17,J20","JST_XH_4","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","2","","","","","",""
-"J18","ScrewTerm_2","MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270","1","","","","","",""
-"J19","PE/EARTH","MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270","1","","","","","",""
-"J21","FDC1004","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"J22","REED_WIND_SPEED","MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical","1","","","","","",""
-"J23","EXT_BTN","MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical","1","","","","","",""
-"J24","PANEL_LED_5V","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"J25","BUZZER_5V","MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical","1","","","","","",""
-"J26","AS5600_WIND_DIR","MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical","1","","","","","",""
-"Q1,Q5,Q6","2N7000","MoriShield_Carrier:TO-92_Inline","3","","","","","",""
-"Q2,Q3,Q7","AO3401A","MoriShield_Carrier:SOT-23_HS","3","","","","","",""
-"Q4,Q8","2N7002","MoriShield_Carrier:SOT-23_HS","2","","","","","",""
-"Q9","AO3401A","MoriShield_Carrier:SOT-23_PMOS_HS","1","","","","","",""
-"R1,R2","DNP","MoriShield_Carrier:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","2","","","","","",""
-"R5,R10,R13,R14,R49,R51,R52","10k","MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","7","","","","","",""
-"R6,R7,R11,R15","1k","MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","4","","","","","",""
-"R16,R35-R48","4.7k","MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","15","","","","","",""
-"R20,R21,R23,R53,R55","100k","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","5","","","","","",""
-"R22,R24,R54","10k","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","3","","","","","",""
-"R25-R28","4.7k","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","4","","","","","",""
-"R29,R30","1k","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","2","","","","","",""
-"R31-R34","47R","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","4","","","","","",""
-"R50","100R","MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder","1","","","","","",""
-"R56,R57","0","Resistor_SMD:R_0603_1608Metric","2","","","","","",""
-"SW1","SW_6x6","MoriShield_Carrier:SW_6x6","1","","","","","",""
-"TP2,TP3","+5V","MoriShield_Carrier:TestPoint_Pad_D2.0mm","2","","","","","",""
-"TP4","3V3_C","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP5","GND","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP6","RST_ESP","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP7","I2C0_SDA","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP8","I2C0_SCL","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP9","UART2_MOD_TX","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP10","UART2_MOD_RX","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP11","I2C0_SDA_CH6","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"TP12","I2C0_SCL_CH6","MoriShield_Carrier:TestPoint_Pad_D2.0mm","1","","","","","",""
-"U4","TPS3823-33","MoriShield_Carrier:SOT-23-5_HS","1","","","","","",""
-"U6","TPS7A2033","Package_TO_SOT_SMD:SOT-23-5","1","","","","","",""
-"U7","TCA9548A","MoriShield_Carrier:TSSOP-24_4.4x7.8mm_P0.65mm_HS","1","","","","","",""
-"U8","TCA9535","MoriShield_Carrier:TSSOP-24_4.4x7.8mm_P0.65mm_HS","1","","","","","",""
-"U10","eFuse","Package_TO_SOT_SMD:SOT-23-6","1","","","","","",""
+Refs,Value,Footprint,Qty,DNP,Manufacturer,MPN,Rating,Temp,Variant
+C1,10uF/25V,MoriShield_Carrier:CP_Radial_D5.0mm_P2.50mm,1,,Panasonic,ECE-A1EN100,25V 10uF +/-20% Low-Leakage,-40C to +85C,STD
+C5,470uF/25V,MoriShield_Carrier:CP_Radial_D10.0mm_P5.00mm,1,,Panasonic,EEU-FR1E471,25V 470uF Low-ESR (10000h),-40C to +105C,STD
+"C3,C4,C7-C10,C14,C16,C29,C30,C34-C36,C39-C50",100nF,MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,25,,Yageo,CC0805KRX7R9BB104,50V 100nF +/-10% X7R,-55C to +125C,STD
+C13,10uF/50V_X7R,MoriShield_Carrier:CP_Radial_D10.0mm_P5.00mm,1,,Nichicon,UVZ1H100MDD,50V 10uF +/-20% Radial Alum,-55C to +105C,STD
+"C26,C27",1uF/10V,MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,2,,Murata,GRM21BR71A105KA01L,10V 1uF +/-10% X7R,-55C to +125C,STD
+"C28,C38",10uF/10V,MoriShield_Carrier:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,2,,Murata,GRM31CR71A106KA01L,10V 10uF +/-10% X7R,-55C to +125C,STD
+C31,100uF/16V,MoriShield_Carrier:CP_Radial_D6.3mm_P2.50mm,1,,Panasonic,EEU-FC1C101,16V 100uF Low-ESR Radial,-40C to +105C,STD
+"C32,C51",10uF/16V,MoriShield_Carrier:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,2,,Murata,GRM31CR71C106KA12L,16V 10uF +/-10% X7R,-55C to +125C,STD
+C33,100nF/16V,MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,1,,Yageo,CC0805KRX7R7BB104,16V 100nF +/-10% X7R,-55C to +125C,STD
+D2,SMCJ5.0A,MoriShield_Carrier:D_SMC_Handsoldering,1,,Littelfuse,SMCJ5.0A,"1500W TVS, 5.0V Standoff, 9.2V Clamp",-65C to +150C,STD
+D3,GRN,MoriShield_Carrier:LED_D3.0mm,1,,Kingbright,WP710A10GD,"3mm Green Through-Hole LED, 20mA",-40C to +85C,STD
+D4,YEL,MoriShield_Carrier:LED_D3.0mm,1,,Kingbright,WP710A10YD,"3mm Yellow Through-Hole LED, 20mA",-40C to +85C,STD
+D6,RED,MoriShield_Carrier:LED_D3.0mm,1,,Kingbright,WP710A10ID,"3mm Red Through-Hole LED, 20mA",-40C to +85C,STD
+D7,SS56,MoriShield_Carrier:D_SMC_Handsoldering,1,,ON Semiconductor,SS56,"60V 5A Schottky Diode, SMC",-55C to +150C,STD
+"ESD1,ESD2,ESD7-ESD12",SRV05-4,Package_TO_SOT_SMD:SOT-23-6,8,,Diodes Inc,DSRV05-4-7,"6V Standoff, 4-Channel TVS Array, SOT-23-6",-55C to +125C,STD
+ESD16,SMBJ5.0A,MoriShield_Carrier:D_SMB_Handsoldering,1,,Littelfuse,SMBJ5.0A,"600W TVS, 5.0V Standoff, 9.2V Clamp, SMB",-65C to +150C,STD
+"ESD3,ESD4,ESD17-ESD20",PESD5V0S1BA,Diode_SMD:D_SOD-323,6,,Nexperia,"PESD5V0S1BA,115","5V Standoff, Bidirectional ESD Diode, SOD-323",-65C to +150C,STD
+F1,PTC_4A,MoriShield_Carrier:Fuseholder_Clip-5x20mm_Littelfuse_111_Inline_P20.00x5.00mm_D1.05mm_Horizontal,1,,Littelfuse,01110501Z + 0218004.MXP,5x20mm Clip + 4A 250V Time-Lag Ceramic Fuse,-55C to +125C,STD
+FB2,120R@100MHz 2A,Inductor_SMD:L_0805_2012Metric,1,,Murata,BLM21PG121SN1D,"120 Ohm @ 100MHz, 2A, DCR 0.045 Ohm, 0805",-55C to +125C,STD
+H1-H4,M3,MoriShield_Carrier:MountingHole_3.2mm_M3,4,,Keystone Electronics,24300,"M3 Threaded Clearance Hole, Plated",-40C to +125C,STD
+J1,Sock_1x22_L,MoriShield_Carrier:PinSocket_1x22_P2.54mm_Vertical_R180,1,,Samtec,SSW-122-01-T-S,"2.54mm 1x22 Receptacle Strip, 3A",-55C to +125C,STD
+J2,Sock_1x22_R,MoriShield_Carrier:PinSocket_1x22_P2.54mm_Vertical_R180,1,,Samtec,SSW-122-01-T-S,"2.54mm 1x22 Receptacle Strip, 3A",-55C to +125C,STD
+J3,Sock_1x12_L,MoriShield_Carrier:PinSocket_1x12_P2.54mm_Vertical,1,,Samtec,SSW-112-01-T-S,"2.54mm 1x12 Receptacle Strip, 3A",-55C to +125C,STD
+J4,Sock_1x12_R,MoriShield_Carrier:PinSocket_1x12_P2.54mm_Vertical,1,,Samtec,SSW-112-01-T-S,"2.54mm 1x12 Receptacle Strip, 3A",-55C to +125C,STD
+J5,MX126-5.0-02P,MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270,1,,Phoenix Contact,1985195,"5.00mm Screw Terminal Block 2-Pos, 300V 10A",-40C to +105C,STD
+J6,Sock_1x07,MoriShield_Carrier:PinSocket_1x07_P2.54mm_Vertical_R90,1,,Samtec,SSW-107-01-T-S,"2.54mm 1x07 Receptacle Strip, 3A",-55C to +125C,STD
+J7,GY-521_MPU6050,MoriShield_Carrier:PinSocket_1x08_P2.54mm_Vertical,1,,Samtec,SSW-108-01-T-S,"2.54mm 1x08 Receptacle Strip, 3A",-55C to +125C,STD
+J8,DS3231_RTC,MoriShield_Carrier:PinSocket_1x06_P2.54mm_Vertical,1,,Samtec,SSW-106-01-T-S,"2.54mm 1x06 Receptacle Strip, 3A",-55C to +125C,STD
+J11,SGP41,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J12,SHT45,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J13,SPS30_5V,MoriShield_Carrier:JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical,1,,JST,B5B-ZR(LF)(SN),"1.50mm ZH Shrouded Header 5-Pos, 50V 1A",-25C to +85C,STD
+J14,BME688,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J15,SOIL_ANALOG,MoriShield_Carrier:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,1,,JST,B3B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 3-Pos, 250V 3A",-25C to +85C,STD
+J16,FSR_ANALOG,MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,1,,JST,B2B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 2-Pos, 250V 3A",-25C to +85C,STD
+"J17,J20",JST_XH_4,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,2,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J18,ScrewTerm_2,MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270,1,,Phoenix Contact,1985195,"5.00mm Screw Terminal Block 2-Pos, 300V 10A",-40C to +105C,STD
+J19,PE/EARTH,MoriShield_Carrier:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm_R270,1,,Phoenix Contact,1985195,"5.00mm Screw Terminal Block 2-Pos, 300V 10A",-40C to +105C,STD
+J21,FDC1004,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J22,REED_WIND_SPEED,MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,1,,JST,B2B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 2-Pos, 250V 3A",-25C to +85C,STD
+J23,EXT_BTN,MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,1,,JST,B2B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 2-Pos, 250V 3A",-25C to +85C,STD
+J24,PANEL_LED_5V,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+J25,BUZZER_5V,MoriShield_Carrier:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,1,,JST,B2B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 2-Pos, 250V 3A",-25C to +85C,STD
+J26,AS5600_WIND_DIR,MoriShield_Carrier:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,1,,JST,B4B-XH-A(LF)(SN),"2.50mm XH Shrouded Header 4-Pos, 250V 3A",-25C to +85C,STD
+"Q1,Q5,Q6",2N7000,MoriShield_Carrier:TO-92_Inline,3,,ON Semiconductor,2N7000TA,"60V 200mA N-Ch MOSFET, TO-92",-55C to +150C,STD
+"Q2,Q3,Q7",AO3401A,MoriShield_Carrier:SOT-23_HS,3,,Alpha & Omega,AO3401A,"30V 4.0A P-Ch MOSFET Rds 44mOhm, SOT-23",-55C to +150C,STD
+"Q4,Q8",2N7002,MoriShield_Carrier:SOT-23_HS,2,,ON Semiconductor,2N7002ET1G,"60V 115mA N-Ch MOSFET, SOT-23",-55C to +150C,STD
+Q9,AO3401A,MoriShield_Carrier:SOT-23_PMOS_HS,1,,Alpha & Omega,AO3401A,"30V 4.0A P-Ch MOSFET Rds 44mOhm, SOT-23",-55C to +150C,STD
+"R1,R2",DNP,MoriShield_Carrier:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,2,DNP,Yageo,MFR-25FRF52-10K,1/4W 1% Axial Resistor (Not Fitted),-55C to +155C,DNP
+"R5,R10,R13,R14,R49,R51,R52",10k,MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,7,,Yageo,RC1206JR-0710KL,"1/4W 10k +/-5% Thick Film, 1206",-55C to +155C,STD
+"R6,R7,R11,R15",1k,MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,4,,Yageo,RC1206JR-071KL,"1/4W 1k +/-5% Thick Film, 1206",-55C to +155C,STD
+"R16,R35-R48",4.7k,MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,15,,Yageo,RC1206JR-074K7L,"1/4W 4.7k +/-5% Thick Film, 1206",-55C to +155C,STD
+"R20,R21,R23,R53,R55",100k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,5,,Yageo,RC0805JR-07100KL,"1/8W 100k +/-5% Thick Film, 0805",-55C to +155C,STD
+"R22,R24,R54",10k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,3,,Yageo,RC0805JR-0710KL,"1/8W 10k +/-5% Thick Film, 0805",-55C to +155C,STD
+R25-R28,4.7k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,4,,Yageo,RC0805JR-074K7L,"1/8W 4.7k +/-5% Thick Film, 0805",-55C to +155C,STD
+"R29,R30",1k,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,2,,Yageo,RC0805JR-071KL,"1/8W 1k +/-5% Thick Film, 0805",-55C to +155C,STD
+R31-R34,47R,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,4,,Yageo,RC0805JR-0747RL,"1/8W 47R +/-5% Thick Film, 0805",-55C to +155C,STD
+R50,100R,MoriShield_Carrier:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,1,,Yageo,RC1206JR-07100RL,"1/4W 100R +/-5% Thick Film, 1206",-55C to +155C,STD
+"R56,R57",0,Resistor_SMD:R_0603_1608Metric,2,,Yageo,RC0603JR-070RL,"1/10W 0R Jumper, 0603",-55C to +155C,STD
+SW1,SW_6x6,MoriShield_Carrier:SW_6x6,1,,C&K / Littelfuse,PTS645SL43-2 LFS,"6x6mm SPST Tactile Switch, 50mA 12VDC",-20C to +70C,STD
+"TP2,TP3",+5V,MoriShield_Carrier:TestPoint_Pad_D2.0mm,2,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP4,3V3_C,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP5,GND,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP6,RST_ESP,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP7,I2C0_SDA,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP8,I2C0_SCL,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP9,UART2_MOD_TX,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP10,UART2_MOD_RX,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP11,I2C0_SDA_CH6,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+TP12,I2C0_SCL_CH6,MoriShield_Carrier:TestPoint_Pad_D2.0mm,1,,Keystone Electronics,5000,Miniature Surface Mount Test Point Pad,-40C to +125C,STD
+U4,TPS3823-33,MoriShield_Carrier:SOT-23-5_HS,1,,Texas Instruments,TPS3823-33DBVT,"3.3V Voltage Supervisor with Watchdog, SOT-23-5",-40C to +85C,STD
+U6,TPS7A2033,Package_TO_SOT_SMD:SOT-23-5,1,,Texas Instruments,TPS7A2033PDBVR,"300mA Ultra-Low-Noise LDO, 3.3V, SOT-23-5",-40C to +125C,STD
+U7,TCA9548A,MoriShield_Carrier:TSSOP-24_4.4x7.8mm_P0.65mm_HS,1,,Texas Instruments,TCA9548APWR,"Low-Voltage 8-Channel I2C Switch, TSSOP-24",-40C to +85C,STD
+U8,TCA9535,MoriShield_Carrier:TSSOP-24_4.4x7.8mm_P0.65mm_HS,1,,Texas Instruments,TCA9535PWR,"16-Bit I2C and SMBus I/O Expander, TSSOP-24",-40C to +85C,STD
+U10,eFuse,Package_TO_SOT_SMD:SOT-23-6,1,,Texas Instruments,TPS26630PWPR,"60V 6A Industrial eFuse with OV Cut-Off, HTSSOP-20 (or SOT-23-6 OVP Controller)",-40C to +125C,STD

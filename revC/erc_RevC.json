@@ -1,20 +1,9 @@
-{
-    "$schema": "https://schemas.kicad.org/erc.v1.json",
-    "coordinate_units": "mm",
-    "date": "2026-11-04T08:45:36",
-    "ignored_checks": [],
-    "included_severities": [
-        "error",
-        "warning",
-        "exclusion"
-    ],
-    "kicad_version": "10.0.6",
-    "sheets": [
-        {
-            "path": "/",
-            "uuid_path": "/d80462c8-fe11-4e1d-8672-0e34f7f857a2",
-            "violations": []
-        }
-    ],
-    "source": "MoriShield_Carrier.kicad_sch"
-}
+ERC report (2026-11-11T18:19:33, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+
+ ** ERC messages: 0  Errors 0  Warnings 0
+
+ ** Ignored checks:
+    - None

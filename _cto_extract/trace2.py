@@ -1,6 +1,6 @@
 import io, re, csv, collections, os
 
-P = r'C:\Users\aswin\OneDrive\Desktop\PCB\SERIGREEN\new pcb'
+P = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def cells(l):

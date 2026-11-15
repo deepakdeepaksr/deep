@@ -126,7 +126,7 @@ The same table governs §2.
 | R9 | PE clearance errors 0; the bond to ground is still absent; no README section | J19/PE | Partly |
 | R10 | **J5 moved out from under the modem 2026-11-03** to (222.0, 91.4), 1.91 mm clear of the modem outline, DRC 0; TP2/TP3/TP5 unchanged; no standoffs, no 3D models | `pcbnew` positions | Partly |
 | R11 | **The pin is fixed 2026-11-04**: `/REED_PULSE_F` moved from J2.7 (GPIO41, output-only) to **J2.9 = GPIO39**; J2.7 is `unconnected-(J2-IO41-Pad7)`. The 1/10/50 Hz bench counts are still owed | pad nets | New |
-| R12 | 63 track items, 448.41 mm, on In2.Cu across 8 nets | `pcbnew` layer census | Open — answer requested |
+| R12 | All signal track segments eliminated from internal plane layer In2.Cu (was 448.41 mm / 63 segments / 8 nets, now 0.00 mm / 0 segments / 0 nets). All signals relocated to outer signal layers F.Cu and B.Cu. DRC 0 violations, 0 unconnected items, 0 schematic parity issues | `pcbnew` layer census, DRC report (0/0/0) | Done |
 | R13 | Q1, Q5, Q6 still 2N7000, unspecified at 2.5 V gate drive | Q1/Q5/Q6 | Open — answer requested |
 | R14 | GY-521 and DS3231 outlines still on each other's sockets | gr_rect (154,163.5)-(173.5,187.5) and (207.35,163.5)-(232.35,205.5) | Open — answer requested |
 | R15 | `.kicad_dru` now exists and names only nets on this board; stale descriptions, F.Fab labels, J24 symbol pin names and `!padne` directives remain | `pcb\MoriShield_Carrier.kicad_dru` | Partly |

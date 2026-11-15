@@ -1,16 +1,43 @@
-{
-    "$schema": "https://schemas.kicad.org/drc.v1.json",
-    "coordinate_units": "mm",
-    "date": "2026-11-04T08:45:33",
-    "ignored_checks": [],
-    "included_severities": [
-        "error",
-        "warning",
-        "exclusion"
-    ],
-    "kicad_version": "10.0.6",
-    "schematic_parity": [],
-    "source": "MoriShield_Carrier.kicad_pcb",
-    "unconnected_items": [],
-    "violations": []
-}
+** Drc report for MoriShield_Carrier.kicad_pcb **
+** Created on 2026-11-11T18:33:06 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 3 DRC violations **
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(228.2500 mm, 140.2500 mm): Track [/PWR_EN] on B.Cu, length 2.0329 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(243.5000 mm, 169.0000 mm): Track [/I2C0_SDA] on F.Cu, length 2.7500 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(247.2500 mm, 172.2500 mm): Track [/I2C0_SDA] on F.Cu, length 3.5000 mm
+
+** Found 5 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(255.0000 mm, 164.0750 mm): Pad 23 [/I2C1_SDA] of U8 on F.Cu
+    @(221.0200 mm, 167.2500 mm): Track [/I2C1_SDA] on B.Cu, length 1.7678 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(255.0000 mm, 164.7250 mm): Pad 22 [/I2C1_SCL] of U8 on F.Cu
+    @(224.8100 mm, 166.0000 mm): PTH pad 6 [/I2C1_SCL] of J7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(247.2500 mm, 172.2500 mm): Track [/I2C0_SDA] on F.Cu, length 2.1213 mm
+    @(243.5000 mm, 169.0000 mm): Track [/I2C0_SDA] on F.Cu, length 2.7500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(243.0000 mm, 177.7250 mm): Pad 22 [/I2C0_SCL] of U7 on F.Cu
+    @(235.0000 mm, 156.2500 mm): Track [/I2C0_SCL] on F.Cu, length 5.0559 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(239.5000 mm, 173.0000 mm): Track [/I2C_SW_RST] on F.Cu, length 4.5962 mm
+    @(209.5000 mm, 105.7400 mm): PTH pad 20 [/I2C_SW_RST] of J1
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - None
+
+** End of Report **

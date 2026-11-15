@@ -1,6 +1,6 @@
 import io, re, csv, collections, os, datetime
 
-P = r'C:\Users\aswin\OneDrive\Desktop\PCB\SERIGREEN\new pcb'
+P = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = ['PROJECT_CONTEXT_RevC.md', 'TASK_TRACKER.md', 'REPLY_TO_CTO.md', 'STAGE_TRACKER.md']
 
 exp = ([f'A{i}' for i in range(1, 13)] + [f'B{i}' for i in range(1, 13)] +

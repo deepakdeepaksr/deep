@@ -5,12 +5,12 @@ Priority is looked up from TASK_TRACKER.md Part 1. Nothing is paraphrased: every
 cell is copied from the markdown, and the script then re-reads the CSV and
 compares it cell by cell with the source tables.
 """
-import csv, re, sys
+import csv, os, re, sys
 
-ROOT = r"C:\Users\aswin\OneDrive\Desktop\PCB\SERIGREEN\new pcb"
-REPLY = ROOT + r"\REPLY_TO_CTO.md"
-TASK = ROOT + r"\TASK_TRACKER.md"
-OUT = ROOT + r"\revC\ResponseSheet_RevC.csv"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPLY = os.path.join(ROOT, "REPLY_TO_CTO.md")
+TASK = os.path.join(ROOT, "TASK_TRACKER.md")
+OUT = os.path.join(ROOT, "revC", "ResponseSheet_RevC.csv")
 
 
 def table_rows(text, start, end):

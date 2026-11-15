@@ -54,3 +54,22 @@ Thumbs.db
 desktop.ini
 .DS_Store
 *.tmp
+
+# Reports and locks
+*.rpt
+**/*.rpt
+*.lck
+**/*.lck
+
+# Scratch boards and trials
+pcb/MoriShield_Carrier_*
+!pcb/MoriShield_Carrier.kicad_pcb
+!pcb/MoriShield_Carrier.kicad_sch
+!pcb/MoriShield_Carrier.kicad_pro
+pcb/test_*
+
+# Ad-hoc one-off investigation scripts
+pcb/_*.py
+!pcb/_make_response_sheet.py
+!pcb/_regen_vias_in_pads.py
+

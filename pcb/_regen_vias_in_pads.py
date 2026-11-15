@@ -1,8 +1,9 @@
 """Regenerate revC\\vias_in_pads.txt from the saved board."""
-import pcbnew
+import pcbnew, os
 
-PCB = r"C:\Users\aswin\OneDrive\Desktop\PCB\SERIGREEN\new pcb\pcb\MoriShield_Carrier.kicad_pcb"
-OUT = r"C:\Users\aswin\OneDrive\Desktop\PCB\SERIGREEN\new pcb\revC\vias_in_pads.txt"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PCB = os.path.join(ROOT, "pcb", "MoriShield_Carrier.kicad_pcb")
+OUT = os.path.join(ROOT, "revC", "vias_in_pads.txt")
 
 b = pcbnew.LoadBoard(PCB)
 smd = []

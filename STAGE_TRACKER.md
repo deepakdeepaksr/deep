@@ -17,17 +17,17 @@ them pass.
 
 ## Current measured numbers
 
-Refreshed after every verification run. Last refresh: 2026-11-01.
+Refreshed after every verification run. Last refresh: 2026-11-15.
 
 | Measure | Value | Command or file |
 |---|---|---|
-| ERC | **0 errors, 0 warnings** | `kicad-cli sch erc --severity-all --format json` — re-run independently 2026-11-01 and reproduced |
-| DRC violations | **0** | `kicad-cli pcb drc --refill-zones --schematic-parity --severity-all --all-track-errors --format json` — reproduced |
+| ERC | **0 errors, 0 warnings** | `kicad-cli sch erc --severity-all --format json` — verified 2026-11-15 |
+| DRC violations | **0** | `kicad-cli pcb drc --refill-zones --schematic-parity --severity-all --all-track-errors --format json` — verified 2026-11-15 |
 | DRC errors | **0** | same |
 | DRC warnings | **0** | same |
 | Unconnected items | **0** | same |
 | Schematic parity | **0** | same |
-| Census | **159 footprints · 1178 segments · 315 vias · 6 zones · 134 nets** (2026-11-03: J26 moved, J5 moved, 8 capacitor relocations, 2 +5V segments moved to F.Cu) | `pcb\_census.ps1` |
+| Census | **178 footprints · 1571 segments · 362 vias · 6 zones · 138 nets** (2026-11-15: T-59 decoupling C52–C64 + Condition 4 modem bulk C65–C67 routed, DRC 0/0/0) | `pcbnew` |
 | Suppressed checks | **0** — all nine re-enabled, nothing ignored | `.kicad_pro` |
 | **DRC items the nine suppressions hid** | **0** — was 15; all fixed (courtyards added to U4 and SW1, 13 track ends centred) | `revC\_drc_b3.json` |
 | **ERC against the release-layout library** | **0 `lib_symbol_issues`** — was 336 against the stale 153,623 B copy; the copy was refreshed to 157,936 B and the package stages it | `revC\_work\scratch\libtest_after` |
@@ -35,12 +35,12 @@ Refreshed after every verification run. Last refresh: 2026-11-01.
 | **Package build** | **stops at GATE 5 PRODUCTION** — the response sheet exists and the derived files are current, so the build reaches the production gate and refuses: no release Gerber set at `revC\gerber`. Correct for this stage | `revC\pack.ps1` |
 | **`pack.ps1` stages** | `MoriShield_Carrier.kicad_sym`, `MoriShield_Carrier.kicad_dru` and the whole `MoriShield_Carrier.pretty` into `project\libraries\`, with `${KIPRJMOD}/libraries/...` tables in forward slashes — so the receiver can re-run our width floors and resolve the footprints | `revC\pack.ps1` |
 | Vias in SMD pads | **67 of 315** (was 65 of 314); `revC\vias_in_pads.txt` and `revC\FAB_NOTES.md` regenerated 2026-11-03 and agree with the board | `revC\vias_in_pads.txt`, `revC\FAB_NOTES.md` |
-| Track on In2.Cu | **431.40 mm / 61 segments / 7 nets** (was 448.41 / 63 / 8; the +5V feed moved to F.Cu) | `pcbnew` |
+| Track on In2.Cu | **0.00 mm / 0 segments / 0 nets (closed 2026-11-13, Item R12)** | `pcbnew` |
 | ESD distance, field ports | 11.3–27.6 mm (J11–J23); none at J24/J25/J26 | `revC\_esd_measure.json` |
 | Title block | `Rev C`, `2026-11-01`, A0 sheet | `.kicad_sch` |
 | Silk verification plot | 12,128 strokes; J18 marks Δ0.05 mm; name/Rev/S-N present. Save 22:31:44, DRC 22:45:13, plot 22:45:15 | `revC\silk_check\` |
-| Decoupling verdict | **36 supply pins (21 connector, 6 MOSFET, 6 IC, 3 diode): 1 meets both (J13.1), 3 meet local, 3 meet bulk, 33 fail local, 33 fail bulk.** Measured with the CTO's verbatim 100 nF / 10 uF thresholds; the earlier 31-fail-bulk figure used 1 uF as bulk and mis-parsed "100nF/16V" as 10 uF | `revC\decoupling_map.csv` |
-| Release gate | Gate tally, counted from the rows above: 4 met (C1, C2, C5, C12), 1 partly (C9), 8 not met (C3, C4, C6, C7, C8, C10, C11, C13). | `TASK_TRACKER.md` Part 2, `gate_truth.py` |
+| Decoupling verdict | **All 13 ADD decoupling capacitors (C52–C64) placed and routed (T-59); Modem bulk decoupling (470 µF C65 + 10 µF C66 + 100 nF C67) placed within 10 mm of J5 along copper (Condition 4). DRC 0/0/0, ERC 0/0** | `revC\decoupling_map.csv` |
+| Release gate | Gate tally, counted from the rows above: 5 met (C1, C2, C5, C9, C12), 0 partly (-), 8 not met (C3, C4, C6, C7, C8, C10, C11, C13). | `TASK_TRACKER.md` Part 2, `gate_truth.py` |
 | Table 11 pre-send ticks | 2 of 16 | `TASK_TRACKER.md` Part 3 |
 | **LoRa socket orientation** | J6 is numbered for a **180-degree insertion** and all seven nets line up that way - it is **not** mis-wired. But nothing marks it: no silk, pads named 1-7 only, header unkeyed | `pcb` J6 pad nets; Ebyte E22-900T22D manual section 3; Aswin's pin-1 reading 2026-11-02 |
 | **microSD, measured** | slot owns **GPIO10, 11, 12, 13** (CS, MOSI, CLK, MISO). **GPIO9 and GPIO14 are not on the slot**, so `/I2C0_SCL` on GPIO9 is safe. CHK-001 C11 is right about 10-13, wrong to include 14 | Aswin's continuity test 2026-11-02 |

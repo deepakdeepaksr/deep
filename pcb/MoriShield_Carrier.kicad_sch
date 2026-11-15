@@ -10775,9 +10775,25 @@
 		(at 871.22 308.61)
 		(uuid "705d8589-0268-4841-a1ef-9722beffd843")
 	)
-	(no_connect
-		(at 115.57 337.82)
-		(uuid "70d97276-546f-47a8-a319-c1170eb6b188")
+	(wire
+		(pts
+			(xy 115.57 337.82) (xy 113.03 337.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5ff8568-4720-4d94-afe1-c536130d33d6")
+	)
+	(label "I2C_SW_RST"
+		(at 113.03 337.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9c5e83cd-f9b9-48ef-93bf-7d8480ffb001")
 	)
 	(no_connect
 		(at 810.26 288.29)
@@ -10895,9 +10911,25 @@
 		(at 871.22 323.85)
 		(uuid "e53e09e8-636c-4396-80c8-72b96ed90eef")
 	)
-	(no_connect
-		(at 115.57 307.34)
-		(uuid "ee08cc57-4b3d-4068-8d72-b04a919e47e6")
+	(wire
+		(pts
+			(xy 115.57 307.34) (xy 113.03 307.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc0584a2-d21d-41cd-95ce-a13ee9dd0a28")
+	)
+	(label "EVENT_BTN"
+		(at 113.03 307.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8b17254d-168d-4cfe-a156-82a91224c292")
 	)
 	(no_connect
 		(at 515.62 101.6)
@@ -12571,16 +12603,7 @@
 		)
 		(uuid "5ba6b7f1-354f-4db4-b04f-a3d30295db7e")
 	)
-	(wire
-		(pts
-			(xy 445.77 320.04) (xy 448.31 320.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c7df526-e0c0-405a-9fc6-1f0988007662")
-	)
+	
 	(wire
 		(pts
 			(xy 214.63 292.1) (xy 214.63 289.56)
@@ -14691,16 +14714,7 @@
 		)
 		(uuid "e75a4b37-bbf9-46a2-bade-7dd5e71809f1")
 	)
-	(wire
-		(pts
-			(xy 115.57 320.04) (xy 113.03 320.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7b05124-29ea-492c-b740-f70ee7551e19")
-	)
+	
 	(wire
 		(pts
 			(xy 422.91 641.35) (xy 420.37 641.35)
@@ -15281,7 +15295,7 @@
 		)
 		(uuid "185bff40-427b-4a8b-8f46-de038aeebbe9")
 	)
-	(label "I2C0_SCL"
+	(label "I2C1_SCL"
 		(at 845.82 295.91 0)
 		(effects
 			(font
@@ -15811,14 +15825,8 @@
 		)
 		(uuid "4ce89687-d7ee-461b-ac8c-64d8504f6ea3")
 	)
-	(label "PWR_EN"
-		(at 873.76 313.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
+	(no_connect
+		(at 873.76 313.69)
 		(uuid "4cfc5b35-b326-46da-b7c1-9da69e8bc75f")
 	)
 	(label "I2C0_SDA_CH6"
@@ -16351,15 +16359,114 @@
 		)
 		(uuid "7dd430b8-d1b8-4c08-beb5-5520939c7f09")
 	)
+	(wire
+		(pts
+			(xy 445.77 320.04) (xy 449.58 320.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0ec22df-d503-4183-8b5f-8fffb57bc59d")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:R")
+		(at 453.39 320.04 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5c045a34-7633-45cb-bab3-974fbf9bb132")
+		(property "Reference" "R58"
+			(at 453.39 314.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 453.39 325.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at -71.12 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at -71.12 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MODEM_RST damping resistor"
+			(at -71.12 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efbc03ac-8556-4d69-a2c2-915c2a607f2f")
+		)
+		(pin "2"
+			(uuid "ce549e61-1ecc-476f-a178-e1e3c481dca7")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "R58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 457.2 320.04) (xy 459.74 320.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08acde7-bb33-4c2b-897a-8bdbeb3cdbba")
+	)
 	(label "MODEM_RST"
-		(at 448.31 320.04 0)
+		(at 459.74 320.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "7ec01da1-c350-4857-af86-1aee34049d8f")
+		(uuid "2d6421d8-1613-49e3-98ad-5627e209ee3b")
 	)
 	(label "3V3_SENS_SW"
 		(at 116.84 628.65 0)
@@ -16671,15 +16778,9 @@
 		)
 		(uuid "a0ca14b5-5278-45d3-a094-7dc770d3bfae")
 	)
-	(label "EVENT_BTN"
-		(at 113.03 320.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a0db9118-2366-4d42-a589-8111d8921ac1")
+	(no_connect
+		(at 115.57 320.04)
+		(uuid "23f2ded3-e502-457e-bfd1-eda3223b94d4")
 	)
 	(label "I2C0_SCL_CH4"
 		(at 744.22 646.43 180)
@@ -16991,7 +17092,7 @@
 		)
 		(uuid "bcfcc7c2-c2e2-46fa-9d22-fb17f4691b69")
 	)
-	(label "I2C0_SDA"
+	(label "I2C1_SDA"
 		(at 845.82 298.45 0)
 		(effects
 			(font
@@ -27553,7 +27654,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6363d0eb-13fd-4893-9a9c-373c1cdfc0dc")
 		(property "Reference" "C29"
 			(at 930.91 283.21 0)
@@ -44452,5 +44553,2903 @@
 	)	(no_connect
 		(at 152.4 304.8)
 		(uuid "57ee4400-0b0a-4717-b8f6-37912ee0a498")
+	)
+
+	(label "3V3_C"
+		(at 443.23 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cccb4e9b-16dc-4740-81d0-2c506d3f58bf")
+	)
+	(wire
+		(pts
+			(xy 443.23 146.05) (xy 443.23 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24adb992-e5dc-4128-9d83-dc129684f820")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 443.23 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ac0cbe97-4b04-4a58-b843-bbcaddcc7fe1")
+		(property "Reference" "C52"
+			(at 443.23 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 443.23 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 443.23 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J1.1 decoupling"
+			(at 443.23 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ebbe9d34-01e6-4ea8-9d52-6c7ca03ec592")
+		)
+		(pin "2"
+			(uuid "05ad554f-f1be-40f1-b036-41a859fd0c67")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 443.23 156.21) (xy 443.23 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9347b68c-c788-457f-8092-4b45cd97af20")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 443.23 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eeaa2aa6-6f72-4a02-8096-027a8bc8058e")
+		(property "Reference" "#PWR0931"
+			(at 443.23 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 443.23 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 443.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 443.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1f60fc89-87a6-4139-b146-dfcadf0873fb")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0931")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_C"
+		(at 473.71 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5a3db9a-7b80-4671-9aaf-bf72ec341391")
+	)
+	(wire
+		(pts
+			(xy 473.71 146.05) (xy 473.71 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb1b84c8-0605-4035-8aef-d522b4de89c5")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 473.71 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca3374e6-d83e-45d8-a1a8-f7615a8eb117")
+		(property "Reference" "C53"
+			(at 473.71 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 473.71 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 473.71 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J4.3 decoupling"
+			(at 473.71 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5586f4d7-ff96-4b56-b01a-b6c72c6d279d")
+		)
+		(pin "2"
+			(uuid "a4898744-8e27-42b5-8740-09242094d126")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 473.71 156.21) (xy 473.71 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dac91bc3-b838-4ae6-8697-c52a8d80d7c6")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 473.71 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "926de6a0-42d7-4509-820d-a1a10444e032")
+		(property "Reference" "#PWR0932"
+			(at 473.71 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 473.71 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 473.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 473.71 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "51d0c7ff-498b-4d53-bedf-8ce4529236d5")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0932")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_C"
+		(at 504.19 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5c7f4d17-c681-4ed2-ae88-e75179d9c660")
+	)
+	(wire
+		(pts
+			(xy 504.19 146.05) (xy 504.19 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "919ec367-b311-4389-a35a-cf253613af48")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 504.19 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e720de08-20ff-4cfa-b12b-e09445d5cc71")
+		(property "Reference" "C54"
+			(at 504.19 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 504.19 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 504.19 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J7.2 decoupling"
+			(at 504.19 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f3945f49-4e9a-4a7f-a973-8fec955da9da")
+		)
+		(pin "2"
+			(uuid "f279863d-854d-48a1-ac62-9950221de3b1")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 504.19 156.21) (xy 504.19 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4094b6e5-d55a-428d-9dcd-c27d321109d6")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 504.19 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "922aa45a-5632-46aa-9758-f465a349e50a")
+		(property "Reference" "#PWR0933"
+			(at 504.19 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 504.19 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 504.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 504.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a40a17e5-d6c1-42a6-8c23-af238af8d474")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0933")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_C"
+		(at 534.67 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b137d15a-a133-4135-9576-7c1f51026ce6")
+	)
+	(wire
+		(pts
+			(xy 534.67 146.05) (xy 534.67 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79f240ab-eaad-402a-9331-69d5b07385f4")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 534.67 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "49fea458-8f82-4648-a416-d59d49a33565")
+		(property "Reference" "C55"
+			(at 534.67 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 534.67 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 534.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J7.8 decoupling"
+			(at 534.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dcf31ba5-9518-499d-baae-5eed7f45d26e")
+		)
+		(pin "2"
+			(uuid "2d5683cc-4736-4fe0-a698-52bd17e15422")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 534.67 156.21) (xy 534.67 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "873cf547-ce32-4af3-a16e-cd234f158c11")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 534.67 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3ac97ccd-0c0b-423b-b219-da84bd2b3042")
+		(property "Reference" "#PWR0934"
+			(at 534.67 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 534.67 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 534.67 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e2de2c65-088d-41ee-9072-bb0055ac9928")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0934")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_C"
+		(at 565.15 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e6dcde2-35d8-4f77-ae0d-621e6f828cf0")
+	)
+	(wire
+		(pts
+			(xy 565.15 146.05) (xy 565.15 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22547ba6-de31-4829-8f3d-3fcf87da7e5f")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 565.15 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "914e9e69-5d4a-4451-b46d-346b7deb03c3")
+		(property "Reference" "C56"
+			(at 565.15 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 565.15 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 565.15 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 565.15 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J8.5 decoupling"
+			(at 565.15 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "286a01da-5021-4caf-9e4c-69611ccafbfa")
+		)
+		(pin "2"
+			(uuid "e7a822fb-83e8-4158-b350-3694ca6c027f")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 565.15 156.21) (xy 565.15 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d2f24e9-5224-425e-b634-a46ba2df50c1")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 565.15 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "92167e75-37b6-4fdf-84db-a7f30231a521")
+		(property "Reference" "#PWR0935"
+			(at 565.15 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 565.15 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 565.15 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 565.15 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 565.15 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4773eedf-ecb1-4bfc-a9bb-3e9b0ef39c9d")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0935")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_C"
+		(at 595.63 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b71fc10-e78a-4df2-a2df-5e8d3a6c9bb1")
+	)
+	(wire
+		(pts
+			(xy 595.63 146.05) (xy 595.63 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec92d62-a207-4b4f-968e-818e02482d35")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 595.63 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f6845776-5de3-4285-9dca-e8afc15e4187")
+		(property "Reference" "C57"
+			(at 595.63 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 595.63 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 595.63 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 595.63 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J26.1 decoupling"
+			(at 595.63 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e730041-2968-43ba-af1a-7211a79585af")
+		)
+		(pin "2"
+			(uuid "1c385990-4fee-4c97-95ee-3449cafc1c21")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 595.63 156.21) (xy 595.63 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "830695b2-b034-4976-8188-bac8769a3105")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 595.63 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f9075a3a-a023-48a6-a12a-34bc41c52c6c")
+		(property "Reference" "#PWR0936"
+			(at 595.63 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 595.63 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 595.63 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 595.63 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 595.63 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a56abe7-f6b7-4e51-bb8c-173f309fd818")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0936")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_SENS_SW"
+		(at 626.11 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "618fac77-3639-478d-9d19-c203dadf01df")
+	)
+	(wire
+		(pts
+			(xy 626.11 146.05) (xy 626.11 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32b86193-a6c3-4f1a-9b5b-d3dd2c308373")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 626.11 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6e7d4a88-3957-4999-a026-8a421380de49")
+		(property "Reference" "C58"
+			(at 626.11 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 626.11 161.29000000000002 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 626.11 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 626.11 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J11.1 decoupling"
+			(at 626.11 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0cceac41-e7fc-4609-b8d1-d3450ceedf89")
+		)
+		(pin "2"
+			(uuid "a650ed25-8c68-4732-9189-496863352a41")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 626.11 156.21) (xy 626.11 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88d4f267-bb3e-4ec5-b3f5-9911c536cc11")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 626.11 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d97bc413-3b7f-44aa-b3d7-ace24a2b44d0")
+		(property "Reference" "#PWR0937"
+			(at 626.11 151.13 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 626.11 162.56 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 626.11 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 626.11 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 626.11 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5dd03150-98bf-43d0-8afe-2c0789caaed7")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0937")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_SENS_SW"
+		(at 443.23 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4b89d2d-f769-4090-a3f2-fbb90dbee8c7")
+	)
+	(wire
+		(pts
+			(xy 443.23 171.45000000000002) (xy 443.23 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af8a348c-70ec-4887-a886-673c865ab106")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 443.23 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f35053a8-95a3-489a-81fd-75f641d7c4ba")
+		(property "Reference" "C59"
+			(at 443.23 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 443.23 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 443.23 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J12.1 decoupling"
+			(at 443.23 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32f607ac-7645-4513-8158-6d2410a6ce46")
+		)
+		(pin "2"
+			(uuid "f05ef744-5bb5-4020-b139-5a62fb035ec1")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 443.23 181.61) (xy 443.23 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5941f94a-795f-4a75-a88e-17d2cffaa168")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 443.23 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "42f1185f-f478-49ca-9061-b738659c6cad")
+		(property "Reference" "#PWR0938"
+			(at 443.23 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 443.23 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 443.23 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 443.23 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee8555f3-15f7-4e14-8b5a-b91c828bfd95")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0938")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_SENS_SW"
+		(at 473.71 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7648f39-f552-47d3-98b0-a9b25fa4d54a")
+	)
+	(wire
+		(pts
+			(xy 473.71 171.45000000000002) (xy 473.71 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82c7f570-e3a3-45f8-b557-3c8cf889550e")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 473.71 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a99e65a5-df8c-4492-b50e-4b8729671068")
+		(property "Reference" "C60"
+			(at 473.71 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 473.71 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 473.71 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J15.1 decoupling"
+			(at 473.71 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b029276-1f96-4eef-ba8d-9f3f87cbdf1e")
+		)
+		(pin "2"
+			(uuid "5b127f3f-7384-4631-81a1-01662b7be39b")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 473.71 181.61) (xy 473.71 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "272b291d-f4a9-43b7-b267-0579eca56b0d")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 473.71 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "67560db5-f2d4-4997-8178-c81412f88431")
+		(property "Reference" "#PWR0939"
+			(at 473.71 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 473.71 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 473.71 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 473.71 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b2acfad-1e11-43b2-a19a-3c985b6da933")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0939")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_SENS_SW"
+		(at 504.19 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "197ac826-4f68-4eab-b138-9142763f0bd2")
+	)
+	(wire
+		(pts
+			(xy 504.19 171.45000000000002) (xy 504.19 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24782998-a6f7-42d8-a322-2daae944cdf4")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 504.19 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d85d8d05-d0ab-49b8-b616-13c301a7ac8c")
+		(property "Reference" "C61"
+			(at 504.19 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 504.19 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 504.19 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J16.1 decoupling"
+			(at 504.19 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e8ad66f4-b5a6-4665-a70b-17cc4c4091cf")
+		)
+		(pin "2"
+			(uuid "bfcf735a-15fe-44e1-9b0d-b90361a7c892")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 504.19 181.61) (xy 504.19 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f97f1375-db17-481c-8e8a-0d767a800254")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 504.19 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7f90bd40-9a85-49c9-8e84-5852502bd144")
+		(property "Reference" "#PWR0940"
+			(at 504.19 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 504.19 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 504.19 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 504.19 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05e6ed7c-4258-4411-856a-ba368b03b60a")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0940")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "3V3_SENS_SW"
+		(at 534.67 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba5218cd-a6c8-4b7d-a9f9-7ecb04749f1c")
+	)
+	(wire
+		(pts
+			(xy 534.67 171.45000000000002) (xy 534.67 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00048b37-7e09-4931-8926-dc78d7e54290")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 534.67 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3fdf0630-d7c3-4929-8221-b7dead2f2a24")
+		(property "Reference" "C62"
+			(at 534.67 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 534.67 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 534.67 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J17.1 decoupling"
+			(at 534.67 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3422d53b-93fc-49d3-a162-7140f3c893dd")
+		)
+		(pin "2"
+			(uuid "702ab895-fc9a-40a4-be48-adbbc4619803")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 534.67 181.61) (xy 534.67 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d7d05ef-40bc-4331-89cd-fa2a9c5061a4")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 534.67 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9ee8f182-8a1f-43a7-8323-09215371c4f3")
+		(property "Reference" "#PWR0941"
+			(at 534.67 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 534.67 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 534.67 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4b0a077d-78d0-4666-a229-8d1c308d6c66")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0941")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+5V"
+		(at 565.15 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79b53772-7141-4cee-a672-aeb3ce4b61ec")
+	)
+	(wire
+		(pts
+			(xy 565.15 171.45000000000002) (xy 565.15 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1af4ebae-14e7-4b7a-8193-620f30560192")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 565.15 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cee6ea4c-a7ef-4f32-be90-4685e64b81ba")
+		(property "Reference" "C63"
+			(at 565.15 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 565.15 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 565.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 565.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "J24.1 decoupling"
+			(at 565.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cf454bec-0a26-4014-873f-00244a659e36")
+		)
+		(pin "2"
+			(uuid "2ebb2190-3052-4069-80d0-1f55d8dbf89b")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 565.15 181.61) (xy 565.15 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75ee36e8-3c08-4f2e-8ffa-2d262fd082d5")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 565.15 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00ecce7c-06ec-4365-a562-97b868717cc7")
+		(property "Reference" "#PWR0942"
+			(at 565.15 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 565.15 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 565.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 565.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 565.15 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a0206bd4-5282-4278-92da-b49573ec1f33")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0942")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+5V_ESP"
+		(at 595.63 171.45000000000002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8432d34a-9ef3-486b-bc16-7775e95a3e10")
+	)
+	(wire
+		(pts
+			(xy 595.63 171.45000000000002) (xy 595.63 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9351c25f-fd0d-4abe-a8bf-9edd4874f7e2")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 595.63 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "357c1f5e-82c2-4ce3-922b-e362def716f4")
+		(property "Reference" "C64"
+			(at 595.63 168.91000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 595.63 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 595.63 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 595.63 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "D7.1 decoupling"
+			(at 595.63 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c615068a-b761-478b-b19e-dc6100d33be3")
+		)
+		(pin "2"
+			(uuid "e959c23e-0e32-4f65-b70d-2170ff125d58")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 595.63 181.61) (xy 595.63 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61d00f6a-e344-4732-9671-898829149e2c")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 595.63 184.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "50e1dd23-076f-4966-8643-603adbf32f63")
+		(property "Reference" "#PWR0943"
+			(at 595.63 176.53 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 595.63 187.96 0)
+			(hide yes)
+			(show_name no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 595.63 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 595.63 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 595.63 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "92581e7c-f304-4ff9-9627-96a40efd8385")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR0943")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C_Polarized")
+		(at 443.23 203.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5ff4006-8269-4a08-93ee-0d0704a8d37b")
+		(property "Reference" "C65"
+			(at 443.23 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470uF/16V"
+			(at 443.23 209.54999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:CP_Radial_D8.0mm_P3.50mm"
+			(at 443.23 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Modem 5V bulk 470uF electrolytic"
+			(at 443.23 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ae70e48a-2ea7-49a8-a233-f825c0f00b54")
+		)
+		(pin "2"
+			(uuid "ca5abee3-1806-4d41-b24f-23309beec185")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 443.23 199.39) (xy 443.23 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37cb4cc3-36ba-4bc4-8612-0e376e183b41")
+	)
+	(label "+5V"
+		(at 443.23 194.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b80bda11-1342-4328-862a-29bd0032cbd6")
+	)
+	(wire
+		(pts
+			(xy 443.23 207.01) (xy 443.23 212.08999999999997)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25d0ef30-0873-4587-8c4f-df41bbb2bfc8")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 443.23 212.08999999999997 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5994ac8f-c216-4474-8edf-aead6abf81d5")
+		(property "Reference" "#PWR?"
+			(at 443.23 218.43999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 443.23 215.89999999999998 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 443.23 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 443.23 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 443.23 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c88a5e6d-3b6b-4cf7-8c92-21f0ec4464d0")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 473.71 203.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64129789-d3a5-4653-b0e2-df58b8057525")
+		(property "Reference" "C66"
+			(at 473.71 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF/16V"
+			(at 473.71 209.54999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 473.71 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Modem 5V bulk 10uF ceramic"
+			(at 473.71 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "54511829-272f-485f-be50-fac36cffd85c")
+		)
+		(pin "2"
+			(uuid "1afbc266-fdbc-46e7-aa66-c96ac46e6827")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 473.71 199.39) (xy 473.71 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f1e6e7d-e532-4a3d-b043-401e59799398")
+	)
+	(label "+5V"
+		(at 473.71 194.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e98c9b25-1422-4116-b305-1eb7ed0710c1")
+	)
+	(wire
+		(pts
+			(xy 473.71 207.01) (xy 473.71 212.08999999999997)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9643406-6af4-48e0-b2d3-dcc4ac390b35")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 473.71 212.08999999999997 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "40952393-9c14-4540-9cb7-976a1d48354b")
+		(property "Reference" "#PWR?"
+			(at 473.71 218.43999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 473.71 215.89999999999998 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 473.71 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 473.71 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e6de262-d754-4566-8e7c-001a59bdf1c7")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:C")
+		(at 504.19 203.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c89f2e64-f31c-43d9-b8c8-22e34d018ba4")
+		(property "Reference" "C67"
+			(at 504.19 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 504.19 209.54999999999998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MoriShield_Carrier:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 504.19 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Modem 5V bulk 100nF ceramic"
+			(at 504.19 203.2 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c7a75c0-0fe6-41ca-8c73-73a14f7bb5a7")
+		)
+		(pin "2"
+			(uuid "0bd5d0a0-e4fa-4f0c-aecf-cf52ada45ddc")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "C67")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 504.19 199.39) (xy 504.19 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c9e589e-dd7f-40eb-8291-7514b7718c28")
+	)
+	(label "+5V"
+		(at 504.19 194.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba101fd5-8f09-4152-97cd-e9340e2160fd")
+	)
+	(wire
+		(pts
+			(xy 504.19 207.01) (xy 504.19 212.08999999999997)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f412427-3869-4202-846c-999326877ac6")
+	)
+	(symbol
+		(lib_id "MoriShield_Carrier:GND")
+		(at 504.19 212.08999999999997 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9737914b-d98d-4152-b665-607ecc20be2a")
+		(property "Reference" "#PWR?"
+			(at 504.19 218.43999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 504.19 215.89999999999998 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 504.19 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 504.19 212.08999999999997 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5cf14e3f-a1b5-4d35-bfca-314d241451c0")
+		)
+		(instances
+			(project "MoriShield_Carrier"
+				(path "/d80462c8-fe11-4e1d-8672-0e34f7f857a2"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
+		)
 	)
 )
